@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/dynatrace/dt-app-mcp-knowledge-base/main/schemas/index.schema.json",
+  "title": "KnowledgeBaseIndex",
+  "description": "Contract between the preprocessing pipeline and dt-app-mcp. One entry per chunk; drives agent retrieval before any chunk file is loaded.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "chunks": {
+      "type": "array",
+      "description": "Ordered list of all chunks in the knowledge base.",
+      "items": {
+        "$ref": "#/$defs/ChunkEntry"
+      }
+    }
+  },
+  "required": ["chunks"],
+  "additionalProperties": false,
+  "$defs": {
+    "ChunkEntry": {
+      "type": "object",
+      "description": "Metadata the agent inspects to decide whether to load a chunk.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Short, human-readable identifier for the chunk (e.g. document title + section).",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "description": "One-sentence summary of the chunk content used by the agent for retrieval decisions.",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "description": "Path to the chunk file, relative to the repository root (forward slashes, no leading slash).",
+          "minLength": 1,
+          "pattern": "^[^/].*"
+        }
+      },
+      "required": ["name", "description", "path"],
+      "additionalProperties": false
+    }
+  }
+}
