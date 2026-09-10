@@ -5,7 +5,7 @@
 This repository is community-supported by maintainers on a best-effort basis.
 
 `dt-app-mcp-knowledge-base` is the generated knowledge base consumed by
-[`dt-app-mcp`](https://github.com/Dynatrace/dt-app-mcp). All content is derived
+`dt-app-mcp`. All content is derived
 automatically from the [Dynatrace Developer](https://developer.dynatrace.com) portal;
 hand-written contributions to `index.json` or `docs/` are out of scope and will be
 overwritten by the next pipeline run.

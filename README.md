@@ -1,6 +1,6 @@
 # dt-app-mcp-knowledge-base
 
-Knowledge base for [`dt-app-mcp`](https://github.com/Dynatrace/dt-app-mcp), built from the
+Knowledge base for `dt-app-mcp`, built from the
 [Dynatrace Developer](https://developer.dynatrace.com) documentation.
 
 This repository holds two things: the **preprocessing pipeline** that turns the public developer
