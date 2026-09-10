@@ -22,7 +22,7 @@ pipeline.
 
 ## How it works
 
-```
+```text
 developer.dynatrace.com/sitemap.xml
         │
         ▼
@@ -47,11 +47,11 @@ small.
 
 ## Repository layout
 
-| Path             | Contents                                                                       |
-| ---------------- | ------------------------------------------------------------------------------ |
+| Path | Contents |
+| --- | --- |
 | `preprocessing/` | The pipeline and its CLI. See [preprocessing/README.md](preprocessing/README.md). |
-| `schemas/`       | JSON schemas for the generated `index.json` and `meta.json`.                   |
-| `meta.json`      | Build-only metadata. Generated — never edit by hand.                           |
+| `schemas/` | JSON schemas for the generated `index.json` and `meta.json`. |
+| `meta.json` | Build-only metadata. Generated — never edit by hand. |
 
 `index.json` and `docs/` appear once the chunking stage lands.
 

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security issue
+    url: https://github.com/Dynatrace/dt-app-mcp-knowledge-base/security/policy
+    about: Report security vulnerabilities according to the security policy
