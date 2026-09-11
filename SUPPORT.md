@@ -2,7 +2,9 @@
 
 ## Support model
 
-This repository is community-supported by maintainers on a best-effort basis.
+This project is officially supported by Dynatrace. For product support, use the applicable
+Dynatrace support channel. GitHub Issues may be used for repository-specific bugs,
+feature requests, and contribution discussions as described in this repository.
 
 `dt-app-mcp-knowledge-base` is the generated knowledge base consumed by
 `dt-app-mcp`. All content is derived
@@ -16,12 +18,7 @@ Please use GitHub Issues for:
 
 - bug reports (e.g. stale or incorrect knowledge-base content)
 - feature requests related to the preprocessing pipeline
-- general questions about this repository
+- contribution discussions
 
 If you believe you have found a security issue, do not file a public issue.
 Follow the instructions in [`SECURITY.md`](SECURITY.md).
-
-## Commercial support
-
-Unless explicitly stated otherwise, this repository is not covered by standard
-Dynatrace commercial support.
