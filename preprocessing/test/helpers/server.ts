@@ -8,12 +8,16 @@ export type SitemapServer = {
 };
 
 /** Serves a canned sitemap response so fetch behaviour can be tested without the real portal. */
-export async function startSitemapServer(
-  response: { body: string; status?: number; delayMs?: number },
-): Promise<SitemapServer> {
+export async function startSitemapServer(response: {
+  body: string;
+  status?: number;
+  delayMs?: number;
+}): Promise<SitemapServer> {
   const server = createServer((_request, res) => {
     const send = () => {
-      res.writeHead(response.status ?? 200, { 'content-type': 'application/xml' });
+      res.writeHead(response.status ?? 200, {
+        'content-type': 'application/xml',
+      });
       res.end(response.body);
     };
     if (response.delayMs === undefined) send();

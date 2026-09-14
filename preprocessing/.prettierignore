@@ -1,0 +1,4 @@
+node_modules
+
+# Markdown is left to markdownlint, which already runs over every .md file in the repository.
+**/*.md

@@ -3,7 +3,13 @@ import { mkdtemp, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, it } from 'node:test';
-import { mergeMetadata, readMetadata, writeMetadata } from '../src/meta.ts';
+import {
+  mergeMetadata,
+  readMetadata,
+  recordChunkPaths,
+  toPagePath,
+  writeMetadata,
+} from '../src/meta.ts';
 import { UNKNOWN_CONTENT_HASH } from '../src/sitemap.ts';
 import type { KnowledgeBaseMetadata } from '../src/types.ts';
 import { assertValidMetadata } from './helpers/schema.ts';
@@ -22,7 +28,8 @@ const unprocessed = (path: string) => ({
   chunkPaths: [],
 });
 
-const tempFile = async (name: string) => join(await mkdtemp(join(tmpdir(), 'kb-meta-')), name);
+const tempFile = async (name: string) =>
+  join(await mkdtemp(join(tmpdir(), 'kb-meta-')), name);
 
 describe('mergeMetadata', () => {
   it('records every discovered document with placeholder build fields', () => {
@@ -33,7 +40,10 @@ describe('mergeMetadata', () => {
     );
 
     assert.equal(meta.generatedAt, '2026-09-09T06:00:00.000Z');
-    assert.deepEqual(meta.sources, [unprocessed('/docs/a'), unprocessed('/docs/b')]);
+    assert.deepEqual(meta.sources, [
+      unprocessed('/docs/a'),
+      unprocessed('/docs/b'),
+    ]);
     assert.deepEqual(added, [
       'https://developer.dynatrace.com/docs/a.md',
       'https://developer.dynatrace.com/docs/b.md',
@@ -42,13 +52,21 @@ describe('mergeMetadata', () => {
   });
 
   it('produces metadata that satisfies meta.schema.json', () => {
-    const { meta } = mergeMetadata([discovered('/docs/a'), discovered('/index')], undefined, GENERATED_AT);
+    const { meta } = mergeMetadata(
+      [discovered('/docs/a'), discovered('/index')],
+      undefined,
+      GENERATED_AT,
+    );
 
     assertValidMetadata(meta);
   });
 
   it('gives every document its own chunkPaths array', () => {
-    const { meta } = mergeMetadata([discovered('/docs/a'), discovered('/docs/b')], undefined, GENERATED_AT);
+    const { meta } = mergeMetadata(
+      [discovered('/docs/a'), discovered('/docs/b')],
+      undefined,
+      GENERATED_AT,
+    );
 
     meta.sources[0]?.chunkPaths.push('docs/docs/a/intro.md');
 
@@ -62,9 +80,16 @@ describe('mergeMetadata', () => {
       downloadedAt: '2026-09-01T00:00:00.000Z',
       chunkPaths: ['docs/docs/a/intro.md'],
     };
-    const previous: KnowledgeBaseMetadata = { generatedAt: '2026-09-01T00:00:00.000Z', sources: [processed] };
+    const previous: KnowledgeBaseMetadata = {
+      generatedAt: '2026-09-01T00:00:00.000Z',
+      sources: [processed],
+    };
 
-    const { meta, added } = mergeMetadata([discovered('/docs/a')], previous, GENERATED_AT);
+    const { meta, added } = mergeMetadata(
+      [discovered('/docs/a')],
+      previous,
+      GENERATED_AT,
+    );
 
     assert.deepEqual(meta.sources, [processed]);
     assert.deepEqual(added, []);
@@ -98,8 +123,132 @@ describe('mergeMetadata', () => {
     assert.deepEqual(removed, ['https://developer.dynatrace.com/docs/gone.md']);
     assert.deepEqual(
       meta.sources.map((source) => source.url),
-      ['https://developer.dynatrace.com/docs/a.md', 'https://developer.dynatrace.com/docs/new.md'],
+      [
+        'https://developer.dynatrace.com/docs/a.md',
+        'https://developer.dynatrace.com/docs/new.md',
+      ],
     );
+  });
+});
+
+const chunked = (pagePath: string, ...paths: string[]) => ({
+  pagePath,
+  chunks: paths.map((path) => ({ path, heading: undefined, content: '' })),
+  genericHeadings: [],
+});
+
+describe('recordChunkPaths', () => {
+  it('records the chunks of each document on its source entry', () => {
+    const previous: KnowledgeBaseMetadata = {
+      generatedAt: '2026-09-01T00:00:00.000Z',
+      sources: [unprocessed('/docs/a'), unprocessed('/docs/b')],
+    };
+
+    const { meta, unmatched } = recordChunkPaths(
+      previous,
+      [chunked('docs/a', 'docs/docs/a/index.md', 'docs/docs/a/usage.md')],
+      GENERATED_AT,
+    );
+
+    assert.deepEqual(meta.sources[0]?.chunkPaths, [
+      'docs/docs/a/index.md',
+      'docs/docs/a/usage.md',
+    ]);
+    assert.deepEqual(meta.sources[1]?.chunkPaths, []);
+    assert.deepEqual(unmatched, []);
+    assertValidMetadata(meta);
+  });
+
+  it('replaces the chunk paths of an earlier run instead of adding to them', () => {
+    const previous: KnowledgeBaseMetadata = {
+      generatedAt: '2026-09-01T00:00:00.000Z',
+      sources: [
+        { ...unprocessed('/docs/a'), chunkPaths: ['docs/docs/a/gone.md'] },
+      ],
+    };
+
+    const { meta } = recordChunkPaths(
+      previous,
+      [chunked('docs/a', 'docs/docs/a/index.md')],
+      GENERATED_AT,
+    );
+
+    assert.deepEqual(meta.sources[0]?.chunkPaths, ['docs/docs/a/index.md']);
+  });
+
+  it('matches on page path, so the origin a document came from does not have to agree', () => {
+    const previous: KnowledgeBaseMetadata = {
+      generatedAt: '2026-09-01T00:00:00.000Z',
+      sources: [
+        {
+          ...unprocessed('/docs/a'),
+          url: 'https://developer.dynatracelabs.com/docs/a.md',
+        },
+      ],
+    };
+
+    const { meta, unmatched } = recordChunkPaths(
+      previous,
+      [chunked('docs/a', 'docs/docs/a/index.md')],
+      GENERATED_AT,
+    );
+
+    assert.deepEqual(meta.sources[0]?.chunkPaths, ['docs/docs/a/index.md']);
+    assert.deepEqual(unmatched, []);
+  });
+
+  it('reports documents that no source entry claims', () => {
+    const previous: KnowledgeBaseMetadata = {
+      generatedAt: '2026-09-01T00:00:00.000Z',
+      sources: [unprocessed('/docs/a')],
+    };
+
+    const { unmatched } = recordChunkPaths(
+      previous,
+      [chunked('RequestAnalysis', 'docs/request-analysis/index.md')],
+      GENERATED_AT,
+    );
+
+    assert.deepEqual(unmatched, ['RequestAnalysis']);
+  });
+
+  it('leaves the download fields of every source untouched', () => {
+    const processed = {
+      url: 'https://developer.dynatrace.com/docs/a.md',
+      downloadHash: 'a'.repeat(64),
+      downloadedAt: '2026-09-01T00:00:00.000Z',
+      chunkPaths: [],
+    };
+    const previous: KnowledgeBaseMetadata = {
+      generatedAt: '2026-09-01T00:00:00.000Z',
+      sources: [processed],
+    };
+
+    const { meta } = recordChunkPaths(
+      previous,
+      [chunked('docs/a', 'docs/docs/a/index.md')],
+      GENERATED_AT,
+    );
+
+    assert.equal(meta.sources[0]?.downloadHash, 'a'.repeat(64));
+    assert.equal(meta.sources[0]?.downloadedAt, '2026-09-01T00:00:00.000Z');
+  });
+});
+
+describe('toPagePath', () => {
+  it('reduces a document URL to the path the chunking stage addresses it by', () => {
+    assert.equal(
+      toPagePath('https://developer.dynatrace.com/docs/a.md'),
+      'docs/a',
+    );
+    assert.equal(
+      toPagePath('https://developer.dynatrace.com/index.md'),
+      'index',
+    );
+  });
+
+  it('has no page path for a value that is not a URL', () => {
+    assert.equal(toPagePath('docs/a.md'), undefined);
   });
 });
 
@@ -110,7 +259,11 @@ describe('readMetadata', () => {
 
   it('round-trips a written file', async () => {
     const path = await tempFile('meta.json');
-    const { meta } = mergeMetadata([discovered('/docs/a')], undefined, GENERATED_AT);
+    const { meta } = mergeMetadata(
+      [discovered('/docs/a')],
+      undefined,
+      GENERATED_AT,
+    );
 
     await writeMetadata(path, meta);
 
@@ -121,6 +274,9 @@ describe('readMetadata', () => {
     const path = await tempFile('meta.json');
     await writeFile(path, '{ not json', 'utf8');
 
-    await assert.rejects(readMetadata(path), /is not valid JSON, fix or delete it/);
+    await assert.rejects(
+      readMetadata(path),
+      /is not valid JSON, fix or delete it/,
+    );
   });
 });
