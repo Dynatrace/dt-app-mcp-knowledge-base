@@ -1,5 +1,7 @@
 ignores:
   - "**/node_modules/**"
+  # Knowledge base chunks are generated slices of portal pages, not prose authored here.
+  - "docs/**"
 
 config:
   MD013: false

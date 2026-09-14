@@ -12,16 +12,24 @@
   },
   "scripts": {
     "start": "node src/cli.ts",
+    "chunk": "node src/cli.ts chunk",
     "test": "node --test \"test/**/*.test.ts\"",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
-    "fast-xml-parser": "^5.2.5"
+    "fast-xml-parser": "^5.2.5",
+    "mdast-util-from-markdown": "^2.0.3",
+    "mdast-util-frontmatter": "^2.0.1",
+    "mdast-util-to-string": "^4.0.0",
+    "micromark-extension-frontmatter": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "prettier": "^3.9.6",
     "typescript": "^5.9.2"
   }
 }
