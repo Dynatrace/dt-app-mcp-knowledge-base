@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug preprocessing CLI",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/preprocessing/src/cli.ts",
+      "cwd": "${workspaceFolder}/preprocessing",
+      "args": ["--dry-run"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
