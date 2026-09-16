@@ -218,8 +218,8 @@ describe('preprocessing CLI chunk command', () => {
     ]);
 
     assert.equal(code, 0);
-    assert.match(stdout, /Split 1 document into 3 chunks/);
-    assert.match(stdout, /^ {2}docs\/a {2}3 chunks$/m);
+    assert.match(stdout, /Split 1 document into 2 chunks/);
+    assert.match(stdout, /^ {2}docs\/a {2}2 chunks$/m);
   });
 
   it('writes one file per chunk below the chunk directory', async () => {
@@ -238,9 +238,21 @@ describe('preprocessing CLI chunk command', () => {
       await readFile(join(chunks, 'docs/a/span-attributes.md'), 'utf8'),
       '## Span Attributes\n\nBody.\n',
     );
-    assert.equal(
-      await readFile(join(chunks, 'docs/a/index.md'), 'utf8'),
-      '# Page A\n\nIntro.\n',
+    await assert.rejects(access(join(chunks, 'docs/a/index.md')));
+  });
+
+  it('prints the index entries it would write, since index.json is not produced yet', async () => {
+    const { stdout } = await cli([
+      'chunk',
+      '--source-dir',
+      await sourceDir(),
+      '--dry-run',
+    ]);
+
+    assert.match(stdout, /Index entries, not yet written to index\.json:/);
+    assert.match(
+      stdout,
+      /^ {2}Page A: Span Attributes\n {4}docs\/docs\/a\/span-attributes\.md\n {4}Body\.$/m,
     );
   });
 
@@ -258,7 +270,7 @@ describe('preprocessing CLI chunk command', () => {
     ]);
 
     const sources = (await readMetadata(out))?.sources;
-    assert.equal(sources?.[0]?.chunkPaths.length, 3);
+    assert.equal(sources?.[0]?.chunkPaths.length, 2);
     assert.deepEqual(sources?.[1]?.chunkPaths, []);
   });
 
@@ -302,10 +314,15 @@ describe('preprocessing CLI chunk command', () => {
 
     const documents = JSON.parse(stdout) as {
       pagePath: string;
-      chunks: unknown[];
+      title: string;
+      chunks: { name: string }[];
     }[];
     assert.equal(documents[0]?.pagePath, 'docs/a');
-    assert.equal(documents[0]?.chunks.length, 3);
+    assert.equal(documents[0]?.title, 'Page A');
+    assert.deepEqual(
+      documents[0]?.chunks.map((chunk) => chunk.name),
+      ['Page A: Span Attributes', 'Page A: Overview'],
+    );
   });
 
   it('keeps warning on stderr while stdout carries JSON', async () => {
@@ -330,6 +347,21 @@ describe('preprocessing CLI chunk command', () => {
 
     assert.match(stderr, /Headings too generic to identify a feature/);
     assert.match(stderr, /^ {2}docs\/a: Overview$/m);
+  });
+
+  it('warns about descriptions too thin to decide on', async () => {
+    const { stderr } = await cli([
+      'chunk',
+      '--source-dir',
+      await sourceDir(),
+      '--dry-run',
+    ]);
+
+    assert.match(stderr, /Descriptions too thin to decide on/);
+    assert.match(
+      stderr,
+      /^ {2}docs\/docs\/a\/span-attributes\.md: shorter than 30 characters$/m,
+    );
   });
 
   it('reports documents that meta.json does not list', async () => {

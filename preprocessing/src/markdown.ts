@@ -1,7 +1,5 @@
-import { frontmatterFromMarkdown } from 'mdast-util-frontmatter';
 import { fromMarkdown } from 'mdast-util-from-markdown';
 import { toString } from 'mdast-util-to-string';
-import { frontmatter } from 'micromark-extension-frontmatter';
 
 /** A heading of either CommonMark style, with the line it starts on. */
 export type Heading = { level: number; text: string; line: number };
@@ -33,14 +31,9 @@ export function splitMarkdown(source: string): Section[] {
   return sections;
 }
 
-/** Collects every top-level heading, leaving those inside code, quotes or frontmatter out. */
+/** Collects every top-level heading, leaving those inside code blocks or block quotes out. */
 export function findHeadings(source: string): Heading[] {
-  const tree = fromMarkdown(source, {
-    extensions: [frontmatter(['yaml', 'toml'])],
-    mdastExtensions: [frontmatterFromMarkdown(['yaml', 'toml'])],
-  });
-
-  return tree.children.flatMap((node) =>
+  return fromMarkdown(source).children.flatMap((node) =>
     node.type === 'heading' && node.position !== undefined
       ? [
           {

@@ -198,13 +198,6 @@ describe('findHeadings', () => {
       [],
     );
   });
-
-  it('ignores frontmatter, so its closing delimiter is no setext heading', () => {
-    assert.deepEqual(
-      findHeadings(doc('---', 'title: Page Title', '---', '', '## Section')),
-      [{ level: 2, text: 'Section', line: 4 }],
-    );
-  });
 });
 
 describe('mainHeadingLevel', () => {

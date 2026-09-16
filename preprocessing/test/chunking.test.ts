@@ -38,11 +38,16 @@ describe('chunkDocument', () => {
     assert.deepEqual(
       chunks.map((chunk) => chunk.path),
       [
-        'docs/docs/dql/request-analysis/index.md',
         'docs/docs/dql/request-analysis/request-attributes.md',
         'docs/docs/dql/request-analysis/best-practices.md',
       ],
     );
+  });
+
+  it('produces the same result twice for the same document', () => {
+    const document = { pagePath: 'a', markdown: PAGE };
+
+    assert.deepEqual(chunkDocument(document), chunkDocument(document));
   });
 
   it('keeps a chunk name when a neighbouring section is removed', () => {
@@ -60,11 +65,42 @@ describe('chunkDocument', () => {
     assert.equal(after?.path, 'docs/a/best-practices.md');
   });
 
-  it('writes the content above the first main heading to its own chunk', () => {
-    const [preamble] = chunkDocument({ pagePath: 'a', markdown: PAGE }).chunks;
+  it('keeps the page title and introduction as the page summary instead of a chunk', () => {
+    const { title, description, chunks } = chunkDocument({
+      pagePath: 'a',
+      markdown: PAGE,
+    });
 
-    assert.equal(preamble?.heading, undefined);
-    assert.equal(preamble?.content, '# Request Analysis\n\nIntro.');
+    assert.equal(title, 'Request Analysis');
+    assert.equal(description, 'Intro.');
+    assert.deepEqual(
+      chunks.filter((chunk) => chunk.heading === undefined),
+      [],
+    );
+  });
+
+  it('writes a preamble holding more than the title and introduction to its own chunk', () => {
+    const markdown = PAGE.replace(
+      'Intro.',
+      'Intro.\n\n```dql\nfetch spans\n```',
+    );
+
+    const [preamble] = chunkDocument({ pagePath: 'a', markdown }).chunks;
+
+    assert.equal(preamble?.path, 'docs/a/index.md');
+    assert.equal(preamble?.name, 'Request Analysis');
+    assert.equal(
+      preamble?.content,
+      '# Request Analysis\n\nIntro.\n\n```dql\nfetch spans\n```',
+    );
+  });
+
+  it('writes a preamble the description would cut short to its own chunk', () => {
+    const markdown = PAGE.replace('Intro.', 'word '.repeat(60));
+
+    const [preamble] = chunkDocument({ pagePath: 'a', markdown }).chunks;
+
+    assert.equal(preamble?.path, 'docs/a/index.md');
   });
 
   it('honours the chunk directory it is given', () => {
@@ -73,7 +109,61 @@ describe('chunkDocument', () => {
       'generated',
     );
 
-    assert.equal(chunks[0]?.path, 'generated/a/index.md');
+    assert.equal(chunks[0]?.path, 'generated/a/request-attributes.md');
+  });
+
+  it('names a chunk after the page it came from and its heading', () => {
+    const { chunks } = chunkDocument({ pagePath: 'a', markdown: PAGE });
+
+    assert.deepEqual(
+      chunks.map((chunk) => chunk.name),
+      [
+        'Request Analysis: Request Attributes',
+        'Request Analysis: Best Practices',
+      ],
+    );
+  });
+
+  it('describes a chunk from its own content', () => {
+    const { chunks } = chunkDocument({ pagePath: 'a', markdown: PAGE });
+
+    assert.equal(chunks[0]?.description, 'Body.');
+  });
+
+  it('falls back to the page description for a chunk with no text of its own', () => {
+    const markdown = doc(
+      '# Request Analysis',
+      '',
+      'Intro.',
+      '',
+      '## Request Attributes',
+      '',
+      '```dql',
+      'fetch spans',
+      '```',
+    );
+
+    const { chunks, weakDescriptions } = chunkDocument({
+      pagePath: 'a',
+      markdown,
+    });
+
+    assert.equal(chunks[0]?.description, 'Intro.');
+    assert.deepEqual(weakDescriptions, [
+      { path: 'docs/a/request-attributes.md', reason: 'no text of its own' },
+    ]);
+  });
+
+  it('reports a chunk whose description says too little to decide on', () => {
+    const { weakDescriptions } = chunkDocument({
+      pagePath: 'a',
+      markdown: PAGE,
+    });
+
+    assert.deepEqual(
+      weakDescriptions.map((weak) => weak.path),
+      ['docs/a/request-attributes.md', 'docs/a/best-practices.md'],
+    );
   });
 
   it('disambiguates sections that slug to the same name', () => {
@@ -177,6 +267,10 @@ describe('toSlug', () => {
     );
     assert.equal(toSlug('SOAP/Web Services'), 'soap-web-services');
     assert.equal(toSlug('gRPC Analysis'), 'grpc-analysis');
+    assert.equal(
+      toSlug('`request_attribute.<name>`'),
+      'request-attribute-name',
+    );
   });
 
   it('is empty when nothing usable is left', () => {
