@@ -1,6 +1,6 @@
 {
-  "$schema": "./schemas/meta.schema.json",
-  "generatedAt": "2026-09-09T14:43:40.311Z",
+  "$schema": "https://raw.githubusercontent.com/dynatrace/dt-app-mcp-knowledge-base/main/schemas/meta.schema.json",
+  "generatedAt": "2026-09-16T14:34:37.857Z",
   "sources": [
     {
       "url": "https://developer.dynatrace.com/blog.md",
@@ -40,6 +40,12 @@
     },
     {
       "url": "https://developer.dynatrace.com/blog/office-hours-july-2026-recap.md",
+      "downloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "downloadedAt": "1970-01-01T00:00:00.000Z",
+      "chunkPaths": []
+    },
+    {
+      "url": "https://developer.dynatrace.com/blog/office-hours-september-2026-recap.md",
       "downloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
       "downloadedAt": "1970-01-01T00:00:00.000Z",
       "chunkPaths": []
@@ -3214,6 +3220,18 @@
     },
     {
       "url": "https://developer.dynatrace.com/develop/sdks/client-document/v1.md",
+      "downloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "downloadedAt": "1970-01-01T00:00:00.000Z",
+      "chunkPaths": []
+    },
+    {
+      "url": "https://developer.dynatrace.com/develop/sdks/client-extensions-v2.md",
+      "downloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "downloadedAt": "1970-01-01T00:00:00.000Z",
+      "chunkPaths": []
+    },
+    {
+      "url": "https://developer.dynatrace.com/develop/sdks/client-extensions-v2/v3.md",
       "downloadHash": "0000000000000000000000000000000000000000000000000000000000000000",
       "downloadedAt": "1970-01-01T00:00:00.000Z",
       "chunkPaths": []
