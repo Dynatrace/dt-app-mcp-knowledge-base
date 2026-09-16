@@ -1,0 +1,22 @@
+{
+  "name": "knowledgebase",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Knowledge base of Dynatrace developer portal documentation for the dt-app-mcp server.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "preprocessing"
+  ],
+  "scripts": {
+    "start": "npm start --workspace @dynatrace/dt-app-mcp-preprocessing --",
+    "chunk": "npm run chunk --workspace @dynatrace/dt-app-mcp-preprocessing --",
+    "debug": "npm run debug --workspace @dynatrace/dt-app-mcp-preprocessing --",
+    "test": "npm test --workspace @dynatrace/dt-app-mcp-preprocessing --",
+    "typecheck": "npm run typecheck --workspace @dynatrace/dt-app-mcp-preprocessing --",
+    "format": "npm run format --workspace @dynatrace/dt-app-mcp-preprocessing --",
+    "format:check": "npm run format:check --workspace @dynatrace/dt-app-mcp-preprocessing --"
+  }
+}

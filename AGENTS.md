@@ -25,18 +25,23 @@ git push --force-with-lease
 
 ## Commands
 
-Run from `preprocessing/`, the only npm package in the repository. Node 24 or newer is required; sources run on Node's built-in type stripping, so there is no build step.
+The repository is an npm workspace. `preprocessing/` is its only package, and the workspace root owns `package-lock.json`, `node_modules` and `.npmrc`. Node 24 or newer is required; sources run on Node's built-in type stripping, so there is no build step.
+
+Run everything from the repository root:
 
 ```sh
-npm install
+npm install               # Install every workspace dependency
 npm start                 # Discover portal documents and update meta.json
 npm run chunk -- --source-dir <path>   # Split documents at their main headings into docs/ (--source-dir is temporary, see preprocessing/README.md)
 npm start -- --help       # CLI options
+npm run debug             # Run the CLI with the inspector paused on the first line
 npm test
 npm run typecheck
 npm run format            # Format the package with Prettier
 npm run format:check      # Fail on anything Prettier would reformat, as CI does
 ```
+
+Never create a `package-lock.json`, `node_modules` or `.npmrc` inside `preprocessing/`. npm ignores a workspace-level `.npmrc`, so a registry pin placed there is silently dead.
 
 ## Agent guidance
 

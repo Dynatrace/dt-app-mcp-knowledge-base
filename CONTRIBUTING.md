@@ -14,10 +14,11 @@ Meaningful contributions include:
 
 ## Getting started
 
-Node 24 or newer is required. All npm scripts run from `preprocessing/`.
+Node 24 or newer is required. The repository is an npm workspace with
+`preprocessing/` as its only package, so one install at the root covers
+everything and every script runs from the root.
 
 ```sh
-cd preprocessing
 npm install
 npm test
 npm run typecheck

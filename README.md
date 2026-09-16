@@ -57,11 +57,10 @@ small.
 
 ## The CLI
 
-The pipeline ships as a single command, run from `preprocessing/`. Node 24 or newer is required;
-sources run on Node's built-in type stripping, so there is no build step.
+The pipeline ships as a single command, driven from the repository root. Node 24 or newer is
+required; sources run on Node's built-in type stripping, so there is no build step.
 
 ```sh
-cd preprocessing
 npm install
 npm start
 ```
@@ -96,11 +95,13 @@ request with the result.
 
 ## Development
 
-`preprocessing/` is the only npm package in the repository; run its scripts from that directory.
+The repository is an npm workspace and `preprocessing/` is its only package, so a single
+`npm install` at the root installs everything and every script runs from the root.
 
 ```sh
 npm test           # node:test suite
 npm run typecheck
+npm run debug      # Run the CLI with the inspector paused on the first line
 ```
 
 Content changes reach `main` through pull requests reviewed by the owners listed in

@@ -3,10 +3,13 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, it } from 'node:test';
 
-const LOCK_PATH = resolve(import.meta.dirname, '../package-lock.json');
+// The lockfile sits at the repository root because preprocessing is an npm workspace.
+const LOCK_PATH = resolve(import.meta.dirname, '../../package-lock.json');
 const PUBLIC_REGISTRY = 'https://registry.npmjs.org/';
 
-type Lockfile = { packages: Record<string, { resolved?: string }> };
+type Lockfile = {
+  packages: Record<string, { resolved?: string; link?: boolean }>;
+};
 
 describe('package-lock.json', () => {
   it('resolves every package from the public npm registry', () => {
@@ -15,6 +18,8 @@ describe('package-lock.json', () => {
     const unreachable = Object.entries(lock.packages).flatMap(
       ([name, entry]) =>
         entry.resolved === undefined ||
+        // Workspace links resolve to a path inside the repository, never to a registry.
+        entry.link === true ||
         entry.resolved.startsWith(PUBLIC_REGISTRY)
           ? []
           : [`  ${name} -> ${new URL(entry.resolved).host}`],

@@ -7,7 +7,7 @@ local directory for now.
 
 ## Discover documents
 
-From this directory:
+This package is a workspace of the repository root, so run its scripts from there:
 
 ```sh
 npm install
@@ -126,9 +126,12 @@ discards their work. Documents that disappear from the sitemap are dropped.
 
 ## Develop
 
+From the repository root:
+
 ```sh
 npm test        # node:test suite
 npm run typecheck
+npm run debug   # Run the CLI with the inspector paused on the first line
 ```
 
 Sources are TypeScript and run directly on Node's built-in type stripping, so there is no build step.
@@ -136,13 +139,16 @@ Node 24 or newer is required.
 
 ## Dependencies
 
-[`.npmrc`](.npmrc) pins the registry to `registry.npmjs.org`. The `resolved` URLs in `package-lock.json` have
+[`.npmrc`](../.npmrc) pins the registry to `registry.npmjs.org`. It has to live at the workspace root, because npm
+ignores an `.npmrc` inside a workspace. The `resolved` URLs in `package-lock.json` have
 to stay reachable from CI and by external contributors, whatever registry a developer's own `~/.npmrc` happens
 to point at. A test fails the build if the lockfile ever resolves a package from anywhere else, naming the
 offending packages.
 
 npm seeds `resolved` URLs from the installed tree, so passing `--registry` does not repair a lockfile that
 already carries the wrong host. Regenerate it from scratch instead:
+
+Run this from the repository root, which owns both:
 
 ```sh
 rm -rf node_modules package-lock.json
