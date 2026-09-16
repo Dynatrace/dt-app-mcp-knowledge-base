@@ -52,7 +52,8 @@ the bare site root maps to `/index.md`:
 ## Chunk documents
 
 Loading a whole page into the agent context wastes space when only one section is relevant, so every
-document is split at its main headings into one markdown file per section:
+document is split at its main headings into one markdown file per section, each with a name and a
+description an agent can retrieve it by:
 
 ```sh
 npm run chunk -- --source-dir ../../tmp-knowledge-base
@@ -79,37 +80,62 @@ source entry claims are still chunked, and reported on stderr.
 The split happens at the document's **main heading level**, which is the shallowest heading level that holds
 more than the page title. A page with one `#` title and several `##` sections is split at `##`, and the `###`
 subsections stay with the section they belong to, so a chunk never loses the context above it. Content above
-the first main heading — the title and its introduction — becomes a chunk of its own, so nothing is lost.
+the first main heading — the title and its introduction — becomes the page name and description rather than a
+chunk, and a chunk of its own as soon as it holds more than those two.
 
 Headings are read from a CommonMark parse of the document, so both heading styles count — `## Section` and
-a `Section` underlined with `---` are the same thing — while `#` inside fenced code blocks, block quotes or
-YAML frontmatter is not a heading at all.
+a `Section` underlined with `---` are the same thing — while `#` inside a fenced code block or a block quote
+is not a heading at all. Documents are plain markdown: a page carrying frontmatter would have its closing
+`---` read as a setext heading, so the portal must not serve one.
 
 ### How a chunk is named
 
 A chunk file is named after the page path and the heading slug alone, never its position, so it keeps its
 name when neighbouring sections are added, removed or reordered:
 
-| Chunk                                | Path                                        |
-| ------------------------------------ | ------------------------------------------- |
-| Content above the first main heading | `docs/docs/dql/spans/index.md`              |
-| `## Request Attributes`              | `docs/docs/dql/spans/request-attributes.md` |
+| Chunk                                    | Path                                        |
+| ---------------------------------------- | ------------------------------------------- |
+| `## Request Attributes`                  | `docs/docs/dql/spans/request-attributes.md` |
+| A preamble beyond title and introduction | `docs/docs/dql/spans/index.md`              |
 
 Coding agents locate docs by name and stop at the first plausible hit, so a heading that does not name its
-feature makes a chunk hard to find. Headings that name a kind of content instead — `Overview`, `Usage`,
-`Example` — are reported on stderr to be fixed at the source.
+feature makes a chunk hard to find. The chunk name therefore carries the page context as well:
+`RPC Span Analysis: Key Attributes`, from the page title and the heading. A heading that already says what
+the page says is not repeated. Where the document has no title heading, the file name stands in for it.
+
+Headings that name a kind of content instead of a feature — `Overview`, `Usage`, `Example` — are reported
+on stderr to be fixed at the source.
 
 That report is a stopgap: it matches a fixed word list exactly, so it catches `Usage` but not `Common usage`.
 Once every document is chunked it should give way to a corpus-derived check, where a slug recurring across
 many pages is generic by definition. The report is advisory only and never changes what is written.
 
-### `index.md` is a candidate for removal
+### How a chunk is described
 
-`index.md` holds the page title and its introduction, which describe the **page**, not a section. Once the
-index stage lands, that title and introduction are better read as the `name` and `description` of the page's
-chunks in [`index.json`](../schemas/index.schema.json) than written out as a chunk of their own — an agent
-would otherwise have to load a file to learn what the neighbouring files are about. The plan is therefore to
-lift both into `index.json` and stop emitting `index.md`.
+The description is the only text an agent sees before it decides to load a chunk, so it has to say what the
+chunk covers. It is derived from the chunk itself, deterministically and without a model call:
+
+1. the paragraph or list below the heading, with list items kept apart so each stays a term to match on
+2. the subsection headings, where the section opens straight into subsections and has no introduction
+3. the page description, where the section holds nothing but code
+
+Descriptions are cut to 200 characters on a word boundary. Inline markup is unwrapped, but the underscores of
+an attribute name are kept — `request.is_root_span` is exactly what an agent searches for.
+
+A chunk whose description carries no text of its own, only repeats its heading or stays under 30 characters is
+reported on stderr. Like the generic-heading report it is advisory: the chunk is still written, because a thin
+description is a problem in the source document rather than in this run.
+
+### The page title and introduction are not a chunk
+
+The content above the first main heading is the page title and its introduction, which describe the **page**,
+not a section. Both are kept as the page name and description — the name of every chunk of that page starts
+with the title, and a chunk with no text of its own borrows the description — so writing them out again would
+only cost the agent a file to load. A preamble that holds more than title and introduction, or an
+introduction longer than a description may carry, is still written to `index.md`, so nothing is lost.
+
+Neither value reaches [`index.json`](../schemas/index.schema.json) yet. Until the download stage feeds the
+pipeline, the entries the index stage would write are printed to stdout instead.
 
 ## Output
 
