@@ -11,7 +11,7 @@ import {
   writeMetadata,
 } from '../src/meta.ts';
 import { UNKNOWN_CONTENT_HASH } from '../src/sitemap.ts';
-import type { KnowledgeBaseMetadata } from '../src/types.ts';
+import type { ChunkedDocument, KnowledgeBaseMetadata } from '../src/types.ts';
 import { assertValidMetadata } from './helpers/schema.ts';
 
 const GENERATED_AT = new Date('2026-09-09T06:00:00.000Z');
@@ -131,10 +131,19 @@ describe('mergeMetadata', () => {
   });
 });
 
-const chunked = (pagePath: string, ...paths: string[]) => ({
+const chunked = (pagePath: string, ...paths: string[]): ChunkedDocument => ({
   pagePath,
-  chunks: paths.map((path) => ({ path, heading: undefined, content: '' })),
+  title: pagePath,
+  description: undefined,
+  chunks: paths.map((path) => ({
+    path,
+    heading: undefined,
+    content: '',
+    name: pagePath,
+    description: '',
+  })),
   genericHeadings: [],
+  weakDescriptions: [],
 });
 
 describe('recordChunkPaths', () => {
