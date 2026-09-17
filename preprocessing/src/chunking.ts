@@ -2,7 +2,19 @@ import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve, sep } from 'node:path';
 import { splitMarkdown } from './markdown.ts';
 import { toPathSlug, toSlug } from './slug.ts';
-import type { Chunk, ChunkedDocument, SourceDocument } from './types.ts';
+import {
+  describeSection,
+  describeWeakness,
+  holdsOnlyTitleAndIntro,
+  nameChunk,
+  pageTitle,
+} from './summary.ts';
+import type {
+  Chunk,
+  ChunkedDocument,
+  SourceDocument,
+  WeakDescription,
+} from './types.ts';
 
 /** Chunks live under this repository-relative directory, as meta.json and index.json record them. */
 export const DEFAULT_CHUNK_DIR = 'docs';
@@ -54,8 +66,9 @@ const GENERIC_HEADINGS = new Set([
 ]);
 
 /**
- * Splits one document into chunk files. Names come from the page path and the heading slug only,
- * so a chunk keeps its name when neighbouring sections are added, removed or reordered.
+ * Splits one document into chunk files and derives the name and description of each. File names
+ * come from the page path and the heading slug only, so a chunk keeps its name when its
+ * neighbours are added, removed or reordered.
  */
 export function chunkDocument(
   document: SourceDocument,
@@ -65,33 +78,57 @@ export function chunkDocument(
     chunkDir,
     ...document.pagePath.split('/').map(toPathSlug).filter(Boolean),
   ].join('/');
+  const sections = splitMarkdown(document.markdown);
+  const title = pageTitle(document);
+  const preamble = sections.find((section) => !section.heading);
+  const description = preamble && describeSection(preamble.content);
+
   // Reserved even when the document has no preamble, so `index.md` never means two different things.
   const taken = new Set([PREAMBLE_SLUG]);
   const genericHeadings: string[] = [];
+  const weakDescriptions: WeakDescription[] = [];
 
-  const chunks = splitMarkdown(document.markdown).map<Chunk>((section) => {
-    if (section.heading === undefined) {
-      // TODO: Candidate for removal. The title and introduction here describe the page rather than
-      // a section, so they belong in index.json as every chunk's name and description.
-      return {
-        path: `${directory}/${PREAMBLE_SLUG}.md`,
-        heading: undefined,
+  const chunks = sections.flatMap<Chunk>((section) => {
+    const heading = section.heading?.text;
+    // A preamble of nothing but the title and its introduction survives as the page name and
+    // description, so writing it out again would only cost the agent a file to load.
+    if (!heading && holdsOnlyTitleAndIntro(section.content)) {
+      return [];
+    }
+
+    const slug = heading ? toSlug(heading) || UNNAMED_SLUG : PREAMBLE_SLUG;
+    const path = `${directory}/${heading ? disambiguate(slug, taken) : slug}.md`;
+    if (heading && GENERIC_HEADINGS.has(slug)) {
+      genericHeadings.push(heading);
+    }
+
+    const own = describeSection(section.content);
+    const reason = describeWeakness(own, heading);
+    if (reason) {
+      weakDescriptions.push({ path, reason });
+    }
+
+    return [
+      {
+        path,
+        heading,
         content: section.content,
-      };
-    }
-
-    const slug = toSlug(section.heading.text) || UNNAMED_SLUG;
-    if (GENERIC_HEADINGS.has(slug)) {
-      genericHeadings.push(section.heading.text);
-    }
-    return {
-      path: `${directory}/${disambiguate(slug, taken)}.md`,
-      heading: section.heading.text,
-      content: section.content,
-    };
+        name: nameChunk(title, heading),
+        // A section with nothing to say for itself still belongs to its page, so it borrows the
+        // page description instead of carrying an empty one.
+        description: own ?? description ?? title,
+      },
+    ];
   });
 
-  return { pagePath: document.pagePath, chunks, genericHeadings };
+  return {
+    pagePath: document.pagePath,
+    title,
+    description,
+    chunks,
+    genericHeadings,
+    weakDescriptions,
+  };
 }
 
 /** Reads every markdown file below `directory`, deriving each page path from its location. */

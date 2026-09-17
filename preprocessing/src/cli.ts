@@ -204,6 +204,7 @@ async function runChunk(argv: string[]): Promise<number> {
         recorded,
         dryRun,
       );
+      reportIndexEntries(documents);
     }
     // TODO: Fail on unmatched documents once the download stage feeds this, where a document
     // without a meta.json entry is a pipeline bug rather than a stand-in file.
@@ -270,6 +271,21 @@ function reportChunking(
   process.stdout.write(`${lines.join('\n')}\n`);
 }
 
+// TODO: Write these entries to index.json once the download stage feeds the pipeline, and report
+// them the way the other stages report their output.
+function reportIndexEntries(documents: ChunkedDocument[]): void {
+  const lines = documents.flatMap((document) =>
+    document.chunks.flatMap((chunk) => [
+      `  ${chunk.name}`,
+      `    ${chunk.path}`,
+      `    ${chunk.description}`,
+    ]),
+  );
+  process.stdout.write(
+    `\nIndex entries, not yet written to index.json:\n${lines.join('\n')}\n`,
+  );
+}
+
 /** Warnings go to stderr so they survive --json, where stdout has to stay machine-readable. */
 function warnChunking(
   documents: ChunkedDocument[],
@@ -286,6 +302,18 @@ function warnChunking(
     ];
     process.stderr.write(`${warning.join('\n')}\n`);
   }
+
+  const weak = documents.flatMap((d) =>
+    d.weakDescriptions.map((entry) => `${entry.path}: ${entry.reason}`),
+  );
+  if (weak.length > 0) {
+    const warning = [
+      'Descriptions too thin to decide on, fix them at the source:',
+      ...weak.map(indent),
+    ];
+    process.stderr.write(`${warning.join('\n')}\n`);
+  }
+
   if (unmatched.length > 0) {
     const warning = [
       `Not listed in ${metaPath}, chunk paths not recorded:`,
@@ -298,9 +326,13 @@ function warnChunking(
 function toJson(documents: ChunkedDocument[]) {
   return documents.map((document) => ({
     pagePath: document.pagePath,
+    title: document.title,
+    description: document.description,
     chunks: document.chunks.map((chunk) => ({
       path: chunk.path,
       heading: chunk.heading,
+      name: chunk.name,
+      description: chunk.description,
     })),
   }));
 }

@@ -23,13 +23,24 @@ export type Chunk = {
   path: string;
   heading: string | undefined;
   content: string;
+  name: string;
+  description: string;
 };
 
-/** Everything one source document contributed to the knowledge base. */
+/** A chunk whose description says too little for an agent to decide on, and why. */
+export type WeakDescription = {
+  path: string;
+  reason: string;
+};
+
+/** Everything one source document contributed to the knowledge base, plus its own page summary. */
 export type ChunkedDocument = {
   pagePath: string;
+  title: string;
+  description: string | undefined;
   chunks: Chunk[];
   genericHeadings: string[];
+  weakDescriptions: WeakDescription[];
 };
 
 /** Shape of meta.json as defined by schemas/meta.schema.json. */
