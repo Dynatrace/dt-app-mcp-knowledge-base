@@ -8,6 +8,13 @@ import {
   writeChunks,
 } from './chunking.ts';
 import {
+  DEFAULT_INDEX_PATH,
+  buildIndex,
+  findMissingChunks,
+  validateIndex,
+  writeIndex,
+} from './indexing.ts';
+import {
   mergeMetadata,
   readMetadata,
   recordChunkPaths,
@@ -19,119 +26,38 @@ import {
   fetchSitemap,
   parseSitemap,
 } from './sitemap.ts';
-import type { ChunkedDocument } from './types.ts';
+import type { ChunkedDocument, SitemapDocument } from './types.ts';
 
 const DEFAULT_META_PATH = 'meta.json';
 
 // The repository root is the pipeline's output location, and the package lives one level below it.
 const REPOSITORY_ROOT = resolve(import.meta.dirname, '../..');
 
-const USAGE = `Usage: npm start -- [options]
-       npm run chunk -- --source-dir <path> [options]
+const USAGE = `Usage: npm start -- --source-dir <path> [options]
 
-Commands:
-  discover              Record every developer portal documentation page in meta.json (default)
-  chunk                 Split documents at their main headings into one markdown file per chunk
+Discovers every developer portal documentation page, splits each document at its main headings and
+writes the knowledge base: one markdown file per section under the chunk directory, one index entry
+per chunk, and the build metadata of the run.
 
-discover options:
-  --sitemap <url>       Sitemap to read (default: ${DEFAULT_SITEMAP_URL})
-  --out <path>          meta.json to write, relative to the repository root (default: ${DEFAULT_META_PATH})
-  --dry-run             Report what was found without writing anything
-  --json                Print the discovered documents as JSON instead of a summary
-
-chunk options:
+Options:
   --source-dir <path>   Directory holding the markdown documents to split (required).
                         Temporary, to be removed once the download stage supplies the documents.
-  --out <path>          meta.json to update, relative to the repository root (default: ${DEFAULT_META_PATH})
+  --sitemap <url>       Sitemap to read (default: ${DEFAULT_SITEMAP_URL})
   --chunk-dir <path>    Chunk output directory, relative to the repository root (default: ${DEFAULT_CHUNK_DIR})
+  --index <path>        index.json to write, relative to the repository root (default: ${DEFAULT_INDEX_PATH})
+  --out <path>          meta.json to write, relative to the repository root (default: ${DEFAULT_META_PATH})
   --dry-run             Report what would be produced without writing anything
-  --json                Print the produced chunks as JSON instead of a summary
-
+  --json                Print what the run produced as JSON instead of a summary
   --help                Show this message
 `;
 
-// TODO: Fold chunking into the pipeline run once the download stage feeds it, so that it is a
-// stage of `npm start` rather than a command called on its own.
 export async function run(argv: string[]): Promise<number> {
-  const [command, ...rest] = argv;
-  if (command === 'chunk') {
-    return runChunk(rest);
-  }
-  return runDiscover(command === 'discover' ? rest : argv);
-}
-
-async function runDiscover(argv: string[]): Promise<number> {
-  let options: {
-    sitemap?: string;
-    out?: string;
-    'dry-run'?: boolean;
-    json?: boolean;
-    help?: boolean;
-  };
-  try {
-    ({ values: options } = parseArgs({
-      args: argv,
-      options: {
-        sitemap: { type: 'string' },
-        out: { type: 'string' },
-        'dry-run': { type: 'boolean' },
-        json: { type: 'boolean' },
-        help: { type: 'boolean' },
-      },
-    }));
-  } catch (cause) {
-    return usageError(cause instanceof Error ? cause.message : String(cause));
-  }
-
-  if (options.help === true) {
-    process.stdout.write(USAGE);
-    return 0;
-  }
-
-  const sitemapUrl = options.sitemap ?? DEFAULT_SITEMAP_URL;
-  const metaPath = resolve(REPOSITORY_ROOT, options.out ?? DEFAULT_META_PATH);
-
-  try {
-    const documents = parseSitemap(await fetchSitemap(sitemapUrl));
-
-    const { meta, added, removed } = mergeMetadata(
-      documents,
-      await readMetadata(metaPath),
-      new Date(),
-    );
-    if (options['dry-run'] !== true) {
-      await writeMetadata(metaPath, meta);
-    }
-
-    if (options.json === true) {
-      process.stdout.write(`${JSON.stringify(documents, undefined, 2)}\n`);
-    } else {
-      reportDiscovery(
-        sitemapUrl,
-        metaPath,
-        documents.length,
-        added.length,
-        removed.length,
-        options['dry-run'] === true,
-      );
-    }
-    return 0;
-  } catch (cause) {
-    const detail = cause instanceof Error ? cause.message : String(cause);
-    process.stderr.write(
-      cause instanceof SitemapError
-        ? `Sitemap discovery failed. ${detail}\n`
-        : `${detail}\n`,
-    );
-    return 1;
-  }
-}
-
-async function runChunk(argv: string[]): Promise<number> {
   let options: {
     'source-dir'?: string;
-    out?: string;
+    sitemap?: string;
     'chunk-dir'?: string;
+    index?: string;
+    out?: string;
     'dry-run'?: boolean;
     json?: boolean;
     help?: boolean;
@@ -141,8 +67,10 @@ async function runChunk(argv: string[]): Promise<number> {
       args: argv,
       options: {
         'source-dir': { type: 'string' },
-        out: { type: 'string' },
+        sitemap: { type: 'string' },
         'chunk-dir': { type: 'string' },
+        index: { type: 'string' },
+        out: { type: 'string' },
         'dry-run': { type: 'boolean' },
         json: { type: 'boolean' },
         help: { type: 'boolean' },
@@ -159,17 +87,32 @@ async function runChunk(argv: string[]): Promise<number> {
 
   // TODO: Remove --source-dir once the download stage supplies the documents to split.
   const sourceDir = options['source-dir'];
-  if (sourceDir === undefined || sourceDir === '') {
+  if (!sourceDir) {
     return usageError(
-      'chunk needs the documents to split, pass --source-dir <path>',
+      'the pipeline needs the documents to split, pass --source-dir <path>',
     );
   }
 
-  const metaPath = resolve(REPOSITORY_ROOT, options.out ?? DEFAULT_META_PATH);
+  const sitemapUrl = options.sitemap ?? DEFAULT_SITEMAP_URL;
   const chunkDir = options['chunk-dir'] ?? DEFAULT_CHUNK_DIR;
+  const indexPath = resolve(
+    REPOSITORY_ROOT,
+    options.index ?? DEFAULT_INDEX_PATH,
+  );
+  const metaPath = resolve(REPOSITORY_ROOT, options.out ?? DEFAULT_META_PATH);
   const dryRun = options['dry-run'] === true;
 
   try {
+    const discovered = parseSitemap(await fetchSitemap(sitemapUrl));
+    // One timestamp for the whole run, so every stage of a build reports the same build.
+    const generatedAt = new Date();
+    const {
+      meta: discoveredMeta,
+      added,
+      removed,
+    } = mergeMetadata(discovered, await readMetadata(metaPath), generatedAt);
+
+    // TODO: Read the documents from the download stage instead, once it feeds the pipeline.
     const sources = await readSourceDocuments(sourceDir);
     if (sources.length === 0) {
       throw new Error(`No markdown documents found in ${resolve(sourceDir)}`);
@@ -177,117 +120,115 @@ async function runChunk(argv: string[]): Promise<number> {
 
     const documents = sources.map((source) => chunkDocument(source, chunkDir));
     const { meta, unmatched } = recordChunkPaths(
-      await readMetadata(metaPath),
+      discoveredMeta,
       documents,
-      new Date(),
+      generatedAt,
     );
-    // Rewriting meta.json when not a single source entry matched would only churn its timestamp.
-    const recorded = unmatched.length < documents.length;
+
+    // An index dt-app-mcp cannot rely on is worse than none, so nothing is written until it holds.
+    const index = buildIndex(REPOSITORY_ROOT, documents);
+    const violations = validateIndex(index);
+    if (violations.length > 0) {
+      throw invalidIndex(indexPath, violations);
+    }
+
     if (!dryRun) {
       await writeChunks(REPOSITORY_ROOT, documents);
-      if (recorded) {
-        await writeMetadata(metaPath, meta);
+      const missing = await findMissingChunks(REPOSITORY_ROOT, index);
+      if (missing.length > 0) {
+        throw invalidIndex(
+          indexPath,
+          missing.map((path) => `${path}: chunk file was not written`),
+        );
       }
+
+      await writeIndex(indexPath, index);
+      await writeMetadata(metaPath, meta);
     }
 
     if (options.json === true) {
       process.stdout.write(
-        `${JSON.stringify(toJson(documents), undefined, 2)}\n`,
+        `${JSON.stringify(toJson(discovered, documents), undefined, 2)}\n`,
       );
     } else {
-      reportChunking(
+      report({
+        sitemapUrl,
+        found: discovered.length,
+        added: added.length,
+        removed: removed.length,
         sourceDir,
-        chunkDir,
-        metaPath,
         documents,
-        unmatched,
-        recorded,
+        entries: index.chunks.length,
+        chunkDir,
+        indexPath,
+        metaPath,
         dryRun,
-      );
-      reportIndexEntries(documents);
+      });
     }
     // TODO: Fail on unmatched documents once the download stage feeds this, where a document
     // without a meta.json entry is a pipeline bug rather than a stand-in file.
-    warnChunking(documents, unmatched, metaPath);
+    warn(documents, unmatched, metaPath);
     return 0;
   } catch (cause) {
+    const detail = cause instanceof Error ? cause.message : String(cause);
     process.stderr.write(
-      `${cause instanceof Error ? cause.message : String(cause)}\n`,
+      cause instanceof SitemapError
+        ? `Sitemap discovery failed. ${detail}\n`
+        : `${detail}\n`,
     );
     return 1;
   }
 }
 
-function reportDiscovery(
-  sitemapUrl: string,
-  metaPath: string,
-  found: number,
-  added: number,
-  removed: number,
-  dryRun: boolean,
-): void {
-  const lines = [
-    `Read ${sitemapUrl}`,
-    `Found ${found} page${found === 1 ? '' : 's'} (${added} new, ${removed} no longer listed)`,
-    dryRun ? `Dry run, ${metaPath} left unchanged` : `Wrote ${metaPath}`,
-  ];
-  process.stdout.write(`${lines.join('\n')}\n`);
-}
+type RunReport = {
+  sitemapUrl: string;
+  found: number;
+  added: number;
+  removed: number;
+  sourceDir: string;
+  documents: ChunkedDocument[];
+  entries: number;
+  chunkDir: string;
+  indexPath: string;
+  metaPath: string;
+  dryRun: boolean;
+};
 
-function reportChunking(
-  sourceDir: string,
-  chunkDir: string,
-  metaPath: string,
-  documents: ChunkedDocument[],
-  unmatched: string[],
-  recorded: boolean,
-  dryRun: boolean,
-): void {
-  const total = documents.reduce(
+function report(run: RunReport): void {
+  const total = run.documents.reduce(
     (count, document) => count + document.chunks.length,
     0,
   );
   const width = Math.max(
-    ...documents.map((document) => document.pagePath.length),
+    ...run.documents.map((document) => document.pagePath.length),
   );
   const lines = [
-    `Read ${resolve(sourceDir)}`,
-    `Split ${plural(documents.length, 'document')} into ${plural(total, 'chunk')}`,
-    ...documents.map(
+    `Read ${run.sitemapUrl}`,
+    `Found ${plural(run.found, 'page')} (${run.added} new, ${run.removed} no longer listed)`,
+    `Read ${resolve(run.sourceDir)}`,
+    `Split ${plural(run.documents.length, 'document')} into ${plural(total, 'chunk')}`,
+    ...run.documents.map(
       (d) =>
         `  ${d.pagePath.padEnd(width)}  ${plural(d.chunks.length, 'chunk')}`,
     ),
-    dryRun
-      ? `Dry run, ${chunkDir}/ and ${metaPath} left unchanged`
-      : `Wrote ${chunkDir}/`,
   ];
-  if (!dryRun) {
+  if (run.dryRun) {
     lines.push(
-      recorded
-        ? `Wrote ${metaPath}`
-        : `No source entry matched, ${metaPath} left unchanged`,
+      `Validated ${plural(run.entries, 'index entry', 'index entries')}`,
+      `Dry run, ${run.chunkDir}/, ${run.indexPath} and ${run.metaPath} left unchanged`,
+    );
+  } else {
+    lines.push(
+      `Wrote ${run.chunkDir}/`,
+      `Wrote ${run.indexPath} (${plural(run.entries, 'entry', 'entries')})`,
+      `Wrote ${run.metaPath}`,
     );
   }
   process.stdout.write(`${lines.join('\n')}\n`);
 }
 
-// TODO: Write these entries to index.json once the download stage feeds the pipeline, and report
-// them the way the other stages report their output.
-function reportIndexEntries(documents: ChunkedDocument[]): void {
-  const lines = documents.flatMap((document) =>
-    document.chunks.flatMap((chunk) => [
-      `  ${chunk.name}`,
-      `    ${chunk.path}`,
-      `    ${chunk.description}`,
-    ]),
-  );
-  process.stdout.write(
-    `\nIndex entries, not yet written to index.json:\n${lines.join('\n')}\n`,
-  );
-}
-
 /** Warnings go to stderr so they survive --json, where stdout has to stay machine-readable. */
-function warnChunking(
+function warn(
   documents: ChunkedDocument[],
   unmatched: string[],
   metaPath: string,
@@ -323,18 +264,30 @@ function warnChunking(
   }
 }
 
-function toJson(documents: ChunkedDocument[]) {
-  return documents.map((document) => ({
-    pagePath: document.pagePath,
-    title: document.title,
-    description: document.description,
-    chunks: document.chunks.map((chunk) => ({
-      path: chunk.path,
-      heading: chunk.heading,
-      name: chunk.name,
-      description: chunk.description,
+function toJson(
+  discovered: SitemapDocument[],
+  documents: ChunkedDocument[],
+): unknown {
+  return {
+    discovered,
+    documents: documents.map((document) => ({
+      pagePath: document.pagePath,
+      title: document.title,
+      description: document.description,
+      chunks: document.chunks.map((chunk) => ({
+        path: chunk.path,
+        heading: chunk.heading,
+        name: chunk.name,
+        description: chunk.description,
+      })),
     })),
-  }));
+  };
+}
+
+function invalidIndex(indexPath: string, violations: string[]): Error {
+  return new Error(
+    [`${indexPath} is invalid:`, ...violations.map(indent)].join('\n'),
+  );
 }
 
 function usageError(message: string): number {
@@ -342,8 +295,8 @@ function usageError(message: string): number {
   return 2;
 }
 
-function plural(count: number, noun: string): string {
-  return `${count} ${noun}${count === 1 ? '' : 's'}`;
+function plural(count: number, noun: string, many = `${noun}s`): string {
+  return `${count} ${count === 1 ? noun : many}`;
 }
 
 function indent(line: string): string {
