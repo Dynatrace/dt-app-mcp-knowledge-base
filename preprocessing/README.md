@@ -1,42 +1,51 @@
 # Preprocessing
 
 Turns the [Dynatrace Developer](https://developer.dynatrace.com) documentation into the knowledge base
-that `dt-app-mcp` consumes. The pipeline runs in stages; this package implements **document discovery**
-and **chunking**. The download stage between them is still missing, so chunking reads its input from a
-local directory for now.
+that `dt-app-mcp` consumes. The pipeline runs in stages — **document discovery**, **chunking** and
+**indexing** — as a single command. The download stage between discovery and chunking is still missing,
+so the documents to split come from a local directory for now.
 
-## Discover documents
+## Run the pipeline
 
 From this directory:
 
 ```sh
 npm install
-npm start
+npm start -- --source-dir ../../tmp-knowledge-base
 ```
 
-That reads `https://developer.dynatrace.com/sitemap.xml`, derives the Markdown URL of every page and writes
-the result to `meta.json` in the repository root. The run prints how many pages were found, how many are new
-and how many the sitemap no longer lists.
+That reads `https://developer.dynatrace.com/sitemap.xml` and derives the Markdown URL of every page, splits
+each document at its main headings into `docs/`, and writes `index.json` and `meta.json` in the repository
+root. The run prints what each stage produced: how many pages the sitemap held, how many are new and how
+many it no longer lists, how many chunks each document was split into, and what was written where.
+
+`--source-dir` is **temporary**. The portal sitemap does not serve markdown yet, so there is nothing for the
+download stage to fetch and the documents to split have to come from a local directory. Once the download
+stage supplies them, the option goes away and the pipeline splits whatever that stage wrote.
 
 ### Options
 
 Pass CLI options after `--`:
 
 ```sh
-npm start -- --dry-run
-npm start -- --sitemap https://developer.dynatracelabs.com/sitemap.xml
+npm start -- --source-dir ../../tmp-knowledge-base --dry-run
+npm start -- --source-dir ../../tmp-knowledge-base --sitemap https://developer.dynatracelabs.com/sitemap.xml
 ```
 
-| Option            | Default                                       | Description                                            |
-| ----------------- | --------------------------------------------- | ------------------------------------------------------ |
-| `--sitemap <url>` | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                       |
-| `--out <path>`    | `meta.json`                                   | Output file, relative to the repository root.          |
-| `--dry-run`       | off                                           | Report what was found without writing the output file. |
-| `--json`          | off                                           | Print the discovered documents as JSON.                |
-| `--help`          | —                                             | Show usage.                                            |
+| Option                | Default                                       | Description                                              |
+| --------------------- | --------------------------------------------- | -------------------------------------------------------- |
+| `--source-dir <path>` | —                                             | Documents to split. Required, and temporary — see above. |
+| `--sitemap <url>`     | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
+| `--chunk-dir <path>`  | `docs`                                        | Chunk output directory, relative to the repository root. |
+| `--index <path>`      | `index.json`                                  | `index.json` to write, relative to the repository root.  |
+| `--out <path>`        | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
+| `--dry-run`           | off                                           | Report what would be produced without writing anything.  |
+| `--json`              | off                                           | Print what the run produced as JSON.                     |
+| `--help`              | —                                             | Show usage.                                              |
 
-An unreachable, empty or malformed sitemap fails the run with a message on stderr and exit code `1`.
-Bad CLI usage exits with `2`.
+An unreachable, empty or malformed sitemap, a source directory holding no markdown and an index that does
+not satisfy its schema each fail the run with a message on stderr and exit code `1`. Bad CLI usage exits
+with `2`.
 
 ## Document URLs
 
@@ -53,23 +62,7 @@ the bare site root maps to `/index.md`:
 
 Loading a whole page into the agent context wastes space when only one section is relevant, so every
 document is split at its main headings into one markdown file per section, each with a name and a
-description an agent can retrieve it by:
-
-```sh
-npm run chunk -- --source-dir ../../tmp-knowledge-base
-```
-
-`--source-dir` is **temporary**. The portal sitemap does not serve markdown yet, so there is nothing for the
-download stage to fetch and the documents to split have to come from a local directory. Once the download
-stage supplies them, the option goes away and chunking reads whatever that stage wrote.
-
-| Option                | Default     | Description                                                  |
-| --------------------- | ----------- | ------------------------------------------------------------ |
-| `--source-dir <path>` | —           | Documents to split. Required, and temporary — see above.     |
-| `--out <path>`        | `meta.json` | `meta.json` to update, relative to the repository root.      |
-| `--chunk-dir <path>`  | `docs`      | Chunk output directory, relative to the repository root.     |
-| `--dry-run`           | off         | Report what would be produced without writing anything.      |
-| `--json`              | off         | Print the produced chunks as JSON.                           |
+description an agent can retrieve it by, and one `index.json` entry per chunk.
 
 Every `.md` file below `--source-dir` is one document, and its location is its page path: `docs/dql/spans.md`
 is the page `docs/dql/spans`. Chunk paths are recorded on the matching `meta.json` source entry; documents no
@@ -134,21 +127,33 @@ with the title, and a chunk with no text of its own borrows the description — 
 only cost the agent a file to load. A preamble that holds more than title and introduction, or an
 introduction longer than a description may carry, is still written to `index.md`, so nothing is lost.
 
-Neither value reaches [`index.json`](../schemas/index.schema.json) yet. Until the download stage feeds the
-pipeline, the entries the index stage would write are printed to stdout instead.
-
 ## Output
 
+`index.json` at the repository root is the file `dt-app-mcp` starts from, described by
+[`schemas/index.schema.json`](../schemas/index.schema.json). It holds one `chunks` entry per chunk,
+carrying the name, the description and the path of that chunk relative to the repository root — enough
+to search the index in memory and load only the chunks a request needs. Entries follow the order the
+documents were read and split, so a re-run of an unchanged corpus produces an unchanged file.
+
+Every run rebuilds the index from the documents it split and validates it against the schema before
+anything is written, then checks that every entry points at a chunk file that was written. A violation
+fails the run with exit code `1`, naming the chunk behind each one — an index `dt-app-mcp` cannot rely
+on is worse than none.
+
 `meta.json` holds build-only metadata, one `sources` entry per document, and is described by
-[`schemas/meta.schema.json`](../schemas/meta.schema.json). Discovery fills `url` and writes placeholders for
-the fields later stages own, so the file always satisfies the schema:
+[`schemas/meta.schema.json`](../schemas/meta.schema.json). The discovery stage fills `url` and writes
+placeholders for the fields the stages behind it own, so the file always satisfies the schema:
 
 - `downloadHash` — an all-zero digest until the download stage hashes the document
 - `downloadedAt` — the Unix epoch until the document is first downloaded
-- `chunkPaths` — empty until the chunking stage splits the document
+- `chunkPaths` — empty for a page no source document matched
 
-Re-runs rebuild the list from the sitemap but keep whatever later stages already recorded, so discovery never
-discards their work. Documents that disappear from the sitemap are dropped.
+Re-runs rebuild the list from the sitemap but keep whatever the later stages already recorded, so discovery
+never discards their work. Documents that disappear from the sitemap are dropped.
+
+`generatedAt` carries the build timestamp of the run that last wrote the file, which is how fresh the content
+of the knowledge base is. It stays out of `index.json` so that the file every request searches holds nothing
+but what retrieval needs.
 
 ## Develop
 

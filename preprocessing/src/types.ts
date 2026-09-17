@@ -49,3 +49,16 @@ export type KnowledgeBaseMetadata = {
   generatedAt: string;
   sources: SourceEntry[];
 };
+
+/** One `chunks` entry of index.json, all an agent sees before it decides to load the chunk. */
+export type ChunkEntry = {
+  name: string;
+  description: string;
+  path: string;
+};
+
+/** Shape of index.json as defined by schemas/index.schema.json. */
+export type KnowledgeBaseIndex = {
+  $schema?: string;
+  chunks: ChunkEntry[];
+};
