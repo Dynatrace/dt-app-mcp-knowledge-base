@@ -51,9 +51,9 @@ small.
 | --- | --- |
 | `preprocessing/` | The pipeline and its CLI. See [preprocessing/README.md](preprocessing/README.md). |
 | `schemas/` | JSON schemas for the generated `index.json` and `meta.json`. |
+| `docs/` | The knowledge base chunks, one markdown file per section. Generated — never edit by hand. |
+| `index.json` | One entry per chunk, the file `dt-app-mcp` starts from. Generated — never edit by hand. |
 | `meta.json` | Build-only metadata. Generated — never edit by hand. |
-
-`index.json` and `docs/` appear once the chunking stage lands.
 
 ## The CLI
 
@@ -63,36 +63,45 @@ sources run on Node's built-in type stripping, so there is no build step.
 ```sh
 cd preprocessing
 npm install
-npm start
+npm start -- --source-dir <path>
 ```
 
-That reads the portal sitemap, derives the Markdown URL of every page and records the result in
-`meta.json`, reporting how many pages were found, how many are new and how many the sitemap no
-longer lists.
+That reads the portal sitemap and derives the Markdown URL of every page, splits each document at
+its main headings into one markdown file per section under `docs/`, and writes one entry per chunk
+in `index.json` along with the build metadata in `meta.json`. The index is validated against its
+schema before anything is written, so a run either produces an index `dt-app-mcp` can rely on or
+fails naming the chunks at fault.
+
+`--source-dir` stands in for the download stage, which does not exist yet — the documents to split
+come from a local directory until it does.
 
 Pass options after `--`:
 
 ```sh
-npm start -- --dry-run
-npm start -- --sitemap https://developer.dynatracelabs.com/sitemap.xml
+npm start -- --source-dir <path> --dry-run
+npm start -- --source-dir <path> --sitemap https://developer.dynatracelabs.com/sitemap.xml
 ```
 
-| Option            | Default                                       | Description                                            |
-| ----------------- | --------------------------------------------- | ------------------------------------------------------ |
-| `--sitemap <url>` | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                       |
-| `--out <path>`    | `meta.json`                                   | Output file, relative to the repository root.          |
-| `--dry-run`       | off                                           | Report what was found without writing the output file. |
-| `--json`          | off                                           | Print the discovered documents as JSON.                |
-| `--help`          | —                                             | Show usage.                                            |
+| Option                | Default                                       | Description                                              |
+| --------------------- | --------------------------------------------- | -------------------------------------------------------- |
+| `--source-dir <path>` | —                                             | Documents to split. Required, and temporary — see above. |
+| `--sitemap <url>`     | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
+| `--chunk-dir <path>`  | `docs`                                        | Chunk output directory, relative to the repository root. |
+| `--index <path>`      | `index.json`                                  | `index.json` to write, relative to the repository root.  |
+| `--out <path>`        | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
+| `--dry-run`           | off                                           | Report what would be produced without writing anything.  |
+| `--json`              | off                                           | Print what the run produced as JSON.                     |
+| `--help`              | —                                             | Show usage.                                              |
 
-An unreachable, empty or malformed sitemap fails the run with exit code `1`. Bad CLI usage exits
-with `2`.
+An unreachable, empty or malformed sitemap, and an index that does not satisfy its schema, each fail
+the run with exit code `1`. Bad CLI usage exits with `2`. See
+[preprocessing/README.md](preprocessing/README.md) for how chunks are split, named and described.
 
 ## Status
 
-Document discovery is implemented. Downloading, heading-based chunking and `index.json` generation
-are still to come, as is the nightly CI run that refreshes the knowledge base and opens a pull
-request with the result.
+Document discovery, heading-based chunking and `index.json` generation are implemented. Downloading
+is still to come — the documents to split come from a local directory for now — as is the nightly
+CI run that refreshes the knowledge base and opens a pull request with the result.
 
 ## Development
 

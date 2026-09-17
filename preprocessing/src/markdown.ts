@@ -1,7 +1,6 @@
-import { frontmatterFromMarkdown } from 'mdast-util-frontmatter';
+import type { Root } from 'mdast';
 import { fromMarkdown } from 'mdast-util-from-markdown';
 import { toString } from 'mdast-util-to-string';
-import { frontmatter } from 'micromark-extension-frontmatter';
 
 /** A heading of either CommonMark style, with the line it starts on. */
 export type Heading = { level: number; text: string; line: number };
@@ -33,14 +32,14 @@ export function splitMarkdown(source: string): Section[] {
   return sections;
 }
 
-/** Collects every top-level heading, leaving those inside code, quotes or frontmatter out. */
-export function findHeadings(source: string): Heading[] {
-  const tree = fromMarkdown(source, {
-    extensions: [frontmatter(['yaml', 'toml'])],
-    mdastExtensions: [frontmatterFromMarkdown(['yaml', 'toml'])],
-  });
+/** Parses a document as plain CommonMark, which is what the portal serves. */
+export function parseMarkdown(source: string): Root {
+  return fromMarkdown(source);
+}
 
-  return tree.children.flatMap((node) =>
+/** Collects every top-level heading, leaving those inside code blocks or block quotes out. */
+export function findHeadings(source: string): Heading[] {
+  return parseMarkdown(source).children.flatMap((node) =>
     node.type === 'heading' && node.position !== undefined
       ? [
           {
