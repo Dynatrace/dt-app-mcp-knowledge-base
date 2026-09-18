@@ -57,23 +57,22 @@ export function findHeadings(source: string): Heading[] {
  * single heading is also the document's first one, which is a page title rather than a section.
  */
 export function mainHeadingLevel(headings: Heading[]): number | undefined {
-  if (headings.length === 0) {
-    return undefined;
-  }
-
   const levels = [...new Set(headings.map((heading) => heading.level))].sort(
     (a, b) => a - b,
   );
-  let index = 0;
-  while (
-    index + 1 < levels.length &&
-    headings[0]?.level === levels[index] &&
-    headings.filter((heading) => heading.level === levels[index]).length === 1
-  ) {
-    index += 1;
+  const [shallowest, deeper] = levels;
+  if (shallowest === undefined) {
+    return undefined;
   }
 
-  return levels[index];
+  const atShallowest = headings.filter(
+    (heading) => heading.level === shallowest,
+  );
+  const opensWithPageTitle =
+    atShallowest.length === 1 && atShallowest[0] === headings[0];
+
+  // Without a deeper level the title has to start a section, or the document would have none.
+  return opensWithPageTitle && deeper !== undefined ? deeper : shallowest;
 }
 
 function slice(lines: string[], start: number, end: number): string {

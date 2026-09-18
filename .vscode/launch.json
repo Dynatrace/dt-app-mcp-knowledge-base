@@ -10,6 +10,16 @@
       "args": ["--dry-run"],
       "console": "integratedTerminal",
       "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Debug preprocessing chunking",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/preprocessing/src/cli.ts",
+      "cwd": "${workspaceFolder}/preprocessing",
+      "args": ["chunk", "--source-dir", "../test-knowledgebase", "--dry-run"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
     }
   ]
 }

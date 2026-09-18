@@ -56,7 +56,7 @@ document is split at its main headings into one markdown file per section, each 
 description an agent can retrieve it by:
 
 ```sh
-npm run chunk -- --source-dir ../../tmp-knowledge-base
+npm run chunk -- --source-dir ../test-knowledgebase
 ```
 
 `--source-dir` is **temporary**. The portal sitemap does not serve markdown yet, so there is nothing for the
