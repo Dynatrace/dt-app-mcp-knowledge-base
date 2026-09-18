@@ -13,6 +13,7 @@
   "scripts": {
     "start": "node src/cli.ts",
     "debug": "node --inspect-brk src/cli.ts",
+    "debug:chunk": "node --inspect-brk src/cli.ts chunk",
     "test": "node --test \"test/**/*.test.ts\"",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",

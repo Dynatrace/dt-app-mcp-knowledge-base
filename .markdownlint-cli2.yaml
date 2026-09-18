@@ -2,6 +2,8 @@ ignores:
   - "**/node_modules/**"
   # Knowledge base chunks are generated slices of portal pages, not prose authored here.
   - "docs/**"
+  # Chunking fixtures are malformed on purpose, so the lint rules they break are the test.
+  - "test-knowledgebase/**"
 
 config:
   MD013: false
