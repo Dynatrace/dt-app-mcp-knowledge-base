@@ -14,6 +14,7 @@
     "start": "node src/cli.ts",
     "chunk": "node src/cli.ts chunk",
     "debug": "node --inspect-brk src/cli.ts",
+    "debug:chunk": "node --inspect-brk src/cli.ts chunk",
     "test": "node --test \"test/**/*.test.ts\"",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
@@ -22,9 +23,7 @@
   "dependencies": {
     "fast-xml-parser": "^5.2.5",
     "mdast-util-from-markdown": "^2.0.3",
-    "mdast-util-frontmatter": "^2.0.1",
-    "mdast-util-to-string": "^4.0.0",
-    "micromark-extension-frontmatter": "^2.0.0"
+    "mdast-util-to-string": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",

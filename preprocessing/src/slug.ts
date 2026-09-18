@@ -1,6 +1,9 @@
 // Markdown inline syntax carries no meaning in a file name, so it is unwrapped before slugging.
 const LINK = /\[([^\]]*)\]\([^)]*\)/g;
-const EMPHASIS = /[*_~`]/g;
+const EMPHASIS = /[*~`]/g;
+
+// An underscore inside a word is literal, and dropping it would name a chunk `requestattribute`.
+const UNDERSCORE = /(?<![\p{L}\p{N}])_|_(?![\p{L}\p{N}])/gu;
 
 const CAMEL_BOUNDARY = /([a-z0-9])([A-Z])/g;
 const ACRONYM_BOUNDARY = /([A-Z]+)([A-Z][a-z])/g;
@@ -10,6 +13,7 @@ export function toSlug(text: string): string {
   return text
     .replace(LINK, '$1')
     .replace(EMPHASIS, '')
+    .replace(UNDERSCORE, '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');

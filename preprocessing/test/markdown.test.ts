@@ -198,13 +198,6 @@ describe('findHeadings', () => {
       [],
     );
   });
-
-  it('ignores frontmatter, so its closing delimiter is no setext heading', () => {
-    assert.deepEqual(
-      findHeadings(doc('---', 'title: Page Title', '---', '', '## Section')),
-      [{ level: 2, text: 'Section', line: 4 }],
-    );
-  });
 });
 
 describe('mainHeadingLevel', () => {
@@ -220,5 +213,21 @@ describe('mainHeadingLevel', () => {
     ];
 
     assert.equal(mainHeadingLevel(headings), 2);
+  });
+
+  it('skips a lone opening title for the level below it', () => {
+    const headings = [
+      { level: 1, text: 'Title', line: 0 },
+      { level: 2, text: 'A', line: 1 },
+      { level: 2, text: 'B', line: 2 },
+    ];
+
+    assert.equal(mainHeadingLevel(headings), 2);
+  });
+
+  it('keeps a lone title when the document has no level below it', () => {
+    const headings = [{ level: 1, text: 'Title', line: 0 }];
+
+    assert.equal(mainHeadingLevel(headings), 1);
   });
 });

@@ -1,7 +1,6 @@
-import { frontmatterFromMarkdown } from 'mdast-util-frontmatter';
+import type { Root } from 'mdast';
 import { fromMarkdown } from 'mdast-util-from-markdown';
 import { toString } from 'mdast-util-to-string';
-import { frontmatter } from 'micromark-extension-frontmatter';
 
 /** A heading of either CommonMark style, with the line it starts on. */
 export type Heading = { level: number; text: string; line: number };
@@ -33,14 +32,14 @@ export function splitMarkdown(source: string): Section[] {
   return sections;
 }
 
-/** Collects every top-level heading, leaving those inside code, quotes or frontmatter out. */
-export function findHeadings(source: string): Heading[] {
-  const tree = fromMarkdown(source, {
-    extensions: [frontmatter(['yaml', 'toml'])],
-    mdastExtensions: [frontmatterFromMarkdown(['yaml', 'toml'])],
-  });
+/** Parses a document as plain CommonMark, which is what the portal serves. */
+export function parseMarkdown(source: string): Root {
+  return fromMarkdown(source);
+}
 
-  return tree.children.flatMap((node) =>
+/** Collects every top-level heading, leaving those inside code blocks or block quotes out. */
+export function findHeadings(source: string): Heading[] {
+  return parseMarkdown(source).children.flatMap((node) =>
     node.type === 'heading' && node.position !== undefined
       ? [
           {
@@ -58,23 +57,22 @@ export function findHeadings(source: string): Heading[] {
  * single heading is also the document's first one, which is a page title rather than a section.
  */
 export function mainHeadingLevel(headings: Heading[]): number | undefined {
-  if (headings.length === 0) {
-    return undefined;
-  }
-
   const levels = [...new Set(headings.map((heading) => heading.level))].sort(
     (a, b) => a - b,
   );
-  let index = 0;
-  while (
-    index + 1 < levels.length &&
-    headings[0]?.level === levels[index] &&
-    headings.filter((heading) => heading.level === levels[index]).length === 1
-  ) {
-    index += 1;
+  const [shallowest, deeper] = levels;
+  if (shallowest === undefined) {
+    return undefined;
   }
 
-  return levels[index];
+  const atShallowest = headings.filter(
+    (heading) => heading.level === shallowest,
+  );
+  const opensWithPageTitle =
+    atShallowest.length === 1 && atShallowest[0] === headings[0];
+
+  // Without a deeper level the title has to start a section, or the document would have none.
+  return opensWithPageTitle && deeper !== undefined ? deeper : shallowest;
 }
 
 function slice(lines: string[], start: number, end: number): string {
