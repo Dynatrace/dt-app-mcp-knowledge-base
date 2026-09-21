@@ -1,6 +1,14 @@
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
-import { access, mkdir, mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import {
+  access,
+  mkdir,
+  mkdtemp,
+  readdir,
+  readFile,
+  stat,
+  writeFile,
+} from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { promisify } from 'node:util';
@@ -75,13 +83,27 @@ async function cli(
   }
 }
 
+type Outputs = { meta: string; chunks: string; index: string };
+
+/** Somewhere for one knowledge base to live, which a second run can be pointed back at. */
+async function outputs(): Promise<Outputs> {
+  return {
+    meta: join(await mkdtemp(join(tmpdir(), 'kb-meta-')), 'meta.json'),
+    chunks: await mkdtemp(join(tmpdir(), 'kb-chunks-')),
+    index: join(await mkdtemp(join(tmpdir(), 'kb-index-')), 'index.json'),
+  };
+}
+
 /** One full pipeline run, with every output in a temporary location of its own. */
 async function pipeline(
-  options: { sitemap?: string; source?: string; args?: string[] } = {},
+  options: {
+    sitemap?: string;
+    source?: string;
+    args?: string[];
+    outputs?: Outputs;
+  } = {},
 ) {
-  const meta = join(await mkdtemp(join(tmpdir(), 'kb-meta-')), 'meta.json');
-  const chunks = await mkdtemp(join(tmpdir(), 'kb-chunks-'));
-  const index = join(await mkdtemp(join(tmpdir(), 'kb-index-')), 'index.json');
+  const { meta, chunks, index } = options.outputs ?? (await outputs());
   const sitemap = options.sitemap ?? (await serve(SITEMAP));
   const result = await cli([
     '--sitemap',
@@ -115,8 +137,12 @@ describe('preprocessing CLI', () => {
     assert.equal(code, 0);
     assert.match(stdout, new RegExp(`^Read ${sitemap}$`, 'm'));
     assert.match(stdout, /^Found 2 pages \(2 new, 0 no longer listed\)$/m);
-    assert.match(stdout, /^Split 1 document into 2 chunks$/m);
+    assert.match(
+      stdout,
+      /^Split 1 of 1 document into 2 chunks \(1 new, 0 changed, 0 unchanged\)$/m,
+    );
     assert.match(stdout, /^ {2}docs\/a {2}2 chunks$/m);
+    assert.match(stdout, /^Updated 2 chunks and removed 0 \(0 left alone\)$/m);
     assert.match(stdout, new RegExp(`^Wrote ${index} \\(2 entries\\)$`, 'm'));
     assert.match(stdout, new RegExp(`^Wrote ${meta}$`, 'm'));
   });
@@ -333,5 +359,153 @@ describe('the knowledge base the pipeline writes', () => {
     });
 
     assert.match(stderr, /chunk paths not recorded:\n {2}orphan$/m);
+  });
+});
+
+/** Every modification time below a directory, which is how a rewrite gives itself away. */
+async function touchedAt(root: string): Promise<Map<string, number>> {
+  const entries = await readdir(root, { recursive: true, withFileTypes: true });
+  const files = entries.filter((entry) => entry.isFile());
+  return new Map(
+    await Promise.all(
+      files.map(
+        async (entry) =>
+          [
+            join(entry.parentPath, entry.name),
+            (await stat(join(entry.parentPath, entry.name))).mtimeMs,
+          ] as const,
+      ),
+    ),
+  );
+}
+
+describe('a second run over the same documents', () => {
+  it('rewrites nothing at all when no document changed', async () => {
+    const source = await sourceDir();
+    const out = await outputs();
+    await pipeline({ source, outputs: out });
+    const before = await touchedAt(out.chunks);
+    const meta = await readFile(out.meta, 'utf8');
+    const index = await readFile(out.index, 'utf8');
+
+    const { code, stdout } = await pipeline({ source, outputs: out });
+
+    assert.equal(code, 0);
+    assert.deepEqual(await touchedAt(out.chunks), before);
+    assert.equal(await readFile(out.meta, 'utf8'), meta);
+    assert.equal(await readFile(out.index, 'utf8'), index);
+    assert.match(stdout, new RegExp(`^${out.chunks}/ unchanged$`, 'm'));
+    assert.match(stdout, new RegExp(`^${out.meta} unchanged$`, 'm'));
+  });
+
+  it('carries the chunks of an unchanged document over instead of splitting it again', async () => {
+    const source = await sourceDir();
+    const out = await outputs();
+    await pipeline({ source, outputs: out });
+
+    const { stdout } = await pipeline({ source, outputs: out });
+
+    assert.match(
+      stdout,
+      /^Split 0 of 1 document into 0 chunks \(0 new, 0 changed, 1 unchanged\)$/m,
+    );
+    assert.match(stdout, /^Updated 0 chunks and removed 0 \(2 left alone\)$/m);
+  });
+
+  it('splits a document again once its content changed', async () => {
+    const source = await sourceDir();
+    const out = await outputs();
+    await pipeline({ source, outputs: out });
+    await writeFile(
+      join(source, 'docs/a.md'),
+      PAGE.replace('Body.', 'A longer body that says something.'),
+      'utf8',
+    );
+
+    const { stdout, index } = await pipeline({ source, outputs: out });
+
+    assert.match(
+      stdout,
+      /^Split 1 of 1 document into 2 chunks \(0 new, 1 changed, 0 unchanged\)$/m,
+    );
+    assert.match(stdout, /^Updated 1 chunk and removed 0 \(1 left alone\)$/m);
+    const { chunks } = await readIndex(index);
+    assert.equal(chunks[0]?.description, 'A longer body that says something.');
+  });
+
+  it('takes a chunk whose heading disappeared out of docs, index.json and meta.json', async () => {
+    const source = await sourceDir();
+    const out = await outputs();
+    await pipeline({ source, outputs: out });
+    const gone = join(out.chunks, 'docs/a/overview.md');
+    await access(gone);
+    await writeFile(
+      join(source, 'docs/a.md'),
+      PAGE.slice(0, PAGE.indexOf('## Overview')).trimEnd(),
+      'utf8',
+    );
+
+    const { stdout, index, meta } = await pipeline({ source, outputs: out });
+
+    assert.match(stdout, /^Updated 0 chunks and removed 1 \(1 left alone\)$/m);
+    await assert.rejects(access(gone));
+    const { chunks } = await readIndex(index);
+    assert.deepEqual(
+      chunks.map((entry) => entry.name),
+      ['Page A: Span Attributes'],
+    );
+    assert.equal((await readMetadata(meta))?.sources[0]?.chunkPaths.length, 1);
+  });
+
+  it('drops the chunks of a document the sitemap no longer lists', async () => {
+    const source = await sourceDir();
+    const out = await outputs();
+    await pipeline({ source, outputs: out });
+
+    // A source directory holding nothing for the page leaves the chunks nobody produces any more.
+    const { stdout, index } = await pipeline({
+      source: await sourceDir('docs/b'),
+      outputs: out,
+    });
+
+    assert.match(stdout, /^Updated 2 chunks and removed 2 \(0 left alone\)$/m);
+    await assert.rejects(access(join(out.chunks, 'docs/a')));
+    const { chunks } = await readIndex(index);
+    assert.deepEqual(
+      chunks.map((entry) => entry.path.endsWith('docs/b/overview.md')),
+      [false, true],
+    );
+  });
+
+  it('splits every document again with --force', async () => {
+    const source = await sourceDir();
+    const out = await outputs();
+    await pipeline({ source, outputs: out });
+
+    const { stdout } = await pipeline({
+      source,
+      outputs: out,
+      args: ['--force'],
+    });
+
+    assert.match(
+      stdout,
+      /^Split 1 of 1 document into 2 chunks \(0 new, 0 changed, 1 unchanged\)$/m,
+    );
+    // Splitting a document again is not a reason to rewrite files it did not change.
+    assert.match(stdout, /^Updated 0 chunks and removed 0 \(2 left alone\)$/m);
+  });
+
+  it('records when a document was last seen to change', async () => {
+    const source = await sourceDir();
+    const out = await outputs();
+    await pipeline({ source, outputs: out });
+    const first = (await readMetadata(out.meta))?.sources[0];
+
+    await pipeline({ source, outputs: out });
+
+    const second = (await readMetadata(out.meta))?.sources[0];
+    assert.notEqual(first?.downloadHash, '0'.repeat(64));
+    assert.equal(second?.downloadedAt, first?.downloadedAt);
   });
 });

@@ -1,8 +1,9 @@
 import { readFileSync } from 'node:fs';
-import { access, writeFile } from 'node:fs/promises';
+import { access } from 'node:fs/promises';
 import { relative, resolve, sep } from 'node:path';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import type { ErrorObject } from 'ajv';
+import { readIfPresent, writeIfChanged } from './files.ts';
 import type {
   ChunkEntry,
   ChunkedDocument,
@@ -37,7 +38,7 @@ export function buildIndex(
       document.chunks.map<ChunkEntry>((chunk) => ({
         name: chunk.name,
         description: chunk.description,
-        path: toEntryPath(repositoryRoot, chunk.path),
+        path: toRepositoryPath(repositoryRoot, chunk.path),
       })),
     ),
   };
@@ -74,15 +75,35 @@ export async function findMissingChunks(
   return checked.flat();
 }
 
+/** Reads the index an earlier run wrote, which is where unchanged chunks keep their entries. */
+export async function readIndex(
+  path: string,
+): Promise<KnowledgeBaseIndex | undefined> {
+  const raw = await readIfPresent(path);
+  if (raw === undefined) {
+    return undefined;
+  }
+
+  try {
+    return JSON.parse(raw) as KnowledgeBaseIndex;
+  } catch (cause) {
+    throw new Error(
+      `Existing ${path} is not valid JSON, fix or delete it before re-running`,
+      { cause },
+    );
+  }
+}
+
+/** Reports whether the file changed, so the run can say what it left alone. */
 export async function writeIndex(
   path: string,
   index: KnowledgeBaseIndex,
-): Promise<void> {
-  await writeFile(path, `${JSON.stringify(index, undefined, 2)}\n`, 'utf8');
+): Promise<boolean> {
+  return writeIfChanged(path, `${JSON.stringify(index, undefined, 2)}\n`);
 }
 
 // The schema records paths relative to the repository root, whatever --chunk-dir was given.
-function toEntryPath(repositoryRoot: string, path: string): string {
+export function toRepositoryPath(repositoryRoot: string, path: string): string {
   return relative(repositoryRoot, resolve(repositoryRoot, path))
     .split(sep)
     .join('/');

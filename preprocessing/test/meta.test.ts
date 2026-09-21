@@ -7,6 +7,7 @@ import {
   mergeMetadata,
   readMetadata,
   recordChunkPaths,
+  stampMetadata,
   toPagePath,
   writeMetadata,
 } from '../src/meta.ts';
@@ -105,6 +106,47 @@ describe('mergeMetadata', () => {
     const { meta } = mergeMetadata([document], previous, GENERATED_AT);
 
     assert.equal(meta.sources[0]?.downloadHash, 'b'.repeat(64));
+  });
+
+  it('dates a document to the run that first saw the content it holds now', () => {
+    const { meta } = mergeMetadata(
+      [{ ...discovered('/docs/a'), contentHash: 'a'.repeat(64) }],
+      undefined,
+      GENERATED_AT,
+    );
+
+    assert.equal(meta.sources[0]?.downloadedAt, '2026-09-09T06:00:00.000Z');
+  });
+
+  it('keeps the date of a document whose content did not change', () => {
+    const previous: KnowledgeBaseMetadata = {
+      generatedAt: '2026-09-01T00:00:00.000Z',
+      sources: [
+        {
+          ...unprocessed('/docs/a'),
+          downloadHash: 'a'.repeat(64),
+          downloadedAt: '2026-08-08T00:00:00.000Z',
+        },
+      ],
+    };
+
+    const { meta } = mergeMetadata(
+      [{ ...discovered('/docs/a'), contentHash: 'a'.repeat(64) }],
+      previous,
+      GENERATED_AT,
+    );
+
+    assert.equal(meta.sources[0]?.downloadedAt, '2026-08-08T00:00:00.000Z');
+  });
+
+  it('leaves a document nobody has hashed yet undated', () => {
+    const { meta } = mergeMetadata(
+      [discovered('/docs/a')],
+      undefined,
+      GENERATED_AT,
+    );
+
+    assert.equal(meta.sources[0]?.downloadedAt, '1970-01-01T00:00:00.000Z');
   });
 
   it('reports documents that are new and documents the sitemap no longer lists', () => {
@@ -241,6 +283,46 @@ describe('recordChunkPaths', () => {
 
     assert.equal(meta.sources[0]?.downloadHash, 'a'.repeat(64));
     assert.equal(meta.sources[0]?.downloadedAt, '2026-09-01T00:00:00.000Z');
+  });
+});
+
+describe('stampMetadata', () => {
+  const meta: KnowledgeBaseMetadata = {
+    generatedAt: 'whatever recordChunkPaths put here',
+    sources: [unprocessed('/docs/a')],
+  };
+  const previous: KnowledgeBaseMetadata = {
+    generatedAt: '2026-09-01T00:00:00.000Z',
+    sources: [unprocessed('/docs/a')],
+  };
+
+  it('keeps the timestamp of the run that last changed something', () => {
+    const stamped = stampMetadata(meta, previous, GENERATED_AT, false);
+
+    assert.equal(stamped.generatedAt, '2026-09-01T00:00:00.000Z');
+  });
+
+  it('dates the build when the run wrote chunks', () => {
+    const stamped = stampMetadata(meta, previous, GENERATED_AT, true);
+
+    assert.equal(stamped.generatedAt, '2026-09-09T06:00:00.000Z');
+  });
+
+  it('dates the build when the sources themselves changed', () => {
+    const stamped = stampMetadata(
+      { ...meta, sources: [unprocessed('/docs/a'), unprocessed('/docs/b')] },
+      previous,
+      GENERATED_AT,
+      false,
+    );
+
+    assert.equal(stamped.generatedAt, '2026-09-09T06:00:00.000Z');
+  });
+
+  it('dates the build of a knowledge base that has no earlier run', () => {
+    const stamped = stampMetadata(meta, undefined, GENERATED_AT, false);
+
+    assert.equal(stamped.generatedAt, '2026-09-09T06:00:00.000Z');
   });
 });
 
