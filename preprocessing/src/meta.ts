@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { readIfPresent, writeIfChanged } from './files.ts';
 import { UNKNOWN_CONTENT_HASH } from './sitemap.ts';
 import type {
   ChunkedDocument,
@@ -40,11 +40,12 @@ export function mergeMetadata(
       document.contentHash === UNKNOWN_CONTENT_HASH
         ? undefined
         : document.contentHash;
+    const downloadHash =
+      discoveredHash ?? previousSource?.downloadHash ?? UNKNOWN_CONTENT_HASH;
     return {
       url: document.url,
-      downloadHash:
-        discoveredHash ?? previousSource?.downloadHash ?? UNKNOWN_CONTENT_HASH,
-      downloadedAt: previousSource?.downloadedAt ?? UNPROCESSED_DOWNLOADED_AT,
+      downloadHash,
+      downloadedAt: lastSeenAt(downloadHash, previousSource, generatedAt),
       chunkPaths: previousSource?.chunkPaths ?? [],
     };
   });
@@ -60,6 +61,23 @@ export function mergeMetadata(
       .map((document) => document.url),
     removed: [...known.keys()].filter((url) => !discovered.has(url)),
   };
+}
+
+/**
+ * Dates a document to the run that first saw the content it holds now. An unchanged document keeps
+ * its earlier date, so re-running the pipeline nightly does not churn meta.json.
+ */
+function lastSeenAt(
+  hash: string,
+  previous: SourceEntry | undefined,
+  generatedAt: Date,
+): string {
+  if (hash === UNKNOWN_CONTENT_HASH) {
+    return UNPROCESSED_DOWNLOADED_AT;
+  }
+  return previous?.downloadHash === hash
+    ? previous.downloadedAt
+    : generatedAt.toISOString();
 }
 
 export type ChunkPathResult = {
@@ -105,6 +123,27 @@ export function recordChunkPaths(
   };
 }
 
+/**
+ * Decides the build timestamp last, once the run knows whether it changed anything. Metadata that
+ * matches the previous run keeps its timestamp, so `generatedAt` dates the content, not the run.
+ */
+export function stampMetadata(
+  meta: KnowledgeBaseMetadata,
+  previous: KnowledgeBaseMetadata | undefined,
+  generatedAt: Date,
+  changedChunks: boolean,
+): KnowledgeBaseMetadata {
+  const unchanged =
+    !changedChunks &&
+    previous !== undefined &&
+    JSON.stringify(meta.sources) === JSON.stringify(previous.sources);
+
+  return {
+    ...meta,
+    generatedAt: unchanged ? previous.generatedAt : generatedAt.toISOString(),
+  };
+}
+
 /** Reduces a document URL to the page path the chunking stage addresses documents by. */
 export function toPagePath(url: string): string | undefined {
   try {
@@ -117,14 +156,9 @@ export function toPagePath(url: string): string | undefined {
 export async function readMetadata(
   path: string,
 ): Promise<KnowledgeBaseMetadata | undefined> {
-  let raw: string;
-  try {
-    raw = await readFile(path, 'utf8');
-  } catch (cause) {
-    if ((cause as NodeJS.ErrnoException).code === 'ENOENT') {
-      return undefined;
-    }
-    throw cause;
+  const raw = await readIfPresent(path);
+  if (raw === undefined) {
+    return undefined;
   }
 
   try {
@@ -137,9 +171,10 @@ export async function readMetadata(
   }
 }
 
+/** Reports whether the file changed, so the run can say what it left alone. */
 export async function writeMetadata(
   path: string,
   meta: KnowledgeBaseMetadata,
-): Promise<void> {
-  await writeFile(path, `${JSON.stringify(meta, undefined, 2)}\n`, 'utf8');
+): Promise<boolean> {
+  return writeIfChanged(path, `${JSON.stringify(meta, undefined, 2)}\n`);
 }

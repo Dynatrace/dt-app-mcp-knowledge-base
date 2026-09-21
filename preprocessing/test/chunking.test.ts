@@ -1,13 +1,9 @@
 import assert from 'node:assert/strict';
-import { mkdir, mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, it } from 'node:test';
-import {
-  chunkDocument,
-  readSourceDocuments,
-  writeChunks,
-} from '../src/chunking.ts';
+import { chunkDocument, readSourceDocuments } from '../src/chunking.ts';
 import { toPathSlug, toSlug } from '../src/slug.ts';
 
 const doc = (...lines: string[]) => lines.join('\n');
@@ -238,24 +234,6 @@ describe('readSourceDocuments', () => {
       readSourceDocuments(join(tmpdir(), 'kb-missing-source')),
       /Could not read the source directory/,
     );
-  });
-});
-
-describe('writeChunks', () => {
-  it('writes each chunk under the repository root, creating the directories it needs', async () => {
-    const root = await tempDir('kb-chunks-');
-    const document = chunkDocument({
-      pagePath: 'docs/dql/request-analysis',
-      markdown: PAGE,
-    });
-
-    await writeChunks(root, [document]);
-
-    const written = await readFile(
-      join(root, 'docs/docs/dql/request-analysis/best-practices.md'),
-      'utf8',
-    );
-    assert.equal(written, '## Best Practices\n\nAdvice.\n');
   });
 });
 

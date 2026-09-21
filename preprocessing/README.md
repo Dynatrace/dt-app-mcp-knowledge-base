@@ -17,11 +17,19 @@ npm start -- --source-dir ../../tmp-knowledge-base
 That reads `https://developer.dynatrace.com/sitemap.xml` and derives the Markdown URL of every page, splits
 each document at its main headings into `docs/`, and writes `index.json` and `meta.json` in the repository
 root. The run prints what each stage produced: how many pages the sitemap held, how many are new and how
-many it no longer lists, how many chunks each document was split into, and what was written where.
+many it no longer lists, which documents it split, what it changed below `docs/`, and what it left alone.
+
+The pipeline runs nightly, so it only redoes what the portal changed — see
+[Only what changed](#only-what-changed).
 
 `--source-dir` is **temporary**. The portal sitemap does not serve markdown yet, so there is nothing for the
 download stage to fetch and the documents to split have to come from a local directory. Once the download
 stage supplies them, the option goes away and the pipeline splits whatever that stage wrote.
+
+The sitemap carries no content hash either, and deciding what changed needs one. Until it does,
+[`src/mock-portal.ts`](src/mock-portal.ts) stands in for it, hashing the document the source directory holds
+for a page; a page it holds nothing for keeps the all-zero digest discovery writes. The comparison itself is
+already the real one, so only that stand-in goes away — the download stage will hash the bytes it fetched.
 
 ### Options
 
@@ -39,6 +47,7 @@ npm start -- --source-dir ../../tmp-knowledge-base --sitemap https://developer.d
 | `--chunk-dir <path>`  | `docs`                                        | Chunk output directory, relative to the repository root. |
 | `--index <path>`      | `index.json`                                  | `index.json` to write, relative to the repository root.  |
 | `--out <path>`        | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
+| `--force`             | off                                           | Split every document again, whatever the hashes say.     |
 | `--dry-run`           | off                                           | Report what would be produced without writing anything.  |
 | `--json`              | off                                           | Print what the run produced as JSON.                     |
 | `--help`              | —                                             | Show usage.                                              |
@@ -46,6 +55,41 @@ npm start -- --source-dir ../../tmp-knowledge-base --sitemap https://developer.d
 An unreachable, empty or malformed sitemap, a source directory holding no markdown and an index that does
 not satisfy its schema each fail the run with a message on stderr and exit code `1`. Bad CLI usage exits
 with `2`.
+
+## Only what changed
+
+Rewriting every chunk each night costs a large diff even when the portal published nothing, so a run
+redoes only what changed. It compares the content hash of every page against the `downloadHash` the
+last run recorded for it in `meta.json`, and a page whose hash still matches keeps the chunks it
+already has: its files are not read, its sections are not derived again, and nothing is written.
+
+A page whose hash moved is split again, and the result is compared with what `docs/` holds file by
+file. Only the chunks that actually differ are written, so a reworded section touches one file and
+leaves its neighbours alone. A chunk nothing produces any more — because its heading disappeared, or
+because the page did — is deleted from `docs/` and drops out of `index.json` and `meta.json` with it.
+Directories left empty go too.
+
+`generatedAt` therefore dates the content rather than the run: a night that changed nothing leaves
+`meta.json` untouched, keeping the timestamp of the run that last changed something. `downloadedAt`
+works the same way, dating each page to the run that first saw the content it holds now.
+
+A page is split again regardless of its hash when the run cannot carry its chunks over — when a
+recorded chunk file is missing, or `index.json` no longer holds an entry for it — so a half-written
+knowledge base repairs itself on the next run rather than staying broken.
+
+### Forcing a rebuild
+
+The hash describes the **source document**, not the pipeline, so a change to how documents are split,
+named or described does not reach the chunks of a page the portal left alone. `--force` splits every
+document again whatever the hashes say:
+
+```sh
+npm start -- --source-dir ../../tmp-knowledge-base --force
+```
+
+Files still change only where the content differs — writing bytes a file already holds helps nobody.
+What `--force` buys is that every chunk is derived from the current pipeline, and that the advisory
+reports below cover the whole corpus again rather than only the pages this run happened to split.
 
 ## Document URLs
 
@@ -103,6 +147,9 @@ That report is a stopgap: it matches a fixed word list exactly, so it catches `U
 Once every document is chunked it should give way to a corpus-derived check, where a slug recurring across
 many pages is generic by definition. The report is advisory only and never changes what is written.
 
+Both this report and the one below cover the documents a run split. A page whose chunks were carried over
+was not looked at, so it has nothing to say about it; `--force` brings the whole corpus back into view.
+
 ### How a chunk is described
 
 The description is the only text an agent sees before it decides to load a chunk, so it has to say what the
@@ -132,27 +179,31 @@ introduction longer than a description may carry, is still written to `index.md`
 `index.json` at the repository root is the file `dt-app-mcp` starts from, described by
 [`schemas/index.schema.json`](../schemas/index.schema.json). It holds one `chunks` entry per chunk,
 carrying the name, the description and the path of that chunk relative to the repository root — enough
-to search the index in memory and load only the chunks a request needs. Entries follow the order the
-documents were read and split, so a re-run of an unchanged corpus produces an unchanged file.
+to search the index in memory and load only the chunks a request needs. Entries follow the page path
+of the document they came from, so an entry holds its place whether the run split that document or
+carried its chunks over, and a re-run of an unchanged corpus produces an unchanged file.
 
-Every run rebuilds the index from the documents it split and validates it against the schema before
-anything is written, then checks that every entry points at a chunk file that was written. A violation
-fails the run with exit code `1`, naming the chunk behind each one — an index `dt-app-mcp` cannot rely
-on is worse than none.
+Every run rebuilds the whole index, from the documents it split and the entries it carried over, and
+validates it against the schema before anything is written, then checks that every entry points at a
+chunk file that is there. A violation fails the run with exit code `1`, naming the chunk behind each
+one — an index `dt-app-mcp` cannot rely on is worse than none.
 
 `meta.json` holds build-only metadata, one `sources` entry per document, and is described by
 [`schemas/meta.schema.json`](../schemas/meta.schema.json). The discovery stage fills `url` and writes
 placeholders for the fields the stages behind it own, so the file always satisfies the schema:
 
-- `downloadHash` — an all-zero digest until the download stage hashes the document
-- `downloadedAt` — the Unix epoch until the document is first downloaded
+- `downloadHash` — an all-zero digest for a page whose content nothing has hashed yet
+- `downloadedAt` — the Unix epoch for as long as that digest stands in
 - `chunkPaths` — empty for a page no source document matched
+
+A page carrying the all-zero digest cannot be told apart from a changed one, so it is split on every
+run. That is every page until the download stage lands, which is why the stand-in hash below exists.
 
 Re-runs rebuild the list from the sitemap but keep whatever the later stages already recorded, so discovery
 never discards their work. Documents that disappear from the sitemap are dropped.
 
-`generatedAt` carries the build timestamp of the run that last wrote the file, which is how fresh the content
-of the knowledge base is. It stays out of `index.json` so that the file every request searches holds nothing
+`generatedAt` carries the build timestamp of the run that last changed something, which is how fresh the
+content of the knowledge base is. It stays out of `index.json` so that the file every request searches holds nothing
 but what retrieval needs.
 
 ## Develop

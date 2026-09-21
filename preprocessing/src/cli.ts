@@ -5,12 +5,12 @@ import {
   DEFAULT_CHUNK_DIR,
   chunkDocument,
   readSourceDocuments,
-  writeChunks,
 } from './chunking.ts';
 import {
   DEFAULT_INDEX_PATH,
   buildIndex,
   findMissingChunks,
+  readIndex,
   validateIndex,
   writeIndex,
 } from './indexing.ts';
@@ -18,14 +18,24 @@ import {
   mergeMetadata,
   readMetadata,
   recordChunkPaths,
+  stampMetadata,
   writeMetadata,
 } from './meta.ts';
+import { mockContentHashes } from './mock-portal.ts';
 import {
   DEFAULT_SITEMAP_URL,
   SitemapError,
   fetchSitemap,
   parseSitemap,
 } from './sitemap.ts';
+import {
+  applyChunks,
+  planChunks,
+  planDocuments,
+  touchesChunks,
+  type ChunkUpdate,
+  type DocumentPlan,
+} from './update.ts';
 import type { ChunkedDocument, SitemapDocument } from './types.ts';
 
 const DEFAULT_META_PATH = 'meta.json';
@@ -37,7 +47,7 @@ const USAGE = `Usage: npm start -- --source-dir <path> [options]
 
 Discovers every developer portal documentation page, splits each document at its main headings and
 writes the knowledge base: one markdown file per section under the chunk directory, one index entry
-per chunk, and the build metadata of the run.
+per chunk, and the build metadata of the run. Only what the portal changed is written again.
 
 Options:
   --source-dir <path>   Directory holding the markdown documents to split (required).
@@ -46,6 +56,7 @@ Options:
   --chunk-dir <path>    Chunk output directory, relative to the repository root (default: ${DEFAULT_CHUNK_DIR})
   --index <path>        index.json to write, relative to the repository root (default: ${DEFAULT_INDEX_PATH})
   --out <path>          meta.json to write, relative to the repository root (default: ${DEFAULT_META_PATH})
+  --force               Split every document again, whatever the recorded content hashes say
   --dry-run             Report what would be produced without writing anything
   --json                Print what the run produced as JSON instead of a summary
   --help                Show this message
@@ -58,6 +69,7 @@ export async function run(argv: string[]): Promise<number> {
     'chunk-dir'?: string;
     index?: string;
     out?: string;
+    force?: boolean;
     'dry-run'?: boolean;
     json?: boolean;
     help?: boolean;
@@ -71,6 +83,7 @@ export async function run(argv: string[]): Promise<number> {
         'chunk-dir': { type: 'string' },
         index: { type: 'string' },
         out: { type: 'string' },
+        force: { type: 'boolean' },
         'dry-run': { type: 'boolean' },
         json: { type: 'boolean' },
         help: { type: 'boolean' },
@@ -106,11 +119,8 @@ export async function run(argv: string[]): Promise<number> {
     const discovered = parseSitemap(await fetchSitemap(sitemapUrl));
     // One timestamp for the whole run, so every stage of a build reports the same build.
     const generatedAt = new Date();
-    const {
-      meta: discoveredMeta,
-      added,
-      removed,
-    } = mergeMetadata(discovered, await readMetadata(metaPath), generatedAt);
+    const previousMeta = await readMetadata(metaPath);
+    const previousIndex = await readIndex(indexPath);
 
     // TODO: Read the documents from the download stage instead, once it feeds the pipeline.
     const sources = await readSourceDocuments(sourceDir);
@@ -118,8 +128,28 @@ export async function run(argv: string[]): Promise<number> {
       throw new Error(`No markdown documents found in ${resolve(sourceDir)}`);
     }
 
-    const documents = sources.map((source) => chunkDocument(source, chunkDir));
-    const { meta, unmatched } = recordChunkPaths(
+    // TODO: Drop once the sitemap carries a content hash of its own.
+    const hashed = mockContentHashes(discovered, sources);
+    const {
+      meta: discoveredMeta,
+      added,
+      removed,
+    } = mergeMetadata(hashed, previousMeta, generatedAt);
+
+    const plan = await planDocuments(sources, {
+      repositoryRoot: REPOSITORY_ROOT,
+      previousMeta,
+      previousIndex,
+      currentMeta: discoveredMeta,
+      force: options.force === true,
+    });
+    const split = plan.process.map((source) => chunkDocument(source, chunkDir));
+    // A page holds its place however this run arrived at its chunks, so the index stays stable.
+    const documents = [...plan.reused, ...split].sort((a, b) =>
+      a.pagePath.localeCompare(b.pagePath),
+    );
+
+    const { meta: chunked, unmatched } = recordChunkPaths(
       discoveredMeta,
       documents,
       generatedAt,
@@ -132,8 +162,18 @@ export async function run(argv: string[]): Promise<number> {
       throw invalidIndex(indexPath, violations);
     }
 
+    const update = await planChunks(REPOSITORY_ROOT, chunkDir, documents);
+    const meta = stampMetadata(
+      chunked,
+      previousMeta,
+      generatedAt,
+      touchesChunks(update),
+    );
+
+    let wroteIndex = false;
+    let wroteMeta = false;
     if (!dryRun) {
-      await writeChunks(REPOSITORY_ROOT, documents);
+      await applyChunks(REPOSITORY_ROOT, chunkDir, update);
       const missing = await findMissingChunks(REPOSITORY_ROOT, index);
       if (missing.length > 0) {
         throw invalidIndex(
@@ -142,13 +182,13 @@ export async function run(argv: string[]): Promise<number> {
         );
       }
 
-      await writeIndex(indexPath, index);
-      await writeMetadata(metaPath, meta);
+      wroteIndex = await writeIndex(indexPath, index);
+      wroteMeta = await writeMetadata(metaPath, meta);
     }
 
     if (options.json === true) {
       process.stdout.write(
-        `${JSON.stringify(toJson(discovered, documents), undefined, 2)}\n`,
+        `${JSON.stringify(toJson(discovered, documents, plan, update), undefined, 2)}\n`,
       );
     } else {
       report({
@@ -157,12 +197,16 @@ export async function run(argv: string[]): Promise<number> {
         added: added.length,
         removed: removed.length,
         sourceDir,
-        documents,
+        split,
+        plan,
+        update,
         entries: index.chunks.length,
         chunkDir,
         indexPath,
         metaPath,
         dryRun,
+        wroteIndex,
+        wroteMeta,
       });
     }
     // TODO: Fail on unmatched documents once the download stage feeds this, where a document
@@ -186,31 +230,44 @@ type RunReport = {
   added: number;
   removed: number;
   sourceDir: string;
-  documents: ChunkedDocument[];
+  split: ChunkedDocument[];
+  plan: DocumentPlan;
+  update: ChunkUpdate;
   entries: number;
   chunkDir: string;
   indexPath: string;
   metaPath: string;
   dryRun: boolean;
+  wroteIndex: boolean;
+  wroteMeta: boolean;
 };
 
 function report(run: RunReport): void {
-  const total = run.documents.reduce(
+  const total = run.split.reduce(
     (count, document) => count + document.chunks.length,
     0,
   );
+  const documents =
+    run.plan.added.length + run.plan.changed.length + run.plan.unchanged.length;
   const width = Math.max(
-    ...run.documents.map((document) => document.pagePath.length),
+    0,
+    ...run.split.map((document) => document.pagePath.length),
   );
+  const touched = run.update.added.length + run.update.changed.length;
   const lines = [
     `Read ${run.sitemapUrl}`,
     `Found ${plural(run.found, 'page')} (${run.added} new, ${run.removed} no longer listed)`,
     `Read ${resolve(run.sourceDir)}`,
-    `Split ${plural(run.documents.length, 'document')} into ${plural(total, 'chunk')}`,
-    ...run.documents.map(
+    `Split ${run.split.length} of ${plural(documents, 'document')} into ${plural(total, 'chunk')}` +
+      ` (${run.plan.added.length} new, ${run.plan.changed.length} changed,` +
+      ` ${run.plan.unchanged.length} unchanged)`,
+    ...run.split.map(
       (d) =>
         `  ${d.pagePath.padEnd(width)}  ${plural(d.chunks.length, 'chunk')}`,
     ),
+    `${run.dryRun ? 'Would update' : 'Updated'} ${plural(touched, 'chunk')}` +
+      ` and ${run.dryRun ? 'remove' : 'removed'} ${run.update.removed.length}` +
+      ` (${run.update.unchanged.length} left alone)`,
   ];
   if (run.dryRun) {
     lines.push(
@@ -219,9 +276,13 @@ function report(run: RunReport): void {
     );
   } else {
     lines.push(
-      `Wrote ${run.chunkDir}/`,
-      `Wrote ${run.indexPath} (${plural(run.entries, 'entry', 'entries')})`,
-      `Wrote ${run.metaPath}`,
+      touchesChunks(run.update)
+        ? `Wrote ${run.chunkDir}/`
+        : `${run.chunkDir}/ unchanged`,
+      run.wroteIndex
+        ? `Wrote ${run.indexPath} (${plural(run.entries, 'entry', 'entries')})`
+        : `${run.indexPath} unchanged (${plural(run.entries, 'entry', 'entries')})`,
+      run.wroteMeta ? `Wrote ${run.metaPath}` : `${run.metaPath} unchanged`,
     );
   }
   process.stdout.write(`${lines.join('\n')}\n`);
@@ -267,6 +328,8 @@ function warn(
 function toJson(
   discovered: SitemapDocument[],
   documents: ChunkedDocument[],
+  plan: DocumentPlan,
+  update: ChunkUpdate,
 ): unknown {
   return {
     discovered,
@@ -281,6 +344,18 @@ function toJson(
         description: chunk.description,
       })),
     })),
+    changed: {
+      documents: {
+        added: plan.added,
+        changed: plan.changed,
+        unchanged: plan.unchanged,
+      },
+      chunks: {
+        added: update.added.map((chunk) => chunk.path),
+        changed: update.changed.map((chunk) => chunk.path),
+        removed: update.removed,
+      },
+    },
   };
 }
 

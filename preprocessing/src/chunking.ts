@@ -1,5 +1,5 @@
-import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname, join, resolve, sep } from 'node:path';
+import { readdir, readFile } from 'node:fs/promises';
+import { join, resolve, sep } from 'node:path';
 import { splitMarkdown } from './markdown.ts';
 import { toPathSlug, toSlug } from './slug.ts';
 import {
@@ -156,18 +156,6 @@ export async function readSourceDocuments(
   );
 
   return documents.sort((a, b) => a.pagePath.localeCompare(b.pagePath));
-}
-
-/** Writes every chunk below `repositoryRoot`, creating the directories each chunk path implies. */
-export async function writeChunks(
-  repositoryRoot: string,
-  documents: ChunkedDocument[],
-): Promise<void> {
-  for (const chunk of documents.flatMap((document) => document.chunks)) {
-    const path = resolve(repositoryRoot, chunk.path);
-    await mkdir(dirname(path), { recursive: true });
-    await writeFile(path, `${chunk.content}\n`, 'utf8');
-  }
 }
 
 function disambiguate(slug: string, taken: Set<string>): string {

@@ -22,7 +22,8 @@ export type SourceDocument = {
 export type Chunk = {
   path: string;
   heading: string | undefined;
-  content: string;
+  // Absent for a chunk carried over from an earlier run, whose file was never read.
+  content: string | undefined;
   name: string;
   description: string;
 };
@@ -36,7 +37,8 @@ export type WeakDescription = {
 /** Everything one source document contributed to the knowledge base, plus its own page summary. */
 export type ChunkedDocument = {
   pagePath: string;
-  title: string;
+  // Both absent for a document this run carried over instead of splitting, which derived neither.
+  title: string | undefined;
   description: string | undefined;
   chunks: Chunk[];
   genericHeadings: string[];
