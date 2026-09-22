@@ -51,6 +51,7 @@ small.
 | --- | --- |
 | `preprocessing/` | The pipeline and its CLI. See [preprocessing/README.md](preprocessing/README.md). |
 | `schemas/` | JSON schemas for the generated `index.json` and `meta.json`. |
+| `sources/` | The portal documents the pipeline splits. Temporary — see [The CLI](#the-cli). |
 | `docs/` | The knowledge base chunks, one markdown file per section. Generated — never edit by hand. |
 | `index.json` | One entry per chunk, the file `dt-app-mcp` starts from. Generated — never edit by hand. |
 | `meta.json` | Build-only metadata. Generated — never edit by hand. |
@@ -63,7 +64,7 @@ sources run on Node's built-in type stripping, so there is no build step.
 ```sh
 cd preprocessing
 npm install
-npm start -- --source-dir <path>
+npm start -- --source-dir ../sources
 ```
 
 That reads the portal sitemap and derives the Markdown URL of every page, splits each document at
@@ -73,13 +74,13 @@ schema before anything is written, so a run either produces an index `dt-app-mcp
 fails naming the chunks at fault.
 
 `--source-dir` stands in for the download stage, which does not exist yet — the documents to split
-come from a local directory until it does.
+come from `sources/` in this repository until it does.
 
 Pass options after `--`:
 
 ```sh
-npm start -- --source-dir <path> --dry-run
-npm start -- --source-dir <path> --sitemap https://developer.dynatracelabs.com/sitemap.xml
+npm start -- --source-dir ../sources --dry-run
+npm start -- --source-dir ../sources --sitemap https://developer.dynatracelabs.com/sitemap.xml
 ```
 
 | Option                | Default                                       | Description                                              |
@@ -89,6 +90,7 @@ npm start -- --source-dir <path> --sitemap https://developer.dynatracelabs.com/s
 | `--chunk-dir <path>`  | `docs`                                        | Chunk output directory, relative to the repository root. |
 | `--index <path>`      | `index.json`                                  | `index.json` to write, relative to the repository root.  |
 | `--out <path>`        | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
+| `--force`             | off                                           | Split every document again, whatever the hashes say.     |
 | `--dry-run`           | off                                           | Report what would be produced without writing anything.  |
 | `--json`              | off                                           | Print what the run produced as JSON.                     |
 | `--help`              | —                                             | Show usage.                                              |
@@ -97,11 +99,26 @@ An unreachable, empty or malformed sitemap, and an index that does not satisfy i
 the run with exit code `1`. Bad CLI usage exits with `2`. See
 [preprocessing/README.md](preprocessing/README.md) for how chunks are split, named and described.
 
+## Nightly refresh
+
+A knowledge base only helps while it matches the portal, so
+[`.github/workflows/knowledge-base.yml`](.github/workflows/knowledge-base.yml) runs the pipeline
+every night at 03:20 UTC and commits the result straight to `main`. What the portal published
+yesterday is in the knowledge base before the working day starts, without anyone asking for it.
+
+The run commits only when the pipeline changed the knowledge base and nothing else: it stops rather
+than commits if anything outside `docs/`, `index.json` and `meta.json` differs, and a night the
+portal published nothing ends with no commit at all. A failed run reports to the team on Slack and
+leaves `main` holding the last knowledge base that validated.
+
+The workflow can be run on demand from the Actions tab, with `--force` and `--dry-run` as inputs —
+`--force` for after a change to how documents are split, which the content hashes know nothing
+about.
+
 ## Status
 
-Document discovery, heading-based chunking and `index.json` generation are implemented. Downloading
-is still to come — the documents to split come from a local directory for now — as is the nightly
-CI run that refreshes the knowledge base and opens a pull request with the result.
+Document discovery, heading-based chunking, `index.json` generation and the nightly refresh are
+implemented. Downloading is still to come — the documents to split come from `sources/` for now.
 
 ## Development
 
@@ -112,8 +129,9 @@ npm test           # node:test suite
 npm run typecheck
 ```
 
-Content changes reach `main` through pull requests reviewed by the owners listed in
-[CODEOWNERS](CODEOWNERS). See [AGENTS.md](AGENTS.md) for the conventions this repository expects.
+Changes to the pipeline reach `main` through pull requests reviewed by the owners listed in
+[CODEOWNERS](CODEOWNERS); refreshed content reaches it through the nightly run. See
+[AGENTS.md](AGENTS.md) for the conventions this repository expects.
 
 ## License
 

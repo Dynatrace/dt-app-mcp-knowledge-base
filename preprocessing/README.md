@@ -11,7 +11,7 @@ From this directory:
 
 ```sh
 npm install
-npm start -- --source-dir ../../tmp-knowledge-base
+npm start -- --source-dir ../sources
 ```
 
 That reads `https://developer.dynatrace.com/sitemap.xml` and derives the Markdown URL of every page, splits
@@ -20,11 +20,13 @@ root. The run prints what each stage produced: how many pages the sitemap held, 
 many it no longer lists, which documents it split, what it changed below `docs/`, and what it left alone.
 
 The pipeline runs nightly, so it only redoes what the portal changed — see
-[Only what changed](#only-what-changed).
+[Nightly run](#nightly-run) and [Only what changed](#only-what-changed).
 
 `--source-dir` is **temporary**. The portal sitemap does not serve markdown yet, so there is nothing for the
-download stage to fetch and the documents to split have to come from a local directory. Once the download
-stage supplies them, the option goes away and the pipeline splits whatever that stage wrote.
+download stage to fetch and the documents to split have to come from a directory. `sources/` in the
+repository root holds them until then, which is also what the nightly run passes. Once the download stage
+supplies them, the option goes away along with that directory, and the pipeline splits whatever the stage
+wrote.
 
 The sitemap carries no content hash either, and deciding what changed needs one. Until it does,
 [`src/mock-portal.ts`](src/mock-portal.ts) stands in for it, hashing the document the source directory holds
@@ -36,8 +38,8 @@ already the real one, so only that stand-in goes away — the download stage wil
 Pass CLI options after `--`:
 
 ```sh
-npm start -- --source-dir ../../tmp-knowledge-base --dry-run
-npm start -- --source-dir ../../tmp-knowledge-base --sitemap https://developer.dynatracelabs.com/sitemap.xml
+npm start -- --source-dir ../sources --dry-run
+npm start -- --source-dir ../sources --sitemap https://developer.dynatracelabs.com/sitemap.xml
 ```
 
 | Option                | Default                                       | Description                                              |
@@ -55,6 +57,23 @@ npm start -- --source-dir ../../tmp-knowledge-base --sitemap https://developer.d
 An unreachable, empty or malformed sitemap, a source directory holding no markdown and an index that does
 not satisfy its schema each fail the run with a message on stderr and exit code `1`. Bad CLI usage exits
 with `2`.
+
+## Nightly run
+
+Nobody should have to ask for a current knowledge base, so
+[`.github/workflows/knowledge-base.yml`](../.github/workflows/knowledge-base.yml) runs the pipeline every
+night at 03:20 UTC against `sources/` and commits what it produced straight to `main`, early enough to be
+there when the working day starts. `--force` and `--dry-run` are inputs of the manual trigger on the
+Actions tab, so an on-demand run can rebuild the whole corpus or report without writing.
+
+The workflow runs the test suite before the pipeline and commits only what the pipeline owns: a change
+anywhere but `docs/`, `index.json` and `meta.json` fails the run instead of reaching `main`, and a night
+that changed nothing commits nothing. Anything that fails — a sitemap that would not load, an index that
+does not satisfy its schema, a test — leaves `main` on the last knowledge base that validated and reports
+to the team on Slack.
+
+The commit is made with `GITHUB_TOKEN`, so it starts no workflow run of its own and the nightly cannot
+trigger itself.
 
 ## Only what changed
 
@@ -84,7 +103,7 @@ named or described does not reach the chunks of a page the portal left alone. `-
 document again whatever the hashes say:
 
 ```sh
-npm start -- --source-dir ../../tmp-knowledge-base --force
+npm start -- --source-dir ../sources --force
 ```
 
 Files still change only where the content differs — writing bytes a file already holds helps nobody.

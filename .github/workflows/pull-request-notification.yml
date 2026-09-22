@@ -1,0 +1,36 @@
+name: Pull request notification
+
+# pull_request_target, so a pull request from a fork can reach the Slack credentials too.
+# Nothing here checks out or runs the branch under review.
+on:
+  pull_request_target:
+    types:
+      - opened
+
+permissions: {}
+
+jobs:
+  notify:
+    name: Notify the team
+    runs-on: ubuntu-latest
+    steps:
+      # The title is whatever the author typed, so it reaches Slack as data rather than as YAML
+      - name: Describe the pull request
+        env:
+          NUMBER: ${{ github.event.pull_request.number }}
+          TITLE: ${{ github.event.pull_request.title }}
+          URL: ${{ github.event.pull_request.html_url }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+          CHANNEL: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: |
+          jq -n \
+            --arg channel "$CHANNEL" \
+            --arg text ":inbox_tray: <$URL|#$NUMBER $TITLE> opened by $AUTHOR in $GITHUB_REPOSITORY" \
+            '{channel: $channel, text: $text}' > "$RUNNER_TEMP/payload.json"
+
+      - name: Post to Slack
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d # v4.0.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload-file-path: ${{ runner.temp }}/payload.json
