@@ -1,0 +1,96 @@
+name: Knowledge base
+
+on:
+  schedule:
+    # 03:20 UTC, so the refreshed knowledge base is on main before the team starts working
+    - cron: "20 3 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Split every document again, whatever the recorded content hashes say
+        type: boolean
+        default: false
+      dry-run:
+        description: Report what the run would produce without committing anything
+        type: boolean
+        default: false
+
+# A second run must not write to main while one is still pushing
+concurrency:
+  group: knowledge-base
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Refresh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          # The knowledge base is refreshed on the default branch, whatever branch dispatched the run
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: preprocessing/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: preprocessing
+
+      # A pipeline its own suite rejects must not commit a knowledge base to main
+      - name: Run tests
+        run: npm test
+        working-directory: preprocessing
+
+      - name: Refresh the knowledge base
+        run: npm start -- --source-dir ../sources $FORCE $DRY_RUN
+        working-directory: preprocessing
+        env:
+          # Empty on the nightly run, which has no inputs
+          FORCE: ${{ inputs.force && '--force' || '' }}
+          DRY_RUN: ${{ inputs.dry-run && '--dry-run' || '' }}
+
+      - name: Check what the run changed
+        id: changes
+        run: |
+          unexpected=$(git status --porcelain | grep -Ev '^.. (docs/|index\.json|meta\.json)' || true)
+          if [ -n "$unexpected" ]; then
+            echo "The run changed files outside the knowledge base:" >&2
+            echo "$unexpected" >&2
+            exit 1
+          fi
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "The portal published nothing, main already holds the current knowledge base"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short
+          fi
+
+      - name: Commit the refreshed knowledge base
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs index.json meta.json
+          git commit -m "chore(docs): refresh the knowledge base from the developer portal"
+          git push
+
+      - name: Report the failure
+        if: failure()
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d # v4.0.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.SLACK_CHANNEL_ID }}
+            text: ":rotating_light: The knowledge base refresh failed, ${{ github.repository }} still holds yesterday's content: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

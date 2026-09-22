@@ -25,6 +25,7 @@ jobs:
             --verbose
             --no-progress
             --exclude-path docs
+            --exclude-path sources
             --exclude-path meta.json
             '**/*.md'
             '**/*.yml'
