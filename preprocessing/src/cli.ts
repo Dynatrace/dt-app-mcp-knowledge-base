@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 import { parseArgs } from 'node:util';
 import { resolve } from 'node:path';
+import { DEFAULT_CHUNK_DIR, chunkDocument } from './chunking.ts';
 import {
-  DEFAULT_CHUNK_DIR,
-  chunkDocument,
-  readSourceDocuments,
-} from './chunking.ts';
+  downloadDocuments,
+  withContentHashes,
+  type DownloadResult,
+} from './download.ts';
 import {
   DEFAULT_INDEX_PATH,
   buildIndex,
@@ -21,12 +22,12 @@ import {
   stampMetadata,
   writeMetadata,
 } from './meta.ts';
-import { mockContentHashes } from './mock-portal.ts';
 import {
   DEFAULT_SITEMAP_URL,
   SitemapError,
   fetchSitemap,
   parseSitemap,
+  siteRoot,
 } from './sitemap.ts';
 import {
   applyChunks,
@@ -43,15 +44,14 @@ const DEFAULT_META_PATH = 'meta.json';
 // The repository root is the pipeline's output location, and the package lives one level below it.
 const REPOSITORY_ROOT = resolve(import.meta.dirname, '../..');
 
-const USAGE = `Usage: npm start -- --source-dir <path> [options]
+const USAGE = `Usage: npm start -- [options]
 
-Discovers every developer portal documentation page, splits each document at its main headings and
-writes the knowledge base: one markdown file per section under the chunk directory, one index entry
-per chunk, and the build metadata of the run. Only what the portal changed is written again.
+Discovers every developer portal documentation page, downloads its markdown, splits each document
+at its main headings and writes the knowledge base: one markdown file per section under the chunk
+directory, one index entry per chunk, and the build metadata of the run. Only what the portal
+changed is written again.
 
 Options:
-  --source-dir <path>   Directory holding the markdown documents to split (required).
-                        Temporary, to be removed once the download stage supplies the documents.
   --sitemap <url>       Sitemap to read (default: ${DEFAULT_SITEMAP_URL})
   --chunk-dir <path>    Chunk output directory, relative to the repository root (default: ${DEFAULT_CHUNK_DIR})
   --index <path>        index.json to write, relative to the repository root (default: ${DEFAULT_INDEX_PATH})
@@ -64,7 +64,6 @@ Options:
 
 export async function run(argv: string[]): Promise<number> {
   let options: {
-    'source-dir'?: string;
     sitemap?: string;
     'chunk-dir'?: string;
     index?: string;
@@ -78,7 +77,6 @@ export async function run(argv: string[]): Promise<number> {
     ({ values: options } = parseArgs({
       args: argv,
       options: {
-        'source-dir': { type: 'string' },
         sitemap: { type: 'string' },
         'chunk-dir': { type: 'string' },
         index: { type: 'string' },
@@ -98,14 +96,6 @@ export async function run(argv: string[]): Promise<number> {
     return 0;
   }
 
-  // TODO: Remove --source-dir once the download stage supplies the documents to split.
-  const sourceDir = options['source-dir'];
-  if (!sourceDir) {
-    return usageError(
-      'the pipeline needs the documents to split, pass --source-dir <path>',
-    );
-  }
-
   const sitemapUrl = options.sitemap ?? DEFAULT_SITEMAP_URL;
   const chunkDir = options['chunk-dir'] ?? DEFAULT_CHUNK_DIR;
   const indexPath = resolve(
@@ -116,31 +106,33 @@ export async function run(argv: string[]): Promise<number> {
   const dryRun = options['dry-run'] === true;
 
   try {
-    const discovered = parseSitemap(await fetchSitemap(sitemapUrl));
+    const root = siteRoot(sitemapUrl);
+    const discovered = parseSitemap(await fetchSitemap(sitemapUrl), sitemapUrl);
     // One timestamp for the whole run, so every stage of a build reports the same build.
     const generatedAt = new Date();
     const previousMeta = await readMetadata(metaPath);
     const previousIndex = await readIndex(indexPath);
 
-    // TODO: Read the documents from the download stage instead, once it feeds the pipeline.
-    const sources = await readSourceDocuments(sourceDir);
-    if (sources.length === 0) {
-      throw new Error(`No markdown documents found in ${resolve(sourceDir)}`);
+    const download = await downloadDocuments(discovered, root);
+    if (download.documents.length === 0) {
+      throw new Error(
+        `None of the ${plural(discovered.length, 'page')} ${sitemapUrl} lists served any markdown`,
+      );
     }
 
-    // TODO: Drop once the sitemap carries a content hash of its own.
-    const hashed = mockContentHashes(discovered, sources);
+    const hashed = withContentHashes(discovered, download.documents);
     const {
       meta: discoveredMeta,
       added,
       removed,
     } = mergeMetadata(hashed, previousMeta, generatedAt);
 
-    const plan = await planDocuments(sources, {
+    const plan = await planDocuments(download.documents, {
       repositoryRoot: REPOSITORY_ROOT,
       previousMeta,
       previousIndex,
       currentMeta: discoveredMeta,
+      siteRoot: root,
       force: options.force === true,
     });
     const split = plan.process.map((source) => chunkDocument(source, chunkDir));
@@ -153,7 +145,14 @@ export async function run(argv: string[]): Promise<number> {
       discoveredMeta,
       documents,
       generatedAt,
+      root,
     );
+    // Every document came from the sitemap, so one the metadata does not list is a pipeline bug.
+    if (unmatched.length > 0) {
+      throw new Error(
+        [`Not listed in ${metaPath}:`, ...unmatched.map(indent)].join('\n'),
+      );
+    }
 
     // An index dt-app-mcp cannot rely on is worse than none, so nothing is written until it holds.
     const index = buildIndex(REPOSITORY_ROOT, documents);
@@ -188,7 +187,7 @@ export async function run(argv: string[]): Promise<number> {
 
     if (options.json === true) {
       process.stdout.write(
-        `${JSON.stringify(toJson(discovered, documents, plan, update), undefined, 2)}\n`,
+        `${JSON.stringify(toJson(discovered, download, documents, plan, update), undefined, 2)}\n`,
       );
     } else {
       report({
@@ -196,7 +195,7 @@ export async function run(argv: string[]): Promise<number> {
         found: discovered.length,
         added: added.length,
         removed: removed.length,
-        sourceDir,
+        download,
         split,
         plan,
         update,
@@ -209,9 +208,7 @@ export async function run(argv: string[]): Promise<number> {
         wroteMeta,
       });
     }
-    // TODO: Fail on unmatched documents once the download stage feeds this, where a document
-    // without a meta.json entry is a pipeline bug rather than a stand-in file.
-    warn(documents, unmatched, metaPath);
+    warn(documents, download);
     return 0;
   } catch (cause) {
     const detail = cause instanceof Error ? cause.message : String(cause);
@@ -229,7 +226,7 @@ type RunReport = {
   found: number;
   added: number;
   removed: number;
-  sourceDir: string;
+  download: DownloadResult;
   split: ChunkedDocument[];
   plan: DocumentPlan;
   update: ChunkUpdate;
@@ -257,7 +254,8 @@ function report(run: RunReport): void {
   const lines = [
     `Read ${run.sitemapUrl}`,
     `Found ${plural(run.found, 'page')} (${run.added} new, ${run.removed} no longer listed)`,
-    `Read ${resolve(run.sourceDir)}`,
+    `Downloaded ${plural(run.download.documents.length, 'document')}` +
+      ` (${run.download.skipped.length} without markdown, ${run.download.failed.length} failed)`,
     `Split ${run.split.length} of ${plural(documents, 'document')} into ${plural(total, 'chunk')}` +
       ` (${run.plan.added.length} new, ${run.plan.changed.length} changed,` +
       ` ${run.plan.unchanged.length} unchanged)`,
@@ -289,11 +287,27 @@ function report(run: RunReport): void {
 }
 
 /** Warnings go to stderr so they survive --json, where stdout has to stay machine-readable. */
-function warn(
-  documents: ChunkedDocument[],
-  unmatched: string[],
-  metaPath: string,
-): void {
+function warn(documents: ChunkedDocument[], download: DownloadResult): void {
+  if (download.failed.length > 0) {
+    const warning = [
+      'Downloads that went wrong, these pages keep the chunks the last run wrote:',
+      ...download.failed.map((entry) =>
+        indent(`${entry.url}: ${entry.reason}`),
+      ),
+    ];
+    process.stderr.write(`${warning.join('\n')}\n`);
+  }
+
+  if (download.skipped.length > 0) {
+    const warning = [
+      'Pages the portal serves no markdown for, not part of the knowledge base:',
+      ...download.skipped.map((entry) =>
+        indent(`${entry.url}: ${entry.reason}`),
+      ),
+    ];
+    process.stderr.write(`${warning.join('\n')}\n`);
+  }
+
   const generic = documents.flatMap((d) =>
     d.genericHeadings.map((heading) => `${d.pagePath}: ${heading}`),
   );
@@ -315,24 +329,26 @@ function warn(
     ];
     process.stderr.write(`${warning.join('\n')}\n`);
   }
-
-  if (unmatched.length > 0) {
-    const warning = [
-      `Not listed in ${metaPath}, chunk paths not recorded:`,
-      ...unmatched.map(indent),
-    ];
-    process.stderr.write(`${warning.join('\n')}\n`);
-  }
 }
 
 function toJson(
   discovered: SitemapDocument[],
+  download: DownloadResult,
   documents: ChunkedDocument[],
   plan: DocumentPlan,
   update: ChunkUpdate,
 ): unknown {
   return {
     discovered,
+    downloaded: {
+      documents: download.documents.map((document) => ({
+        url: document.url,
+        pagePath: document.pagePath,
+        contentHash: document.contentHash,
+      })),
+      skipped: download.skipped,
+      failed: download.failed,
+    },
     documents: documents.map((document) => ({
       pagePath: document.pagePath,
       title: document.title,
