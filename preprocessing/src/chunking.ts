@@ -1,5 +1,3 @@
-import { readdir, readFile } from 'node:fs/promises';
-import { join, resolve, sep } from 'node:path';
 import { splitMarkdown } from './markdown.ts';
 import { toPathSlug, toSlug } from './slug.ts';
 import {
@@ -81,7 +79,11 @@ export function chunkDocument(
   const sections = splitMarkdown(document.markdown);
   const title = pageTitle(document);
   const preamble = sections.find((section) => !section.heading);
-  const description = preamble && describeSection(preamble.content);
+  const derived = preamble && describeSection(preamble.content);
+  // The portal describes some of its pages and not others, so the preamble still stands in.
+  const description = document.description ?? derived;
+  // An introduction a description the portal wrote does not carry is a chunk, or its text is lost.
+  const carriesPreamble = !derived || description === derived;
 
   // Reserved even when the document has no preamble, so `index.md` never means two different things.
   const taken = new Set([PREAMBLE_SLUG]);
@@ -92,7 +94,11 @@ export function chunkDocument(
     const heading = section.heading?.text;
     // A preamble of nothing but the title and its introduction survives as the page name and
     // description, so writing it out again would only cost the agent a file to load.
-    if (!heading && holdsOnlyTitleAndIntro(section.content)) {
+    if (
+      !heading &&
+      carriesPreamble &&
+      holdsOnlyTitleAndIntro(section.content)
+    ) {
       return [];
     }
 
@@ -131,33 +137,6 @@ export function chunkDocument(
   };
 }
 
-/** Reads every markdown file below `directory`, deriving each page path from its location. */
-export async function readSourceDocuments(
-  directory: string,
-): Promise<SourceDocument[]> {
-  const root = resolve(directory);
-  let entries: string[];
-  try {
-    entries = await readdir(root, { recursive: true });
-  } catch (cause) {
-    throw new Error(
-      `Could not read the source directory ${root}: ${describe(cause)}`,
-      { cause },
-    );
-  }
-
-  const documents = await Promise.all(
-    entries
-      .filter((entry) => entry.endsWith('.md'))
-      .map(async (entry) => ({
-        pagePath: entry.slice(0, -'.md'.length).split(sep).join('/'),
-        markdown: await readFile(join(root, entry), 'utf8'),
-      })),
-  );
-
-  return documents.sort((a, b) => a.pagePath.localeCompare(b.pagePath));
-}
-
 function disambiguate(slug: string, taken: Set<string>): string {
   let candidate = slug;
   for (let suffix = 2; taken.has(candidate); suffix += 1) {
@@ -165,8 +144,4 @@ function disambiguate(slug: string, taken: Set<string>): string {
   }
   taken.add(candidate);
   return candidate;
-}
-
-function describe(cause: unknown): string {
-  return cause instanceof Error ? cause.message : String(cause);
 }

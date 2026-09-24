@@ -16,6 +16,9 @@ export type SourceEntry = {
 export type SourceDocument = {
   pagePath: string;
   markdown: string;
+  // Both written by the page's own author, and both absent where the frontmatter carries neither.
+  title?: string;
+  description?: string;
 };
 
 /** One chunk file, addressed by its repository-relative path as recorded in meta.json and index.json. */

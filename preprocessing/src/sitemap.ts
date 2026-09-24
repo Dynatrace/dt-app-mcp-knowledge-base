@@ -14,6 +14,11 @@ export const DEFAULT_SITEMAP_URL =
 // The sitemap carries no per-URL content hash, so discovery records a sentinel the download stage replaces.
 export const UNKNOWN_CONTENT_HASH = '0'.repeat(64);
 
+/** The site a sitemap describes, which is rooted at the directory the sitemap itself sits in. */
+export function siteRoot(sitemapUrl: string): string {
+  return new URL('.', sitemapUrl).toString();
+}
+
 export async function fetchSitemap(
   url: string,
   timeoutMs = DEFAULT_TIMEOUT_MS,
@@ -52,7 +57,10 @@ export async function fetchSitemap(
   return body;
 }
 
-export function parseSitemap(xml: string): SitemapDocument[] {
+export function parseSitemap(
+  xml: string,
+  sitemapUrl: string,
+): SitemapDocument[] {
   // Tag values stay strings so a <loc> like "2026" is not coerced into a number.
   const parser = new XMLParser({
     ignoreAttributes: true,
@@ -85,9 +93,10 @@ export function parseSitemap(xml: string): SitemapDocument[] {
     throw new SitemapError('The sitemap contains no <url> elements');
   }
 
+  const site = siteRoot(sitemapUrl);
   const documents = new Map<string, SitemapDocument>();
   entries.forEach((entry, position) => {
-    const url = toMarkdownUrl(readLoc(entry, position));
+    const url = toMarkdownUrl(readLoc(entry, position), site);
     documents.set(url, { url, contentHash: UNKNOWN_CONTENT_HASH });
   });
 
@@ -96,16 +105,33 @@ export function parseSitemap(xml: string): SitemapDocument[] {
 }
 
 /**
- * Applies the portal's `<page-url>.md` convention. Portal locs carry a trailing slash,
- * so the slash is dropped first and the bare site root maps to `/index.md`.
+ * Applies the portal's `<page-url>.md` convention, on the host the sitemap came from. Portal locs
+ * carry a trailing slash, so the slash is dropped first and the site root maps to `index.md`.
  */
-export function toMarkdownUrl(pageUrl: string): string {
-  const url = new URL(pageUrl);
-  const path = url.pathname.replace(/\/+$/, '');
-  url.pathname = path === '' ? '/index.md' : `${path}.md`;
-  url.search = '';
-  url.hash = '';
+export function toMarkdownUrl(pageUrl: string, root: string): string {
+  const site = new URL(root);
+  const path = new URL(pageUrl).pathname.replace(/\/+$/, '');
+  const base = site.pathname.replace(/\/+$/, '');
+
+  // A preview deployment lists the URLs its pages will have in production, which serve nothing yet.
+  const url = new URL(site.origin);
+  url.pathname = path === base ? `${base}/index.md` : `${path}.md`;
   return url.toString();
+}
+
+/** Reduces a document URL to the page path below the site root, which addresses it everywhere else. */
+export function toPagePath(url: string, root: string): string | undefined {
+  let path: string;
+  try {
+    path = new URL(url).pathname.replace(/\.md$/, '');
+  } catch {
+    return undefined;
+  }
+
+  const base = new URL(root).pathname;
+  return path.startsWith(base)
+    ? path.slice(base.length)
+    : path.replace(/^\/+/, '');
 }
 
 function readLoc(entry: unknown, position: number): string {

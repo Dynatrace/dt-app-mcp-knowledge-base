@@ -35,6 +35,8 @@ const PAGE = [
 
 const HASH = 'a'.repeat(64);
 
+const SITE = 'https://developer.dynatrace.com/';
+
 const tempDir = (prefix: string) => mkdtemp(join(tmpdir(), prefix));
 
 const source = (pagePath = 'docs/a', markdown = PAGE): SourceDocument => ({
@@ -77,6 +79,7 @@ function context(
     previousMeta,
     previousIndex: indexed('docs/docs/a/intro.md'),
     currentMeta: previousMeta,
+    siteRoot: SITE,
     force: false,
     ...options,
   };
@@ -190,6 +193,40 @@ describe('planDocuments', () => {
 
     assert.deepEqual(plan.changed, ['docs/a']);
     assert.equal(plan.process.length, 1);
+  });
+
+  it('carries the chunks of a page the download stage had nothing for over', async () => {
+    const root = await tempDir('kb-update-');
+    await existingChunk(root, 'docs/docs/a/intro.md');
+
+    // The page is still listed, so it keeps its chunks rather than dropping out of the corpus.
+    const plan = await planDocuments([], context(root));
+
+    assert.deepEqual(plan.process, []);
+    assert.deepEqual(plan.added, []);
+    assert.deepEqual(plan.changed, []);
+    assert.deepEqual(plan.unchanged, []);
+    assert.equal(plan.reused[0]?.pagePath, 'docs/a');
+    assert.deepEqual(
+      plan.reused[0]?.chunks.map((chunk) => chunk.path),
+      ['docs/docs/a/intro.md'],
+    );
+  });
+
+  it('has nothing to carry over for a page whose chunk file is gone', async () => {
+    const plan = await planDocuments([], context(await tempDir('kb-update-')));
+
+    assert.deepEqual(plan.reused, []);
+  });
+
+  it('has nothing to carry over for a page no earlier run recorded', async () => {
+    const plan = await planDocuments([], {
+      ...context(await tempDir('kb-update-')),
+      previousMeta: undefined,
+      previousIndex: undefined,
+    });
+
+    assert.deepEqual(plan.reused, []);
   });
 
   it('carries over a document that produced no chunks at all', async () => {

@@ -12,6 +12,32 @@ import {
 const doc = (...lines: string[]) => lines.join('\n');
 
 describe('pageTitle', () => {
+  it('takes the title the page author wrote over anything derived', () => {
+    const markdown = doc('# Button', '', '## Columns', 'One.');
+
+    assert.equal(
+      pageTitle({
+        pagePath: 'design/components/Button/props',
+        markdown,
+        title: 'Button - Properties',
+      }),
+      'Button - Properties',
+    );
+  });
+
+  it('keeps the version of a page whose author titles every version alike', () => {
+    const markdown = doc('## Functions', 'One.');
+
+    assert.equal(
+      pageTitle({
+        pagePath: 'develop/sdks/client-classic-environment-v2/v7',
+        markdown,
+        title: 'Classic environment v2',
+      }),
+      'Classic environment v2: V7',
+    );
+  });
+
   it('takes the title heading of the document', () => {
     const markdown = doc(
       '# Request Analysis',
@@ -42,6 +68,42 @@ describe('pageTitle', () => {
       'Rpc Spans',
     );
   });
+
+  it('qualifies a page named after a kind of content with the page above it', () => {
+    const markdown = doc('## Columns', 'One.', '', '## Rows', 'Two.');
+
+    assert.equal(
+      pageTitle({ pagePath: 'design/components/DataTable/props', markdown }),
+      'Data Table: Props',
+    );
+  });
+
+  it('qualifies a version page, which every SDK repeats', () => {
+    const markdown = doc('## Functions', 'One.', '', '## Types', 'Two.');
+
+    assert.equal(
+      pageTitle({ pagePath: 'develop/sdks/user-preferences/v1', markdown }),
+      'User Preferences: V1',
+    );
+  });
+
+  it('leaves a page named after its own subject unqualified', () => {
+    const markdown = doc('## Columns', 'One.', '', '## Rows', 'Two.');
+
+    assert.equal(
+      pageTitle({ pagePath: 'design/components/DataTable', markdown }),
+      'Data Table',
+    );
+  });
+
+  it('takes the title heading over the page path even on a kind page', () => {
+    const markdown = doc('# Data Table - Properties', '', '## Columns', 'One.');
+
+    assert.equal(
+      pageTitle({ pagePath: 'design/components/DataTable/props', markdown }),
+      'Data Table - Properties',
+    );
+  });
 });
 
 describe('nameChunk', () => {
@@ -63,6 +125,17 @@ describe('nameChunk', () => {
     assert.equal(
       nameChunk('RPC Span Analysis', 'RPC span analysis'),
       'RPC Span Analysis',
+    );
+  });
+
+  it('does not repeat the kind a qualified title already ends on', () => {
+    assert.equal(nameChunk('Data Table: Props', 'Props'), 'Data Table: Props');
+  });
+
+  it('keeps the qualifying page in front of the heading', () => {
+    assert.equal(
+      nameChunk('Data Table: Usage', 'When to use'),
+      'Data Table: Usage: When to use',
     );
   });
 });
@@ -147,6 +220,71 @@ describe('describeSection', () => {
       describeSection(doc('## Calls', '', '```dql', 'fetch spans', '```')),
       undefined,
     );
+  });
+
+  it('describes the section behind an admonition rather than the callout', () => {
+    const section = doc(
+      '## Number Input',
+      '',
+      ':::caution Deprecated',
+      '',
+      'Use the NumberInputV2 component instead of this one.',
+      '',
+      ':::',
+    );
+
+    assert.equal(
+      describeSection(section),
+      'Use the NumberInputV2 component instead of this one.',
+    );
+  });
+
+  it('takes the fences off an admonition written without blank lines', () => {
+    const section = doc(
+      '## Number Input',
+      '',
+      ':::note',
+      'Number inputs accept integers and floating-point numbers.',
+      ':::',
+    );
+
+    assert.equal(
+      describeSection(section),
+      'Number inputs accept integers and floating-point numbers.',
+    );
+  });
+
+  it('skips a table and describes the section with the prose below it', () => {
+    const section = doc(
+      '## Props',
+      '',
+      '| Prop | Type |',
+      '| ---- | ---- |',
+      '| size | string |',
+      '',
+      'Every prop of the base input applies as well.',
+    );
+
+    assert.equal(
+      describeSection(section),
+      'Every prop of the base input applies as well.',
+    );
+  });
+
+  it('lists the subsections of a section that holds nothing but a table', () => {
+    const section = doc(
+      '## Props',
+      '',
+      '| Prop | Type |',
+      '| ---- | ---- |',
+      '',
+      '### Illustration Cues',
+      '',
+      '| Cue | Meaning |',
+      '| --- | ------- |',
+    );
+
+    assert.equal(describeSection(section), 'Illustration Cues');
   });
 
   it('cuts an overlong paragraph on a word boundary', () => {
