@@ -51,7 +51,7 @@ jobs:
         working-directory: preprocessing
 
       - name: Refresh the knowledge base
-        run: npm start -- --source-dir ../sources $FORCE $DRY_RUN
+        run: npm start -- $FORCE $DRY_RUN
         working-directory: preprocessing
         env:
           # Empty on the nightly run, which has no inputs

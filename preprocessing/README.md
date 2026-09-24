@@ -1,9 +1,8 @@
 # Preprocessing
 
 Turns the [Dynatrace Developer](https://developer.dynatrace.com) documentation into the knowledge base
-that `dt-app-mcp` consumes. The pipeline runs in stages — **document discovery**, **chunking** and
-**indexing** — as a single command. The download stage between discovery and chunking is still missing,
-so the documents to split come from a local directory for now.
+that `dt-app-mcp` consumes. The pipeline runs in stages — **document discovery**, **download**,
+**chunking** and **indexing** — as a single command.
 
 ## Run the pipeline
 
@@ -11,58 +10,47 @@ From this directory:
 
 ```sh
 npm install
-npm start -- --source-dir ../sources
+npm start
 ```
 
-That reads `https://developer.dynatrace.com/sitemap.xml` and derives the Markdown URL of every page, splits
-each document at its main headings into `docs/`, and writes `index.json` and `meta.json` in the repository
-root. The run prints what each stage produced: how many pages the sitemap held, how many are new and how
-many it no longer lists, which documents it split, what it changed below `docs/`, and what it left alone.
+That reads `https://developer.dynatrace.com/sitemap.xml` and derives the Markdown URL of every page,
+downloads each of them, splits each document at its main headings into `docs/`, and writes `index.json`
+and `meta.json` in the repository root. The run prints what each stage produced: how many pages the
+sitemap held, how many are new and how many it no longer lists, how many documents it downloaded, which
+documents it split, what it changed below `docs/`, and what it left alone.
 
 The pipeline runs nightly, so it only redoes what the portal changed — see
 [Nightly run](#nightly-run) and [Only what changed](#only-what-changed).
-
-`--source-dir` is **temporary**. The portal sitemap does not serve markdown yet, so there is nothing for the
-download stage to fetch and the documents to split have to come from a directory. `sources/` in the
-repository root holds them until then, which is also what the nightly run passes. Once the download stage
-supplies them, the option goes away along with that directory, and the pipeline splits whatever the stage
-wrote.
-
-The sitemap carries no content hash either, and deciding what changed needs one. Until it does,
-[`src/mock-portal.ts`](src/mock-portal.ts) stands in for it, hashing the document the source directory holds
-for a page; a page it holds nothing for keeps the all-zero digest discovery writes. The comparison itself is
-already the real one, so only that stand-in goes away — the download stage will hash the bytes it fetched.
 
 ### Options
 
 Pass CLI options after `--`:
 
 ```sh
-npm start -- --source-dir ../sources --dry-run
-npm start -- --source-dir ../sources --sitemap https://developer.dynatracelabs.com/sitemap.xml
+npm start -- --dry-run
+npm start -- --sitemap https://developer.dynatracelabs.com/sitemap.xml
 ```
 
-| Option                | Default                                       | Description                                              |
-| --------------------- | --------------------------------------------- | -------------------------------------------------------- |
-| `--source-dir <path>` | —                                             | Documents to split. Required, and temporary — see above. |
-| `--sitemap <url>`     | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
-| `--chunk-dir <path>`  | `docs`                                        | Chunk output directory, relative to the repository root. |
-| `--index <path>`      | `index.json`                                  | `index.json` to write, relative to the repository root.  |
-| `--out <path>`        | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
-| `--force`             | off                                           | Split every document again, whatever the hashes say.     |
-| `--dry-run`           | off                                           | Report what would be produced without writing anything.  |
-| `--json`              | off                                           | Print what the run produced as JSON.                     |
-| `--help`              | —                                             | Show usage.                                              |
+| Option               | Default                                       | Description                                              |
+| -------------------- | --------------------------------------------- | -------------------------------------------------------- |
+| `--sitemap <url>`    | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
+| `--chunk-dir <path>` | `docs`                                        | Chunk output directory, relative to the repository root. |
+| `--index <path>`     | `index.json`                                  | `index.json` to write, relative to the repository root.  |
+| `--out <path>`       | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
+| `--force`            | off                                           | Split every document again, whatever the hashes say.     |
+| `--dry-run`          | off                                           | Report what would be produced without writing anything.  |
+| `--json`             | off                                           | Print what the run produced as JSON.                     |
+| `--help`             | —                                             | Show usage.                                              |
 
-An unreachable, empty or malformed sitemap, a source directory holding no markdown and an index that does
-not satisfy its schema each fail the run with a message on stderr and exit code `1`. Bad CLI usage exits
-with `2`.
+An unreachable, empty or malformed sitemap, a portal that served no markdown at all and an index that
+does not satisfy its schema each fail the run with a message on stderr and exit code `1`. Bad CLI usage
+exits with `2`.
 
 ## Nightly run
 
 Nobody should have to ask for a current knowledge base, so
 [`.github/workflows/knowledge-base.yml`](../.github/workflows/knowledge-base.yml) runs the pipeline every
-night at 03:20 UTC against `sources/` and commits what it produced straight to `main`, early enough to be
+night at 03:20 UTC against the portal and commits what it produced straight to `main`, early enough to be
 there when the working day starts. `--force` and `--dry-run` are inputs of the manual trigger on the
 Actions tab, so an on-demand run can rebuild the whole corpus or report without writing.
 
@@ -103,7 +91,7 @@ named or described does not reach the chunks of a page the portal left alone. `-
 document again whatever the hashes say:
 
 ```sh
-npm start -- --source-dir ../sources --force
+npm start -- --force
 ```
 
 Files still change only where the content differs — writing bytes a file already holds helps nobody.
@@ -121,15 +109,49 @@ the bare site root maps to `/index.md`:
 | `https://developer.dynatrace.com/docs/intro/` | `https://developer.dynatrace.com/docs/intro.md` |
 | `https://developer.dynatrace.com/`            | `https://developer.dynatrace.com/index.md`      |
 
+Documents are read from the **host the sitemap came from**, whatever host its `<loc>` values name. A
+preview deployment of the portal lists the URLs its pages will have in production, which serve nothing
+yet, so following the `<loc>` host would download nothing at all. On `developer.dynatrace.com` the two
+are the same host and the rule changes nothing.
+
+The site is rooted where its sitemap sits, and a page path is the location of a document below that
+root — `docs/intro` for the document above. A portal published below a path serves its sitemap below the
+same path, so the same page produces the same page path, the same chunk files and the same index entries
+wherever it is deployed.
+
+## Download the documents
+
+Every discovered page is downloaded, eight requests at a time, and what comes back is what the chunking
+stage splits — nothing is stored in between.
+
+The portal serves markdown for its documentation, and answers `403` or `404` for the pages that have
+none: blog posts, tag listings and anything else that is not a document. Those are **skipped**, and a
+page whose download went wrong — a `500`, an unreachable host, a request that timed out — is reported as
+**failed**. Both are listed on stderr with the reason, and the run carries on either way; only a portal
+that served no markdown at all fails it. A skipped or failed page keeps the chunks the last run wrote
+for it, so a page the portal serves badly for one night does not drop out of the knowledge base.
+
+Frontmatter is split off each document as it arrives. The chunking stage reads a CommonMark parse, where
+the closing `---` of a frontmatter block is a setext heading rather than a delimiter, and would split the
+frontmatter into a chunk of its own.
+
+Its `title` and `description` are kept, because the page's own author names a page better than anything
+this pipeline can derive from its markdown. Every portal page carries a `title`, about two in five a
+`description`. The remaining field, `source`, names the page itself and is dropped.
+
+The content hash is the SHA-256 digest of those two fields and the markdown below them — everything the
+chunking stage goes on to read. A page whose `source` was regenerated, or whose keys were reordered, is
+therefore not split again to produce the chunks it already has, while a retitled one is.
+
 ## Chunk documents
 
 Loading a whole page into the agent context wastes space when only one section is relevant, so every
 document is split at its main headings into one markdown file per section, each with a name and a
 description an agent can retrieve it by, and one `index.json` entry per chunk.
 
-Every `.md` file below `--source-dir` is one document, and its location is its page path: `docs/dql/spans.md`
-is the page `docs/dql/spans`. Chunk paths are recorded on the matching `meta.json` source entry; documents no
-source entry claims are still chunked, and reported on stderr.
+Every downloaded document is one page, addressed by its page path: the document
+`https://developer.dynatrace.com/docs/dql/spans.md` is the page `docs/dql/spans`. Chunk paths are recorded
+on the matching `meta.json` source entry.
 
 ### Where a document is split
 
@@ -141,8 +163,8 @@ chunk, and a chunk of its own as soon as it holds more than those two.
 
 Headings are read from a CommonMark parse of the document, so both heading styles count — `## Section` and
 a `Section` underlined with `---` are the same thing — while `#` inside a fenced code block or a block quote
-is not a heading at all. Documents are plain markdown: a page carrying frontmatter would have its closing
-`---` read as a setext heading, so the portal must not serve one.
+is not a heading at all. What is split is plain markdown, with the frontmatter the portal serves already
+taken off by the download stage.
 
 ### How a chunk is named
 
@@ -157,7 +179,17 @@ name when neighbouring sections are added, removed or reordered:
 Coding agents locate docs by name and stop at the first plausible hit, so a heading that does not name its
 feature makes a chunk hard to find. The chunk name therefore carries the page context as well:
 `RPC Span Analysis: Key Attributes`, from the page title and the heading. A heading that already says what
-the page says is not repeated. Where the document has no title heading, the file name stands in for it.
+the page says is not repeated.
+
+The page title is the `title` its author wrote in the frontmatter. Only where a document carries none is one
+derived: from its title heading, and failing that from its page path. A page path ending in `props`, `usage`
+or `a11y` names a kind of content rather than a subject, and every component repeats it — the portal alone
+has 117 pages ending in `props`. Such a page takes the page above it as well, so a derived title reads
+`Data Table: Props`.
+
+A version is the one thing a title never carries: an SDK publishes `v1` through `v9` under a single authored
+title, so the version segment of the page path is appended whatever the title came from. That is what tells
+`Classic environment v2: V7` from `Classic environment v2: V8`, whose seven pages are otherwise identical.
 
 Headings that name a kind of content instead of a feature — `Overview`, `Usage`, `Example` — are reported
 on stderr to be fixed at the source.
@@ -172,11 +204,16 @@ was not looked at, so it has nothing to say about it; `--force` brings the whole
 ### How a chunk is described
 
 The description is the only text an agent sees before it decides to load a chunk, so it has to say what the
-chunk covers. It is derived from the chunk itself, deterministically and without a model call:
+chunk covers. The page description is the `description` its author wrote in the frontmatter, where the page
+carries one. Everything else is derived from the chunk itself, deterministically and without a model call:
 
 1. the paragraph or list below the heading, with list items kept apart so each stays a term to match on
 2. the subsection headings, where the section opens straight into subsections and has no introduction
 3. the page description, where the section holds nothing but code
+
+A candidate that lays content out instead of saying anything is passed over: the fences of an admonition are
+taken off so the callout behind `:::caution` describes the section, and a table is skipped, since read as
+plain text it is a row of pipes and dashes with no sentence to search.
 
 Descriptions are cut to 200 characters on a word boundary. Inline markup is unwrapped, but the underscores of
 an attribute name are kept — `request.is_root_span` is exactly what an agent searches for.
@@ -192,6 +229,9 @@ not a section. Both are kept as the page name and description — the name of ev
 with the title, and a chunk with no text of its own borrows the description — so writing them out again would
 only cost the agent a file to load. A preamble that holds more than title and introduction, or an
 introduction longer than a description may carry, is still written to `index.md`, so nothing is lost.
+
+So is an introduction the page description does not carry, which is what a `description` from the frontmatter
+is: it was written to summarise the page, not to stand in for the paragraph the page opens with.
 
 ## Output
 
@@ -213,10 +253,11 @@ placeholders for the fields the stages behind it own, so the file always satisfi
 
 - `downloadHash` — an all-zero digest for a page whose content nothing has hashed yet
 - `downloadedAt` — the Unix epoch for as long as that digest stands in
-- `chunkPaths` — empty for a page no source document matched
+- `chunkPaths` — empty for a page no document matched
 
-A page carrying the all-zero digest cannot be told apart from a changed one, so it is split on every
-run. That is every page until the download stage lands, which is why the stand-in hash below exists.
+Every page the portal serves markdown for is filled in by the download stage. The placeholders are what
+a page the portal has no markdown of keeps, which is how the pages that are not documentation stay in
+`meta.json` — listed as discovered, and part of no chunk.
 
 Re-runs rebuild the list from the sitemap but keep whatever the later stages already recorded, so discovery
 never discards their work. Documents that disappear from the sitemap are dropped.

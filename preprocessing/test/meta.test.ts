@@ -8,7 +8,6 @@ import {
   readMetadata,
   recordChunkPaths,
   stampMetadata,
-  toPagePath,
   writeMetadata,
 } from '../src/meta.ts';
 import { UNKNOWN_CONTENT_HASH } from '../src/sitemap.ts';
@@ -16,6 +15,8 @@ import type { ChunkedDocument, KnowledgeBaseMetadata } from '../src/types.ts';
 import { assertValidMetadata } from './helpers/schema.ts';
 
 const GENERATED_AT = new Date('2026-09-09T06:00:00.000Z');
+
+const SITE = 'https://developer.dynatrace.com/';
 
 const discovered = (path: string) => ({
   url: `https://developer.dynatrace.com${path}.md`,
@@ -199,6 +200,7 @@ describe('recordChunkPaths', () => {
       previous,
       [chunked('docs/a', 'docs/docs/a/index.md', 'docs/docs/a/usage.md')],
       GENERATED_AT,
+      SITE,
     );
 
     assert.deepEqual(meta.sources[0]?.chunkPaths, [
@@ -222,6 +224,7 @@ describe('recordChunkPaths', () => {
       previous,
       [chunked('docs/a', 'docs/docs/a/index.md')],
       GENERATED_AT,
+      SITE,
     );
 
     assert.deepEqual(meta.sources[0]?.chunkPaths, ['docs/docs/a/index.md']);
@@ -242,6 +245,7 @@ describe('recordChunkPaths', () => {
       previous,
       [chunked('docs/a', 'docs/docs/a/index.md')],
       GENERATED_AT,
+      SITE,
     );
 
     assert.deepEqual(meta.sources[0]?.chunkPaths, ['docs/docs/a/index.md']);
@@ -258,6 +262,7 @@ describe('recordChunkPaths', () => {
       previous,
       [chunked('RequestAnalysis', 'docs/request-analysis/index.md')],
       GENERATED_AT,
+      SITE,
     );
 
     assert.deepEqual(unmatched, ['RequestAnalysis']);
@@ -279,6 +284,7 @@ describe('recordChunkPaths', () => {
       previous,
       [chunked('docs/a', 'docs/docs/a/index.md')],
       GENERATED_AT,
+      SITE,
     );
 
     assert.equal(meta.sources[0]?.downloadHash, 'a'.repeat(64));
@@ -323,23 +329,6 @@ describe('stampMetadata', () => {
     const stamped = stampMetadata(meta, undefined, GENERATED_AT, false);
 
     assert.equal(stamped.generatedAt, '2026-09-09T06:00:00.000Z');
-  });
-});
-
-describe('toPagePath', () => {
-  it('reduces a document URL to the path the chunking stage addresses it by', () => {
-    assert.equal(
-      toPagePath('https://developer.dynatrace.com/docs/a.md'),
-      'docs/a',
-    );
-    assert.equal(
-      toPagePath('https://developer.dynatrace.com/index.md'),
-      'index',
-    );
-  });
-
-  it('has no page path for a value that is not a URL', () => {
-    assert.equal(toPagePath('docs/a.md'), undefined);
   });
 });
 

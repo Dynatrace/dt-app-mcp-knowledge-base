@@ -1,9 +1,6 @@
 import assert from 'node:assert/strict';
-import { mkdir, mkdtemp, writeFile } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
 import { describe, it } from 'node:test';
-import { chunkDocument, readSourceDocuments } from '../src/chunking.ts';
+import { chunkDocument } from '../src/chunking.ts';
 import { toPathSlug, toSlug } from '../src/slug.ts';
 
 const doc = (...lines: string[]) => lines.join('\n');
@@ -21,8 +18,6 @@ const PAGE = doc(
   '',
   'Advice.',
 );
-
-const tempDir = (prefix: string) => mkdtemp(join(tmpdir(), prefix));
 
 describe('chunkDocument', () => {
   it('names every chunk after the page path and the heading slug', () => {
@@ -72,6 +67,41 @@ describe('chunkDocument', () => {
     assert.deepEqual(
       chunks.filter((chunk) => chunk.heading === undefined),
       [],
+    );
+  });
+
+  it('takes the description the page author wrote over the introduction', () => {
+    const { description } = chunkDocument({
+      pagePath: 'a',
+      markdown: PAGE,
+      description: 'Learn how to analyse requests with DQL.',
+    });
+
+    assert.equal(description, 'Learn how to analyse requests with DQL.');
+  });
+
+  it('keeps the introduction as a chunk when the page description is not it', () => {
+    const { chunks } = chunkDocument({
+      pagePath: 'a',
+      markdown: PAGE,
+      description: 'Learn how to analyse requests with DQL.',
+    });
+
+    const [preamble] = chunks;
+    assert.equal(preamble?.path, 'docs/a/index.md');
+    assert.equal(preamble?.content, '# Request Analysis\n\nIntro.');
+  });
+
+  it('names the chunks of a page after the title its author wrote', () => {
+    const { chunks } = chunkDocument({
+      pagePath: 'a',
+      markdown: PAGE,
+      title: 'Request Analysis with DQL',
+    });
+
+    assert.equal(
+      chunks[0]?.name,
+      'Request Analysis with DQL: Request Attributes',
     );
   });
 
@@ -210,30 +240,6 @@ describe('chunkDocument', () => {
     const { genericHeadings } = chunkDocument({ pagePath: 'a', markdown });
 
     assert.deepEqual(genericHeadings, ['Overview']);
-  });
-});
-
-describe('readSourceDocuments', () => {
-  it('derives a page path from each file location and sorts the result', async () => {
-    const root = await tempDir('kb-source-');
-    await mkdir(join(root, 'docs', 'dql'), { recursive: true });
-    await writeFile(join(root, 'docs', 'dql', 'spans.md'), '# Spans', 'utf8');
-    await writeFile(join(root, 'index.md'), '# Home', 'utf8');
-    await writeFile(join(root, 'notes.txt'), 'ignored', 'utf8');
-
-    const documents = await readSourceDocuments(root);
-
-    assert.deepEqual(documents, [
-      { pagePath: 'docs/dql/spans', markdown: '# Spans' },
-      { pagePath: 'index', markdown: '# Home' },
-    ]);
-  });
-
-  it('fails with a readable error when the directory does not exist', async () => {
-    await assert.rejects(
-      readSourceDocuments(join(tmpdir(), 'kb-missing-source')),
-      /Could not read the source directory/,
-    );
   });
 });
 

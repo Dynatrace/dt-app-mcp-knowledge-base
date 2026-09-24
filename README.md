@@ -51,7 +51,6 @@ small.
 | --- | --- |
 | `preprocessing/` | The pipeline and its CLI. See [preprocessing/README.md](preprocessing/README.md). |
 | `schemas/` | JSON schemas for the generated `index.json` and `meta.json`. |
-| `sources/` | The portal documents the pipeline splits. Temporary — see [The CLI](#the-cli). |
 | `docs/` | The knowledge base chunks, one markdown file per section. Generated — never edit by hand. |
 | `index.json` | One entry per chunk, the file `dt-app-mcp` starts from. Generated — never edit by hand. |
 | `meta.json` | Build-only metadata. Generated — never edit by hand. |
@@ -64,39 +63,39 @@ sources run on Node's built-in type stripping, so there is no build step.
 ```sh
 cd preprocessing
 npm install
-npm start -- --source-dir ../sources
+npm start
 ```
 
-That reads the portal sitemap and derives the Markdown URL of every page, splits each document at
-its main headings into one markdown file per section under `docs/`, and writes one entry per chunk
-in `index.json` along with the build metadata in `meta.json`. The index is validated against its
-schema before anything is written, so a run either produces an index `dt-app-mcp` can rely on or
-fails naming the chunks at fault.
+That reads the portal sitemap and derives the Markdown URL of every page, downloads each of them,
+splits each document at its main headings into one markdown file per section under `docs/`, and
+writes one entry per chunk in `index.json` along with the build metadata in `meta.json`. The index is
+validated against its schema before anything is written, so a run either produces an index
+`dt-app-mcp` can rely on or fails naming the chunks at fault.
 
-`--source-dir` stands in for the download stage, which does not exist yet — the documents to split
-come from `sources/` in this repository until it does.
+A page the portal serves no markdown for — a blog post, a tag listing — is reported and skipped, as
+is one whose download went wrong. Both leave whatever chunks the page already has alone.
 
 Pass options after `--`:
 
 ```sh
-npm start -- --source-dir ../sources --dry-run
-npm start -- --source-dir ../sources --sitemap https://developer.dynatracelabs.com/sitemap.xml
+npm start -- --dry-run
+npm start -- --sitemap https://developer.dynatracelabs.com/sitemap.xml
 ```
 
-| Option                | Default                                       | Description                                              |
-| --------------------- | --------------------------------------------- | -------------------------------------------------------- |
-| `--source-dir <path>` | —                                             | Documents to split. Required, and temporary — see above. |
-| `--sitemap <url>`     | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
-| `--chunk-dir <path>`  | `docs`                                        | Chunk output directory, relative to the repository root. |
-| `--index <path>`      | `index.json`                                  | `index.json` to write, relative to the repository root.  |
-| `--out <path>`        | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
-| `--force`             | off                                           | Split every document again, whatever the hashes say.     |
-| `--dry-run`           | off                                           | Report what would be produced without writing anything.  |
-| `--json`              | off                                           | Print what the run produced as JSON.                     |
-| `--help`              | —                                             | Show usage.                                              |
+| Option               | Default                                       | Description                                              |
+| -------------------- | --------------------------------------------- | -------------------------------------------------------- |
+| `--sitemap <url>`    | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
+| `--chunk-dir <path>` | `docs`                                        | Chunk output directory, relative to the repository root. |
+| `--index <path>`     | `index.json`                                  | `index.json` to write, relative to the repository root.  |
+| `--out <path>`       | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
+| `--force`            | off                                           | Split every document again, whatever the hashes say.     |
+| `--dry-run`          | off                                           | Report what would be produced without writing anything.  |
+| `--json`             | off                                           | Print what the run produced as JSON.                     |
+| `--help`             | —                                             | Show usage.                                              |
 
-An unreachable, empty or malformed sitemap, and an index that does not satisfy its schema, each fail
-the run with exit code `1`. Bad CLI usage exits with `2`. See
+An unreachable, empty or malformed sitemap, a portal that served no markdown at all, and an index
+that does not satisfy its schema, each fail the run with exit code `1`. Bad CLI usage exits with
+`2`. See
 [preprocessing/README.md](preprocessing/README.md) for how chunks are split, named and described.
 
 ## Nightly refresh
@@ -117,8 +116,8 @@ about.
 
 ## Status
 
-Document discovery, heading-based chunking, `index.json` generation and the nightly refresh are
-implemented. Downloading is still to come — the documents to split come from `sources/` for now.
+Document discovery, download, heading-based chunking, `index.json` generation and the nightly
+refresh are implemented. Keeping internal-only content out of the public output is still to come.
 
 ## Development
 
