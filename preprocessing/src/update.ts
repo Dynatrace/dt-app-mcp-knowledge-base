@@ -2,8 +2,7 @@ import { access, readdir, rm, rmdir } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { readIfPresent, writeIfChanged } from './files.ts';
 import { toRepositoryPath } from './indexing.ts';
-import { toPagePath } from './meta.ts';
-import { UNKNOWN_CONTENT_HASH } from './sitemap.ts';
+import { UNKNOWN_CONTENT_HASH, toPagePath } from './sitemap.ts';
 import type {
   Chunk,
   ChunkEntry,
@@ -20,6 +19,7 @@ export type UpdateContext = {
   previousMeta: KnowledgeBaseMetadata | undefined;
   previousIndex: KnowledgeBaseIndex | undefined;
   currentMeta: KnowledgeBaseMetadata;
+  siteRoot: string;
   force: boolean;
 };
 
@@ -40,8 +40,8 @@ export async function planDocuments(
   sources: SourceDocument[],
   context: UpdateContext,
 ): Promise<DocumentPlan> {
-  const recorded = byPagePath(context.previousMeta);
-  const discovered = byPagePath(context.currentMeta);
+  const recorded = byPagePath(context.previousMeta, context.siteRoot);
+  const discovered = byPagePath(context.currentMeta, context.siteRoot);
   const entries = new Map(
     (context.previousIndex?.chunks ?? []).map((chunk) => [chunk.path, chunk]),
   );
@@ -78,18 +78,37 @@ export async function planDocuments(
     }
 
     plan.unchanged.push(source.pagePath);
-    plan.reused.push({
-      pagePath: source.pagePath,
-      // Nothing was derived for this document, so it reports neither a summary nor any warning.
-      title: undefined,
-      description: undefined,
-      chunks: reused,
-      genericHeadings: [],
-      weakDescriptions: [],
-    });
+    plan.reused.push(carriedOver(source.pagePath, reused));
+  }
+
+  // A page the download stage had nothing for keeps the chunks it has, so a portal that serves one
+  // page badly does not take that page out of the knowledge base.
+  const downloaded = new Set(sources.map((source) => source.pagePath));
+  for (const pagePath of discovered.keys()) {
+    const previous = recorded.get(pagePath);
+    if (downloaded.has(pagePath) || !previous) {
+      continue;
+    }
+
+    const reused = await reusableChunks(context, previous.chunkPaths, entries);
+    if (reused && reused.length > 0) {
+      plan.reused.push(carriedOver(pagePath, reused));
+    }
   }
 
   return plan;
+}
+
+function carriedOver(pagePath: string, chunks: Chunk[]): ChunkedDocument {
+  return {
+    pagePath,
+    // Nothing was derived for this document, so it reports neither a summary nor any warning.
+    title: undefined,
+    description: undefined,
+    chunks,
+    genericHeadings: [],
+    weakDescriptions: [],
+  };
 }
 
 /** What the run has to write below the chunk directory, and what it has to take away. */
@@ -171,10 +190,11 @@ export function touchesChunks(update: ChunkUpdate): boolean {
 
 function byPagePath(
   meta: KnowledgeBaseMetadata | undefined,
+  root: string,
 ): Map<string, SourceEntry> {
   const sources = new Map<string, SourceEntry>();
   for (const source of meta?.sources ?? []) {
-    const pagePath = toPagePath(source.url);
+    const pagePath = toPagePath(source.url, root);
     if (pagePath) {
       sources.set(pagePath, source);
     }

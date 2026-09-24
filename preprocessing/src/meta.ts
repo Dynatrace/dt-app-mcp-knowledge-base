@@ -1,5 +1,5 @@
 import { readIfPresent, writeIfChanged } from './files.ts';
-import { UNKNOWN_CONTENT_HASH } from './sitemap.ts';
+import { UNKNOWN_CONTENT_HASH, toPagePath } from './sitemap.ts';
 import type {
   ChunkedDocument,
   KnowledgeBaseMetadata,
@@ -93,6 +93,7 @@ export function recordChunkPaths(
   previous: KnowledgeBaseMetadata | undefined,
   documents: ChunkedDocument[],
   generatedAt: Date,
+  root: string,
 ): ChunkPathResult {
   const chunked = new Map(
     documents.map((document) => [document.pagePath, document]),
@@ -100,7 +101,7 @@ export function recordChunkPaths(
   const matched = new Set<string>();
 
   const sources = (previous?.sources ?? []).map<SourceEntry>((source) => {
-    const pagePath = toPagePath(source.url);
+    const pagePath = toPagePath(source.url, root);
     const document = pagePath === undefined ? undefined : chunked.get(pagePath);
     if (document === undefined) {
       return source;
@@ -142,15 +143,6 @@ export function stampMetadata(
     ...meta,
     generatedAt: unchanged ? previous.generatedAt : generatedAt.toISOString(),
   };
-}
-
-/** Reduces a document URL to the page path the chunking stage addresses documents by. */
-export function toPagePath(url: string): string | undefined {
-  try {
-    return new URL(url).pathname.replace(/^\/+/, '').replace(/\.md$/, '');
-  } catch {
-    return undefined;
-  }
 }
 
 export async function readMetadata(
