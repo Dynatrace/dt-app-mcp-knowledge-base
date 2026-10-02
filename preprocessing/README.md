@@ -33,7 +33,7 @@ npm start -- --sitemap https://developer.dynatracelabs.com/sitemap.xml
 
 | Option               | Default                                       | Description                                              |
 | -------------------- | --------------------------------------------- | -------------------------------------------------------- |
-| `--sitemap <url>`    | `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
+| `--sitemap <url>`    | `$SITEMAP_URL`, else `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read. |
 | `--chunk-dir <path>` | `docs`                                        | Chunk output directory, relative to the repository root. |
 | `--index <path>`     | `index.json`                                  | `index.json` to write, relative to the repository root.  |
 | `--out <path>`       | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
