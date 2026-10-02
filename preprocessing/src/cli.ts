@@ -52,7 +52,7 @@ directory, one index entry per chunk, and the build metadata of the run. Only wh
 changed is written again.
 
 Options:
-  --sitemap <url>       Sitemap to read (default: ${DEFAULT_SITEMAP_URL})
+  --sitemap <url>       Sitemap to read (default: $SITEMAP_URL, else ${DEFAULT_SITEMAP_URL})
   --chunk-dir <path>    Chunk output directory, relative to the repository root (default: ${DEFAULT_CHUNK_DIR})
   --index <path>        index.json to write, relative to the repository root (default: ${DEFAULT_INDEX_PATH})
   --out <path>          meta.json to write, relative to the repository root (default: ${DEFAULT_META_PATH})
@@ -96,7 +96,8 @@ export async function run(argv: string[]): Promise<number> {
     return 0;
   }
 
-  const sitemapUrl = options.sitemap ?? DEFAULT_SITEMAP_URL;
+  const sitemapUrl =
+    options.sitemap || process.env['SITEMAP_URL'] || DEFAULT_SITEMAP_URL;
   const chunkDir = options['chunk-dir'] ?? DEFAULT_CHUNK_DIR;
   const indexPath = resolve(
     REPOSITORY_ROOT,

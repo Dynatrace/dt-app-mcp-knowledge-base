@@ -57,6 +57,8 @@ jobs:
           # Empty on the nightly run, which has no inputs
           FORCE: ${{ inputs.force && '--force' || '' }}
           DRY_RUN: ${{ inputs.dry-run && '--dry-run' || '' }}
+          # Unset repository variable falls back to the CLI default
+          SITEMAP_URL: ${{ vars.SITEMAP_URL }}
 
       - name: Check what the run changed
         id: changes
