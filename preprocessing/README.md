@@ -31,16 +31,16 @@ npm start -- --dry-run
 npm start -- --sitemap https://developer.dynatracelabs.com/sitemap.xml
 ```
 
-| Option               | Default                                       | Description                                              |
-| -------------------- | --------------------------------------------- | -------------------------------------------------------- |
-| `--sitemap <url>`    | `$SITEMAP_URL`, else `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read. |
-| `--chunk-dir <path>` | `docs`                                        | Chunk output directory, relative to the repository root. |
-| `--index <path>`     | `index.json`                                  | `index.json` to write, relative to the repository root.  |
-| `--out <path>`       | `meta.json`                                   | `meta.json` to write, relative to the repository root.   |
-| `--force`            | off                                           | Split every document again, whatever the hashes say.     |
-| `--dry-run`          | off                                           | Report what would be produced without writing anything.  |
-| `--json`             | off                                           | Print what the run produced as JSON.                     |
-| `--help`             | —                                             | Show usage.                                              |
+| Option               | Default                                                            | Description                                              |
+| -------------------- | ------------------------------------------------------------------ | -------------------------------------------------------- |
+| `--sitemap <url>`    | `$SITEMAP_URL`, else `https://developer.dynatrace.com/sitemap.xml` | Sitemap to read.                                         |
+| `--chunk-dir <path>` | `docs`                                                             | Chunk output directory, relative to the repository root. |
+| `--index <path>`     | `index.json`                                                       | `index.json` to write, relative to the repository root.  |
+| `--out <path>`       | `meta.json`                                                        | `meta.json` to write, relative to the repository root.   |
+| `--force`            | off                                                                | Split every document again, whatever the hashes say.     |
+| `--dry-run`          | off                                                                | Report what would be produced without writing anything.  |
+| `--json`             | off                                                                | Print what the run produced as JSON.                     |
+| `--help`             | —                                                                  | Show usage.                                              |
 
 An unreachable, empty or malformed sitemap, a portal that served no markdown at all and an index that
 does not satisfy its schema each fail the run with a message on stderr and exit code `1`. Bad CLI usage
