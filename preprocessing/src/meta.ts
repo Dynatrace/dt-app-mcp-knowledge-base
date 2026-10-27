@@ -63,6 +63,14 @@ export function mergeMetadata(
   };
 }
 
+// A copy, so previous.sources keeps the chunk paths stampMetadata compares against
+function withChunkPaths(
+  source: SourceEntry,
+  chunkPaths: string[],
+): SourceEntry {
+  return { ...source, chunkPaths };
+}
+
 /**
  * Dates a document to the run that first saw the content it holds now. An unchanged document keeps
  * its earlier date, so re-running the pipeline nightly does not churn meta.json.
@@ -108,10 +116,10 @@ export function recordChunkPaths(
     }
 
     matched.add(document.pagePath);
-    return {
-      ...source,
-      chunkPaths: document.chunks.map((chunk) => chunk.path),
-    };
+    return withChunkPaths(
+      source,
+      document.chunks.map((chunk) => chunk.path),
+    );
   });
 
   return {

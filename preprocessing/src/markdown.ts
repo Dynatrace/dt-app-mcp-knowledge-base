@@ -55,9 +55,9 @@ export function mainHeadingLevel(headings: Heading[]): number | undefined {
     return undefined;
   }
 
-  const levels = [...new Set(headings.map((heading) => heading.level))].sort(
-    (a, b) => a - b,
-  );
+  const levels = [
+    ...new Set(headings.map((heading) => heading.level)),
+  ].toSorted((a, b) => a - b);
   let index = 0;
   while (
     index + 1 < levels.length &&

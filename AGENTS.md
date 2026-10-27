@@ -34,6 +34,7 @@ npm start                 # Discover, download, split into docs/ and write index
 npm start -- --help       # CLI options
 npm test
 npm run typecheck
+npm run lint             # Lint the TypeScript sources with Oxlint
 npm run format            # Format the package with Prettier
 npm run format:check      # Fail on anything Prettier would reformat, as CI does
 ```

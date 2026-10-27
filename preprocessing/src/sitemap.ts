@@ -101,7 +101,7 @@ export function parseSitemap(
   });
 
   // Sorting keeps meta.json diffs readable when the portal reorders its sitemap.
-  return [...documents.values()].sort((a, b) => a.url.localeCompare(b.url));
+  return [...documents.values()].toSorted((a, b) => a.url.localeCompare(b.url));
 }
 
 /**
