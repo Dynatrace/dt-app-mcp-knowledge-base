@@ -88,19 +88,19 @@ describe('buildIndex', () => {
   });
 });
 
-describe('validateIndex', () => {
-  const invalid = (entry: Partial<KnowledgeBaseIndex['chunks'][number]>) =>
-    validateIndex({
-      chunks: [
-        {
-          name: 'Request Analysis: Request Attributes',
-          description: 'Everything about request attributes.',
-          path: 'docs/docs/a/request-attributes.md',
-          ...entry,
-        },
-      ],
-    });
+const invalid = (entry: Partial<KnowledgeBaseIndex['chunks'][number]>) =>
+  validateIndex({
+    chunks: [
+      {
+        name: 'Request Analysis: Request Attributes',
+        description: 'Everything about request attributes.',
+        path: 'docs/docs/a/request-attributes.md',
+        ...entry,
+      },
+    ],
+  });
 
+describe('validateIndex', () => {
   it('names the offending chunk rather than its position in the index', () => {
     const violations = invalid({ description: '' });
 

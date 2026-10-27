@@ -21,6 +21,7 @@ cd preprocessing
 npm install
 npm test
 npm run typecheck
+npm run lint
 ```
 
 See [AGENTS.md](AGENTS.md) for the conventions this repository expects from
@@ -30,7 +31,8 @@ automated agents.
 
 - Open an issue first for non-trivial changes so the approach can be agreed on.
 - Keep pull requests focused; one logical change per PR.
-- Ensure `npm test` and `npm run typecheck` pass before opening a PR.
+- Ensure `npm test`, `npm run typecheck` and `npm run lint` pass before opening a PR.
+- Changes to `.github/workflows/` are checked by [actionlint](https://github.com/rhysd/actionlint). To run it locally, install the binary (see its [install guide](https://github.com/rhysd/actionlint/blob/main/docs/install.md)) and run `actionlint` from the repository root.
 - Every PR must contain exactly one commit.
 
 ## Code of conduct

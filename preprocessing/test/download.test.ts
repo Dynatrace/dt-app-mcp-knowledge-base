@@ -12,8 +12,13 @@ import { startPortal, type Portal, type PortalPage } from './helpers/server.ts';
 const portals: Portal[] = [];
 
 after(async () => {
-  await Promise.all(portals.map((portal) => portal.close()));
+  await Promise.all(portals.map((running) => running.close()));
 });
+
+const pageWithTitle = (title: string) => `---\ntitle: ${title}\n---\n\n# A\n`;
+
+const pageWithSource = (source: string) =>
+  `---\ntitle: Page A\nsource: ${source}\n---\n\n# A\n`;
 
 /** A portal holding the given pages, and the discovered documents pointing at its markdown. */
 async function portal(pages: Record<string, PortalPage>) {
@@ -94,11 +99,11 @@ describe('downloadDocuments', () => {
     const before = await downloadDocuments(discovered, root);
     served.pages.set('docs/a', '# A, rewritten\n');
 
-    const after = await downloadDocuments(discovered, root);
+    const rerun = await downloadDocuments(discovered, root);
 
     assert.notEqual(
       before.documents[0]?.contentHash,
-      after.documents[0]?.contentHash,
+      rerun.documents[0]?.contentHash,
     );
   });
 
@@ -115,38 +120,35 @@ describe('downloadDocuments', () => {
   });
 
   it('digests a retitled document to a different hash', async () => {
-    const page = (title: string) => `---\ntitle: ${title}\n---\n\n# A\n`;
     const { served, root, discovered } = await portal({
-      'docs/a': page('Page A'),
+      'docs/a': pageWithTitle('Page A'),
     });
     const before = await downloadDocuments(discovered, root);
-    served.pages.set('docs/a', page('Page A, renamed'));
+    served.pages.set('docs/a', pageWithTitle('Page A, renamed'));
 
-    const after = await downloadDocuments(discovered, root);
+    const renamed = await downloadDocuments(discovered, root);
 
     assert.notEqual(
       before.documents[0]?.contentHash,
-      after.documents[0]?.contentHash,
+      renamed.documents[0]?.contentHash,
     );
   });
 
   it('leaves a document alone when only the frontmatter it drops changed', async () => {
-    const page = (source: string) =>
-      `---\ntitle: Page A\nsource: ${source}\n---\n\n# A\n`;
     const { served, root, discovered } = await portal({
-      'docs/a': page('https://preview.example.com/p/pr-1/docs/a/'),
+      'docs/a': pageWithSource('https://preview.example.com/p/pr-1/docs/a/'),
     });
     const before = await downloadDocuments(discovered, root);
     served.pages.set(
       'docs/a',
-      page('https://preview.example.com/p/pr-2/docs/a/'),
+      pageWithSource('https://preview.example.com/p/pr-2/docs/a/'),
     );
 
-    const after = await downloadDocuments(discovered, root);
+    const rerun = await downloadDocuments(discovered, root);
 
     assert.equal(
       before.documents[0]?.contentHash,
-      after.documents[0]?.contentHash,
+      rerun.documents[0]?.contentHash,
     );
   });
 

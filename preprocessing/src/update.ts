@@ -54,23 +54,35 @@ export async function planDocuments(
     unchanged: [],
   };
 
-  for (const source of sources) {
-    const previous = recorded.get(source.pagePath);
-    if (!previous) {
+  const checks = await Promise.all(
+    sources.map(async (source) => {
+      const previous = recorded.get(source.pagePath);
+      if (!previous) {
+        return undefined;
+      }
+
+      // Without a real hash on both sides there is no telling the page apart from a changed one.
+      const hash = discovered.get(source.pagePath)?.downloadHash;
+      const same =
+        hash !== UNKNOWN_CONTENT_HASH && hash === previous.downloadHash;
+
+      const reused =
+        same && !context.force
+          ? await reusableChunks(context, previous.chunkPaths, entries)
+          : undefined;
+      return { same, reused };
+    }),
+  );
+
+  for (const [index, source] of sources.entries()) {
+    const check = checks[index];
+    if (check === undefined) {
       plan.added.push(source.pagePath);
       plan.process.push(source);
       continue;
     }
 
-    // Without a real hash on both sides there is no telling the page apart from a changed one.
-    const hash = discovered.get(source.pagePath)?.downloadHash;
-    const same =
-      hash !== UNKNOWN_CONTENT_HASH && hash === previous.downloadHash;
-
-    const reused =
-      same && !context.force
-        ? await reusableChunks(context, previous.chunkPaths, entries)
-        : undefined;
+    const { same, reused } = check;
     if (reused === undefined) {
       (same ? plan.unchanged : plan.changed).push(source.pagePath);
       plan.process.push(source);
@@ -84,13 +96,19 @@ export async function planDocuments(
   // A page the download stage had nothing for keeps the chunks it has, so a portal that serves one
   // page badly does not take that page out of the knowledge base.
   const downloaded = new Set(sources.map((source) => source.pagePath));
-  for (const pagePath of discovered.keys()) {
+  const leftovers = [...discovered.keys()].flatMap((pagePath) => {
     const previous = recorded.get(pagePath);
-    if (downloaded.has(pagePath) || !previous) {
-      continue;
-    }
-
-    const reused = await reusableChunks(context, previous.chunkPaths, entries);
+    return downloaded.has(pagePath) || !previous
+      ? []
+      : [{ pagePath, previous }];
+  });
+  const carried = await Promise.all(
+    leftovers.map(async ({ pagePath, previous }) => ({
+      pagePath,
+      reused: await reusableChunks(context, previous.chunkPaths, entries),
+    })),
+  );
+  for (const { pagePath, reused } of carried) {
     if (reused && reused.length > 0) {
       plan.reused.push(carriedOver(pagePath, reused));
     }
@@ -146,13 +164,22 @@ export async function planChunks(
       .map((path) => toRepositoryPath(repositoryRoot, path)),
   };
 
-  for (const [path, chunk] of produced) {
+  const entries = [...produced];
+  const onDisk = await Promise.all(
+    entries.map(([path, chunk]) =>
+      existing.has(path) && chunk.content !== undefined
+        ? readIfPresent(path)
+        : undefined,
+    ),
+  );
+
+  for (const [index, [path, chunk]] of entries.entries()) {
     if (!existing.has(path)) {
       update.added.push(chunk);
     } else if (chunk.content === undefined) {
       // A carried-over chunk was never read, so the file it came from is what it still holds.
       update.unchanged.push(chunk);
-    } else if ((await readIfPresent(path)) === fileContent(chunk)) {
+    } else if (onDisk[index] === fileContent(chunk)) {
       update.unchanged.push(chunk);
     } else {
       update.changed.push(chunk);
@@ -168,16 +195,18 @@ export async function applyChunks(
   chunkDir: string,
   update: ChunkUpdate,
 ): Promise<void> {
+  // Writes go one file at a time so a large corpus never holds many file handles open at once
   for (const chunk of [...update.added, ...update.changed]) {
+    // oxlint-disable-next-line no-await-in-loop
     await writeIfChanged(
       resolve(repositoryRoot, chunk.path),
       fileContent(chunk),
     );
   }
 
-  for (const path of update.removed) {
-    await rm(resolve(repositoryRoot, path));
-  }
+  await Promise.all(
+    update.removed.map((path) => rm(resolve(repositoryRoot, path))),
+  );
   await pruneBelow(resolve(repositoryRoot, chunkDir));
 }
 
@@ -211,16 +240,19 @@ async function reusableChunks(
   chunkPaths: string[],
   entries: Map<string, ChunkEntry>,
 ): Promise<Chunk[] | undefined> {
-  const chunks: Chunk[] = [];
-  for (const path of chunkPaths) {
-    const entry = entries.get(toRepositoryPath(context.repositoryRoot, path));
-    if (!entry) {
-      return undefined;
-    }
+  const present = await Promise.all(
+    chunkPaths.map((path) =>
+      access(resolve(context.repositoryRoot, path)).then(
+        () => true,
+        () => false,
+      ),
+    ),
+  );
 
-    try {
-      await access(resolve(context.repositoryRoot, path));
-    } catch {
+  const chunks: Chunk[] = [];
+  for (const [index, path] of chunkPaths.entries()) {
+    const entry = entries.get(toRepositoryPath(context.repositoryRoot, path));
+    if (!entry || !present[index]) {
       return undefined;
     }
 
@@ -255,15 +287,19 @@ async function chunkFiles(root: string): Promise<Set<string>> {
 
 /** The chunk directory itself stays; only the directories below it follow the chunks they held. */
 async function pruneBelow(root: string): Promise<void> {
-  for (const directory of await subdirectories(root)) {
-    await prune(join(root, directory));
-  }
+  await Promise.all(
+    (await subdirectories(root)).map((directory) =>
+      prune(join(root, directory)),
+    ),
+  );
 }
 
 async function prune(path: string): Promise<void> {
-  for (const directory of await subdirectories(path)) {
-    await prune(join(path, directory));
-  }
+  await Promise.all(
+    (await subdirectories(path)).map((directory) =>
+      prune(join(path, directory)),
+    ),
+  );
 
   if ((await readdir(path)).length === 0) {
     await rmdir(path);

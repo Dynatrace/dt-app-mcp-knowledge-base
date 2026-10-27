@@ -144,7 +144,7 @@ export async function run(argv: string[]): Promise<number> {
       return chunked;
     });
     // A page holds its place however this run arrived at its chunks, so the index stays stable.
-    const documents = [...plan.reused, ...split].sort((a, b) =>
+    const documents = [...plan.reused, ...split].toSorted((a, b) =>
       a.pagePath.localeCompare(b.pagePath),
     );
 
@@ -246,48 +246,52 @@ type RunReport = {
   wroteMeta: boolean;
 };
 
-function report(run: RunReport): void {
-  const total = run.split.reduce(
+function report(summary: RunReport): void {
+  const total = summary.split.reduce(
     (count, document) => count + document.chunks.length,
     0,
   );
   const documents =
-    run.plan.added.length + run.plan.changed.length + run.plan.unchanged.length;
+    summary.plan.added.length +
+    summary.plan.changed.length +
+    summary.plan.unchanged.length;
   const width = Math.max(
     0,
-    ...run.split.map((document) => document.pagePath.length),
+    ...summary.split.map((document) => document.pagePath.length),
   );
-  const touched = run.update.added.length + run.update.changed.length;
+  const touched = summary.update.added.length + summary.update.changed.length;
   const lines = [
-    `Read ${run.sitemapUrl}`,
-    `Found ${plural(run.found, 'page')} (${run.added} new, ${run.removed} no longer listed)`,
-    `Downloaded ${plural(run.download.documents.length, 'document')}` +
-      ` (${run.download.skipped.length} without markdown, ${run.download.failed.length} failed)`,
-    `Split ${run.split.length} of ${plural(documents, 'document')} into ${plural(total, 'chunk')}` +
-      ` (${run.plan.added.length} new, ${run.plan.changed.length} changed,` +
-      ` ${run.plan.unchanged.length} unchanged)`,
-    ...run.split.map(
+    `Read ${summary.sitemapUrl}`,
+    `Found ${plural(summary.found, 'page')} (${summary.added} new, ${summary.removed} no longer listed)`,
+    `Downloaded ${plural(summary.download.documents.length, 'document')}` +
+      ` (${summary.download.skipped.length} without markdown, ${summary.download.failed.length} failed)`,
+    `Split ${summary.split.length} of ${plural(documents, 'document')} into ${plural(total, 'chunk')}` +
+      ` (${summary.plan.added.length} new, ${summary.plan.changed.length} changed,` +
+      ` ${summary.plan.unchanged.length} unchanged)`,
+    ...summary.split.map(
       (d) =>
         `  ${d.pagePath.padEnd(width)}  ${plural(d.chunks.length, 'chunk')}`,
     ),
-    `${run.dryRun ? 'Would update' : 'Updated'} ${plural(touched, 'chunk')}` +
-      ` and ${run.dryRun ? 'remove' : 'removed'} ${run.update.removed.length}` +
-      ` (${run.update.unchanged.length} left alone)`,
+    `${summary.dryRun ? 'Would update' : 'Updated'} ${plural(touched, 'chunk')}` +
+      ` and ${summary.dryRun ? 'remove' : 'removed'} ${summary.update.removed.length}` +
+      ` (${summary.update.unchanged.length} left alone)`,
   ];
-  if (run.dryRun) {
+  if (summary.dryRun) {
     lines.push(
-      `Validated ${plural(run.entries, 'index entry', 'index entries')}`,
-      `Dry run, ${run.chunkDir}/, ${run.indexPath} and ${run.metaPath} left unchanged`,
+      `Validated ${plural(summary.entries, 'index entry', 'index entries')}`,
+      `Dry run, ${summary.chunkDir}/, ${summary.indexPath} and ${summary.metaPath} left unchanged`,
     );
   } else {
     lines.push(
-      touchesChunks(run.update)
-        ? `Wrote ${run.chunkDir}/`
-        : `${run.chunkDir}/ unchanged`,
-      run.wroteIndex
-        ? `Wrote ${run.indexPath} (${plural(run.entries, 'entry', 'entries')})`
-        : `${run.indexPath} unchanged (${plural(run.entries, 'entry', 'entries')})`,
-      run.wroteMeta ? `Wrote ${run.metaPath}` : `${run.metaPath} unchanged`,
+      touchesChunks(summary.update)
+        ? `Wrote ${summary.chunkDir}/`
+        : `${summary.chunkDir}/ unchanged`,
+      summary.wroteIndex
+        ? `Wrote ${summary.indexPath} (${plural(summary.entries, 'entry', 'entries')})`
+        : `${summary.indexPath} unchanged (${plural(summary.entries, 'entry', 'entries')})`,
+      summary.wroteMeta
+        ? `Wrote ${summary.metaPath}`
+        : `${summary.metaPath} unchanged`,
     );
   }
   process.stdout.write(`${lines.join('\n')}\n`);

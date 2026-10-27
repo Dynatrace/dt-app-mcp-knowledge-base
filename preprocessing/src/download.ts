@@ -70,6 +70,8 @@ export async function downloadDocuments(
     },
     async () => {
       for (let document = queue.shift(); document; document = queue.shift()) {
+        // Each worker takes one page at a time, the concurrency comes from the pool
+        // oxlint-disable-next-line no-await-in-loop
         const outcome = await download(document, root, timeoutMs);
         if ('document' in outcome) {
           result.documents.push(outcome.document);

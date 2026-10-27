@@ -51,7 +51,10 @@ jobs:
         working-directory: preprocessing
 
       - name: Refresh the knowledge base
-        run: npm start -- $FORCE $DRY_RUN
+        run: |
+          # Unquoted on purpose, an empty flag must expand to nothing
+          # shellcheck disable=SC2086
+          npm start -- $FORCE $DRY_RUN
         working-directory: preprocessing
         env:
           # Empty on the nightly run, which has no inputs
