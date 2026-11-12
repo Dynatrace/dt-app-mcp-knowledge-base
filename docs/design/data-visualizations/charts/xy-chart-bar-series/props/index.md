@@ -1,0 +1,1 @@
+The BarSeries renders rectangular bars to visualize values across categories, numbers or time. It supports simple, grouped (clustered), and stacked layouts, making it ideal for comparisons, totals, and distributions. The BarSeries works with numeric, time, and categorical axes, and handles a wide range of data types—perfect for Bar, Column, and Stacked charts.

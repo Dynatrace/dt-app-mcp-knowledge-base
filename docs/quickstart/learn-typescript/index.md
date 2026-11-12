@@ -1,0 +1,1 @@
+This page provides a brief introduction to [TypeScript](https://www.typescriptlang.org/) and why we use it for our apps. The second part is an [installation tutorial](#installation-tutorial) that teaches you how to set up an environment for app development and configure TypeScript.

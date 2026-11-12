@@ -1,0 +1,10 @@
+## ChipGroup.Control
+
+**`ChipGroupControlProps`**
+
+| Prop      | Type                                   | Default                                                                   | Description                                                                                                                                                                                                  |
+| --------- | -------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `display` | `'more' \| 'less'`                     | `` inferred from the`expanded`/`defaultExpanded`prop of the`ChipGroup` `` | Whether to show more chips or collapse chips. If undefined, the action is inferred. If no more items are available and all items fit in one line, the control is automatically hidden unless display is set. |
+| `count`   | `boolean \| number`                    | `undefined`                                                               | Whether to render \`Show more\` or \`Show x more\` by default. If true, the count is calculated automatically. The count can be overridden by passing a number.                                              |
+| `loading` | `boolean`                              | `false`                                                                   | Whether the control should show the loading indicator.                                                                                                                                                       |
+| `onClick` | `MouseEventHandler<HTMLButtonElement>` |                                                                           | Callback triggered when the control is interacted with.                                                                                                                                                      |

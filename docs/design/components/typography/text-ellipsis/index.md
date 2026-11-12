@@ -1,0 +1,1 @@
+Use the `TextEllipsis` component to truncate text and show an ellipsis whenever there is insufficient space to render the entire text. While some of our Strato components provide ellipsis out of the box, you need to take care of this yourself when writing your own components.

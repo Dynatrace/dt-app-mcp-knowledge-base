@@ -1,0 +1,1 @@
+Use the design token reference tables to look up the default values of Strato design tokens. Relationships between the different reference tokens and their stored default values are mapped in the tables.

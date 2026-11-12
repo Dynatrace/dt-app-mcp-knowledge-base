@@ -1,0 +1,1 @@
+Communicating a system's status, like loading and saving, is essential to establishing a good user experience. It reassures users that the system is actively retrieving or saving data and reduces the users’ perceived waiting time.

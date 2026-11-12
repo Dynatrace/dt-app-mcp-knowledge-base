@@ -1,0 +1,7 @@
+## BoxShadows.Field.Primary.Emphasized
+
+| Name                                         | Value                                                                                                                      | CSS variable                                       | Description                                        |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `BoxShadows.Field.Primary.Emphasized.Rest`   | `inset 0px 0px 0px 1px #0017ae0f, inset 0px -1px 0px #0017ae1a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #dde8fc` | `--dt-box-shadows-field-primary-emphasized-rest`   | Use for emphasized primary button in rest state.   |
+| `BoxShadows.Field.Primary.Emphasized.Hover`  | `inset 0px 0px 0px 1px #0017ae0f, inset 0px -1px 0px #0017ae1a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #d1e1fd` | `--dt-box-shadows-field-primary-emphasized-hover`  | Use for emphasized primary button in hover state.  |
+| `BoxShadows.Field.Primary.Emphasized.Active` | `inset 0px 0px 0px 1px #0017ae0f, inset 0px -1px 0px #0017ae1a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #c3d8ff` | `--dt-box-shadows-field-primary-emphasized-active` | Use for emphasized primary button in active state. |

@@ -1,0 +1,1 @@
+When a user opens a notification from your app on their phone, they expect the page to work well. The new [Mobile experience guide](pathname:///design/foundations/mobile-experience/) helps you decide which parts of your app to optimize and explains best practices to design better mobile app experiences.

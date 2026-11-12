@@ -1,0 +1,7 @@
+## BoxShadows.Field.Critical.Emphasized
+
+| Name                                          | Value                                                                                                                      | CSS variable                                        | Description                                                   |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
+| `BoxShadows.Field.Critical.Emphasized.Rest`   | `inset 0px 0px 0px 1px #80000c0f, inset 0px -1px 0px #80000c1a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #fbe1df` | `--dt-box-shadows-field-critical-emphasized-rest`   | Use for emphasized critical button and input in rest state.   |
+| `BoxShadows.Field.Critical.Emphasized.Hover`  | `inset 0px 0px 0px 1px #80000c0f, inset 0px -1px 0px #80000c1a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #fbd6d4` | `--dt-box-shadows-field-critical-emphasized-hover`  | Use for emphasized critical button and input in hover state.  |
+| `BoxShadows.Field.Critical.Emphasized.Active` | `inset 0px 0px 0px 1px #80000c0f, inset 0px -1px 0px #80000c1a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #fbcbc7` | `--dt-box-shadows-field-critical-emphasized-active` | Use for emphasized critical button and input in active state. |

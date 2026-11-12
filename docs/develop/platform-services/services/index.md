@@ -1,0 +1,11 @@
+- [AppEngine](https://developer.dynatrace.com/develop/platform-services/services/app-engine.md): Basic concepts to understand when working with AppEngine
+- [App settings service](https://developer.dynatrace.com/develop/platform-services/services/app-settings-service.md): Manage app settings
+- [Settings service](https://developer.dynatrace.com/develop/platform-services/services/settings-service.md): Manage Dynatrace environment and entity settings
+- [AutomationEngine](https://developer.dynatrace.com/develop/platform-services/services/automation-engine.md): Introduction to AutomationEngine, which manages workflows and runs their executions
+- [Classic environment service](https://developer.dynatrace.com/develop/platform-services/services/classic-environment-service.md): Information about a service that mirrors most Dynatrace APIs so you can use them inside AppEngine and AutomationEngine
+- [Dynatrace Intelligence service](https://developer.dynatrace.com/develop/platform-services/services/dynatrace-intelligence-service.md): Basic concepts to learn to use AI and ML capabilities in the Dynatrace platform
+- [Document service](https://developer.dynatrace.com/develop/platform-services/services/document-service.md): Information about storing all types of data; typically, self-contained data produced and maintained by apps
+- [Grail service](https://developer.dynatrace.com/develop/platform-services/services/grail-service.md): Reference of the Grail query API, which lets you store and query data
+- [Notification service](https://developer.dynatrace.com/develop/platform-services/services/notification-service.md): Basic concepts and limitations of email notifications in your app
+- [Platform management service](https://developer.dynatrace.com/develop/platform-services/services/platform-management-service.md): Information about retrieving license and settings information in a Dynatrace environment
+- [State service](https://developer.dynatrace.com/develop/platform-services/services/state-service.md): Information about a key-value storage service that an app can use to store internal states, only available in their corresponding apps

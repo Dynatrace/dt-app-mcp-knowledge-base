@@ -1,0 +1,7 @@
+## BoxShadows.Field.Neutral.Emphasized
+
+| Name                                         | Value                                                                                                                      | CSS variable                                       | Description                                                  |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------ |
+| `BoxShadows.Field.Neutral.Emphasized.Rest`   | `inset 0px 0px 0px 1px #31323a1f, inset 0px -1px 0px #31323a14, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #fff`    | `--dt-box-shadows-field-neutral-emphasized-rest`   | Use for emphasized neutral button and input in rest state.   |
+| `BoxShadows.Field.Neutral.Emphasized.Hover`  | `inset 0px 0px 0px 1px #31323a1f, inset 0px -1px 0px #31323a14, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #eff0f2` | `--dt-box-shadows-field-neutral-emphasized-hover`  | Use for emphasized neutral button and input in hover state.  |
+| `BoxShadows.Field.Neutral.Emphasized.Active` | `inset 0px 0px 0px 1px #31323a1f, inset 0px -1px 0px #31323a14, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #eaeaed` | `--dt-box-shadows-field-neutral-emphasized-active` | Use for emphasized neutral button and input in active state. |

@@ -1,0 +1,36 @@
+The SDK for TypeScript provides a TypeScript API for Dynatrace platform services and Dynatrace AppEngine functionality.
+
+- [Introduction to SDK for TypeScript](https://developer.dynatrace.com/develop/sdks/overview.md): Use the SDK for TypeScript in Dynatrace Apps and ad-hoc functions.
+- [Addons](https://developer.dynatrace.com/develop/sdks/addons.md): Control the lifecycle of Dynatrace apps opened in addon mode.
+- [App environment](https://developer.dynatrace.com/develop/sdks/app-environment.md): Obtain the basic information about the app and the environment in which it's running.
+- [App utils](https://developer.dynatrace.com/develop/sdks/app-utils.md): Utilities for app function executions.
+- [Automation utils](https://developer.dynatrace.com/develop/sdks/automation-utils.md): Utility functions for accessing AutomationEngine APIs from the Run JavaScript action.
+- [AppEngine - EdgeConnect](https://developer.dynatrace.com/develop/sdks/client-app-engine-edge-connect.md): EdgeConnect API manages EdgeConnect configurations that specify which HTTP requests matching what URL host patterns will be forwarded to and executed by that EdgeConnect.
+- [AppEngine - registry](https://developer.dynatrace.com/develop/sdks/client-app-engine-registry.md): Manage Dynatrace AppEngine apps.
+- [App settings v1](https://developer.dynatrace.com/develop/sdks/client-app-settings.md): Retrieve, update and manage app settings.
+- [App settings v2](https://developer.dynatrace.com/develop/sdks/client-app-settings-v2.md): Retrieve, update and manage app settings.
+- [Automation](https://developer.dynatrace.com/develop/sdks/client-automation.md): Automation API allows working with workflows and various trigger options.
+- [Grail storage management API](https://developer.dynatrace.com/develop/sdks/client-bucket-management.md): Provides a public bucket management API for Grail.
+- [Classic environment v1](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v1.md): Client for the Dynatrace Classic Environment API v1
+- [Classic environment v2](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2.md): Client for the Dynatrace Environment API v2
+- [Credential vault](https://developer.dynatrace.com/develop/sdks/client-credential-vault.md): Manage credential entries of username/password, certificate, and token types, with support for external vault integrations.
+- [Davis® AI - predictive and causal](https://developer.dynatrace.com/develop/sdks/client-davis-analyzers.md): Davis AI - Predictive and Causal
+- [Document](https://developer.dynatrace.com/develop/sdks/client-document.md): Allows you to create and manage documents, as well as manage access to your documents via shares.
+- [Extensions 2.0](https://developer.dynatrace.com/develop/sdks/client-extensions-v2.md): Documentation of Extensions 2.
+- [Grail filter segments API](https://developer.dynatrace.com/develop/sdks/client-filter-segment-management.md): Filter-Segment Management for Grail.
+- [Fleet management](https://developer.dynatrace.com/develop/sdks/client-fleet-management.md): The Fleet Management API provides access to ActiveGate and OneAgent deployment data, installer downloads, ActiveGate tokens, container image URIs, Dynatrace network addresses, and support archive management.
+- [Hub](https://developer.dynatrace.com/develop/sdks/client-hub.md): The Hub API provides catalog content, such as Dynatrace Apps, Extensions, and Technologies, in the context of the current environment.
+- [Identity and access management](https://developer.dynatrace.com/develop/sdks/client-iam.md): Identity and Access Management configuration. Allows viewing users within the platform and their access capabilities.
+- [Notification](https://developer.dynatrace.com/develop/sdks/client-notification.md): Manage self notifications with the Notification Service API.
+- [Notification v2](https://developer.dynatrace.com/develop/sdks/client-notification-v2.md): Manage resource/event notifications with the Notification Service API.
+- [Platform management](https://developer.dynatrace.com/develop/sdks/client-platform-management-service.md): Basic read-only information about the currently logged-in environment.
+- [Grail DQL query](https://developer.dynatrace.com/develop/sdks/client-query.md): Exposes an API to fetch records stored in Grail.
+- [Grail resource store API](https://developer.dynatrace.com/develop/sdks/client-resource-store.md): Documentation of the Dynatrace Resource Store API for Grail.
+- [Service-Level objectives](https://developer.dynatrace.com/develop/sdks/client-service-level-objectives.md): Management API for service-level objectives, templates and evaluating service-level objectives.
+- [Settings](https://developer.dynatrace.com/develop/sdks/client-settings.md): Manage Dynatrace settings through a schema-driven API for storing, querying, and maintaining configuration objects.
+- [State](https://developer.dynatrace.com/develop/sdks/client-state.md): Provides key-value storage for apps so that app developers can persist and get small chunks of state in the context of their app.
+- [Synthetic](https://developer.dynatrace.com/develop/sdks/client-synthetic.md): Manage synthetic monitors, locations, nodes, and on-demand executions.
+- [Navigation](https://developer.dynatrace.com/develop/sdks/navigation.md): Navigate within the AppEngine and send Intents from one app to another.
+- [React hooks](https://developer.dynatrace.com/develop/sdks/react-hooks.md): A collection of React hooks for building Dynatrace apps, providing simplified state management for common platform interactions.
+- [Units](https://developer.dynatrace.com/develop/sdks/units.md): Package for converting and formatting units and numerical values.
+- [User preferences](https://developer.dynatrace.com/develop/sdks/user-preferences.md): Obtain the currently logged-in user preferences, like theme or language.

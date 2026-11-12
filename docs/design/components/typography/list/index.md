@@ -1,0 +1,1 @@
+The `List` component groups a set of related content in a list and can be arbitrarily nested. List items are preceded by either a consecutive number (for ordered lists) or a bullet point (for unordered lists).

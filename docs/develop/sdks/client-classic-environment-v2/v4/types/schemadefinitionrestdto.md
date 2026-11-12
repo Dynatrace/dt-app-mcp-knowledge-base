@@ -1,0 +1,25 @@
+### SchemaDefinitionRestDto
+
+| Name                     | Type                                                                        | Description                                                                                                      |
+| ------------------------ | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| allowedScopes (required) | Array\<string>                                                              | A list of scopes where the schema can be used.                                                                   |
+| constraints              | Array\<[ComplexConstraint](#complexconstraint)>                             | A list of constrains limiting the values to be accepted by the schema.                                           |
+| deletionConstraints      | Array\<[DeletionConstraint](#deletionconstraint)>                           | Constraints limiting the values to be deleted.                                                                   |
+| description (required)   | string                                                                      | A short description of the schema.                                                                               |
+| displayName (required)   | string                                                                      | The display name of the schema.                                                                                  |
+| documentation            | string                                                                      | An extended description of the schema and/or links to documentation.                                             |
+| dynatrace (required)     | string                                                                      | The version of the data format.                                                                                  |
+| enums (required)         | [SchemaDefinitionRestDtoEnums](#schemadefinitionrestdtoenums)               | A list of definitions of enum properties.                                                                        |
+| keyProperty              | string                                                                      | Name of the key property in this schema.                                                                         |
+| maxObjects (required)    | number                                                                      | The maximum amount of objects per scope. Only applicable when **multiObject** is set to `true`.                  |
+| metadata                 | [SchemaDefinitionRestDtoMetadata](#schemadefinitionrestdtometadata)         | Metadata of the setting.                                                                                         |
+| multiObject (required)   | boolean                                                                     | Multiple (`true`) objects per scope are permitted or a single (`false`) object per scope is permitted.           |
+| ordered                  | boolean                                                                     | If `true` the order of objects has semantic significance. Only applicable when **multiObject** is set to `true`. |
+| properties (required)    | [SchemaDefinitionRestDtoProperties](#schemadefinitionrestdtoproperties)     | A list of schema's properties.                                                                                   |
+| schemaConstraints        | Array\<[SchemaConstraintRestDto](#schemaconstraintrestdto)>                 | Constraints limiting the values as a whole to be accepted in this configuration element.                         |
+| schemaGroups             | Array\<string>                                                              | Names of the groups, which the schema belongs to.                                                                |
+| schemaId (required)      | string                                                                      | The ID of the schema.                                                                                            |
+| tableColumns             | [SchemaDefinitionRestDtoTableColumns](#schemadefinitionrestdtotablecolumns) | Table column definitions for use in the ui.                                                                      |
+| types (required)         | [SchemaDefinitionRestDtoTypes](#schemadefinitionrestdtotypes)               | A list of definitions of types. A type is a complex property that contains its own set of subproperties.         |
+| uiCustomization          | [UiCustomization](#uicustomization)                                         | Customization for UI elements                                                                                    |
+| version (required)       | string                                                                      | The version of the schema.                                                                                       |

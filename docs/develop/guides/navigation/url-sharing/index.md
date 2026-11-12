@@ -1,0 +1,1 @@
+Building Dynatrace apps requires careful consideration of how users navigate, share, and collaborate around data. Two fundamental web platform features, URLs and the browser back button, play a critical role in creating intuitive user experiences. This guide outlines best practices for implementing URL-based state management and browser history handling in Dynatrace applications.

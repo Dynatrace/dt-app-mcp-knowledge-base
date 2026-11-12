@@ -1,0 +1,1 @@
+Personal Identifiable Information (PII) can't be stored for an indefinite period. You need to define the retention period in line with the purposes of the processing. After **the data has been used for its given purpose**, it should be deleted or anonymous.

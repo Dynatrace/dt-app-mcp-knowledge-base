@@ -1,0 +1,1 @@
+This guide lists coding patterns that result in oversized bundles. While the focus is on app functions running on the serverless platform, where size has the most impact, the guidance applies to JavaScript and TypeScript apps in general.

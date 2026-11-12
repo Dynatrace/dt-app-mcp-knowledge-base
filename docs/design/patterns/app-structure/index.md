@@ -1,0 +1,1 @@
+Apps should follow the same base structure to ensure a consistent user experience across the Dynatrace platform ecosystem. There are a few guidelines and components that you can use to provide a familiar structure and, ultimately, make your app's experience more enjoyable.

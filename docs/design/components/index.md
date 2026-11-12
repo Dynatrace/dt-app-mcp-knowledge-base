@@ -1,0 +1,1 @@
+Strato's reusable React components help you build beautiful and powerful Dynatrace apps efficiently. Use them in line with [Strato Design System](https://developer.dynatrace.com/design/about-strato-design-system.md) **Foundations** and **Patterns**, and component-specific usage guidance.

@@ -1,0 +1,1 @@
+The Dynatrace Tech Radar is a comprehensive and visualized guide on the latest trends, tools, and best practices within the Dynatrace AppEngine community, helping developers and teams make informed decisions.

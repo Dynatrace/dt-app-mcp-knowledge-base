@@ -1,0 +1,18 @@
+### BaseWaitConditionDto
+
+Wait condition for Browser Monitor step.
+
+| Name            | Type                                                                                        | Description                                                                                                                                                                                                                                                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type (required) | "NETWORK" \| "NEXT_EVENT" \| "PAGE_COMPLETE" \| "TIME" \| "USER_ACTIONS" \| "VALIDATION" | Defines the actual set of fields depending on the value. See one of the following objects: * `TIME`
+   -> TimeWaitConditionDto
+* `VALIDATION`
+   -> ValidationWaitConditionDto
+* `PAGE_COMPLETE`
+   -> BaseWaitConditionDto
+* `NETWORK`
+   -> BaseWaitConditionDto
+* `NEXT_EVENT`
+   -> BaseWaitConditionDto
+* `USER_ACTIONS`
+   -> BaseWaitConditionDto |

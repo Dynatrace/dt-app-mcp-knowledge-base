@@ -1,0 +1,11 @@
+## Accessible names and roles
+
+> **Tip**
+>
+> Relates to [WCAG 2.5.3](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name).
+
+Every interactive control must have an accessible name and a correct semantic role. The accessible name is what assistive technologies, such as screen readers, announce to users.
+
+This requirement is met by providing appropriate ARIA labels for icon-only controls, verifying that visible text and accessible names are in sync for text-based controls, and making sure tooltip text matches its corresponding label. Specific requirements vary depending on whether the control uses an icon only, text only, or a combination of icon and text.
+
+**Example components:** [Accordion](https://developer.dynatrace.com/design/components/content/Accordion/a11y.md), [AvatarGroup](https://developer.dynatrace.com/design/components/content/AvatarGroup/a11y.md), [Button](https://developer.dynatrace.com/design/components/buttons/Button/a11y.md), [ChipGroup](https://developer.dynatrace.com/design/components/content/ChipGroup/a11y.md), [DateTimePicker](https://developer.dynatrace.com/design/components/forms/DateTimePicker/a11y.md), [ExpandableText](https://developer.dynatrace.com/design/components/content/ExpandableText/a11y.md), [FilterBar](https://developer.dynatrace.com/design/components/filters/FilterBar/a11y.md), [HelpMenu](https://developer.dynatrace.com/design/components/layouts/HelpMenu/a11y.md), [InformationOverlay](https://developer.dynatrace.com/design/components/content/InformationOverlay/a11y.md), [IntentButton](https://developer.dynatrace.com/design/components/buttons/IntentButton/a11y.md), [Menu](https://developer.dynatrace.com/design/components/navigation/Menu/a11y.md), [NotifyButton](https://developer.dynatrace.com/design/components/buttons/NotifyButton/a11y.md), [Select](https://developer.dynatrace.com/design/components/forms/Select/a11y.md), [SegmentSelector](https://developer.dynatrace.com/design/components/filters/SegmentSelector/a11y.md), [TerminologyOverlay](https://developer.dynatrace.com/design/components/content/TerminologyOverlay/a11y.md), [TimeframeSelector](https://developer.dynatrace.com/design/components/filters/TimeframeSelector/a11y.md)

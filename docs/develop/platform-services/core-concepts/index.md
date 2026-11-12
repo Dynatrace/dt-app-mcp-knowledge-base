@@ -1,0 +1,6 @@
+- [About platform services](https://developer.dynatrace.com/develop/platform-services/core-concepts/about-platform-services.md): Learn methods to interact with platform services.
+- [API versions](https://developer.dynatrace.com/develop/platform-services/core-concepts/api-versions.md): Understand the versioning of Dynatrace platform service APIs.
+- [Authentication](https://developer.dynatrace.com/develop/platform-services/core-concepts/authentication.md): Details about the structure of Dynatrace platform service APIs permissions
+- [Error handling](https://developer.dynatrace.com/develop/platform-services/core-concepts/error-handling.md): Description of the platform service APIs HTTP error codes and error responses
+- [Filtering and sorting](https://developer.dynatrace.com/develop/platform-services/core-concepts/filtering-sorting.md): Details about filtering and sorting strategies through APIs
+- [Locking strategies](https://developer.dynatrace.com/develop/platform-services/core-concepts/locking-strategies.md): Information about using optimistic locking to protect your resources in versions

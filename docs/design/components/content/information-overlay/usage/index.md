@@ -1,0 +1,1 @@
+The `InformationOverlay` provides additional information via an overlay, the position of which can be adjusted. According to the type of information, the `variant` can be set. The trigger consists of an icon and an optional text. By default, the `variant` is `neutral` and the overlay is positioned on the bottom.

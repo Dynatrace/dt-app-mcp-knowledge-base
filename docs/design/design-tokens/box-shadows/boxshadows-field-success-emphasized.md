@@ -1,0 +1,7 @@
+## BoxShadows.Field.Success.Emphasized
+
+| Name                                         | Value                                                                                                                      | CSS variable                                       | Description                                        |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `BoxShadows.Field.Success.Emphasized.Rest`   | `inset 0px 0px 0px 1px #0042220f, inset 0px -1px 0px #0042221a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #e2f2e8` | `--dt-box-shadows-field-success-emphasized-rest`   | Use for emphasized success button in rest state.   |
+| `BoxShadows.Field.Success.Emphasized.Hover`  | `inset 0px 0px 0px 1px #0042220f, inset 0px -1px 0px #0042221a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #d8efe2` | `--dt-box-shadows-field-success-emphasized-hover`  | Use for emphasized success button in hover state.  |
+| `BoxShadows.Field.Success.Emphasized.Active` | `inset 0px 0px 0px 1px #0042220f, inset 0px -1px 0px #0042221a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #cdecda` | `--dt-box-shadows-field-success-emphasized-active` | Use for emphasized success button in active state. |

@@ -1,0 +1,11 @@
+## Getting started
+
+The mobile version of your app should give users the same information as the desktop version does: nothing gets removed, only the degree of optimization changes for a smaller viewport. If your app sends alerts or notifications, be sure to fully optimize the pages those notifications open, since users land there directly. The following table lists criteria to help you prioritize the parts to optimize for mobile:
+
+| Criteria                | Ask yourself                                                                   | Favors full optimization                                    | Favors baseline optimization                                                         |
+| ----------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Trigger source          | Is the feature triggered by something the user receives on mobile?             | Page is reached directly from a push notification or alert. | Page is typically entered from desktop.                                              |
+| Task urgency            | Would delaying the task until desktop access is possible cause harm?           | Time-sensitive, can't wait.                                 | Can reasonably wait.                                                                 |
+| Interaction complexity  | Does the task require precise pointer input, drag-and-drop, or multiple views? | Simple selections suffice.                                  | Requires precision or complex comparison of different elements in the layout.        |
+| Information density     | Can the content be reflowed for mobile width without losing critical detail?   | Reduces cleanly using the patterns in this guide.           | Inherently requires desktop-width space or should remain visible via zoom or scroll. |
+| Frequency of mobile use | Do users reach for mobile for this task?                                       | Yes, frequently.                                            | Rarely or never.                                                                     |

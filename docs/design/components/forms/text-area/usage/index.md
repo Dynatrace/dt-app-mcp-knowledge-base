@@ -1,0 +1,1 @@
+The `TextArea` component can be used as a multi-line plain-text editing control to enter free-form text, such as a comment on a form. The component uses a fallback FormFieldMessages context if it wasn't wrapped in a FormField.

@@ -1,0 +1,1 @@
+The [Extensions Framework 2.0](https://docs.dynatrace.com/docs/shortlink/extensions20) for JMX has been available since version 1.213 and brings you new possibilities for visualizing and querying your data. Follow this guide to learn how to leverage Visual Studio Code to convert your 1.0 extensions to the new format automatically.

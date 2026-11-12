@@ -1,0 +1,1 @@
+Workflow actions should follow the same base structure to ensure a consistent user experience across the Dynatrace platform ecosystem. A few guidelines and components can give a familiar structure and, ultimately, make your Workflow actions experience more enjoyable and easier to comprehend.

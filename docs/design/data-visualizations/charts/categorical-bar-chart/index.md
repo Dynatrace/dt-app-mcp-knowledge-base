@@ -1,0 +1,1 @@
+The `CategoricalBarChart` visually displays the frequencies or values of distinct categories using rectangular bars. Each bar's length or height corresponds to the quantity or value associated with a specific category, making it easy to compare the relative differences among categories.

@@ -1,0 +1,1 @@
+Now that you've finished your first app and have a better understanding of what's possible, you're probably eager to **put things into practice**. Depending on what you're interested in trying out, we've got some resources to help you get started.

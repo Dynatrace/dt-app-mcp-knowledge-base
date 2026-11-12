@@ -1,0 +1,13 @@
+## Keyboard accessibility and focus
+
+> **Tip**
+>
+> Relates to [WCAG 2.1.1](https://www.w3.org/WAI/WCAG22/Understanding/keyboard), [WCAG 2.4.3](https://www.w3.org/WAI/WCAG22/Understanding/focus-order), [WCAG 2.4.7](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible), [WCAG 2.4.11](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance), and [WCAG 2.4.12](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured).
+
+All functionality must be accessible using a keyboard alone. Users who can't use a pointer device such as a mouse rely entirely on keyboard navigation. The focus indicator must always be visible so users can see where they are on the page.
+
+Strato components are designed to meet the two WCAG 2.2 AA focus requirements that focus indicators must meet minimum size and contrast thresholds, and focused elements must never be fully obscured by overlapping content.
+
+You can further ensure a good, accessible experience by maintaining a logical tab order, never trapping keyboard focus, and keeping a clearly visible focus indicator at all times. Follow established keyboard patterns for composite components such as menus, tab panels, and data grids.
+
+**Example components:** [Accordion](https://developer.dynatrace.com/design/components/content/Accordion/a11y.md), [AvatarGroup](https://developer.dynatrace.com/design/components/content/AvatarGroup/a11y.md), [ChipGroup](https://developer.dynatrace.com/design/components/content/ChipGroup/a11y.md), [DateTimePicker](https://developer.dynatrace.com/design/components/forms/DateTimePicker/a11y.md), [ExpandableText](https://developer.dynatrace.com/design/components/content/ExpandableText/a11y.md), [FilterBar](https://developer.dynatrace.com/design/components/filters/FilterBar/a11y.md), [HelpMenu](https://developer.dynatrace.com/design/components/layouts/HelpMenu/a11y.md), [InformationOverlay](https://developer.dynatrace.com/design/components/content/InformationOverlay/a11y.md), [IntentButton](https://developer.dynatrace.com/design/components/buttons/IntentButton/a11y.md), [Menu](https://developer.dynatrace.com/design/components/navigation/Menu/a11y.md), [NotifyButton](https://developer.dynatrace.com/design/components/buttons/NotifyButton/a11y.md), [Select](https://developer.dynatrace.com/design/components/forms/Select/a11y.md), [SegmentSelector](https://developer.dynatrace.com/design/components/filters/SegmentSelector/a11y.md), [TerminologyOverlay](https://developer.dynatrace.com/design/components/content/TerminologyOverlay/a11y.md), [TimeframeSelector](https://developer.dynatrace.com/design/components/filters/TimeframeSelector/a11y.md)

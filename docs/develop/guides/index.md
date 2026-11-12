@@ -1,0 +1,13 @@
+- [Access platform APIs from outside](https://developer.dynatrace.com/develop/guides/access-platform-apis-from-outside.md): Call platform APIs and app functions from outside Dynatrace.
+- [App functions](https://developer.dynatrace.com/develop/guides/app-functions.md): Learn about app functions for the app backend.
+- [Automate dependency updates](https://developer.dynatrace.com/develop/guides/automate-dependency-updates.md): Automatically update Dynatrace app dependencies with Renovate.
+- [Code optimization](https://developer.dynatrace.com/develop/guides/code-optimization.md): Introduction to code optimization for Dynatrace apps
+- [Data](https://developer.dynatrace.com/develop/guides/data.md): Introduction to the types of storage available for your Dynatrace app
+- [Deploy your app](https://developer.dynatrace.com/develop/guides/deploy-your-app.md): Deploy your Dynatrace application.
+- [Keyboard shortcuts](https://developer.dynatrace.com/develop/guides/keyboard-shortcuts.md): Access the reference library of Dynatrace keyboard shortcuts.
+- [Navigation](https://developer.dynatrace.com/develop/guides/navigation.md): Get an overview of navigation patterns, deep linking, and interoperability in Dynatrace Apps.
+- [Privacy](https://developer.dynatrace.com/develop/guides/privacy.md): Learn about privacy by design for Dynatrace Apps.
+- [Reuse code within your app](https://developer.dynatrace.com/develop/guides/reuse-code.md): Learn to reuse code in your app.
+- [Security](https://developer.dynatrace.com/develop/guides/security.md): Understand security-related topics for developing Dynatrace Apps.
+- [Support dark and light themes](https://developer.dynatrace.com/develop/guides/support-dark-light-themes.md): Learn how to implement dark and light themes in your Dynatrace App.
+- [Workflows](https://developer.dynatrace.com/develop/guides/workflows.md): Basic concepts of worflows in Dynatrace, which let you automatically act on monitoring data

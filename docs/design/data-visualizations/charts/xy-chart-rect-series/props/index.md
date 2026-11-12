@@ -1,0 +1,1 @@
+A `RectSeries` is a type of shape that provides a two-dimensional representation of data in which various values are represented by colors. This shape excels at allowing the user to compare values and observe patterns. One of the most popular uses this shape can be used for are HeatMaps.

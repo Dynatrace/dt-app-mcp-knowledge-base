@@ -1,0 +1,3 @@
+The `Overlay` component allows you to show additional content when the user clicks on a particular element in the UI. The `Overlay` is placed at the border of its trigger element. To define a UI element as a trigger, use the `useOverlayWithTrigger` hook. The Overlay only exists in a controlled manner, so the `isOpen` prop must be updated by the developer.
+
+Package `@dynatrace/strato-components`, latest version **3.17.1**. Below are the changes to `Overlay`. See [Components changelog](https://developer.dynatrace.com/changelogs/design-system/components-changelog.md) for all changes to the package.

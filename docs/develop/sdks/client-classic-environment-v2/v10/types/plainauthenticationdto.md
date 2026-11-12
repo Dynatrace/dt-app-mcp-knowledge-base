@@ -1,0 +1,15 @@
+### PlainAuthenticationDto
+
+Plain authentication dto for Browser Monitor step.
+
+| Name                 | Type                                              | Description                                                                                                                                                                |
+| -------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| authServerAllowlist  | null \| string                                    | String containing the allowed servers of KERBEROS authentication. Can be defined only for `KERBEROS` authentication type.                                                  |
+| domain               | null \| string                                    | String containing the KERBEROS authentication domain. Can be defined only for `KERBEROS` authentication type.                                                              |
+| inputType (required) | "PLAIN" \| "SECURE"                               | Defines the actual set of fields depending on the value. See one of the following objects: * `SECURE`
+   -> SecureAuthenticationDto
+* `PLAIN`
+   -> PlainAuthenticationDto |
+| password (required)  | string                                            | String containing the password.                                                                                                                                            |
+| type (required)      | "HTTP_AUTHENTICATION" \| "KERBEROS" \| "WEBFORM" | Type of authentication.                                                                                                                                                    |
+| username (required)  | string                                            | String containing the username.                                                                                                                                            |

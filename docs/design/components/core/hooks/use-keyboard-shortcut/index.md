@@ -1,0 +1,1 @@
+The `useKeyboardShortcut` hook registers a `keydown` listener for a key combination in `aria-keyshortcuts` format and runs `onTrigger` when the user presses it. On top of that, the hook accepts `mod`, which resolves to `Meta` on macOS and to `Control` on every other platform.

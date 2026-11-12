@@ -1,0 +1,1 @@
+The `FocusScope` helps you manage the focus when opening any overlay. If you want to create a custom overlay, you can wrap the content of your overlay in the `FocusScope` to help you make the overlay accessible and handle focus appropriately.

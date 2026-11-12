@@ -1,0 +1,1 @@
+The `ChoroplethLayer` component allows users to display divided geographical areas or regions that are coloured in relation to a given data. It provides an easy way to visualize how a variable varies across a geographic area or show the level of variability within a region.

@@ -1,0 +1,8 @@
+### ~~PutMetadataPathPlatform~~
+
+> ⚠️ **Deprecated**
+> Use literal values.
+
+#### Enum keys
+
+`Android` | `Ios`

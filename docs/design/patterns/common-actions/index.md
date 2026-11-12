@@ -1,0 +1,1 @@
+Actions let users trigger operations, navigate, or make decisions. They use icons, labels, or both to communicate their purpose. The following sections describe standard words and icons for common actions across the Dynatrace platform.

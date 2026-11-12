@@ -1,0 +1,1 @@
+A status describes the condition or health of a system, process, or object. A consistent approach to showing status in the user interface helps users see what's happening, assess whether they need to act, and respond accordingly.

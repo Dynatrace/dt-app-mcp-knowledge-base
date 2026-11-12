@@ -1,0 +1,3 @@
+The `CodeEditor` provides a text input field that is specifically designed for editing code. It further offers properties to configure e.g. syntax highlighting, spell checks or line wrapping. Once the editor is focused via the keyboard, the user must press `Enter` to start editing and `Escape` to quit editing and return to the keyboard navigation flow.
+
+Package `@dynatrace/strato-components`, latest version **3.17.1**. Below are the changes to `CodeEditor`. See [Components changelog](https://developer.dynatrace.com/changelogs/design-system/components-changelog.md) for all changes to the package.

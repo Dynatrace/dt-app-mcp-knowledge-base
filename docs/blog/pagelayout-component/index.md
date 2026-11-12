@@ -1,0 +1,1 @@
+`PageLayout` is the new Strato layout component and the more flexible successor to `Page`. It keeps the familiar slot-based structure (header, sidebar, content, and details) while giving you more freedom in how you compose and control those panels. `Page` still works, so you can migrate at your own pace.

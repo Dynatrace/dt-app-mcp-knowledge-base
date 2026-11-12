@@ -1,0 +1,7 @@
+Optimizing your app's code is crucial for delivering a fast and responsive user experience. By reducing the size of your JavaScript bundles and loading code on demand, you can significantly improve your app's load times and performance.
+
+- [Bundler-friendly code](https://developer.dynatrace.com/develop/guides/code-optimization/bundler-friendly-code.md): Write code that is optimized for bundlers, improving your Dynatrace app's load performance and enabling lazy loading.
+- [Lazy loading quickstart](https://developer.dynatrace.com/develop/guides/code-optimization/lazy-loading-quickstart.md): Improve your Dynatrace app's load performance by splitting your code into smaller chunks and implementing lazy loading.
+- [Understand lazy loading](https://developer.dynatrace.com/develop/guides/code-optimization/lazy-loading.md): Learn the principles of lazy loading in React and how to apply it effectively in your Dynatrace app to optimize load performance and Core Web Vitals.
+- [Prevent layout shift in Dynatrace Apps](https://developer.dynatrace.com/develop/guides/code-optimization/prevent-layout-shift.md): Prevent Cumulative Layout Shift (CLS) in Dynatrace apps by reserving space for async content, sizing skeletons, and using SWR caching.
+- [Stale-While-Revalidate (SWR)](https://developer.dynatrace.com/develop/guides/code-optimization/stale-while-revalidate.md): Implement the stale-while-revalidate (SWR) caching strategy in your Dynatrace app to improve performance and user experience.

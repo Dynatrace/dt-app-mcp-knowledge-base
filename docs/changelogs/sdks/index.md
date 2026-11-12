@@ -1,0 +1,35 @@
+The Dynatrace software development kit (SDK) helps developers create apps for the Dynatrace platform. Select the cards below to see the history of changes to different libraries of the Dynatrace SDK.
+
+- [Addons changelog](https://developer.dynatrace.com/changelogs/sdks/addons.md): @dynatrace-sdk/addons
+- [App environment changelog](https://developer.dynatrace.com/changelogs/sdks/app-environment.md): @dynatrace-sdk/app-environment
+- [App utils changelog](https://developer.dynatrace.com/changelogs/sdks/app-utils.md): @dynatrace-sdk/app-utils
+- [Automation utils changelog](https://developer.dynatrace.com/changelogs/sdks/automation-utils.md): @dynatrace-sdk/automation-utils
+- [AppEngine - EdgeConnect changelog](https://developer.dynatrace.com/changelogs/sdks/client-app-engine-edge-connect.md): @dynatrace-sdk/client-app-engine-edge-connect
+- [AppEngine - registry changelog](https://developer.dynatrace.com/changelogs/sdks/client-app-engine-registry.md): @dynatrace-sdk/client-app-engine-registry
+- [App settings v2 changelog](https://developer.dynatrace.com/changelogs/sdks/client-app-settings-v2.md): @dynatrace-sdk/client-app-settings-v2
+- [App settings v1 changelog](https://developer.dynatrace.com/changelogs/sdks/client-app-settings.md): @dynatrace-sdk/client-app-settings
+- [Automation changelog](https://developer.dynatrace.com/changelogs/sdks/client-automation.md): @dynatrace-sdk/client-automation
+- [Grail storage management API changelog](https://developer.dynatrace.com/changelogs/sdks/client-bucket-management.md): @dynatrace-sdk/client-bucket-management
+- [Classic environment v1 changelog](https://developer.dynatrace.com/changelogs/sdks/client-classic-environment-v1.md): @dynatrace-sdk/client-classic-environment-v1
+- [Classic environment v2 changelog](https://developer.dynatrace.com/changelogs/sdks/client-classic-environment-v2.md): @dynatrace-sdk/client-classic-environment-v2
+- [Credential vault changelog](https://developer.dynatrace.com/changelogs/sdks/client-credential-vault.md): @dynatrace-sdk/client-credential-vault
+- [Davis AI - predictive and causal changelog](https://developer.dynatrace.com/changelogs/sdks/client-davis-analyzers.md): @dynatrace-sdk/client-davis-analyzers
+- [Document changelog](https://developer.dynatrace.com/changelogs/sdks/client-document.md): @dynatrace-sdk/client-document
+- [Extensions 2.0 changelog](https://developer.dynatrace.com/changelogs/sdks/client-extensions-v2.md): @dynatrace-sdk/client-extensions-v2
+- [Grail filter segments API changelog](https://developer.dynatrace.com/changelogs/sdks/client-filter-segment-management.md): @dynatrace-sdk/client-filter-segment-management
+- [Fleet management changelog](https://developer.dynatrace.com/changelogs/sdks/client-fleet-management.md): @dynatrace-sdk/client-fleet-management
+- [Hub changelog](https://developer.dynatrace.com/changelogs/sdks/client-hub.md): @dynatrace-sdk/client-hub
+- [Identity and access management changelog](https://developer.dynatrace.com/changelogs/sdks/client-iam.md): @dynatrace-sdk/client-iam
+- [Notification v2 changelog](https://developer.dynatrace.com/changelogs/sdks/client-notification-v2.md): @dynatrace-sdk/client-notification-v2
+- [Notification changelog](https://developer.dynatrace.com/changelogs/sdks/client-notification.md): @dynatrace-sdk/client-notification
+- [Platform management changelog](https://developer.dynatrace.com/changelogs/sdks/client-platform-management-service.md): @dynatrace-sdk/client-platform-management-service
+- [Grail DQL query changelog](https://developer.dynatrace.com/changelogs/sdks/client-query.md): @dynatrace-sdk/client-query
+- [Grail resource store API changelog](https://developer.dynatrace.com/changelogs/sdks/client-resource-store.md): @dynatrace-sdk/client-resource-store
+- [Service-Level objectives changelog](https://developer.dynatrace.com/changelogs/sdks/client-service-level-objectives.md): @dynatrace-sdk/client-service-level-objectives
+- [Settings changelog](https://developer.dynatrace.com/changelogs/sdks/client-settings.md): @dynatrace-sdk/client-settings
+- [State changelog](https://developer.dynatrace.com/changelogs/sdks/client-state.md): @dynatrace-sdk/client-state
+- [Synthetic changelog](https://developer.dynatrace.com/changelogs/sdks/client-synthetic.md): @dynatrace-sdk/client-synthetic
+- [Navigation changelog](https://developer.dynatrace.com/changelogs/sdks/navigation.md): @dynatrace-sdk/navigation
+- [React hooks changelog](https://developer.dynatrace.com/changelogs/sdks/react-hooks.md): @dynatrace-sdk/react-hooks
+- [Units changelog](https://developer.dynatrace.com/changelogs/sdks/units.md): @dynatrace-sdk/units
+- [User preferences changelog](https://developer.dynatrace.com/changelogs/sdks/user-preferences.md): @dynatrace-sdk/user-preferences

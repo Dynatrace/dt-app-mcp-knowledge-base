@@ -1,0 +1,1 @@
+Apps on the Dynatrace platform are based on fundamental layout patterns to support a consistent user experience. Use the following layout tools and standards to structure your app and ensure an accessible, responsive, and familiar user experience.

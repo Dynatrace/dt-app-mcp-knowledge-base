@@ -1,0 +1,1 @@
+Connectivity issues may arise if you're trying to use the App Toolkit from a company network. These can include network issues, proxy issues, firewall issues, single sign-on issues, etc. The following guide will help you solve those issues.

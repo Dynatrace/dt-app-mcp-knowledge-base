@@ -1,0 +1,1 @@
+The `AutomationConnectionPicker` allows users to select a single settings object. The available options will be fetched and displayed according to the given settings `schema`. Users can also create new settings objects with the **Create a new connection** link and can edit the objects by selecting **Edit**.

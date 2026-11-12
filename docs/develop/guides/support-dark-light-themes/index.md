@@ -1,0 +1,1 @@
+Dynatrace platform allows switching between light and dark themes. [Strato components](https://developer.dynatrace.com/contents/docs/design/index.md/) support it out of the box. If you create custom components or use custom resources, you can add light and dark theme support for them.

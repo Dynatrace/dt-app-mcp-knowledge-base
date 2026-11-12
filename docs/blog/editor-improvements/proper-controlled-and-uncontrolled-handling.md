@@ -1,0 +1,3 @@
+## Proper controlled and uncontrolled handling
+
+In earlier versions, the Strato editors didn't cleanly support the standard controlled and uncontrolled React patterns. Now, both Strato editors accept an `isControlled` prop to enable the standard React behavior. Existing code without the prop continues to work as before. The new behavior will become the default with the [next major release](pathname:///release-notes/design-system/upcoming-changes/). For details, see the [`DQLEditor`](pathname:///design/components/editors/DQLEditor/#control-state) and [`CodeEditor`](pathname:///design/components/editors/CodeEditor/#control-state) documentation.

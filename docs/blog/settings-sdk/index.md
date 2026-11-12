@@ -1,0 +1,1 @@
+A new guide, [Store Dynatrace settings](pathname:///develop/guides/data/store-dynatrace-settings/), covers the Settings SDK (`@dynatrace-sdk/client-settings`), a single API client for reading and managing Dynatrace settings objects—from built-in schemas like `builtin:maintenance-windows` to your own app schemas.

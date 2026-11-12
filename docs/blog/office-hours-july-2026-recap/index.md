@@ -1,0 +1,1 @@
+Thanks to everyone who joined the July App Development Office Hours! If you missed it, the [recording is up](https://www.youtube.com/watch?v=ZwNAnSgzWEM) and here's a quick rundown of what we covered: new features for app builders, the latest design-system additions, and questions from the community. The next session is **Tuesday, September 8**.

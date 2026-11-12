@@ -1,0 +1,1 @@
+Data visualization is the process of visually representing data so the user can understand the data easier. We use the following data formats and chart types supported by the Strato Design System for apps that present large amounts of data.

@@ -1,0 +1,1 @@
+The `PasswordInput` component can be used to hide user input. Always use a `PasswordInput` when your app asks for sensitive data, such as a password. Users can click on the eye icon to hide or show their data.

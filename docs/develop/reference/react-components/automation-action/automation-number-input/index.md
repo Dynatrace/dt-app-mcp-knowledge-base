@@ -1,0 +1,1 @@
+The `AutomationNumberInput` component allows you to provide a numeric value. Additionally, you can switch from select mode to expression mode, which displays an [`AutomationTextInput`](https://developer.dynatrace.com/develop/reference/react-components/automation-action/AutomationTextInput.md), for a dynamic [expression](https://dt-url.net/workflows-expression-reference).

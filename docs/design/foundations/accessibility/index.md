@@ -1,0 +1,3 @@
+Dynatrace is committed to building products that are accessible to everyone. We strive to conform with **WCAG 2.2 Level AA**, the internationally recognized standard for digital accessibility, and we verify our compliance through independent audits. See the [Dynatrace Trust Center](https://www.dynatrace.com/company/trust-center/) to learn more about our public commitment to accessible product design and development.
+
+[Strato](https://developer.dynatrace.com/design/about-strato-design-system.md), our design system, is designed for accessibility. The more you use [Strato components](https://developer.dynatrace.com/design/components.md), the more requirements are satisfied out of the box, reducing the work needed to build accessible, compliant apps.

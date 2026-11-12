@@ -1,0 +1,3 @@
+Intents are the platform mechanism for **context-aware cross-app navigation**. When a user interacts with a resource—such as an entity, a metric, or a DQL query—and wants to do something with it in another app, an intent carries the relevant context from the source app to the target app through the AppShell.
+
+Every Dynatrace app runs inside an `iframe` hosted by the AppShell. Regular links can navigate between apps, but they can't carry structured context with them. Intents solve this: they let your app pass data—entity IDs, timeframes, queries—to another app in a way the platform can coordinate, so the target app knows what to show.

@@ -1,0 +1,1 @@
+A new guide covers Cumulative Layout Shift (CLS) in Dynatrace apps, the metric that measures how much visible content jumps unexpectedly after it first renders. The target is below 0.1, and Dynatrace apps have a pattern profile that commonly triggers violations.

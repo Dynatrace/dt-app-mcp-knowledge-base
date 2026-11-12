@@ -1,0 +1,1 @@
+After you've created [your custom Workflow Action](https://developer.dynatrace.com/develop/guides/workflows/create-custom-action.md), you'll likely want to test it. This guide describes best practices and recommended approaches to properly test your app functions and widgets that implement the custom action.

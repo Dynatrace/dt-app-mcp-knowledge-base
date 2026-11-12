@@ -1,0 +1,1 @@
+The `Sparkline` is a compact and simple data visualization that displays a trend or pattern of data in a small, condensed format. It typically consists of a single line or area graph, without axes or labels, that represents the variation of data points over time.

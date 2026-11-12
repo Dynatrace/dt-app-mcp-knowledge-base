@@ -1,0 +1,1 @@
+The `Overlay` component allows you to show additional content when the user clicks on a particular element in the UI. The `Overlay` is placed at the border of its trigger element. To define a UI element as a trigger, use the `useOverlayWithTrigger` hook. The Overlay only exists in a controlled manner, so the `isOpen` prop must be updated by the developer.

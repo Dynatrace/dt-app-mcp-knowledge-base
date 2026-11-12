@@ -1,0 +1,1 @@
+With the introduction of Dynatrace Apps, Dynatrace provides the possibility to build custom functionality on top of all the observability data ingested into Dynatrace in the form of custom apps. An app consists of two main elements: a user interface written in React/TypeScript and a serverless backend, which allows you to run app functions written in TypeScript.

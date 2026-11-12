@@ -1,0 +1,1 @@
+The `ConnectionLayer` component renders connections between points on a map, accepting an array of `Connection` data points with required properties like latitude and longitude. It supports customization of color, thickness, direction the connection indicators.

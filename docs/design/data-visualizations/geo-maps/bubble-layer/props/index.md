@@ -1,0 +1,1 @@
+The `BubbleLayer` component renders data points as bubbles on a map, accepting an array of data points with required properties like latitude and longitude. It supports customization of bubble size using the radius prop and optional tooltips for displaying additional information.

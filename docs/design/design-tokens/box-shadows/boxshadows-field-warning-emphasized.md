@@ -1,0 +1,7 @@
+## BoxShadows.Field.Warning.Emphasized
+
+| Name                                         | Value                                                                                                                      | CSS variable                                       | Description                                        |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `BoxShadows.Field.Warning.Emphasized.Rest`   | `inset 0px 0px 0px 1px #4c34000f, inset 0px -1px 0px #4c34001a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #fdf3dd` | `--dt-box-shadows-field-warning-emphasized-rest`   | Use for emphasized warning button in rest state.   |
+| `BoxShadows.Field.Warning.Emphasized.Hover`  | `inset 0px 0px 0px 1px #4c34000f, inset 0px -1px 0px #4c34001a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #fdefd1` | `--dt-box-shadows-field-warning-emphasized-hover`  | Use for emphasized warning button in hover state.  |
+| `BoxShadows.Field.Warning.Emphasized.Active` | `inset 0px 0px 0px 1px #4c34000f, inset 0px -1px 0px #4c34001a, 0px 1px 1px -1px #3838391f, inset 0px 0px 0px 1px #fdebc2` | `--dt-box-shadows-field-warning-emphasized-active` | Use for emphasized warning button in active state. |

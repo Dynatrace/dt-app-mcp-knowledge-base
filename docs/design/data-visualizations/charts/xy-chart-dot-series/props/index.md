@@ -1,0 +1,1 @@
+The DotSeries is a type of shape that provides a two-dimensional representation of data in which pairs of values are shown. This shape turns out great for representing groups of values spread in classes. It can be an essential component when creating charts such as Scatter and Dot Plots.

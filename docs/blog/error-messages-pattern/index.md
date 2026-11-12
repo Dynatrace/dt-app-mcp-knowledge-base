@@ -1,0 +1,1 @@
+A good error message can turn a dead end into a recoverable step. The new [Error messages](pathname:///design/patterns/error-messages/) pattern brings together everything you need to design clear, consistent error messages across your app, whatever component you're working with.

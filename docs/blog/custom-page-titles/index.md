@@ -1,0 +1,1 @@
+Users often keep several tabs of the same app open: different filters, different entities, etc. Until now every tab showed the same title, but now apps can set a descriptive browser-tab title so each tab describes what it actually shows.

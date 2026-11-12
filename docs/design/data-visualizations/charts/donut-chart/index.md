@@ -1,0 +1,1 @@
+The `DonutChart` is a variation of a pie chart with a circular shape and a hole in the center. It divides the total amount into proportional slices, each representing a category or value. The key difference is the presence of the central hole, which allows placing additional information in the available space.

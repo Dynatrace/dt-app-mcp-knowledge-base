@@ -1,0 +1,1 @@
+An area series chart fills the region between data points and a baseline, making it effective for visualizing magnitudes, trends, and cumulative values over a continuous range. It combines line-based trend visibility with filled regions to emphasize volume, helping to reveal patterns and comparisons across series.

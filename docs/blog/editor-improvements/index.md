@@ -1,0 +1,1 @@
+The latest Strato release ships a significant set of improvements to `DQLEditor` and `CodeEditor`. `DQLEditor` gets a new built-in actions menu, code folding and richer autocomplete suggestions. Both editors gain folding improvements, visible inline diagnostics, along with improved DQL syntax highlighting. Read on for what's new and how to integrate it.

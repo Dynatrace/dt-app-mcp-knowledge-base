@@ -1,0 +1,1 @@
+The `DotLayer` component renders data points on a map, accepting an array of data points with required properties like latitude and longitude. It provides support for various shapes, optional features like custom background for icons, rotation, and tooltips, along with granular color customization and integration with legends for color configuration.

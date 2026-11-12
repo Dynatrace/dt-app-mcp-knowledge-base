@@ -1,0 +1,5 @@
+Requests to the Dynatrace API need authorization via OAuth. When you consume these APIs in your app, directly or via the provided SDK packages, the platform takes care of the authorization for you. During the usage of an app, the user's permissions are used for authorization. During development, they're the developer's permissions, respectively.
+
+The fact that the user's permissions are used for authorization could lead to potential security problems, as an app could misuse the user's permissions and perform malicious activity. Therefore, the Dynatrace platform requires an app to provide all the needed permissions within the app configuration file. When executing an app, app permissions are intersected with user permissions to adhere to the principle of least privilege.
+
+Making this list of required permissions transparent to Dynatrace users and administrators allows them to decide if a particular app is safe to run in their environment. Having specific permissions defined in the app configuration file doesn't necessarily mean that the app uses it.

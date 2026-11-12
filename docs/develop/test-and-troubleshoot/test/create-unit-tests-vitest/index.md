@@ -1,0 +1,1 @@
+In Dynatrace Apps, write unit tests with [Vitest](https://vitest.dev/). Vitest is a Vite-native test framework that supports TypeScript without an additional transformer, making it a fast alternative to Jest for apps already using Vite. Use this guide to write unit tests for React components and app functions.

@@ -1,0 +1,1 @@
+A line series chart connects data points with a continuous line, making it easy to observe changes or trends over 2-variable paired data, helping to reveal dependencies or correlations (or both). The chart allows for assigning the variables to both X and Y-axis.

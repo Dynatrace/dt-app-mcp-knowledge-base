@@ -1,0 +1,1 @@
+In order to have all the providers in place for rendering overlays, applying global styles or internationalization, you need to wrap your app in the `AppRoot`. If you're using the `dt-app` to create your app, this is automatically taken care of and you can start working on your app without further ado.

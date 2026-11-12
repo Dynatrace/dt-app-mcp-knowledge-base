@@ -1,0 +1,1 @@
+The notification service manages notification configurations. You can use it to allow your users to register email notifications in your app. Events related to a resource your app presents or any event recognized in the Dynatrace platform may trigger these notifications.
