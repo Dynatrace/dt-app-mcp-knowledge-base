@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/dynatrace/dt-app-mcp-knowledge-base/main/schemas/meta.schema.json",
-  "generatedAt": "2026-11-12T12:26:38.649Z",
+  "generatedAt": "2026-11-13T03:25:15.786Z",
   "sources": [
     {
       "url": "https://developer.dynatrace.com/blog.md",
@@ -17080,8 +17080,8 @@
     },
     {
       "url": "https://developer.dynatrace.com/develop/sdks/client-iam.md",
-      "downloadHash": "dc315e6aaec2bf7de5192def44302c4525d6260e77885173f45732ac99dd49dd",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "660f1039d58a3192e142336ab27a72ce45208611d794d25b972e82c02871f5d3",
+      "downloadedAt": "2026-11-13T03:25:15.786Z",
       "chunkPaths": [
         "docs/develop/sdks/client-iam/index.md",
         "docs/develop/sdks/client-iam/usersandgroupsclient.md",
