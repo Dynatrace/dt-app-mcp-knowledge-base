@@ -377,59 +377,64 @@
       "path": "docs/changelogs/index.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.20.0 (2026-10-05) {#1200}",
-      "description": "Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-20-0-2026-10-05-1200.md"
-    },
-    {
-      "name": "Dynatrace App Toolkit changelog: 1.19.1 (2026-09-22) {#1191}",
-      "description": "Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-19-1-2026-09-22-1191.md"
-    },
-    {
-      "name": "Dynatrace App Toolkit changelog: 1.19.0 (2026-09-21) {#1190}",
+      "name": "Dynatrace App Toolkit changelog: 1.21.0 (2026-10-19) {#1210}",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-19-0-2026-09-21-1190.md"
+      "path": "docs/changelogs/app-toolkit/1-21-0-2026-10-19-1210.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.18.0 (2026-09-07) {#1180}",
+      "name": "Dynatrace App Toolkit changelog: 1.20.0",
+      "description": "Bugfixes",
+      "path": "docs/changelogs/app-toolkit/1-20-0.md"
+    },
+    {
+      "name": "Dynatrace App Toolkit changelog: 1.19.1",
+      "description": "Bugfixes",
+      "path": "docs/changelogs/app-toolkit/1-19-1.md"
+    },
+    {
+      "name": "Dynatrace App Toolkit changelog: 1.19.0",
+      "description": "Features; Bugfixes",
+      "path": "docs/changelogs/app-toolkit/1-19-0.md"
+    },
+    {
+      "name": "Dynatrace App Toolkit changelog: 1.18.0",
       "description": "Features",
-      "path": "docs/changelogs/app-toolkit/1-18-0-2026-09-07-1180.md"
+      "path": "docs/changelogs/app-toolkit/1-18-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.17.0 (2026-08-31) {#1170}",
+      "name": "Dynatrace App Toolkit changelog: 1.17.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-17-0-2026-08-31-1170.md"
+      "path": "docs/changelogs/app-toolkit/1-17-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.16.1 (2026-08-14) {#1161}",
+      "name": "Dynatrace App Toolkit changelog: 1.16.1",
       "description": "Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-16-1-2026-08-14-1161.md"
+      "path": "docs/changelogs/app-toolkit/1-16-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.16.0 (2026-08-07) {#1160}",
+      "name": "Dynatrace App Toolkit changelog: 1.16.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-16-0-2026-08-07-1160.md"
+      "path": "docs/changelogs/app-toolkit/1-16-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.15.0 (2026-07-29) {#1150}",
+      "name": "Dynatrace App Toolkit changelog: 1.15.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-15-0-2026-07-29-1150.md"
+      "path": "docs/changelogs/app-toolkit/1-15-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.14.1 (2026-07-14) {#1141}",
+      "name": "Dynatrace App Toolkit changelog: 1.14.1",
       "description": "Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-14-1-2026-07-14-1141.md"
+      "path": "docs/changelogs/app-toolkit/1-14-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.14.0 (2026-07-13) {#1140}",
+      "name": "Dynatrace App Toolkit changelog: 1.14.0",
       "description": "Features",
-      "path": "docs/changelogs/app-toolkit/1-14-0-2026-07-13-1140.md"
+      "path": "docs/changelogs/app-toolkit/1-14-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.13.0 (2026-06-29) {#1130}",
+      "name": "Dynatrace App Toolkit changelog: 1.13.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-13-0-2026-06-29-1130.md"
+      "path": "docs/changelogs/app-toolkit/1-13-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 1.12.1",
@@ -437,9 +442,9 @@
       "path": "docs/changelogs/app-toolkit/1-12-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.12.0 (2026-06-15) {#1120}",
+      "name": "Dynatrace App Toolkit changelog: 1.12.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-12-0-2026-06-15-1120.md"
+      "path": "docs/changelogs/app-toolkit/1-12-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 1.11.2",
@@ -452,9 +457,9 @@
       "path": "docs/changelogs/app-toolkit/1-11-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.11.0 (2026-05-27) {#1110}",
+      "name": "Dynatrace App Toolkit changelog: 1.11.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-11-0-2026-05-27-1110.md"
+      "path": "docs/changelogs/app-toolkit/1-11-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 1.10.2",
@@ -467,29 +472,29 @@
       "path": "docs/changelogs/app-toolkit/1-10-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.10.0 (2026-04-28) {#1100}",
+      "name": "Dynatrace App Toolkit changelog: 1.10.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-10-0-2026-04-28-1100.md"
+      "path": "docs/changelogs/app-toolkit/1-10-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.9.0 (2026-03-20) {#190}",
+      "name": "Dynatrace App Toolkit changelog: 1.9.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-9-0-2026-03-20-190.md"
+      "path": "docs/changelogs/app-toolkit/1-9-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.8.1 (2026-02-17) {#181}",
+      "name": "Dynatrace App Toolkit changelog: 1.8.1",
       "description": "Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-8-1-2026-02-17-181.md"
+      "path": "docs/changelogs/app-toolkit/1-8-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.8.0 (2026-02-12) {#180}",
+      "name": "Dynatrace App Toolkit changelog: 1.8.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-8-0-2026-02-12-180.md"
+      "path": "docs/changelogs/app-toolkit/1-8-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.7.0 (2026-01-19) {#170}",
+      "name": "Dynatrace App Toolkit changelog: 1.7.0",
       "description": "Features",
-      "path": "docs/changelogs/app-toolkit/1-7-0-2026-01-19-170.md"
+      "path": "docs/changelogs/app-toolkit/1-7-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 1.6.2",
@@ -502,24 +507,24 @@
       "path": "docs/changelogs/app-toolkit/1-6-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.6.0 (2026-01-13) {#160}",
+      "name": "Dynatrace App Toolkit changelog: 1.6.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-6-0-2026-01-13-160.md"
+      "path": "docs/changelogs/app-toolkit/1-6-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.5.0 (2025-12-17) {#150}",
+      "name": "Dynatrace App Toolkit changelog: 1.5.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-5-0-2025-12-17-150.md"
+      "path": "docs/changelogs/app-toolkit/1-5-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.4.1 (2025-11-20) {#141}",
+      "name": "Dynatrace App Toolkit changelog: 1.4.1",
       "description": "Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-4-1-2025-11-20-141.md"
+      "path": "docs/changelogs/app-toolkit/1-4-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.4.0 (2025-11-11) {#140}",
+      "name": "Dynatrace App Toolkit changelog: 1.4.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-4-0-2025-11-11-140.md"
+      "path": "docs/changelogs/app-toolkit/1-4-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 1.3.1",
@@ -527,14 +532,14 @@
       "path": "docs/changelogs/app-toolkit/1-3-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.3.0 (2025-10-27) {#130}",
+      "name": "Dynatrace App Toolkit changelog: 1.3.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-3-0-2025-10-27-130.md"
+      "path": "docs/changelogs/app-toolkit/1-3-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.2.0 (2025-10-13) {#120}",
+      "name": "Dynatrace App Toolkit changelog: 1.2.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-2-0-2025-10-13-120.md"
+      "path": "docs/changelogs/app-toolkit/1-2-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 1.1.1",
@@ -542,9 +547,9 @@
       "path": "docs/changelogs/app-toolkit/1-1-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.1.0 (2025-09-25) {#110}",
+      "name": "Dynatrace App Toolkit changelog: 1.1.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/1-1-0-2025-09-25-110.md"
+      "path": "docs/changelogs/app-toolkit/1-1-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 1.0.2",
@@ -557,9 +562,9 @@
       "path": "docs/changelogs/app-toolkit/1-0-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 1.0.0 (2025-08-26) {#100}",
+      "name": "Dynatrace App Toolkit changelog: 1.0.0",
       "description": "Remove the following command flags: build --no-prod, build --prod, build --no-sdk-injection, create --oauth-client-id <id>, create --package-manager [name], create --skip-repository-check, dev…",
-      "path": "docs/changelogs/app-toolkit/1-0-0-2025-08-26-100.md"
+      "path": "docs/changelogs/app-toolkit/1-0-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.148.2",
@@ -572,54 +577,54 @@
       "path": "docs/changelogs/app-toolkit/0-148-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.148.0 (2025-07-14) {#01480}",
+      "name": "Dynatrace App Toolkit changelog: 0.148.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-148-0-2025-07-14-01480.md"
+      "path": "docs/changelogs/app-toolkit/0-148-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.147.0 (2025-07-02) {#01470}",
+      "name": "Dynatrace App Toolkit changelog: 0.147.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-147-0-2025-07-02-01470.md"
+      "path": "docs/changelogs/app-toolkit/0-147-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.146.0 (2025-06-18) {#01460}",
+      "name": "Dynatrace App Toolkit changelog: 0.146.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-146-0-2025-06-18-01460.md"
+      "path": "docs/changelogs/app-toolkit/0-146-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.145.0 (2025-06-03) {#01450}",
+      "name": "Dynatrace App Toolkit changelog: 0.145.0",
       "description": "Features",
-      "path": "docs/changelogs/app-toolkit/0-145-0-2025-06-03-01450.md"
+      "path": "docs/changelogs/app-toolkit/0-145-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.144.0 (2025-05-26) {#01440}",
+      "name": "Dynatrace App Toolkit changelog: 0.144.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-144-0-2025-05-26-01440.md"
+      "path": "docs/changelogs/app-toolkit/0-144-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.143.0 (2025-05-08) {#01430}",
+      "name": "Dynatrace App Toolkit changelog: 0.143.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-143-0-2025-05-08-01430.md"
+      "path": "docs/changelogs/app-toolkit/0-143-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.142.0 (2025-04-24) {#01420}",
+      "name": "Dynatrace App Toolkit changelog: 0.142.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-142-0-2025-04-24-01420.md"
+      "path": "docs/changelogs/app-toolkit/0-142-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.141.0 (2025-04-08) {#01410}",
+      "name": "Dynatrace App Toolkit changelog: 0.141.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-141-0-2025-04-08-01410.md"
+      "path": "docs/changelogs/app-toolkit/0-141-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.140.0 (2025-03-26) {#01400}",
+      "name": "Dynatrace App Toolkit changelog: 0.140.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-140-0-2025-03-26-01400.md"
+      "path": "docs/changelogs/app-toolkit/0-140-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.139.0 (2025-03-10) {#01390}",
+      "name": "Dynatrace App Toolkit changelog: 0.139.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-139-0-2025-03-10-01390.md"
+      "path": "docs/changelogs/app-toolkit/0-139-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.138.0",
@@ -632,54 +637,54 @@
       "path": "docs/changelogs/app-toolkit/0-137-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.136.0 (2025-01-14) {#01360}",
+      "name": "Dynatrace App Toolkit changelog: 0.136.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-136-0-2025-01-14-01360.md"
+      "path": "docs/changelogs/app-toolkit/0-136-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.135.0 (2024-12-12) {#01350}",
+      "name": "Dynatrace App Toolkit changelog: 0.135.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-135-0-2024-12-12-01350.md"
+      "path": "docs/changelogs/app-toolkit/0-135-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.134.0 (2024-11-18) {#01340}",
+      "name": "Dynatrace App Toolkit changelog: 0.134.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-134-0-2024-11-18-01340.md"
+      "path": "docs/changelogs/app-toolkit/0-134-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.133.0 (2024-11-06) {#01330}",
+      "name": "Dynatrace App Toolkit changelog: 0.133.0",
       "description": "Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-133-0-2024-11-06-01330.md"
+      "path": "docs/changelogs/app-toolkit/0-133-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.132.0 (2024-10-25) {#01320}",
+      "name": "Dynatrace App Toolkit changelog: 0.132.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-132-0-2024-10-25-01320.md"
+      "path": "docs/changelogs/app-toolkit/0-132-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.131.0 (2024-10-08) {#01310}",
+      "name": "Dynatrace App Toolkit changelog: 0.131.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-131-0-2024-10-08-01310.md"
+      "path": "docs/changelogs/app-toolkit/0-131-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.130.0 (2024-09-23) {#01300}",
+      "name": "Dynatrace App Toolkit changelog: 0.130.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-130-0-2024-09-23-01300.md"
+      "path": "docs/changelogs/app-toolkit/0-130-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.129.0 (2024-09-09) {#01290}",
+      "name": "Dynatrace App Toolkit changelog: 0.129.0",
       "description": "Features; Bugfixes",
-      "path": "docs/changelogs/app-toolkit/0-129-0-2024-09-09-01290.md"
+      "path": "docs/changelogs/app-toolkit/0-129-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.128.0 (2024-08-30) {#01280}",
+      "name": "Dynatrace App Toolkit changelog: 0.128.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-128-0-2024-08-30-01280.md"
+      "path": "docs/changelogs/app-toolkit/0-128-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.127.0 (2024-08-14) {#01270}",
+      "name": "Dynatrace App Toolkit changelog: 0.127.0",
       "description": "Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-127-0-2024-08-14-01270.md"
+      "path": "docs/changelogs/app-toolkit/0-127-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.126.0",
@@ -687,9 +692,9 @@
       "path": "docs/changelogs/app-toolkit/0-126-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.125.0 (2024-07-18) {#01250}",
+      "name": "Dynatrace App Toolkit changelog: 0.125.0",
       "description": "Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-125-0-2024-07-18-01250.md"
+      "path": "docs/changelogs/app-toolkit/0-125-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.124.0",
@@ -697,34 +702,34 @@
       "path": "docs/changelogs/app-toolkit/0-124-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.123.0 (2024-07-18) {#01230}",
+      "name": "Dynatrace App Toolkit changelog: 0.123.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-123-0-2024-07-18-01230.md"
+      "path": "docs/changelogs/app-toolkit/0-123-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.122.0 (2024-06-07) {#01220}",
+      "name": "Dynatrace App Toolkit changelog: 0.122.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-122-0-2024-06-07-01220.md"
+      "path": "docs/changelogs/app-toolkit/0-122-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.121.0 (2024-05-27) {#01210}",
+      "name": "Dynatrace App Toolkit changelog: 0.121.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-121-0-2024-05-27-01210.md"
+      "path": "docs/changelogs/app-toolkit/0-121-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.120.0 (2024-05-08) {#01200}",
+      "name": "Dynatrace App Toolkit changelog: 0.120.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-120-0-2024-05-08-01200.md"
+      "path": "docs/changelogs/app-toolkit/0-120-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.119.0 (2024-04-23) {#01190}",
+      "name": "Dynatrace App Toolkit changelog: 0.119.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-119-0-2024-04-23-01190.md"
+      "path": "docs/changelogs/app-toolkit/0-119-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.118.0 (2024-05-15) {#01180}",
+      "name": "Dynatrace App Toolkit changelog: 0.118.0",
       "description": "Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-118-0-2024-05-15-01180.md"
+      "path": "docs/changelogs/app-toolkit/0-118-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.117.0",
@@ -732,29 +737,29 @@
       "path": "docs/changelogs/app-toolkit/0-117-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.116.0 (2024-03-19) {#01160}",
+      "name": "Dynatrace App Toolkit changelog: 0.116.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-116-0-2024-03-19-01160.md"
+      "path": "docs/changelogs/app-toolkit/0-116-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.115.0 (2024-02-12) {#01150}",
+      "name": "Dynatrace App Toolkit changelog: 0.115.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-115-0-2024-02-12-01150.md"
+      "path": "docs/changelogs/app-toolkit/0-115-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.114.0 (2024-01-30) {#01140}",
+      "name": "Dynatrace App Toolkit changelog: 0.114.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-114-0-2024-01-30-01140.md"
+      "path": "docs/changelogs/app-toolkit/0-114-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.113.0 (2024-01-16) {#01130}",
+      "name": "Dynatrace App Toolkit changelog: 0.113.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-113-0-2024-01-16-01130.md"
+      "path": "docs/changelogs/app-toolkit/0-113-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.112.0 (2023-12-06) {#01120}",
+      "name": "Dynatrace App Toolkit changelog: 0.112.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-112-0-2023-12-06-01120.md"
+      "path": "docs/changelogs/app-toolkit/0-112-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.111.0",
@@ -772,29 +777,29 @@
       "path": "docs/changelogs/app-toolkit/0-110-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.109.0 (2023-10-27) {#01090}",
+      "name": "Dynatrace App Toolkit changelog: 0.109.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-109-0-2023-10-27-01090.md"
+      "path": "docs/changelogs/app-toolkit/0-109-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.108.0 (2023-10-10) {#01080}",
+      "name": "Dynatrace App Toolkit changelog: 0.108.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-108-0-2023-10-10-01080.md"
+      "path": "docs/changelogs/app-toolkit/0-108-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.107.4 (2023-10-05) {#01074}",
+      "name": "Dynatrace App Toolkit changelog: 0.107.4",
       "description": "Fix regression in simulator types",
-      "path": "docs/changelogs/app-toolkit/0-107-4-2023-10-05-01074.md"
+      "path": "docs/changelogs/app-toolkit/0-107-4.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.107.3 (2023-09-28) {#01073}",
+      "name": "Dynatrace App Toolkit changelog: 0.107.3",
       "description": "Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-107-3-2023-09-28-01073.md"
+      "path": "docs/changelogs/app-toolkit/0-107-3.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.107.2 (2023-09-26) {#01072}",
+      "name": "Dynatrace App Toolkit changelog: 0.107.2",
       "description": "Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-107-2-2023-09-26-01072.md"
+      "path": "docs/changelogs/app-toolkit/0-107-2.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.107.1",
@@ -802,34 +807,34 @@
       "path": "docs/changelogs/app-toolkit/0-107-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.107.0 (2023-09-13) {#01070}",
+      "name": "Dynatrace App Toolkit changelog: 0.107.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-107-0-2023-09-13-01070.md"
+      "path": "docs/changelogs/app-toolkit/0-107-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.106.0 (2023-09-06) {#01060}",
+      "name": "Dynatrace App Toolkit changelog: 0.106.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-106-0-2023-09-06-01060.md"
+      "path": "docs/changelogs/app-toolkit/0-106-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.105.0 (2023-08-17) {#01050}",
+      "name": "Dynatrace App Toolkit changelog: 0.105.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-105-0-2023-08-17-01050.md"
+      "path": "docs/changelogs/app-toolkit/0-105-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.104.0 (2023-08-02) {#01040}",
+      "name": "Dynatrace App Toolkit changelog: 0.104.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-104-0-2023-08-02-01040.md"
+      "path": "docs/changelogs/app-toolkit/0-104-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.103.0 (2023-07-19) {#01030}",
+      "name": "Dynatrace App Toolkit changelog: 0.103.0",
       "description": "Minor Changes",
-      "path": "docs/changelogs/app-toolkit/0-103-0-2023-07-19-01030.md"
+      "path": "docs/changelogs/app-toolkit/0-103-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.102.1 (2023-06-26) {#01021}",
+      "name": "Dynatrace App Toolkit changelog: 0.102.1",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-102-1-2023-06-26-01021.md"
+      "path": "docs/changelogs/app-toolkit/0-102-1.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.101.1",
@@ -837,14 +842,14 @@
       "path": "docs/changelogs/app-toolkit/0-101-1.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.101.0 (2023-05-11) {#01010}",
+      "name": "Dynatrace App Toolkit changelog: 0.101.0",
       "description": "Minor Changes",
-      "path": "docs/changelogs/app-toolkit/0-101-0-2023-05-11-01010.md"
+      "path": "docs/changelogs/app-toolkit/0-101-0.md"
     },
     {
-      "name": "Dynatrace App Toolkit changelog: 0.100.0 (2023-04-26) {#01000}",
+      "name": "Dynatrace App Toolkit changelog: 0.100.0",
       "description": "Minor Changes; Patch Changes",
-      "path": "docs/changelogs/app-toolkit/0-100-0-2023-04-26-01000.md"
+      "path": "docs/changelogs/app-toolkit/0-100-0.md"
     },
     {
       "name": "Dynatrace App Toolkit changelog: 0.99.3",
