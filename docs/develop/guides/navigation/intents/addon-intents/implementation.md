@@ -2,13 +2,13 @@
 
 ### Send an add-on intent example
 
-![Send an add-on intent using the 'Upload Image' action](https://developer.dynatrace.com/assets/images/send-addon-intent-with-response-609ec37a6c26622cf20d81285e831999.gif)
+![Send an add-on intent using the 'Upload Image' action](https://public-developer.central.internal.dynatrace.com/assets/images/send-addon-intent-with-response-609ec37a6c26622cf20d81285e831999.gif)
 
 Once the upload modal closes, the add-on returns the selected image path as the intent response to the source app.
 
 ### Receive add-on intents in apps
 
-You can receive add-on intents in apps. Learn more about receiving an intent in the [Receive intents guide](https://developer.dynatrace.com/develop/guides/navigation/intents/receive-intents.md).
+You can receive add-on intents in apps. Learn more about receiving an intent in the [Receive intents guide](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/receive-intents.md).
 
 App developers can specify which intents their apps can handle in the add-on mode by setting the `addonMode` property in the intent declaration in the app manifest. Also, if an intent returns a value, this value needs to be declared as a `responseProperties` object.
 
@@ -63,7 +63,7 @@ If an intent returns a value, you need to declare it as add-on intent. In all ot
 
 #### App routing
 
-An app receives add-on intents like regular intents. Learn more in [Intent app routes](https://developer.dynatrace.com/develop/guides/navigation/intents/receive-intents.md#receive-intent-payload).
+An app receives add-on intents like regular intents. Learn more in [Intent app routes](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/receive-intents.md#receive-intent-payload).
 
 ```tsx title="ui/app/App.tsx"
 // `Handling the add-on intent outside the main app UI`

@@ -151,4 +151,4 @@ export default async function () {
 
 The `useDocument` hook fetches as soon as your component renders. If the `id` comes from another hook, such as `useListDocuments`, it's still empty on the first render. Pass `{ autoFetch: !!id, autoFetchOnUpdate: true }` as the second argument to hold the request until the ID is available. When you pass the options argument, set both fields. Leaving `autoFetchOnUpdate` out means the request never fires once the ID arrives.
 
-This operation requires the scope `document:documents:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `document:documents:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

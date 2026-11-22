@@ -2,4 +2,4 @@
 
 ### Patterns
 
-[Filtering](https://developer.dynatrace.com/design/patterns/filtering.md/)
+[Filtering](https://public-developer.central.internal.dynatrace.com/design/patterns/filtering.md/)

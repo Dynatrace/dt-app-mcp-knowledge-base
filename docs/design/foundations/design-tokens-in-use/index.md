@@ -1,17 +1,17 @@
 > **Tip**
 >
-> Refer to our [design tokens list](https://developer.dynatrace.com/contents/docs/design/design-tokens/index.mdx/) for an overview of the available tokens.
+> Refer to our [design tokens list](https://public-developer.central.internal.dynatrace.com/contents/docs/design/design-tokens/index.mdx/) for an overview of the available tokens.
 
 Design tokens are a way to store variables with self-explanatory and purpose-driven names. They host design attributes such as a color hex code, a font style, pixel amounts, or even Bezier coordinates for animations.
 
-![Design tokens: Example](https://developer.dynatrace.com/assets/images/design-tokens-example-light-486719660ae7cd631ad866614e858095.webp)
+![Design tokens: Example](https://public-developer.central.internal.dynatrace.com/assets/images/design-tokens-example-light-486719660ae7cd631ad866614e858095.webp)
 
 Each design token consists of 2 parts:
 
 - A distinctive **label**, such as `Color.Text.Primary.Default`
 - A corresponding **value**, such as `#464DD2`, `32px`, or `cubic-bezier(0.5,0,1,1)`
 
-Design tokens are essential for constructing and maintaining the layouts and components of our [design system](https://developer.dynatrace.com/contents/docs/design/index.md/). They also provide building blocks for creating apps that match the look and feel of the Dynatrace platform.
+Design tokens are essential for constructing and maintaining the layouts and components of our [design system](https://public-developer.central.internal.dynatrace.com/contents/docs/design/index.md/). They also provide building blocks for creating apps that match the look and feel of the Dynatrace platform.
 
 ![Design tokens: Anatomy](./assets/design-tokens-anatomy-light.webp)
 
@@ -28,4 +28,4 @@ The correct usage of our design tokens comes with the following benefits:
 
 - **Maintainability:** Design tokens minimize duplication and redundancy, creating a codebase that's easier to maintain over time.
 
-- **Theming:** Design tokens support both light and dark themes. Learn more about [themes](https://developer.dynatrace.com/develop/guides/support-dark-light-themes.md).
+- **Theming:** Design tokens support both light and dark themes. Learn more about [themes](https://public-developer.central.internal.dynatrace.com/develop/guides/support-dark-light-themes.md).

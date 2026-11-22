@@ -8,7 +8,7 @@ import { activeGatesActiveGateGroupsClient } from '@dynatrace-sdk/client-classic
 
 > ⚠️ **Deprecated**
 
-**activeGatesActiveGateGroupsClient.getActiveGateGroups(config): Promise\<[ActiveGateGroups](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegategroups)>**
+**activeGatesActiveGateGroupsClient.getActiveGateGroups(config): Promise\<[ActiveGateGroups](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegategroups)>**
 
 Lists ActiveGate groups
 
@@ -26,9 +26,9 @@ Deprecated since version 1.343. Use DQL Smartscape nodes to query ActiveGate dat
 
 #### Returns
 
-| Return type                                                                                                                  | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ActiveGateGroups](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegategroups) | 200         | Success     |
+| Return type                                                                                                                                          | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ActiveGateGroups](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegategroups) | 200         | Success     |
 
 #### Throws
 

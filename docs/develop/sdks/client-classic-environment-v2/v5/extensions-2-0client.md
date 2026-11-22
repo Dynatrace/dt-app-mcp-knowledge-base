@@ -6,7 +6,7 @@ import { extensions_2_0Client } from '@dynatrace-sdk/client-classic-environment-
 
 ### activateExtensionEnvironmentConfiguration
 
-**extensions_2_0Client.activateExtensionEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
+**extensions_2_0Client.activateExtensionEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
 
 Activates the environment configuration from the specified version of the extension 2.0
 
@@ -18,16 +18,16 @@ Activates the environment configuration from the specified version of the extens
 
 #### Parameters
 
-| Name                            | Type                                                                                                                                                                        | Description                              |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)          | [ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) |                                          |
-| config.extensionName (required) | string                                                                                                                                                                      | The name of the requested extension 2.0. |
+| Name                            | Type                                                                                                                                                                                                | Description                              |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)          | [ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) |                                          |
+| config.extensionName (required) | string                                                                                                                                                                                              | The name of the requested extension 2.0. |
 
 #### Returns
 
-| Return type                                                                                                                                                                 | Status code | Description                                 |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------- |
-| [ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success. Environment configuration created. |
+| Return type                                                                                                                                                                                         | Status code | Description                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------- |
+| [ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success. Environment configuration created. |
 
 #### Throws
 
@@ -48,7 +48,7 @@ const data =
 
 ### createMonitoringConfiguration
 
-**extensions_2_0Client.createMonitoringConfiguration(config): Promise\<Array\<[MonitoringConfigurationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse)>>**
+**extensions_2_0Client.createMonitoringConfiguration(config): Promise\<Array\<[MonitoringConfigurationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse)>>**
 
 Creates new monitoring configuration for the specified extension 2.0
 
@@ -60,17 +60,17 @@ Creates new monitoring configuration for the specified extension 2.0
 
 #### Parameters
 
-| Name                            | Type                                                                                                                                                    | Description                              |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)          | Array\<[MonitoringConfigurationDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationdto)> |                                          |
-| config.extensionName (required) | string                                                                                                                                                  | The name of the requested extension 2.0. |
+| Name                            | Type                                                                                                                                                                            | Description                              |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)          | Array\<[MonitoringConfigurationDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationdto)> |                                          |
+| config.extensionName (required) | string                                                                                                                                                                          | The name of the requested extension 2.0. |
 
 #### Returns
 
-| Return type                                                                                                                                               | Status code | Description                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
-| [MonitoringConfigurationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse) | 200         | Success                                                       |
-| [ErrorEnvelope](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#errorenvelope)                                     | 207         | Multi-Status, if not all requests resulted in the same status |
+| Return type                                                                                                                                                                       | Status code | Description                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
+| [MonitoringConfigurationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse) | 200         | Success                                                       |
+| [ErrorEnvelope](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#errorenvelope)                                     | 207         | Multi-Status, if not all requests resulted in the same status |
 
 #### Throws
 
@@ -91,25 +91,25 @@ const data =
   });
 ```
 
-**extensions_2_0Client.createMonitoringConfiguration(config): Promise\<Array\<[ErrorEnvelope](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#errorenvelope) | [MonitoringConfigurationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse)>>**
+**extensions_2_0Client.createMonitoringConfiguration(config): Promise\<Array\<[ErrorEnvelope](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#errorenvelope) | [MonitoringConfigurationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse)>>**
 
 #### Parameters
 
-| Name                            | Type                                                                                                                                                    | Description                              |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)          | Array\<[MonitoringConfigurationDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationdto)> |                                          |
-| config.extensionName (required) | string                                                                                                                                                  | The name of the requested extension 2.0. |
+| Name                            | Type                                                                                                                                                                            | Description                              |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)          | Array\<[MonitoringConfigurationDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationdto)> |                                          |
+| config.extensionName (required) | string                                                                                                                                                                          | The name of the requested extension 2.0. |
 
 #### Returns
 
-| Return type                                                                                                                                               | Status code | Description                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
-| [MonitoringConfigurationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse) | 200         | Success                                                       |
-| [ErrorEnvelope](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#errorenvelope)                                     | 207         | Multi-Status, if not all requests resulted in the same status |
+| Return type                                                                                                                                                                       | Status code | Description                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
+| [MonitoringConfigurationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse) | 200         | Success                                                       |
+| [ErrorEnvelope](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#errorenvelope)                                     | 207         | Multi-Status, if not all requests resulted in the same status |
 
 ### deleteEnvironmentConfiguration
 
-**extensions_2_0Client.deleteEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
+**extensions_2_0Client.deleteEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
 
 Deactivates the environment configuration of the specified extension 2.0
 
@@ -127,9 +127,9 @@ Deactivates the environment configuration of the specified extension 2.0
 
 #### Returns
 
-| Return type                                                                                                                                                                 | Status code | Description                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------- |
-| [ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success. Environment configuration deactivated. |
+| Return type                                                                                                                                                                                         | Status code | Description                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------- |
+| [ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success. Environment configuration deactivated. |
 
 #### Throws
 
@@ -150,7 +150,7 @@ const data =
 
 ### executeExtensionMonitoringConfigurationActions
 
-**extensions_2_0Client.executeExtensionMonitoringConfigurationActions(config): Promise\<[ExecuteActionsResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#executeactionsresponse)>**
+**extensions_2_0Client.executeExtensionMonitoringConfigurationActions(config): Promise\<[ExecuteActionsResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#executeactionsresponse)>**
 
 Executes Data Source action of Active Gate or Host
 
@@ -162,17 +162,17 @@ Executes Data Source action of Active Gate or Host
 
 #### Parameters
 
-| Name                              | Type                                                                                                                          | Description                                       |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| config.body (required)            | [ExecuteActionsDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#executeactionsdto) |                                                   |
-| config.configurationId (required) | string                                                                                                                        | The ID of the requested monitoring configuration. |
-| config.extensionName (required)   | string                                                                                                                        | The name of the requested extension 2.0.          |
+| Name                              | Type                                                                                                                                                  | Description                                       |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| config.body (required)            | [ExecuteActionsDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#executeactionsdto) |                                                   |
+| config.configurationId (required) | string                                                                                                                                                | The ID of the requested monitoring configuration. |
+| config.extensionName (required)   | string                                                                                                                                                | The name of the requested extension 2.0.          |
 
 #### Returns
 
-| Return type                                                                                                                             | Status code | Description                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------- |
-| [ExecuteActionsResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#executeactionsresponse) | 202         | Accepted. Response doesn't have a body. |
+| Return type                                                                                                                                                     | Status code | Description                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------- |
+| [ExecuteActionsResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#executeactionsresponse) | 202         | Accepted. Response doesn't have a body. |
 
 #### Throws
 
@@ -197,7 +197,7 @@ const data =
 
 ### extensionConfigurationSchema
 
-**extensions_2_0Client.extensionConfigurationSchema(config): Promise\<[SchemaDefinitionRestDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemadefinitionrestdto)>**
+**extensions_2_0Client.extensionConfigurationSchema(config): Promise\<[SchemaDefinitionRestDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemadefinitionrestdto)>**
 
 Gets the configuration schema of the specified version of the extension 2.0
 
@@ -220,9 +220,9 @@ Gets the configuration schema of the specified version of the extension 2.0
 
 #### Returns
 
-| Return type                                                                                                                               | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SchemaDefinitionRestDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemadefinitionrestdto) | 200         | Success     |
+| Return type                                                                                                                                                       | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SchemaDefinitionRestDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemadefinitionrestdto) | 200         | Success     |
 
 #### Throws
 
@@ -244,7 +244,7 @@ const data =
 
 ### extensionDetails
 
-**extensions_2_0Client.extensionDetails(config): Promise\<[Extension](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extension)>**
+**extensions_2_0Client.extensionDetails(config): Promise\<[Extension](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extension)>**
 
 Gets details of the specified version of the extension 2.0
 
@@ -304,7 +304,7 @@ const data = await extensions_2_0Client.extensionDetails({
 
 ### extensionMonitoringConfigurations
 
-**extensions_2_0Client.extensionMonitoringConfigurations(config): Promise\<[ExtensionMonitoringConfigurationsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfigurationslist)>**
+**extensions_2_0Client.extensionMonitoringConfigurations(config): Promise\<[ExtensionMonitoringConfigurationsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfigurationslist)>**
 
 Lists all the monitoring configurations of the specified extension 2.0
 
@@ -326,9 +326,9 @@ Lists all the monitoring configurations of the specified extension 2.0
 
 #### Returns
 
-| Return type                                                                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionMonitoringConfigurationsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfigurationslist) | 200         | Success     |
+| Return type                                                                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionMonitoringConfigurationsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfigurationslist) | 200         | Success     |
 
 #### Throws
 
@@ -349,7 +349,7 @@ const data =
 
 ### getActiveEnvironmentConfiguration
 
-**extensions_2_0Client.getActiveEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
+**extensions_2_0Client.getActiveEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
 
 Gets the active environment configuration version of the specified extension 2.0
 
@@ -367,9 +367,9 @@ Gets the active environment configuration version of the specified extension 2.0
 
 #### Returns
 
-| Return type                                                                                                                                                                 | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success     |
+| Return type                                                                                                                                                                                         | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success     |
 
 #### Throws
 
@@ -390,7 +390,7 @@ const data =
 
 ### getActiveGateGroupsInfo
 
-**extensions_2_0Client.getActiveGateGroupsInfo(config): Promise\<[ActiveGateGroupsInfoDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#activegategroupsinfodto)>**
+**extensions_2_0Client.getActiveGateGroupsInfo(config): Promise\<[ActiveGateGroupsInfoDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#activegategroupsinfodto)>**
 
 List all activeGate groups available for extension
 
@@ -409,9 +409,9 @@ List all activeGate groups available for extension
 
 #### Returns
 
-| Return type                                                                                                                               | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ActiveGateGroupsInfoDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#activegategroupsinfodto) | 200         | Success     |
+| Return type                                                                                                                                                       | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ActiveGateGroupsInfoDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#activegategroupsinfodto) | 200         | Success     |
 
 #### Throws
 
@@ -433,7 +433,7 @@ const data =
 
 ### getAlertTemplate
 
-**extensions_2_0Client.getAlertTemplate(config): Promise\<[AlertTemplateDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#alerttemplatedto)>**
+**extensions_2_0Client.getAlertTemplate(config): Promise\<[AlertTemplateDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#alerttemplatedto)>**
 
 Gets an alert template asset for given ID
 
@@ -452,9 +452,9 @@ Gets an alert template asset for given ID
 
 #### Returns
 
-| Return type                                                                                                                 | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AlertTemplateDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#alerttemplatedto) | 200         | Success     |
+| Return type                                                                                                                                         | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AlertTemplateDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#alerttemplatedto) | 200         | Success     |
 
 #### Throws
 
@@ -475,7 +475,7 @@ const data = await extensions_2_0Client.getAlertTemplate({
 
 ### getEnvironmentConfigurationAssetsInfo
 
-**extensions_2_0Client.getEnvironmentConfigurationAssetsInfo(config): Promise\<[ExtensionAssetsDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionassetsdto)>**
+**extensions_2_0Client.getEnvironmentConfigurationAssetsInfo(config): Promise\<[ExtensionAssetsDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionassetsdto)>**
 
 Gets the information about assets in an active extension 2.0
 
@@ -493,9 +493,9 @@ Gets the information about assets in an active extension 2.0
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionAssetsDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionassetsdto) | 200         | Success     |
+| Return type                                                                                                                                             | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionAssetsDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionassetsdto) | 200         | Success     |
 
 #### Throws
 
@@ -518,7 +518,7 @@ const data =
 
 > ⚠️ **Deprecated**
 
-**extensions_2_0Client.getEnvironmentConfigurationEvents(config): Promise\<[ExtensionEventsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist)>**
+**extensions_2_0Client.getEnvironmentConfigurationEvents(config): Promise\<[ExtensionEventsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist)>**
 
 List of the latest extension environment configuration events
 
@@ -602,9 +602,9 @@ List of the latest extension environment configuration events
 
 #### Returns
 
-| Return type                                                                                                                       | Status code | Description                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
-| [ExtensionEventsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist) | 200         | List of the latest extension environment configuration events |
+| Return type                                                                                                                                               | Status code | Description                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
+| [ExtensionEventsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist) | 200         | List of the latest extension environment configuration events |
 
 #### Throws
 
@@ -627,7 +627,7 @@ const data =
 
 > ⚠️ **Deprecated**
 
-**extensions_2_0Client.getExtensionMonitoringConfigurationEvents(config): Promise\<[ExtensionEventsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist)>**
+**extensions_2_0Client.getExtensionMonitoringConfigurationEvents(config): Promise\<[ExtensionEventsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist)>**
 
 Gets the list of the events linked to specific monitoring configuration
 
@@ -715,9 +715,9 @@ Gets the list of the events linked to specific monitoring configuration
 
 #### Returns
 
-| Return type                                                                                                                       | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionEventsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist) | 200         | Success     |
+| Return type                                                                                                                                               | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionEventsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioneventslist) | 200         | Success     |
 
 #### Throws
 
@@ -738,7 +738,7 @@ const data =
 
 ### getExtensionMonitoringConfigurationStatus
 
-**extensions_2_0Client.getExtensionMonitoringConfigurationStatus(config): Promise\<[ExtensionStatusDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatusdto)>**
+**extensions_2_0Client.getExtensionMonitoringConfigurationStatus(config): Promise\<[ExtensionStatusDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatusdto)>**
 
 Gets the most recent status of the execution of given monitoring configuration
 
@@ -757,9 +757,9 @@ Gets the most recent status of the execution of given monitoring configuration
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionStatusDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatusdto) | 200         | Success     |
+| Return type                                                                                                                                             | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionStatusDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatusdto) | 200         | Success     |
 
 #### Throws
 
@@ -780,7 +780,7 @@ const data =
 
 ### getExtensionStatus
 
-**extensions_2_0Client.getExtensionStatus(config): Promise\<Array\<[ExtensionStatusWithIdDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatuswithiddto)>>**
+**extensions_2_0Client.getExtensionStatus(config): Promise\<Array\<[ExtensionStatusWithIdDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatuswithiddto)>>**
 
 Gets the most recent status of the execution of monitoring configurations of given extension
 
@@ -798,9 +798,9 @@ Gets the most recent status of the execution of monitoring configurations of giv
 
 #### Returns
 
-| Return type                                                                                                                                 | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionStatusWithIdDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatuswithiddto) | 200         | Success     |
+| Return type                                                                                                                                                         | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionStatusWithIdDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionstatuswithiddto) | 200         | Success     |
 
 #### Throws
 
@@ -862,7 +862,7 @@ const data = await extensions_2_0Client.getSchemaFile({
 
 ### installExtension
 
-**extensions_2_0Client.installExtension(config): Promise\<[RegisteredExtensionResultDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#registeredextensionresultdto)>**
+**extensions_2_0Client.installExtension(config): Promise\<[RegisteredExtensionResultDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#registeredextensionresultdto)>**
 
 Installs Extension from HUB
 
@@ -881,9 +881,9 @@ Installs Extension from HUB
 
 #### Returns
 
-| Return type                                                                                                                                         | Status code | Description                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------- |
-| [RegisteredExtensionResultDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#registeredextensionresultdto) | 200         | Success. The extension 2.0 has been uploaded. |
+| Return type                                                                                                                                                                 | Status code | Description                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------- |
+| [RegisteredExtensionResultDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#registeredextensionresultdto) | 200         | Success. The extension 2.0 has been uploaded. |
 
 #### Throws
 
@@ -903,7 +903,7 @@ const data = await extensions_2_0Client.installExtension({
 
 ### listExtensionInfos
 
-**extensions_2_0Client.listExtensionInfos(config): Promise\<[ExtensionInfoList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioninfolist)>**
+**extensions_2_0Client.listExtensionInfos(config): Promise\<[ExtensionInfoList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioninfolist)>**
 
 Lists all the extensions 2.0 available in your environment with additional metadata
 
@@ -923,9 +923,9 @@ Lists all the extensions 2.0 available in your environment with additional metad
 
 #### Returns
 
-| Return type                                                                                                                   | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionInfoList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioninfolist) | 200         | Success     |
+| Return type                                                                                                                                           | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionInfoList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensioninfolist) | 200         | Success     |
 
 #### Throws
 
@@ -944,7 +944,7 @@ const data =
 
 ### listExtensionVersions
 
-**extensions_2_0Client.listExtensionVersions(config): Promise\<[ExtensionList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist)>**
+**extensions_2_0Client.listExtensionVersions(config): Promise\<[ExtensionList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist)>**
 
 Lists all versions of the extension 2.0
 
@@ -964,9 +964,9 @@ Lists all versions of the extension 2.0
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist) | 200         | Success     |
+| Return type                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist) | 200         | Success     |
 
 #### Throws
 
@@ -987,7 +987,7 @@ const data =
 
 ### listExtensions
 
-**extensions_2_0Client.listExtensions(config): Promise\<[ExtensionList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist)>**
+**extensions_2_0Client.listExtensions(config): Promise\<[ExtensionList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist)>**
 
 Lists all the extensions 2.0 available in your environment
 
@@ -1007,9 +1007,9 @@ Lists all the extensions 2.0 available in your environment
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist) | 200         | Success     |
+| Return type                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionlist) | 200         | Success     |
 
 #### Throws
 
@@ -1027,7 +1027,7 @@ const data = await extensions_2_0Client.listExtensions();
 
 ### listSchemaFiles
 
-**extensions_2_0Client.listSchemaFiles(config): Promise\<[SchemaFiles](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemafiles)>**
+**extensions_2_0Client.listSchemaFiles(config): Promise\<[SchemaFiles](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemafiles)>**
 
 Lists all the files available for the specified extension 2.0 schema version
 
@@ -1084,7 +1084,7 @@ const data = await extensions_2_0Client.listSchemaFiles({
 
 ### listSchemas
 
-**extensions_2_0Client.listSchemas(config): Promise\<[SchemasList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemaslist)>**
+**extensions_2_0Client.listSchemas(config): Promise\<[SchemasList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemaslist)>**
 
 Lists all the extension 2.0 schemas versions available in your environment
 
@@ -1096,9 +1096,9 @@ Lists all the extension 2.0 schemas versions available in your environment
 
 #### Returns
 
-| Return type                                                                                                       | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SchemasList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemaslist) | 200         | Success     |
+| Return type                                                                                                                               | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SchemasList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#schemaslist) | 200         | Success     |
 
 #### Throws
 
@@ -1116,7 +1116,7 @@ const data = await extensions_2_0Client.listSchemas();
 
 ### monitoringConfigurationAudit
 
-**extensions_2_0Client.monitoringConfigurationAudit(config): Promise\<[AuditLog](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog)>**
+**extensions_2_0Client.monitoringConfigurationAudit(config): Promise\<[AuditLog](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog)>**
 
 Gets the audit logs of monitoring configuration of given extension
 
@@ -1205,9 +1205,9 @@ Gets the audit logs of monitoring configuration of given extension
 
 #### Returns
 
-| Return type                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AuditLog](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog) | 200         | Success     |
+| Return type                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AuditLog](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog) | 200         | Success     |
 
 #### Throws
 
@@ -1229,7 +1229,7 @@ const data =
 
 ### monitoringConfigurationDetails
 
-**extensions_2_0Client.monitoringConfigurationDetails(config): Promise\<[ExtensionMonitoringConfiguration](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfiguration)>**
+**extensions_2_0Client.monitoringConfigurationDetails(config): Promise\<[ExtensionMonitoringConfiguration](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfiguration)>**
 
 Gets the details of the specified monitoring configuration
 
@@ -1248,9 +1248,9 @@ Gets the details of the specified monitoring configuration
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExtensionMonitoringConfiguration](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfiguration) | 200         | Success     |
+| Return type                                                                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExtensionMonitoringConfiguration](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionmonitoringconfiguration) | 200         | Success     |
 
 #### Throws
 
@@ -1271,7 +1271,7 @@ const data =
 
 ### removeExtension
 
-**extensions_2_0Client.removeExtension(config): Promise\<[Extension](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extension)>**
+**extensions_2_0Client.removeExtension(config): Promise\<[Extension](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extension)>**
 
 Deletes the specified version of the extension 2.0
 
@@ -1290,9 +1290,9 @@ Deletes the specified version of the extension 2.0
 
 #### Returns
 
-| Return type                                                                                                   | Status code | Description                                          |
-| ------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------- |
-| [Extension](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extension) | 200         | Success. The extension 2.0 version has been deleted. |
+| Return type                                                                                                                           | Status code | Description                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------- |
+| [Extension](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extension) | 200         | Success. The extension 2.0 version has been deleted. |
 
 #### Throws
 
@@ -1356,7 +1356,7 @@ const data =
 
 ### updateExtensionEnvironmentConfiguration
 
-**extensions_2_0Client.updateExtensionEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
+**extensions_2_0Client.updateExtensionEnvironmentConfiguration(config): Promise\<[ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion)>**
 
 Updates the active environment configuration version of the extension 2.0
 
@@ -1368,16 +1368,16 @@ Updates the active environment configuration version of the extension 2.0
 
 #### Parameters
 
-| Name                            | Type                                                                                                                                                                        | Description                              |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)          | [ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) |                                          |
-| config.extensionName (required) | string                                                                                                                                                                      | The name of the requested extension 2.0. |
+| Name                            | Type                                                                                                                                                                                                | Description                              |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)          | [ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) |                                          |
+| config.extensionName (required) | string                                                                                                                                                                                              | The name of the requested extension 2.0. |
 
 #### Returns
 
-| Return type                                                                                                                                                                 | Status code | Description                                 |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------- |
-| [ExtensionEnvironmentConfigurationVersion](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success. Environment configuration updated. |
+| Return type                                                                                                                                                                                         | Status code | Description                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------- |
+| [ExtensionEnvironmentConfigurationVersion](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionenvironmentconfigurationversion) | 200         | Success. Environment configuration updated. |
 
 #### Throws
 
@@ -1398,7 +1398,7 @@ const data =
 
 ### updateMonitoringConfiguration
 
-**extensions_2_0Client.updateMonitoringConfiguration(config): Promise\<[MonitoringConfigurationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse)>**
+**extensions_2_0Client.updateMonitoringConfiguration(config): Promise\<[MonitoringConfigurationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse)>**
 
 Updates the specified monitoring configuration
 
@@ -1410,17 +1410,17 @@ Updates the specified monitoring configuration
 
 #### Parameters
 
-| Name                              | Type                                                                                                                                                        | Description                                       |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| config.body (required)            | [MonitoringConfigurationUpdateDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationupdatedto) |                                                   |
-| config.configurationId (required) | string                                                                                                                                                      | The ID of the requested monitoring configuration. |
-| config.extensionName (required)   | string                                                                                                                                                      | The name of the requested extension 2.0.          |
+| Name                              | Type                                                                                                                                                                                | Description                                       |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| config.body (required)            | [MonitoringConfigurationUpdateDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationupdatedto) |                                                   |
+| config.configurationId (required) | string                                                                                                                                                                              | The ID of the requested monitoring configuration. |
+| config.extensionName (required)   | string                                                                                                                                                                              | The name of the requested extension 2.0.          |
 
 #### Returns
 
-| Return type                                                                                                                                               | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [MonitoringConfigurationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse) | 200         | Success     |
+| Return type                                                                                                                                                                       | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [MonitoringConfigurationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoringconfigurationresponse) | 200         | Success     |
 
 #### Throws
 
@@ -1443,7 +1443,7 @@ const data =
 
 ### uploadExtension
 
-**extensions_2_0Client.uploadExtension(config): Promise\<[ExtensionUploadResponseDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionuploadresponsedto)>**
+**extensions_2_0Client.uploadExtension(config): Promise\<[ExtensionUploadResponseDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionuploadresponsedto)>**
 
 Uploads or verifies a new extension 2.0
 
@@ -1462,10 +1462,10 @@ Uploads or verifies a new extension 2.0
 
 #### Returns
 
-| Return type                                                                                                                                     | Status code | Description                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------- |
-| [ExtensionUploadResponseDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionuploadresponsedto) | 200         | The extension is valid                        |
-| [ExtensionUploadResponseDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionuploadresponsedto) | 201         | Success. The extension 2.0 has been uploaded. |
+| Return type                                                                                                                                                             | Status code | Description                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------- |
+| [ExtensionUploadResponseDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionuploadresponsedto) | 200         | The extension is valid                        |
+| [ExtensionUploadResponseDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#extensionuploadresponsedto) | 201         | Success. The extension 2.0 has been uploaded. |
 
 #### Throws
 

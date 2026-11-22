@@ -6,7 +6,7 @@ import { networkZonesClient } from '@dynatrace-sdk/client-classic-environment-v2
 
 ### createOrUpdateNetworkZone
 
-**networkZonesClient.createOrUpdateNetworkZone(config): Promise\<void | [EntityShortRepresentation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#entityshortrepresentation)>**
+**networkZonesClient.createOrUpdateNetworkZone(config): Promise\<void | [EntityShortRepresentation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#entityshortrepresentation)>**
 
 Updates an existing network zone or creates a new one
 
@@ -19,17 +19,17 @@ The ID is not case sensitive. Dynatrace stores the ID in lowercase.
 
 #### Parameters
 
-| Name                   | Type                                                                                                              | Description                                                                                                                                                                 |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [NetworkZone](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzone) |                                                                                                                                                                             |
-| config.id (required)   | string                                                                                                            | The ID of the network zone to be updated. If you set the ID in the body as well, it must match this ID. The ID is not case sensitive. Dynatrace stores the ID in lowercase. |
+| Name                   | Type                                                                                                                                      | Description                                                                                                                                                                 |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [NetworkZone](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzone) |                                                                                                                                                                             |
+| config.id (required)   | string                                                                                                                                    | The ID of the network zone to be updated. If you set the ID in the body as well, it must match this ID. The ID is not case sensitive. Dynatrace stores the ID in lowercase. |
 
 #### Returns
 
-| Return type                                                                                                                                   | Status code | Description                                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------- |
-| [EntityShortRepresentation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#entityshortrepresentation) | 201         | Success. The new network zone has been created. The response body contains the ID of the new network zone. |
-| void                                                                                                                                          | 204         | Success. The network zone has been updated. Response doesn't have a body.                                  |
+| Return type                                                                                                                                                           | Status code | Description                                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------- |
+| [EntityShortRepresentation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#entityshortrepresentation) | 201         | Success. The new network zone has been created. The response body contains the ID of the new network zone. |
+| void                                                                                                                                                                  | 204         | Success. The network zone has been updated. Response doesn't have a body.                                  |
 
 #### Throws
 
@@ -92,7 +92,7 @@ const data = await networkZonesClient.deleteNetworkZone({
 
 ### getAllNetworkZones
 
-**networkZonesClient.getAllNetworkZones(config): Promise\<[NetworkZoneList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonelist)>**
+**networkZonesClient.getAllNetworkZones(config): Promise\<[NetworkZoneList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonelist)>**
 
 Lists all existing network zones
 
@@ -101,9 +101,9 @@ Lists all existing network zones
 
 #### Returns
 
-| Return type                                                                                                               | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [NetworkZoneList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonelist) | 200         | Success     |
+| Return type                                                                                                                                       | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [NetworkZoneList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonelist) | 200         | Success     |
 
 #### Throws
 
@@ -121,7 +121,7 @@ const data = await networkZonesClient.getAllNetworkZones();
 
 ### getHostStats
 
-**networkZonesClient.getHostStats(config): Promise\<[NetworkZoneConnectionStatistics](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzoneconnectionstatistics)>**
+**networkZonesClient.getHostStats(config): Promise\<[NetworkZoneConnectionStatistics](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzoneconnectionstatistics)>**
 
 Gets the statistics about hosts using the network zone
 
@@ -148,9 +148,9 @@ Gets the statistics about hosts using the network zone
 
 #### Returns
 
-| Return type                                                                                                                                               | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [NetworkZoneConnectionStatistics](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzoneconnectionstatistics) | 200         | Success     |
+| Return type                                                                                                                                                                       | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [NetworkZoneConnectionStatistics](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzoneconnectionstatistics) | 200         | Success     |
 
 #### Throws
 
@@ -170,7 +170,7 @@ const data = await networkZonesClient.getHostStats({
 
 ### getNetworkZoneSettings
 
-**networkZonesClient.getNetworkZoneSettings(config): Promise\<[NetworkZoneSettings](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonesettings)>**
+**networkZonesClient.getNetworkZoneSettings(config): Promise\<[NetworkZoneSettings](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonesettings)>**
 
 Gets the global configuration of network zones
 
@@ -179,9 +179,9 @@ Gets the global configuration of network zones
 
 #### Returns
 
-| Return type                                                                                                                       | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [NetworkZoneSettings](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonesettings) | 200         | Success     |
+| Return type                                                                                                                                               | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [NetworkZoneSettings](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonesettings) | 200         | Success     |
 
 #### Throws
 
@@ -200,7 +200,7 @@ const data =
 
 ### getSingleNetworkZone
 
-**networkZonesClient.getSingleNetworkZone(config): Promise\<[NetworkZone](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzone)>**
+**networkZonesClient.getSingleNetworkZone(config): Promise\<[NetworkZone](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzone)>**
 
 Gets parameters of the specified network zone
 
@@ -215,9 +215,9 @@ Gets parameters of the specified network zone
 
 #### Returns
 
-| Return type                                                                                                       | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [NetworkZone](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzone) | 200         | Success     |
+| Return type                                                                                                                               | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [NetworkZone](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzone) | 200         | Success     |
 
 #### Throws
 
@@ -246,9 +246,9 @@ Updates the global configuration of network zones
 
 #### Parameters
 
-| Name                   | Type                                                                                                                              |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [NetworkZoneSettings](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonesettings) |
+| Name                   | Type                                                                                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [NetworkZoneSettings](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#networkzonesettings) |
 
 #### Returns
 

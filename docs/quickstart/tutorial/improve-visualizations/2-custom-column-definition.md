@@ -1,12 +1,12 @@
 ## 2. Custom column definition
 
-The [`DataTable`](https://developer.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/) component is very customizable. One of the most important customizations is for the columns. In this part, we'll customize the table columns using different column types.
+The [`DataTable`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/) component is very customizable. One of the most important customizations is for the columns. In this part, we'll customize the table columns using different column types.
 
 ### 1. Host ID and name
 
 First, we'll show only two columns in the table, **Host ID** and **Host name**.
 
-To start, import the `DataTableColumnDef`. Then, create a new `columns` variable and memoize it using `useMemo`. Next, add the `hostId` and `hostName` column definitions, and replace the [`convertToColumns`](https://developer.dynatrace.com/contents/docs/design/components/tables/convertToColumns/index.mdx/) call in the template with the newly created columns. Since you're not using `convertToColumns` any longer, you can remove its import as well, as shown below:
+To start, import the `DataTableColumnDef`. Then, create a new `columns` variable and memoize it using `useMemo`. Next, add the `hostId` and `hostName` column definitions, and replace the [`convertToColumns`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/tables/convertToColumns/index.mdx/) call in the template with the newly created columns. Since you're not using `convertToColumns` any longer, you can remove its import as well, as shown below:
 
 ```tsx title="ui/app/pages/HostList.tsx" dependencies=access-dynatrace-data.md
 import React, { useMemo } from 'react';
@@ -66,7 +66,7 @@ export const HostList = () => {
 
 The table now looks like this:
 
-![host-columns-dark](https://developer.dynatrace.com/assets/images/host-columns-dark-3b6efc0cd747acc9e5b9e4c9cdd49ad8.png)
+![host-columns-dark](https://public-developer.central.internal.dynatrace.com/assets/images/host-columns-dark-3b6efc0cd747acc9e5b9e4c9cdd49ad8.png)
 
 You might have already noticed that the `header` is the text that appears as the column header in the table. Also, the `width: 'content'` ensures the columns take up as much space as the content.
 
@@ -76,7 +76,7 @@ The `accessor` property configures how the `DataTable` gets that column's data. 
 
 Before we removed it in the previous step, the CPU usage section looked like the following:
 
-![cpu-usage-columns-dark](https://developer.dynatrace.com/assets/images/cpu-usage-columns-dark-d54eea2bfc83fb36112e0da38facb4cb.png)
+![cpu-usage-columns-dark](https://public-developer.central.internal.dynatrace.com/assets/images/cpu-usage-columns-dark-d54eea2bfc83fb36112e0da38facb4cb.png)
 
 However, we can visualize this information more meaningfully using the meter bar chart.
 
@@ -166,25 +166,25 @@ export const HostList = () => {
 
 > **Tip**
 >
-> Learn more about [the meterbar column type](https://developer.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/#use-the-meterbarchart-in-datatable).
+> Learn more about [the meterbar column type](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/#use-the-meterbarchart-in-datatable).
 
 Now, the table looks like this:
 
-![cpu-usage-meterbar-dark](https://developer.dynatrace.com/assets/images/cpu-usage-meterbar-dark-1116542ce3ce0d2424efe5652d82cc75.png)
+![cpu-usage-meterbar-dark](https://public-developer.central.internal.dynatrace.com/assets/images/cpu-usage-meterbar-dark-1116542ce3ce0d2424efe5652d82cc75.png)
 
 ### 3. Average CPU
 
 Another essential information we can add to our table is average CPU data. To do that, we'll use the `sparkline` visualization.
 
-Start by creating a new column of type `sparkline` in our column array. This column type needs time series data. Therefore, we'll need to use the [`convertToTimeseries`](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/convertToTimeseries/index.mdx/) function in the `accessor` function.
+Start by creating a new column of type `sparkline` in our column array. This column type needs time series data. Therefore, we'll need to use the [`convertToTimeseries`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/convertToTimeseries/index.mdx/) function in the `accessor` function.
 
-The [`convertToTimeseries`](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/convertToTimeseries/index.mdx/) function takes two parameters. The first is the array of data; in our case, it's the row data in an array, and the second is the type definition of the data returned in the DQL result.
+The [`convertToTimeseries`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/convertToTimeseries/index.mdx/) function takes two parameters. The first is the array of data; in our case, it's the row data in an array, and the second is the type definition of the data returned in the DQL result.
 
 Finally, add a `width` of `1fr` and change the color of the sparkline by using Strato design tokens.
 
 > **Tip**
 >
-> Learn more about [Strato Design Tokens](https://developer.dynatrace.com/contents/docs/design/design-tokens/index.mdx/).
+> Learn more about [Strato Design Tokens](https://public-developer.central.internal.dynatrace.com/contents/docs/design/design-tokens/index.mdx/).
 
 After the changes, the complete code is as follows:
 
@@ -283,10 +283,10 @@ export const HostList = () => {
 
 > **Tip**
 >
-> Learn more about [the sparkline column type](https://developer.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/#use-the-sparkline-chart).
+> Learn more about [the sparkline column type](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/#use-the-sparkline-chart).
 
 At this point, our app should look like the following:
 
-![avg-cpu-sparkline-dark](https://developer.dynatrace.com/assets/images/avg-cpu-sparkline-dark-1243563fd6dc9e1c82e8fd8fcbf6f71b.png)
+![avg-cpu-sparkline-dark](https://public-developer.central.internal.dynatrace.com/assets/images/avg-cpu-sparkline-dark-1243563fd6dc9e1c82e8fd8fcbf6f71b.png)
 
 You've successfully improved the user experience and data visualization in our app. In the next section, we'll extend our app's functionality by sharing data between apps.

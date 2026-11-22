@@ -15,7 +15,7 @@ trigger a content change of the document to resolve the highlighted issue.
 
 Diagnostic severities:
 
-- `Error` - these findings are highlighted in red and represent issues that would break your extension when deployed. The [Build command](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/commands.md#build) won't work if `Error` severity diagnostics are in your manifest.
+- `Error` - these findings are highlighted in red and represent issues that would break your extension when deployed. The [Build command](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/commands.md#build) won't work if `Error` severity diagnostics are in your manifest.
 - `Warning` - these findings are highlighted in yellow and represent issues that would not stop an extension from functioning but may still produce undesired behaviors.
 
 ### Currently implemented diagnostics

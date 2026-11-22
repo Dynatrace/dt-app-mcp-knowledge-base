@@ -6,7 +6,7 @@ import { accessTokensAgentTokensClient } from '@dynatrace-sdk/client-classic-env
 
 ### getAgentConnectionToken
 
-**accessTokensAgentTokensClient.getAgentConnectionToken(config): Promise\<[AgentConnectionToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#agentconnectiontoken)>**
+**accessTokensAgentTokensClient.getAgentConnectionToken(config): Promise\<[AgentConnectionToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#agentconnectiontoken)>**
 
 Gets the agent connection token | maturity=EARLY_ADOPTER
 
@@ -24,9 +24,9 @@ Returns the agent connection token.
 
 #### Returns
 
-| Return type                                                                                                                      | Status code | Description |
-| -------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AgentConnectionToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#agentconnectiontoken) | 200         | Success     |
+| Return type                                                                                                                                              | Status code | Description |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AgentConnectionToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#agentconnectiontoken) | 200         | Success     |
 
 #### Throws
 

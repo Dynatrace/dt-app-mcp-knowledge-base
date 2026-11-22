@@ -1,10 +1,10 @@
 ## Getting started
 
-**[Build apps with AI](https://developer.dynatrace.com/quickstart/app-development-with-ai.md)**: Connect your AI assistant to Dynatrace app development resources and prompt your way to a working app.
+**[Build apps with AI](https://public-developer.central.internal.dynatrace.com/quickstart/app-development-with-ai.md)**: Connect your AI assistant to Dynatrace app development resources and prompt your way to a working app.
 
-**[Build your first app in 5 minutes](https://developer.dynatrace.com/quickstart/first-app-in-5-minutes.md)**: Learn to set up an environment and create your first Dynatrace App in five minutes.
+**[Build your first app in 5 minutes](https://public-developer.central.internal.dynatrace.com/quickstart/first-app-in-5-minutes.md)**: Learn to set up an environment and create your first Dynatrace App in five minutes.
 
-**[Develop new app-building skills](https://developer.dynatrace.com/quickstart/tutorial.md)**: Learn to build a fully functional Dynatrace App with this tutorial. You'll query data from Grail, add data visualizations, and deploy your app to an environment of your choice.
+**[Develop new app-building skills](https://public-developer.central.internal.dynatrace.com/quickstart/tutorial.md)**: Learn to build a fully functional Dynatrace App with this tutorial. You'll query data from Grail, add data visualizations, and deploy your app to an environment of your choice.
 
 > **Tip**
 >

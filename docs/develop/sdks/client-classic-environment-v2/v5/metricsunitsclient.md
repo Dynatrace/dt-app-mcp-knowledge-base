@@ -6,7 +6,7 @@ import { metricsUnitsClient } from '@dynatrace-sdk/client-classic-environment-v2
 
 ### allUnits
 
-**metricsUnitsClient.allUnits(config): Promise\<[UnitList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitlist)>**
+**metricsUnitsClient.allUnits(config): Promise\<[UnitList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitlist)>**
 
 Lists all available units
 
@@ -35,9 +35,9 @@ You can narrow down the output by providing filter criteria in the **unitSelecto
 
 #### Returns
 
-| Return type                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [UnitList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitlist) | 200         | Success     |
+| Return type                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [UnitList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitlist) | 200         | Success     |
 
 #### Throws
 
@@ -55,7 +55,7 @@ const data = await metricsUnitsClient.allUnits();
 
 ### convert
 
-**metricsUnitsClient.convert(config): Promise\<[UnitConversionResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitconversionresult)>**
+**metricsUnitsClient.convert(config): Promise\<[UnitConversionResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitconversionresult)>**
 
 Converts a value from a source unit into a target unit
 
@@ -76,9 +76,9 @@ If no target unit is set, the request finds an appropriate target unit automatic
 
 #### Returns
 
-| Return type                                                                                                                         | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [UnitConversionResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitconversionresult) | 200         | Success     |
+| Return type                                                                                                                                                 | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [UnitConversionResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#unitconversionresult) | 200         | Success     |
 
 #### Throws
 

@@ -10,4 +10,4 @@ Proper stacking for platform-level system primitives (the intent picker, file up
 
 **Maximum depth:** 2 levels (base context + one platform primitive on top). A third level is permitted only if a platform primitive triggers another platform primitive (for example, upload picker opens a permission prompt).
 
-Add-ons share the same [security context](https://developer.dynatrace.com/develop/guides/navigation/intents/about-intents.md#security-context) and [context sharing](https://developer.dynatrace.com/develop/guides/navigation/intents/about-intents.md#context-sharing) model as all other intents.
+Add-ons share the same [security context](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/about-intents.md#security-context) and [context sharing](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/about-intents.md#context-sharing) model as all other intents.

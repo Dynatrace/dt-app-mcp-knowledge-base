@@ -6,7 +6,7 @@ The following sections use the client SDK directly. If you're building a React U
 
 ### Execute analyzer
 
-This operation requires the scope `davis:analyzers:execute` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `davis:analyzers:execute` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 Let's begin by creating a function that will request the forecast analysis:
 
@@ -133,7 +133,7 @@ Your `loadForecast` function is now ready. You can provide any time series DQL q
 
 > **Tip**
 >
-> You can learn more about visualizing a `TimeseriesBand` from the `TimeseriesChart` [reference page](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#band-chart).
+> You can learn more about visualizing a `TimeseriesBand` from the `TimeseriesChart` [reference page](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#band-chart).
 
 ### Run the analysis from a React component
 
@@ -143,7 +143,7 @@ This operation requires the following scopes:
 - `storage:buckets:read`
 - `storage:metrics:read`
 
-[guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+[guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 If you're calling the analyzer from React, the `useAnalyzer` hook from `@dynatrace-sdk/react-hooks` takes over the first two steps: it calls `executeAnalyzer`, polls the execution once per second for as long as it reports `RUNNING`, and exposes the resulting `AnalyzerResult` as `data`. You don't need your own `pollExecution`. You still handle the output yourself.
 

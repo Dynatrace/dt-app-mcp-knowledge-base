@@ -4,4 +4,4 @@ Dynatrace provides capabilities for monitoring and analyzing the performance of 
 
 You can install extensions on both OneAgent and ActiveGates. They connect to the monitored technologies in the best way that fits that technology. Dynatrace develops the extension data acquisition layer (data source), which allows you to easily manage your extensions declaratively by creating a YAML file specifying what data you want and from where.
 
-To learn more, visit [Extensions](https://developer.dynatrace.com/develop/extensions/about-extensions-v2.md)
+To learn more, visit [Extensions](https://public-developer.central.internal.dynatrace.com/develop/extensions/about-extensions-v2.md)

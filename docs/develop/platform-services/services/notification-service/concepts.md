@@ -10,7 +10,7 @@ Notifications are emails sent to a user, triggered by an event. A notification c
 
 A notification is sent based on a notification configuration.
 
-A notification configuration is defined via the notification service API and the notification template as a static asset in your app. The default approach to registering/unregistering a notification configuration is to use the [NotifyButton](https://developer.dynatrace.com/contents/docs/design/components/buttons/NotifyButton/index.mdx/) the Strato design system offers. You can use the [notifications-client-v2 SDK](https://developer.dynatrace.com/contents/docs/develop/sdks/client-notification-v2/index.md/) to customize the behavior to your needs.
+A notification configuration is defined via the notification service API and the notification template as a static asset in your app. The default approach to registering/unregistering a notification configuration is to use the [NotifyButton](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/buttons/NotifyButton/index.mdx/) the Strato design system offers. You can use the [notifications-client-v2 SDK](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/client-notification-v2/index.md/) to customize the behavior to your needs.
 
 While all notification configurations are about events and the resource they are about, there are two types of notification configurations, resource and event notification configurations.
 
@@ -119,4 +119,4 @@ The trigger configuration defines which events trigger sending an email to the u
 
 ### Notify button
 
-The Strato Design System offers a NotifyButton that allows users to register and unregister a self-notification. Look at the [component documentation](https://developer.dynatrace.com/design/components/buttons/NotifyButton/index.mdx/) for details.
+The Strato Design System offers a NotifyButton that allows users to register and unregister a self-notification. Look at the [component documentation](https://public-developer.central.internal.dynatrace.com/design/components/buttons/NotifyButton/index.mdx/) for details.

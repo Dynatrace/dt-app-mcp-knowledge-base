@@ -76,4 +76,4 @@ export default async function (payload: unknown = undefined) {
 }
 ```
 
-This operation requires the scope `document:documents:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `document:documents:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

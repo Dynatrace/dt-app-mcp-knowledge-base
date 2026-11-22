@@ -34,4 +34,4 @@ const Basic = () => {
 
 > **Note**
 >
-> If you need to indicate the release phase of an entire app, use the `releasePhase` prop on the [AppHeader.Logo](https://developer.dynatrace.com/design/components/layouts/AppHeader.md#indicate-release-phase-of-app) instead.
+> If you need to indicate the release phase of an entire app, use the `releasePhase` prop on the [AppHeader.Logo](https://public-developer.central.internal.dynatrace.com/design/components/layouts/AppHeader.md#indicate-release-phase-of-app) instead.

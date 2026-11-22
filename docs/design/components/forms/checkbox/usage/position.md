@@ -1,6 +1,6 @@
 ## Position
 
-![Four Checkbox components labeled "AIOps", "DevOps", "Security", and "Monitoring", shown stacked vertically on the left and in a single horizontal row on the right.](https://developer.dynatrace.com/assets/images/checkbox-alignment-light-4cc032474c68d361afb4d48922ad2009.webp)
+![Four Checkbox components labeled "AIOps", "DevOps", "Security", and "Monitoring", shown stacked vertically on the left and in a single horizontal row on the right.](https://public-developer.central.internal.dynatrace.com/assets/images/checkbox-alignment-light-4cc032474c68d361afb4d48922ad2009.webp)
 
 ### Vertical
 

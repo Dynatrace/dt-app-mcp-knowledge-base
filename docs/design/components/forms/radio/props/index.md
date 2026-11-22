@@ -15,7 +15,7 @@ export declare type RadioProps = Pick<FormControlProps<string, never, HTMLLabelE
 **`RadioGroupProps`**
 
 ```ts
-export declare type RadioGroupProps = FormControlProps<string, (value: string, event?: FocusEvent<HTMLInputElement>) => void | never, HTMLDivElement> & StylingProps & WithChildren & DataTestId & MaskingProps & BehaviorTrackingProps & {
+export declare type RadioGroupProps = FormControlProps<string | null, (value: string, event?: FocusEvent<HTMLInputElement>) => void | never, HTMLDivElement> & StylingProps & WithChildren & DataTestId & MaskingProps & BehaviorTrackingProps & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

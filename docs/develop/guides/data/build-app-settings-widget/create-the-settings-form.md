@@ -1,6 +1,6 @@
 ## Create the settings form
 
-The following component is a text field with a **Save** button, built with [Strato components](https://developer.dynatrace.com/design/components.md). The form has no connection to settings yet; the next steps add reading and writing.
+The following component is a text field with a **Save** button, built with [Strato components](https://public-developer.central.internal.dynatrace.com/design/components.md). The form has no connection to settings yet; the next steps add reading and writing.
 
 ```tsx title="ui/app/SettingsForm.tsx"
 import React, { useState } from 'react';

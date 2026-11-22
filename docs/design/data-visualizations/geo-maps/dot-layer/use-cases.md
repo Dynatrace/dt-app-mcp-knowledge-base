@@ -17,7 +17,7 @@ Use the `DotLayer` component to render data points as dots or simple shapes. The
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/geo-maps/DotLayer/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/DotLayer/props.md).
 
 **DotLayerSimple**
 
@@ -1616,7 +1616,7 @@ const DotLayerBearing = () => {
 
 The `DotLayer` component displays a tooltip by default when hovering over a data point.
 
-By default, the tooltip will display the location information of the hovered point, but [it can be heavily customized](https://developer.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#customize-tooltip).
+By default, the tooltip will display the location information of the hovered point, but [it can be heavily customized](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#customize-tooltip).
 
 **DotLayerTooltip**
 

@@ -42,4 +42,4 @@ const object = await settingsObjectsClient.getSettingsObject({
 
 Properties of type `secret` are always returned as masked values.
 
-This operation requires the scope `settings:objects:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `settings:objects:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

@@ -3,7 +3,7 @@
 If you haven't done it yet, you can generate developer certificates using the
 Visual Studio Code command
 `Dynatrace extensions: Generate certificates`. For more information about this command,
-visit the [Generate certificates documentation](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/commands.md#generate-certificates).
+visit the [Generate certificates documentation](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/commands.md#generate-certificates).
 
 To create the extension package, run the `Dynatrace extensions: Build` command.
 

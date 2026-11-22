@@ -20,18 +20,18 @@ The general form of the field-level expression is `<Fieldname> <Operator> <Value
 
 Following is the list of data types supported in the filter expression along with the operators:
 
-| Datatype                                 | Supported operators                                     | Representation                                                                                                                                                                                                                                                                                                        |
-| :--------------------------------------- | :------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| number (short, int, long, float, double) | `=`, `!=`, `<` , `<=`, `>`, `>=`, `in`                  | - Integers: decimal and hexadecimal (with leading&#x20;
+| Datatype                                 | Supported operators                                               | Representation                                                                                                                                                                                                                                                                                                                                                        |
+| :--------------------------------------- | :---------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| number (short, int, long, float, double) | `=`, `!=`, `<` , `<=`, `>`, `>=`, `in`                            | - Integers: decimal and hexadecimal, with leading&#x20;
   `0x`
-  )&#x20;
+  &#x20;
 - Floating Point: scientific notation with optional exponent&#x20;
   `e`
    or&#x20;
   `E`
-  &#x20;                                                                                                                                          |
-| String                                   | `=`, `!=`, `contains`, `starts-with`, `ends-with`, `in` | *  Single quotes only: 'Hello World!'&#x20;
-* Special characters (for example, the quotes) are preceded with&#x20;
+  &#x20;                                                                                                                                                                                           |
+| String                                   | `=`, `!=`, `contains`, `starts-with`, `ends-with`, `in`, `exists` | *  Single quotes only: 'Hello World!'&#x20;
+* Special characters such as quotes are preceded with&#x20;
   `\`
 * exact operators&#x20;
   `=`
@@ -44,28 +44,26 @@ Following is the list of data types supported in the filter expression along wit
   `starts-with`
   , and&#x20;
   `ends-with`
-   are case insensitive |
-| Boolean                                  | `=`, `!=`                                               | Comparison with constants `true` or `false` only                                                                                                                                                                                                                                                                      |
-| Date/Time                                | `=`, `!=`, `<` , `<=`, `>`, `>=`, `in`                  | As ISO 8601 compliant string in one of the following formats:* `yyyy-MM-ddThh:mm:ss[+/-]hh:mm`
-   (e.g.&#x20;
+   are case insensitive
+* `exists`
+  : unary operator that matches non-null values |
+| Boolean                                  | `=`, `!=`                                                         | Comparison with constants `true` or `false` only                                                                                                                                                                                                                                                                                                                      |
+| Date/Time                                | `=`, `!=`, `<` , `<=`, `>`, `>=`, `in`                            | As ISO 8601 compliant strings in one of the following formats:* `yyyy-MM-ddThh:mm:ss[+/-]hh:mm`
+  . For example:&#x20;
   `2007-12-03T10:15:30+01:00`
-  )
 * `yyyy-MM-ddThh:mm:ss`
-   (e.g.&#x20;
+  . For example:&#x20;
   `2007-12-03T10:15:30`
-  )
 * `yyyy-MM-dd`
-   (e.g.&#x20;
+  . For example:&#x20;
   `2007-12-03`
-  )
 * `hh:mm:ss`
-   (e.g.&#x20;
-  `10:15:30`
-  )      |
-| Array                                    | `contains`, `is-empty`                                  | - `contains`
-  : Comparison with elements contained in the array, for example, 'Hello World!' for an array of strings.
+  . For example:&#x20;
+  `10:15:30`                                     |
+| Array                                    | `contains`, `is-empty`                                            | - `contains`
+  : Comparison with elements within the array. For example, 'Hello World!' for an array of strings
 - `is-empty`
-  : Check if array is empty.                                                                                                                                                      |
+  : Check whether an array is empty                                                                                                                                                                                                      |
 
 #### The 'in' operator
 

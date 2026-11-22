@@ -6,4 +6,4 @@ Install the required SDK via the terminal:
 npm i @dynatrace-sdk/client-settings
 ```
 
-For the full API reference, see the [Settings API](https://developer.dynatrace.com/develop/sdks/client-settings.md).
+For the full API reference, see the [Settings API](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-settings.md).

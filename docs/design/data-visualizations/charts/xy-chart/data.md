@@ -4,4 +4,4 @@ The data provided to the `XYChart` component via the `data` property will be use
 
 The series subcomponent has an optional `data` property that can be used to provide specific data for that series.
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart/props.md).

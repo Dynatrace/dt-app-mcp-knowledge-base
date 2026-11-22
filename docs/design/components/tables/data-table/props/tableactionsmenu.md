@@ -1,6 +1,6 @@
 ## TableActionsMenu
 
-Use the `TableActionsMenu` component for configuring column or cell actions. Pass it to `DataTable.ColumnActions` or `DataTable.CellActions` either directly as children, or by returning it from a function that receives the current column or cell details. See [Configure column actions](https://developer.dynatrace.com/design/components/tables/DataTable.md#configure-column-actions).
+Use the `TableActionsMenu` component for configuring column or cell actions. Pass it to `DataTable.ColumnActions` or `DataTable.CellActions` either directly as children, or by returning it from a function that receives the current column or cell details. See [Configure column actions](https://public-developer.central.internal.dynatrace.com/design/components/tables/DataTable.md#configure-column-actions).
 
 ### TableActionsMenu.ColumnOrder
 
@@ -30,13 +30,13 @@ Use `TableActionsMenu.CopyItem` inside the `TableActionsMenu` to add a menu item
 
 Use `TableActionsMenu.Link` inside the `TableActionsMenu` to render a link element as a menu action item.
 
-For detailed information about the props check out the [Menu.Link props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menulink).
+For detailed information about the props check out the [Menu.Link props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menulink).
 
 ### TableActionsMenu.Item
 
 In addition to the predefined actions, you can provide a custom user action using the `TableActionsMenu.Item` subcomponent.
 
-For detailed information about the props check out the [Menu.Item props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menuitem).
+For detailed information about the props check out the [Menu.Item props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menuitem).
 
 ### TableActionsMenu.Intent
 
@@ -52,40 +52,40 @@ export declare type MenuIntentProps = MenuIntentWithResponseProps | MenuIntentWi
 
 Use the `TableActionsMenu.Prefix` to add an icon to the left side of a `TableActionsMenu.Item`.
 
-For detailed information about the props check out the [Menu.Prefix props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menuprefix).
+For detailed information about the props check out the [Menu.Prefix props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menuprefix).
 
 ### TableActionsMenu.Suffix
 
 Use the `TableActionsMenu.Suffix` to add an icon to the right side a `TableActionsMenu.Item`.
 
-For detailed information about the props check out the [Menu.Suffix props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menusuffix).
+For detailed information about the props check out the [Menu.Suffix props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menusuffix).
 
 ### TableActionsMenu.Group
 
 Use the `TableActionsMenu.Group` to group multiple items in the table actions menu.
 
-For detailed information about the props check out the [Menu.Group props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menugroup).
+For detailed information about the props check out the [Menu.Group props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menugroup).
 
 ### TableActionsMenu.Label
 
 Use the `TableActionsMenu.Label` to add a descriptive label to a table actions menu group.
 
-For detailed information about the props check out the [Menu.Label props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menulabel).
+For detailed information about the props check out the [Menu.Label props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menulabel).
 
 ### TableActionsMenu.SubMenu
 
 Use the `TableActionsMenu.SubMenu` to nest a submenu inside a table actions menu. Combine it with `TableActionsMenu.SubTrigger` and `TableActionsMenu.SubContent`.
 
-For detailed information about the props check out the [Menu.Sub props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menusub).
+For detailed information about the props check out the [Menu.Sub props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menusub).
 
 ### TableActionsMenu.SubTrigger
 
 Use the `TableActionsMenu.SubTrigger` to render the item that opens a `TableActionsMenu.SubMenu`.
 
-For detailed information about the props check out the [Menu.SubTrigger props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menusubtrigger).
+For detailed information about the props check out the [Menu.SubTrigger props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menusubtrigger).
 
 ### TableActionsMenu.SubContent
 
 Use the `TableActionsMenu.SubContent` to wrap the items shown inside a `TableActionsMenu.SubMenu`.
 
-For detailed information about the props check out the [Menu.SubContent props](https://developer.dynatrace.com/design/components/navigation/Menu/props.md#menusubcontent).
+For detailed information about the props check out the [Menu.SubContent props](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/props.md#menusubcontent).

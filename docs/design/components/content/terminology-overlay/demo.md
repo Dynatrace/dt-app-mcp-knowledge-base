@@ -1,6 +1,6 @@
 ## Demo
 
-`TerminologyOverlay` provides an overlay for definitions or explanations of specific terminology in the UI. The term in the UI is marked by a dotted underline. When the user clicks on it, an overlay with the explanation opens. The component consists of at least two elements: a trigger and corresponding explanation. See [Usage](https://developer.dynatrace.com/design/components/content/TerminologyOverlay/usage.md) for more details.
+`TerminologyOverlay` provides an overlay for definitions or explanations of specific terminology in the UI. The term in the UI is marked by a dotted underline. When the user clicks on it, an overlay with the explanation opens. The component consists of at least two elements: a trigger and corresponding explanation. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/content/TerminologyOverlay/usage.md) for more details.
 
 **Basic**
 

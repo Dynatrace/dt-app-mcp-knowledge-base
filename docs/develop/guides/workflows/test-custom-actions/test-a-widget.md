@@ -1,10 +1,10 @@
 ## Test a widget
 
-You don't need to test any [Strato Design System](https://developer.dynatrace.com/contents/docs/design/index.md/) components. You can rely on them; developers have tested them adequately.
+You don't need to test any [Strato Design System](https://public-developer.central.internal.dynatrace.com/contents/docs/design/index.md/) components. You can rely on them; developers have tested them adequately.
 
 ### Write UI integration tests
 
-Visit the [Dynatrace Apps testing guide](https://developer.dynatrace.com/develop/test-and-troubleshoot/test/create-unit-tests-jest.md#test-your-ui) to learn how to write unit tests for your UI.
+Visit the [Dynatrace Apps testing guide](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/test/create-unit-tests-jest.md#test-your-ui) to learn how to write unit tests for your UI.
 Focus on testing the functionality of a single component in isolation by simulating how your end users will use it.
 
 ### Write E2E tests
@@ -23,9 +23,9 @@ It's important not to test the app function or its business logic. Therefore, do
 
 #### Examples
 
-These examples test the `Greeter` widget [created in the custom Workflows action](https://developer.dynatrace.com/develop/guides/workflows/create-custom-action.md#widget-interface) section.
+These examples test the `Greeter` widget [created in the custom Workflows action](https://public-developer.central.internal.dynatrace.com/develop/guides/workflows/create-custom-action.md#widget-interface) section.
 
-Let's begin by setting up [E2E tests for Dynatrace Apps](https://developer.dynatrace.com/develop/test-and-troubleshoot/test/create-end-to-end-tests.md). In addition to the required [environment variables](https://developer.dynatrace.com/develop/test-and-troubleshoot/test/create-end-to-end-tests.md#set-environment), add `WIDGET_URL`, which refers to the URL address where your custom action runs. It could either be the action's local URL displayed by the App Toolkit or the URL of the deployed widget.
+Let's begin by setting up [E2E tests for Dynatrace Apps](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/test/create-end-to-end-tests.md). In addition to the required [environment variables](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/test/create-end-to-end-tests.md#set-environment), add `WIDGET_URL`, which refers to the URL address where your custom action runs. It could either be the action's local URL displayed by the App Toolkit or the URL of the deployed widget.
 
 > **Note**
 >
@@ -61,7 +61,7 @@ export const DEV_HELPER_URL = `${process.env.ENVIRONMENT_URL}/ui/apps/dynatrace.
 export const WIDGET_STATE_STORAGE_KEY = 'dev-helper-widget-state';
 ```
 
-- The `DEV_HELPER_URL` represents the URL address to the dev-helper, which includes a query parameter `src` pointing to the widget URL. Refer to the [debugging custom action](https://developer.dynatrace.com/develop/guides/workflows/create-custom-action.md#debug-the-action) documentation for more detailed information on accessing dev-helper.
+- The `DEV_HELPER_URL` represents the URL address to the dev-helper, which includes a query parameter `src` pointing to the widget URL. Refer to the [debugging custom action](https://public-developer.central.internal.dynatrace.com/develop/guides/workflows/create-custom-action.md#debug-the-action) documentation for more detailed information on accessing dev-helper.
 - The `WIDGET_STATE_STORAGE_KEY` is the key used in the `localStorage` of the dev-helper to store the widget state.
 
 > **Note**

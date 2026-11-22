@@ -1,6 +1,6 @@
 ## Remove chips
 
-Combine the [Chip.DeleteButton](https://developer.dynatrace.com/design/components/content/Chip.md#remove-chip) subcomponent to remove specific `Chip` components by clicking on the delete button. Provide an `onClick` handler to remove the selected chip from the rendered collection.
+Combine the [Chip.DeleteButton](https://public-developer.central.internal.dynatrace.com/design/components/content/Chip.md#remove-chip) subcomponent to remove specific `Chip` components by clicking on the delete button. Provide an `onClick` handler to remove the selected chip from the rendered collection.
 
 **RemovableChips**
 

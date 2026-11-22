@@ -16,9 +16,9 @@ For information about the required Grail permissions, see the [Bucket and table 
 
 #### Parameters
 
-| Name                              | Type   |
-| --------------------------------- | ------ |
-| config.evaluationToken (required) | string |
+| Name                              | Type   | Description                                |
+| --------------------------------- | ------ | ------------------------------------------ |
+| config.evaluationToken (required) | string | **Example:** `FQ5aVZERXZNMjR1SzVnPT0ifQ==` |
 
 #### Returns
 
@@ -61,10 +61,10 @@ For information about the required Grail permissions, see the [Bucket and table 
 
 #### Parameters
 
-| Name                              | Type   | Description                                                                                                                                                                                                                                 |
-| --------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.evaluationToken (required) | string |                                                                                                                                                                                                                                             |
-| config.requestTimeoutMilliseconds | number | How long to wait for the evaluation result before returning in milliseconds. If the evaluation finishes within this time, the result is returned directly (`200`). If not, the response contains the `evaluationToken` for further polling. |
+| Name                              | Type   | Description                                                                                                                                                                                                                                                                                      |
+| --------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| config.evaluationToken (required) | string | **Example:** `FQ5aVZERXZNMjR1SzVnPT0ifQ==`                                                                                                                                                                                                                                                       |
+| config.requestTimeoutMilliseconds | number | How long to wait for the evaluation result before returning in milliseconds. If the evaluation finishes within this time, the result is returned directly (`200`). If not, the response contains the `evaluationToken` for further polling.<br /><br />**Default:** `1000`<br />**Minimum:** `0` |
 
 #### Returns
 

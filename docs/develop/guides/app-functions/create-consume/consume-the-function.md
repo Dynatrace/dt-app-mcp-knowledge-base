@@ -50,7 +50,7 @@ When calling your function from outside the platform, you need to consider the f
 
 - You need to call the absolute API URL address
   - `$ENVIRONMENT_URL/platform/app-engine/app-functions/v1/apps/<Your-App-ID>/api/<Your-Function-Name>`
-- You need to take care of authentication by yourself. App function requests are authenticated via OAuth. Read [Access platform APIs from outside](https://developer.dynatrace.com/develop/guides/access-platform-apis-from-outside.md) for more details.
+- You need to take care of authentication by yourself. App function requests are authenticated via OAuth. Read [Access platform APIs from outside](https://public-developer.central.internal.dynatrace.com/develop/guides/access-platform-apis-from-outside.md) for more details.
 
 After obtaining a Bearer token from the single sign-on (SSO) token endpoint, a curl request to your app function could look like this:
 

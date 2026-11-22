@@ -2,7 +2,7 @@
 
 Below, you can see an overview of the Workflows app. It displays the workflow action in the right-side panel, which we call the detail view. This guide will help you design the detail view. Placing an action in a workflow adds a task comprising the selected action and its values.
 
-![workflow action overview](https://developer.dynatrace.com/assets/images/workflow_action_about_actions-d6c46b24efc1b49590c1fc4fd2d93b1f.svg)
+![workflow action overview](https://public-developer.central.internal.dynatrace.com/assets/images/workflow_action_about_actions-d6c46b24efc1b49590c1fc4fd2d93b1f.svg)
 
 ### Detail view building blocks
 
@@ -15,9 +15,9 @@ A workflow task consists of the following building blocks:
 
 The workflow task header is provided by the Workflows app and is automatically populated when a user selects your action. As an action developer, you define the following in the app config:
 
-![workflow task header](https://developer.dynatrace.com/assets/images/workflow_action_header-467f78ea92a3300e52d7dbb68a58cd58.png)
+![workflow task header](https://public-developer.central.internal.dynatrace.com/assets/images/workflow_action_header-467f78ea92a3300e52d7dbb68a58cd58.png)
 
-1. **App icon:** Displayed next to the task title which is compiled based on the action name as defined at the app level. You can find more information about third-party icons in our documentation [App Icons](https://developer.dynatrace.com/design/icons/app-icons/index.mdx/).
+1. **App icon:** Displayed next to the task title which is compiled based on the action name as defined at the app level. You can find more information about third-party icons in our documentation [App Icons](https://public-developer.central.internal.dynatrace.com/design/icons/app-icons/index.mdx/).
 
 2. **Task name:** Pre-populates the task name when the action is selected based on `name` of your action. It sets the user's initial expectation of what the task does.
 
@@ -25,7 +25,7 @@ The workflow task header is provided by the Workflows app and is automatically p
 
 ### Workflow action widget
 
-![workflow action building blocks](https://developer.dynatrace.com/assets/images/workflow_action_building_blocks-477dd706e339576f4d921251272169ee.png)
+![workflow action building blocks](https://public-developer.central.internal.dynatrace.com/assets/images/workflow_action_building_blocks-477dd706e339576f4d921251272169ee.png)
 
 1. **Connection:** Use the AutomationConnectionPicker component. The link to “Create new connection” opens a **modal** for this Connector. Use the format “Select or create a connection” as the title for this section. Because of this title, the select field doesn't need its own label.
 

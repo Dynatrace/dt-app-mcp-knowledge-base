@@ -16,7 +16,7 @@ Additionally, you can use the `TableActionsMenu.Prefix` slot to place an icon on
 
 For cross-app navigation, the `TableActionsMenu.Intent` slot component can be used to define an intent item. See the section [Configure intents](#configure-intents) to learn more.
 
-Use the predefined `TableActionsMenu.CopyItem` slot component to let users copy column values to the clipboard. To group items semantically within the menu, use `TableActionsMenu.Group` and `TableActionsMenu.Label`. See the [documentation](https://developer.dynatrace.com/design/components/navigation/Menu.md) for more information about grouping items in menus.
+Use the predefined `TableActionsMenu.CopyItem` slot component to let users copy column values to the clipboard. To group items semantically within the menu, use `TableActionsMenu.Group` and `TableActionsMenu.Label`. See the [documentation](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu.md) for more information about grouping items in menus.
 
 The user action menu supports multi-level menus, allowing you to configure sub-menus using the slots `TableActionsMenu.SubMenu`, `TableActionsMenu.SubContent`, and `TableActionsMenu.SubTrigger`.
 
@@ -386,7 +386,7 @@ For cross-app navigation, the `TableActionsMenu.Intent` slot component can be us
 
 To enable users to copy cell values to the clipboard, use the predefined `TableActionsMenu.CopyItem` slot component.
 
-To group items semantically within the menu, use `TableActionsMenu.Group` and `TableActionsMenu.Label`. For more information about menu groups and labels, refer to the [documentation](https://developer.dynatrace.com/design/components/navigation/Menu.md). The user action menu supports multi-level menus, allowing you to configure sub-menus using the slots `TableActionsMenu.SubMenu`, `TableActionsMenu.SubContent`, and `TableActionsMenu.SubTrigger`.
+To group items semantically within the menu, use `TableActionsMenu.Group` and `TableActionsMenu.Label`. For more information about menu groups and labels, refer to the [documentation](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu.md). The user action menu supports multi-level menus, allowing you to configure sub-menus using the slots `TableActionsMenu.SubMenu`, `TableActionsMenu.SubContent`, and `TableActionsMenu.SubTrigger`.
 
 To assign actions to cells in a specific column, you must specify the unique identifier (ID) of the column. This ID is used as the value for the `column` property within the `DataTable.CellActions` configuration. It tells the `DataTable` which column to associate the actions with. Omit the column ID to have default actions apply to any columns without explicitly configured actions.
 
@@ -1503,7 +1503,7 @@ const CustomSortType = () => {
 
 ### Configure intents
 
-An intent is a message object that enables users to pass the user flow from one app to another. It is possible to perform actions such as viewing data in another application. You can read more about intents in the [Intents docs](https://developer.dynatrace.com/develop/guides/navigation/intents.md).
+An intent is a message object that enables users to pass the user flow from one app to another. It is possible to perform actions such as viewing data in another application. You can read more about intents in the [Intents docs](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents.md).
 
 The `DataTable` supports intents within the following slot components:
 

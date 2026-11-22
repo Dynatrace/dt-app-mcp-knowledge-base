@@ -8,7 +8,7 @@ The `HistogramChart` provides several ways to customize the appearance of your d
 
 ### Use color palettes
 
-The `HistogramChart` provides a set of predefined color palettes and it also accepts custom color palettes. See [coloring](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
+The `HistogramChart` provides a set of predefined color palettes and it also accepts custom color palettes. See [coloring](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
 
 ### Direct color assignment
 
@@ -361,4 +361,4 @@ In the example above, we're using several rules:
 3. Color any series starting with "Low" in green
 4. Color any series with `horizontal.start` set to `true` in purple
 
-For more details about available comparators and options, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about available comparators and options, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.

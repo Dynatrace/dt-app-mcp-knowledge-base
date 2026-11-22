@@ -1,6 +1,6 @@
 ## Demo
 
-The `Tooltip` component shows brief, helpful information when users hover on a trigger. The trigger element must be interactive. See [Usage](https://developer.dynatrace.com/design/components/overlays/Tooltip/usage.md) for best practices.
+The `Tooltip` component shows brief, helpful information when users hover on a trigger. The trigger element must be interactive. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/overlays/Tooltip/usage.md) for best practices.
 
 **Basic**
 

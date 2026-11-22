@@ -8,7 +8,7 @@ The `XYChart` provides several ways to customize the appearance of your data:
 
 ### Predefined color palettes
 
-The `XYChart`'s `colorPalette` property supports predefined color palettes, which are useful for consistent theming across your application. See [coloring](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
+The `XYChart`'s `colorPalette` property supports predefined color palettes, which are useful for consistent theming across your application. See [coloring](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
 
 **PredefinedColorPalette**
 
@@ -656,7 +656,7 @@ Color rules support various comparison operators that can be used to match data 
 
 You can apply rules to different data properties using the `valueAccessor` prop, which defaults to the y-value if not specified. When multiple rules match a data point, the last rule in the array takes precedence.
 
-For more details about available comparators and options, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about available comparators and options, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
 
 ### Custom color ranges
 

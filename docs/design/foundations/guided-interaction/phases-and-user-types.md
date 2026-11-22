@@ -10,7 +10,7 @@ A user's journey moves through five phases:
 - **Core use**: They use the app confidently, repeatedly, and independently.
 - **Becoming an expert**: They keep increasing their mastery. Some become ambassadors, who know the app almost as well as you do and promote it.
 
-![Five phases of increasing app mastery: discovery, first-time use, becoming a core user, core use, and becoming an expert. Aha moments cluster in the early phases, where they reduce time-to-value.](https://developer.dynatrace.com/assets/images/guided-interaction-intro-phases-light-ddcf76208d4e67e9ed493ecdadbebabe.webp)
+![Five phases of increasing app mastery: discovery, first-time use, becoming a core user, core use, and becoming an expert. Aha moments cluster in the early phases, where they reduce time-to-value.](https://public-developer.central.internal.dynatrace.com/assets/images/guided-interaction-intro-phases-light-ddcf76208d4e67e9ed493ecdadbebabe.webp)
 
 Users also differ in confidence, independently of where they are in that journey:
 

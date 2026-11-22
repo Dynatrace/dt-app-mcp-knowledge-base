@@ -8,7 +8,7 @@ import { activeGatesAutoUpdateConfigurationClient } from '@dynatrace-sdk/client-
 
 > ⚠️ **Deprecated**
 
-**activeGatesAutoUpdateConfigurationClient.getAutoUpdateConfigById(config): Promise\<[ActiveGateAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig)>**
+**activeGatesAutoUpdateConfigurationClient.getAutoUpdateConfigById(config): Promise\<[ActiveGateAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig)>**
 
 Gets the configuration of auto-update for the specified ActiveGate
 
@@ -34,9 +34,9 @@ Gets the configuration of auto-update for the specified ActiveGate
 
 #### Returns
 
-| Return type                                                                                                                                      | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [ActiveGateAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig) | 200         | Success     |
+| Return type                                                                                                                                                              | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [ActiveGateAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig) | 200         | Success     |
 
 #### Throws
 
@@ -59,7 +59,7 @@ const data =
 
 > ⚠️ **Deprecated**
 
-**activeGatesAutoUpdateConfigurationClient.getGlobalAutoUpdateConfigForTenant(config): Promise\<[ActiveGateGlobalAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig)>**
+**activeGatesAutoUpdateConfigurationClient.getGlobalAutoUpdateConfigForTenant(config): Promise\<[ActiveGateGlobalAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig)>**
 
 Gets the global auto-update configuration of environment ActiveGates.
 
@@ -79,9 +79,9 @@ Gets the global auto-update configuration of environment ActiveGates.
 
 #### Returns
 
-| Return type                                                                                                                                                  | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [ActiveGateGlobalAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig) | 200         | Success     |
+| Return type                                                                                                                                                                          | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [ActiveGateGlobalAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig) | 200         | Success     |
 
 #### Throws
 
@@ -122,10 +122,10 @@ Updates the configuration of auto-update for the specified ActiveGate
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                             | Description                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
-| config.agId (required) | string                                                                                                                                           | The ID of the required ActiveGate. |
-| config.body (required) | [ActiveGateAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig) |                                    |
+| Name                   | Type                                                                                                                                                                     | Description                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| config.agId (required) | string                                                                                                                                                                   | The ID of the required ActiveGate. |
+| config.body (required) | [ActiveGateAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig) |                                    |
 
 #### Returns
 
@@ -186,9 +186,9 @@ Puts the global auto-update configuration of environment ActiveGates.
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                         |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| config.body (required) | [ActiveGateGlobalAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig) |
+| Name                   | Type                                                                                                                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| config.body (required) | [ActiveGateGlobalAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig) |
 
 #### Returns
 
@@ -248,10 +248,10 @@ Validates the payload for the `POST /activeGates/{agId}/autoUpdate` request.
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                             | Description                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
-| config.agId (required) | string                                                                                                                                           | The ID of the required ActiveGate. |
-| config.body (required) | [ActiveGateAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig) |                                    |
+| Name                   | Type                                                                                                                                                                     | Description                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| config.agId (required) | string                                                                                                                                                                   | The ID of the required ActiveGate. |
+| config.body (required) | [ActiveGateAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateautoupdateconfig) |                                    |
 
 #### Returns
 
@@ -312,9 +312,9 @@ Validates the payload for the `POST /activeGates/autoUpdate` request.
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                         |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| config.body (required) | [ActiveGateGlobalAutoUpdateConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig) |
+| Name                   | Type                                                                                                                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| config.body (required) | [ActiveGateGlobalAutoUpdateConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegateglobalautoupdateconfig) |
 
 #### Returns
 

@@ -1,6 +1,6 @@
 ## Trigger position
 
-![Two Accordion trigger positions: at the end for non-essential content, and at the start for essential content.](https://developer.dynatrace.com/assets/images/accordion-trigger-position-light-a2258067058c3b35f9ad74fd34ea9ee2.webp)&#x20;
+![Two Accordion trigger positions: at the end for non-essential content, and at the start for essential content.](https://public-developer.central.internal.dynatrace.com/assets/images/accordion-trigger-position-light-a2258067058c3b35f9ad74fd34ea9ee2.webp)&#x20;
 
 ### End
 

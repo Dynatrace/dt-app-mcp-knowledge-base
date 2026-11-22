@@ -6,7 +6,7 @@ You can also provide custom `min` and `max` props to set the scale of the `Meter
 
 It is also possible to delegate the component to generate the labels by setting `<MeterBarChart.Min />`, `<MeterBarChart.Max />` and `<MeterBarChart.Value />` slots, to respectively generate automatically min, max, and value labels (the formatting will be applied automatically).
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/MeterBarChart/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/MeterBarChart/props.md).
 
 **AddData**
 

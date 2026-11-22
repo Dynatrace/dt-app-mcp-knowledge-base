@@ -1,4 +1,4 @@
-- [API](https://developer.dynatrace.com/develop/reference/apis.md): Overview of all APIs across Dynatrace.
-- [JavaScript runtime](https://developer.dynatrace.com/develop/reference/javascript-runtime.md): Reference of available JavaScript objects, WebAPIs, and packages of the SDK for TypeScript to write app functions
-- [Metric units](https://developer.dynatrace.com/develop/reference/metric-units.md): Reference for metric units in Dynatrace Apps
-- [React style guide](https://developer.dynatrace.com/develop/reference/react-style-guide.md): Best practices for styling your React code
+- [API](https://public-developer.central.internal.dynatrace.com/develop/reference/apis.md): Overview of all APIs across Dynatrace.
+- [JavaScript runtime](https://public-developer.central.internal.dynatrace.com/develop/reference/javascript-runtime.md): Reference of available JavaScript objects, WebAPIs, and packages of the SDK for TypeScript to write app functions
+- [Metric units](https://public-developer.central.internal.dynatrace.com/develop/reference/metric-units.md): Reference for metric units in Dynatrace Apps
+- [React style guide](https://public-developer.central.internal.dynatrace.com/develop/reference/react-style-guide.md): Best practices for styling your React code

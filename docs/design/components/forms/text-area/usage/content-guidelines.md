@@ -29,7 +29,7 @@ Don't use the placeholder for information users need to complete the task, as pl
 
 ### Hint (optional)
 
-Use the hint ([FormFieldMessages](https://developer.dynatrace.com/design/components/forms/FormField.md#show-custom-hints-and-errors) component) for additional information that helps users add a valid input and avoid an error. Include a character counter if there's a character limit. Always provide any error messages here too.
+Use the hint ([FormFieldMessages](https://public-developer.central.internal.dynatrace.com/design/components/forms/FormField.md#show-custom-hints-and-errors) component) for additional information that helps users add a valid input and avoid an error. Include a character counter if there's a character limit. Always provide any error messages here too.
 
 Example hint: 0/100 characters
 

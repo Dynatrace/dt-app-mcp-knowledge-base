@@ -6,7 +6,7 @@ The proper approach depends on whether the trigger uses an icon only or a combin
 
 - **Do** provide an `aria-label` that describes the trigger's intent.
 - **Do** set the SVG's role to `img` and hide it from assistive technology with `aria-hidden="true"`.
-- **Do** use a [Tooltip](https://developer.dynatrace.com/design/components/overlays/Tooltip.md) to say what the trigger is for. Ensure that the tooltip text exactly matches the `aria-label`.
+- **Do** use a [Tooltip](https://public-developer.central.internal.dynatrace.com/design/components/overlays/Tooltip.md) to say what the trigger is for. Ensure that the tooltip text exactly matches the `aria-label`.
 
 ### Icon and text
 

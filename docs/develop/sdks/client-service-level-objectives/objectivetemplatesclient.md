@@ -72,9 +72,9 @@ List objective templates
 * `tag.key`
    and&#x20;
   `tag.value` |
-| config.page     | number | The page number to retrieve, 1-indexed. Can't be used together with `page-key`.                                                                                                                                                                  |
+| config.page     | number | The page number to retrieve, 1-indexed. Can't be used together with `page-key`.<br /><br />**Minimum:** `1`                                                                                                                                      |
 | config.pageKey  | string | Cursor for the next page of results, obtained from `nextPageKey` in the previous response. Can't be used together with `page`.                                                                                                                   |
-| config.pageSize | number | How many items to return at one time (max 500)                                                                                                                                                                                                   |
+| config.pageSize | number | How many items to return at one time (max 500)<br /><br />**Default:** `100`<br />**Minimum:** `1`                                                                                                                                               |
 | config.sort     | string | The sort parameter, as explained [here](https://dt-url.net/platform-services-filtering). Sorting is supported on the following fields: * `name`                                                                                                  |
 
 #### Returns

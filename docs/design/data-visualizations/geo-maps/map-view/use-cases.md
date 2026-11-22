@@ -4,7 +4,7 @@ The minimal representation of a `MapView` component is a base layer that contain
 
 The height of the `MapView` component must be set explicitly using the `height` prop. The width of the `MapView` component will be determined by the width of the parent container.
 
-Learn more about the `MapView` props [here](https://developer.dynatrace.com/design/data-visualizations/geo-maps/MapView/props.md).
+Learn more about the `MapView` props [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/MapView/props.md).
 
 **Simple**
 

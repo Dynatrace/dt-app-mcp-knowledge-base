@@ -39,8 +39,8 @@ export const HostList = () => {
 
 > **Tip**
 >
-> Learn more about [ProgressCircle](https://developer.dynatrace.com/contents/docs/design/components/content/ProgressCircle/index.mdx/).
+> Learn more about [ProgressCircle](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/content/ProgressCircle/index.mdx/).
 
 After the changes, the app should look like the following:
 
-![loading-and-pagination-dark](https://developer.dynatrace.com/assets/images/loading-and-pagination-dark-56b41439ca5dae9208454a538b652c72.gif)
+![loading-and-pagination-dark](https://public-developer.central.internal.dynatrace.com/assets/images/loading-and-pagination-dark-56b41439ca5dae9208454a538b652c72.gif)

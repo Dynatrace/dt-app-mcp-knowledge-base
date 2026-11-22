@@ -4,7 +4,7 @@ Most browsers offer developer tools that help you to debug your web applications
 
 To open the developers tools, use Ctrl + Shift + I (on Windows) or Ctrl + Option + I (on Mac). This is how it looks in Chrome:
 
-![Chrome developer tools](https://developer.dynatrace.com/assets/images/chrome-dev-tools-e95a111d617101531121d3cec0025943.png)
+![Chrome developer tools](https://public-developer.central.internal.dynatrace.com/assets/images/chrome-dev-tools-e95a111d617101531121d3cec0025943.png)
 
 ### Debugging UI
 
@@ -49,13 +49,13 @@ After adding the extension, you get two extra tabs in the browser's developer to
 
 > **Note**
 >
-> The AppShell renders apps in an `iframe`. The React developer tools won't work correctly for an iframe. Therefore, you need to detach the apps from the AppShell. Read the [AppShell documentation](https://developer.dynatrace.com/plan/appshell.md#run-your-app-outside-of-the-iframe-context) to know more.
+> The AppShell renders apps in an `iframe`. The React developer tools won't work correctly for an iframe. Therefore, you need to detach the apps from the AppShell. Read the [AppShell documentation](https://public-developer.central.internal.dynatrace.com/plan/appshell.md#run-your-app-outside-of-the-iframe-context) to know more.
 
 #### Debugging the Component tree
 
 The `Components` tab shows you the React component hierarchy. It lets you see and manipulate component state and props. This is how it looks in Chrome:
 
-![React Dev Tools in Chrome](https://developer.dynatrace.com/assets/images/react-dev-tools-564155a85a4ef62b8f908d4e6ae35adb.png)
+![React Dev Tools in Chrome](https://public-developer.central.internal.dynatrace.com/assets/images/react-dev-tools-564155a85a4ef62b8f908d4e6ae35adb.png)
 
 #### Debugging the performance
 

@@ -21,10 +21,10 @@ The ingestion of business events is subject to licensing (see [licensing documen
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                                                               |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [CloudEvent](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#cloudevent) \| Array\<[CloudEvent](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#cloudevent)> \| IngestBody |
-| config.type (required) | "application/cloudevent+json" \| "application/cloudevents+json" \| "application/cloudevent-batch+json" \| "application/cloudevents-batch+json" \| "application/json; charset=utf-8"                                                                |
+| Name                   | Type                                                                                                                                                                                                                                                                                               |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [CloudEvent](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#cloudevent) \| Array\<[CloudEvent](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#cloudevent)> \| IngestBody |
+| config.type (required) | "application/cloudevent+json" \| "application/cloudevents+json" \| "application/cloudevent-batch+json" \| "application/cloudevents-batch+json" \| "application/json; charset=utf-8"                                                                                                                |
 
 #### Returns
 

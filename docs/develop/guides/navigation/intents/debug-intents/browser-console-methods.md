@@ -7,7 +7,7 @@ The AppShell exposes two global methods for debugging intents from the browser's
 1. Open your browser's developer tools by pressing F12 or `Ctrl+Shift+I` in Windows/Linux and `Cmd+Option+I` in Mac.
 2. Set the JavaScript context to **top**, not the app's iFrame. This is important because the AppShell methods are only available in the top-level context.
 
-![Debug intents](https://developer.dynatrace.com/assets/images/debug-intents-cd80e2cc214e2d2b58307fed0b5f86ed.png)
+![Debug intents](https://public-developer.central.internal.dynatrace.com/assets/images/debug-intents-cd80e2cc214e2d2b58307fed0b5f86ed.png)
 
 ### `sendIntent` method
 

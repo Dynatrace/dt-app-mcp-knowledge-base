@@ -5,9 +5,9 @@ You can use the **Extensions** app from the Hub,
 or navigate to `Infrastructure Observability` and then to `Extensions`
 to configure your extension.
 
-![configure python extension](https://developer.dynatrace.com/assets/images/python-tutorial-configure-01-80daf3c7c490df649061990de2d5ca5c.png)
+![configure python extension](https://public-developer.central.internal.dynatrace.com/assets/images/python-tutorial-configure-01-80daf3c7c490df649061990de2d5ca5c.png)
 
-![configure python extension](https://developer.dynatrace.com/assets/images/python-tutorial-configure-02-2228e84dc725b9ede12d669adc7f2fcc.png)
+![configure python extension](https://public-developer.central.internal.dynatrace.com/assets/images/python-tutorial-configure-02-2228e84dc725b9ede12d669adc7f2fcc.png)
 
 > **Caution**
 >

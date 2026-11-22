@@ -8,7 +8,7 @@
 - Use shapes as secondary indicators to highlight contributing factors for a more important status.
 - Always use shapes combined with a label to ensure their meaning is clearly understood. This can either label the status itself or be text that provides enough context to interpret the meaning of the status indicator.
 
-![HealthIndicator shape indicators in two contexts: paired with a text label, and displayed next to metric values in a table row.](https://developer.dynatrace.com/assets/images/healthindicator-shapes-as-visual-light-db5612aca56031cba5cfabe8e97a8330.webp)&#x20;
+![HealthIndicator shape indicators in two contexts: paired with a text label, and displayed next to metric values in a table row.](https://public-developer.central.internal.dynatrace.com/assets/images/healthindicator-shapes-as-visual-light-db5612aca56031cba5cfabe8e97a8330.webp)&#x20;
 
 ### Icons
 
@@ -17,7 +17,7 @@
 - Accompanying the icon with a label is optional if the status can be easily interpreted by looking at its context. This usually requires close visual proximity between the two or good domain knowledge.
 - Icons usually express a status in more detail than shapes. The symbol contained in icons carries an additional layer of information.
 
-![HealthIndicator icons placed next to entity names in a table, appearing only on the unhealthy rows rather than on every row.](https://developer.dynatrace.com/assets/images/healthindicator-icons-as-visual-light-9a447176b65e5c24f9dcb5fc6dad2933.webp)&#x20;
+![HealthIndicator icons placed next to entity names in a table, appearing only on the unhealthy rows rather than on every row.](https://public-developer.central.internal.dynatrace.com/assets/images/healthindicator-icons-as-visual-light-9a447176b65e5c24f9dcb5fc6dad2933.webp)&#x20;
 
 ### Customized visuals
 
@@ -27,4 +27,4 @@
 
 - Never use color alone to differentiate between multiple statuses, as this is not considered accessible.
 - Keep customized shapes and icons to a minimum, and use the ones that come with the `HealthIndicator` component as much as possible.
-- If you need icons or shapes that are more specific to your use case, don't assign different meanings to already-defined icons and shapes. Stay true to the underlying concept of color, shape, and symbol usage, as documented in our [Status and health guidelines](https://developer.dynatrace.com/design/patterns/status-and-health.md#visualizing-status).
+- If you need icons or shapes that are more specific to your use case, don't assign different meanings to already-defined icons and shapes. Stay true to the underlying concept of color, shape, and symbol usage, as documented in our [Status and health guidelines](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md#visualizing-status).

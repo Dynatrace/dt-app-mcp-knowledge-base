@@ -2,7 +2,7 @@
 
 `Accordion` supports expanding either one or multiple sections at a time.
 
-![Two Accordion examples: single-expand mode with only one section open at a time, and multi-expand mode with multiple sections open simultaneously.](https://developer.dynatrace.com/assets/images/accordion-expand-options-light-7acc72b35202c38195d52a1f11b7e10b.webp)&#x20;
+![Two Accordion examples: single-expand mode with only one section open at a time, and multi-expand mode with multiple sections open simultaneously.](https://public-developer.central.internal.dynatrace.com/assets/images/accordion-expand-options-light-7acc72b35202c38195d52a1f11b7e10b.webp)&#x20;
 
 ### Single expand
 

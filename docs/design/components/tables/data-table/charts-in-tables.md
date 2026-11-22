@@ -235,7 +235,7 @@ const ColumnTypeGantt = () => {
 
 ### MeterBarChart
 
-You can visualize numerical data within the `DataTable` by using the [MeterBarChart](https://developer.dynatrace.com/design/data-visualizations/charts/MeterBarChart.md). Follow these steps to render a `MeterBarChart` in the table:
+You can visualize numerical data within the `DataTable` by using the [MeterBarChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/MeterBarChart.md). Follow these steps to render a `MeterBarChart` in the table:
 
 1. Set `columnType` to `meterbar` in the column definition.
 2. Use the `accessor` property to specify the value data to process.
@@ -344,7 +344,7 @@ const ColumnTypeMeterbar = () => {
 
 ### MultiMeterBarChart
 
-To add a [MultiMeterBarChart](https://developer.dynatrace.com/design/data-visualizations/charts/MultiMeterBarChart.md) to the `DataTable`, follow the steps described in the section on [displaying a MeterBarChart in a table](#meterbarchart).
+To add a [MultiMeterBarChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/MultiMeterBarChart.md) to the `DataTable`, follow the steps described in the section on [displaying a MeterBarChart in a table](#meterbarchart).
 
 Set the `columnType` to `meterbar` in the column definition and use the `accessor` property to specify the value data to process. Instead of providing a single numerical value, as for `MeterBarChart`, with `MultiMeterBarChart` you can provide an array of value objects. Each value object should have the following structure: `{name: string, value: number, color: string}` as data.
 
@@ -440,7 +440,7 @@ The Sparkline chart in the `DataTable` can be further configured via the column 
 - `curve` (`'linear'` | `'smooth'`): Curve shape of the series. Defaults to `'linear'`.
 - `showContextValues` (boolean): Whether min and max labels are shown. Defaults to `false`.
 
-Additionally, x‑axis boundaries can be configured by setting `config: { xAxis: { min: 'auto' | 'data-min' | number | Date, max: 'auto' | 'data-max' | number | Date } }`. Similarly, y‑axis boundaries and scale can be configured by setting `config: { yAxis: { min: number | 'data-min', max: number | 'data-max', scale: 'linear' | 'log' } }`. More details on the configuration options can be found here in the [Sparkline](https://developer.dynatrace.com/design/data-visualizations/charts/Sparkline.md) documentation.
+Additionally, x‑axis boundaries can be configured by setting `config: { xAxis: { min: 'auto' | 'data-min' | number | Date, max: 'auto' | 'data-max' | number | Date } }`. Similarly, y‑axis boundaries and scale can be configured by setting `config: { yAxis: { min: number | 'data-min', max: number | 'data-max', scale: 'linear' | 'log' } }`. More details on the configuration options can be found here in the [Sparkline](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/Sparkline.md) documentation.
 
 **ColumnTypeSparkline**
 

@@ -2,7 +2,7 @@ All Dynatrace platform service APIs use the [OAuth2.0 Client Credentials Flow](h
 
 > **Note**
 >
-> For further details, visit [Access platform APIs from outside](https://developer.dynatrace.com/develop/guides/access-platform-apis-from-outside.md).
+> For further details, visit [Access platform APIs from outside](https://public-developer.central.internal.dynatrace.com/develop/guides/access-platform-apis-from-outside.md).
 
 ## API permissions
 
@@ -16,5 +16,5 @@ All permissions follow this naming schema:
 <Service-Name or Service-Namespace>:<Resource>:<Action>
 ```
 
-- `<Service-Name>`, `<Service-Namespace>` and `<Resource>` correspond to the entries described in the [general URL structure](https://developer.dynatrace.com/develop/platform-services/core-concepts/about-platform-services.md/#url-structure).
+- `<Service-Name>`, `<Service-Namespace>` and `<Resource>` correspond to the entries described in the [general URL structure](https://public-developer.central.internal.dynatrace.com/develop/platform-services/core-concepts/about-platform-services.md/#url-structure).
 - `<Action>` defines the action associated with the permission (for example, execute, read, write, etc.).

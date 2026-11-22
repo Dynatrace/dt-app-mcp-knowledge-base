@@ -6,7 +6,7 @@ import { davisSecurityAdvisorClient } from '@dynatrace-sdk/client-classic-enviro
 
 ### getAdviceForSecurityProblems
 
-**davisSecurityAdvisorClient.getAdviceForSecurityProblems(config): Promise\<[DavisSecurityAdviceList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#davissecurityadvicelist)>**
+**davisSecurityAdvisorClient.getAdviceForSecurityProblems(config): Promise\<[DavisSecurityAdviceList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#davissecurityadvicelist)>**
 
 Provides advice for security problems.
 
@@ -29,9 +29,9 @@ You can narrow down the output by providing the management zone and pagination. 
 
 #### Returns
 
-| Return type                                                                                                                                | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [DavisSecurityAdviceList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#davissecurityadvicelist) | 200         | Success     |
+| Return type                                                                                                                                                        | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [DavisSecurityAdviceList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#davissecurityadvicelist) | 200         | Success     |
 
 #### Throws
 

@@ -6,7 +6,7 @@
 
 - **Do** provide an `aria-label` that describes the button's intent.
 - **Do** set the SVG's role to `img` and hide it from assistive technology with `aria-hidden="true"`.
-- **Do** use a [Tooltip](https://developer.dynatrace.com/design/components/overlays/Tooltip.md) to surface the button name visually. Ensure that the tooltip text matches the `aria-label` exactly.
+- **Do** use a [Tooltip](https://public-developer.central.internal.dynatrace.com/design/components/overlays/Tooltip.md) to surface the button name visually. Ensure that the tooltip text matches the `aria-label` exactly.
 
 ### Icon and text
 
@@ -16,4 +16,4 @@
 
 ### Custom overlay content
 
-If you customize the content of the panel, be sure to adjust the `aria-describedby` attribute accordingly. See [Customize the overlay content](https://developer.dynatrace.com/design/components/buttons/NotifyButton.md#customize-overlay-content) in the Overview tab for a code example.
+If you customize the content of the panel, be sure to adjust the `aria-describedby` attribute accordingly. See [Customize the overlay content](https://public-developer.central.internal.dynatrace.com/design/components/buttons/NotifyButton.md#customize-overlay-content) in the Overview tab for a code example.

@@ -1,6 +1,6 @@
 ## Set content width
 
-You can set the width of the content by adding the `width` prop on the `Select.Content` component and giving it a fixed value. By default, it has a min-width of 96px and adjusts to the size of the trigger. If the text of the options is overflowing, the text is truncated at the end by default. However, you can also add the `TextEllipsis` component directly inside the `Select.Option` and wrap the text inside it to set the truncation to the start or middle, if necessary. See [the TextEllipsis documentation](https://developer.dynatrace.com/design/components/typography/TextEllipsis.md) for more details.
+You can set the width of the content by adding the `width` prop on the `Select.Content` component and giving it a fixed value. By default, it has a min-width of 96px and adjusts to the size of the trigger. If the text of the options is overflowing, the text is truncated at the end by default. However, you can also add the `TextEllipsis` component directly inside the `Select.Option` and wrap the text inside it to set the truncation to the start or middle, if necessary. See [the TextEllipsis documentation](https://public-developer.central.internal.dynatrace.com/design/components/typography/TextEllipsis.md) for more details.
 
 **ContentWidth**
 

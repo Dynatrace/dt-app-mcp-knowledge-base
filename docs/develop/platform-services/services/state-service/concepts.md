@@ -12,7 +12,7 @@ You can use user app states to store information that is relevant only to a spec
 >
 > Be aware that all app users can read app states. If your use case allows for a user-scoped state, best practice is to use the the user app state.
 
-App states are accessible to all users; therefore, you can share specific states essential to the app's context. For example, you can create a workflow that fetches third-party data into your [app function](https://developer.dynatrace.com/develop/guides/app-functions.md). Your app stores this information in its app state. All users of your app can then access this data.
+App states are accessible to all users; therefore, you can share specific states essential to the app's context. For example, you can create a workflow that fetches third-party data into your [app function](https://public-developer.central.internal.dynatrace.com/develop/guides/app-functions.md). Your app stores this information in its app state. All users of your app can then access this data.
 
 There are also use cases for writing an app state in browser code. For example, the app can allow the user to share some meta information (that is only relevant in the context of this app) with other users.
 

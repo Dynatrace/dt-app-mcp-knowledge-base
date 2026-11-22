@@ -11,6 +11,6 @@ All Dynatrace data analyzers have a basic set of input parameters, like `timefra
   });
   ```
 
-  This operation requires the scope `davis:analyzers:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+  This operation requires the scope `davis:analyzers:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 The output of each analyzer can be very different as well. You need to query the analyzer definition using one of the two methods above to get the output definition.

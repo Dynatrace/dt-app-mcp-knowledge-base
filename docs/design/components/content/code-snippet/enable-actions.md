@@ -1,6 +1,6 @@
-## Enable actions menu
+## Enable actions
 
-Use `CodeSnippet.ActionsMenu` as a child to replace the default "Copy" button with `CodeSnippet.Copy`, `CodeSnippet.Download`, or both. `CodeSnippet.ActionsMenu` is an empty wrapper. Use a single child for a single button matching that action. Configure both children to combine them into a menu instead.
+Use `CodeSnippet.ActionsMenu` as a child to replace the default "Copy" button with `CodeSnippet.Copy`, `CodeSnippet.Download`, or both. `CodeSnippet.ActionsMenu` is an empty wrapper. Use a single child for a single button matching that action. Configure both children to render a menu instead.
 
 > **Caution**
 >
@@ -38,13 +38,17 @@ const OnCopy = () => {
 };
 ```
 
-### Add a download action
+### Add download action
 
 Add `CodeSnippet.Download` to let users download the snippet as a file.
 
 The file name defaults to `code-snippet.<extension>`. Set `fileName` to override it. If `fileName` carries no extension of its own, the extension is derived from the `language` prop, falling back to `.txt` when `language` is unset or has no direct file extension. Characters other than letters, digits, `-`, and `_` are stripped from both the name and the extension.
 
 Set `onDownload` to react to the download. The callback fires once the file is handed off to the browser, not once the download finishes.
+
+> **Note**
+>
+> Firefox and Safari may open the content in a new browser tab instead of downloading it, and ignore `fileName`. Use the browser's save option to store the file.
 
 **ActionsMenuDownload**
 

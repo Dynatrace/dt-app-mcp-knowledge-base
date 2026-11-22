@@ -18,7 +18,7 @@
    >
    > For Chrome 142 or later, you need to give the browser permission to connect to any device on your local network.
    >
-   > If you encounter issues with local app development, visit [Troubleshoot app development](https://developer.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-app-development.md) for hints.
+   > If you encounter issues with local app development, visit [Troubleshoot app development](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-app-development.md) for hints.
 
 3. **Open** the file `ui/app/pages/Home.tsx` in your code editor.
 
@@ -48,4 +48,4 @@ When you save your file, the new heading will automatically update in the browse
 
 > **Note**
 >
-> The dev server runs the app locally on your machine only. To share it with your colleagues, [deploy your app](https://developer.dynatrace.com/develop/guides/deploy-your-app.md).
+> The dev server runs the app locally on your machine only. To share it with your colleagues, [deploy your app](https://public-developer.central.internal.dynatrace.com/develop/guides/deploy-your-app.md).

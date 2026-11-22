@@ -6,7 +6,7 @@ import { attacksClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### getAttack
 
-**attacksClient.getAttack(config): Promise\<[Attack](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attack)>**
+**attacksClient.getAttack(config): Promise\<[Attack](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attack)>**
 
 Gets the specified attack
 
@@ -38,9 +38,9 @@ Gets the specified attack
 
 #### Returns
 
-| Return type                                                                                             | Status code | Description |
-| ------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Attack](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attack) | 200         | Success     |
+| Return type                                                                                                                     | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Attack](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attack) | 200         | Success     |
 
 #### Throws
 
@@ -58,7 +58,7 @@ const data = await attacksClient.getAttack({ id: "..." });
 
 ### getAttacks
 
-**attacksClient.getAttacks(config): Promise\<[AttackList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attacklist)>**
+**attacksClient.getAttacks(config): Promise\<[AttackList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attacklist)>**
 
 Lists all attacks
 
@@ -232,9 +232,9 @@ Lists all attacks
 
 #### Returns
 
-| Return type                                                                                                     | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AttackList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attacklist) | 200         | Success     |
+| Return type                                                                                                                             | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AttackList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#attacklist) | 200         | Success     |
 
 #### Throws
 

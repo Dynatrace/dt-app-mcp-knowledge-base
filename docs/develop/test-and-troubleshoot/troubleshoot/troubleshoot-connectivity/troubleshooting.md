@@ -1,6 +1,6 @@
 ## Troubleshooting
 
-This guide helps identify connectivity issues when accessing Dynatrace resources on your corporate network. Follow the commands and compare your machine's outputs with the expected ones. If there are any deviations, go to the [connectivity issues](https://developer.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-connectivity.md#connectivity-issues) section to troubleshoot.
+This guide helps identify connectivity issues when accessing Dynatrace resources on your corporate network. Follow the commands and compare your machine's outputs with the expected ones. If there are any deviations, go to the [connectivity issues](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-connectivity.md#connectivity-issues) section to troubleshoot.
 
 You need to replace the `Environment-Id` with your actual environment ID in the following examples.
 
@@ -79,7 +79,7 @@ HTTP/2 302
 
 It means that Dynatrace SSO is reachable for the authentication for your Dynatrace environment. You get a 302 in this case because curl doesn't follow redirects.
 
-If you don't receive these outputs, refer to this guide's [connectivity issues](https://developer.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-connectivity.md#connectivity-issues) section.
+If you don't receive these outputs, refer to this guide's [connectivity issues](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-connectivity.md#connectivity-issues) section.
 If you have gotten those outputs, try the same Node.js procedure to ensure the Node.js application has identical connectivity. Sometimes, Node.js is blocked from accessing the outside network within corporate networks. Follow along in the next section of this guide.
 
 ### Connectivity of Node.js
@@ -202,6 +202,6 @@ The following output containing a [200 OK](https://developer.mozilla.org/en-US/d
  ...
 ```
 
-If you don't receive these outputs, refer to this guide's [connectivity issues](https://developer.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-connectivity.md#connectivity-issues) section.
+If you don't receive these outputs, refer to this guide's [connectivity issues](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-connectivity.md#connectivity-issues) section.
 
 If you did receive these outputs, everything should work as expected if you develop your app with the help of App Toolkit.

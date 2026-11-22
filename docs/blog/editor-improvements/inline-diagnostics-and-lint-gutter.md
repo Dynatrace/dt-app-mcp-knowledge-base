@@ -4,7 +4,7 @@
 
 Set the `showLintGutter` prop to show severity icons (error, warning) next to the affected line in the **lint gutter** (the narrow margin column on the left of the editor).
 
-![CodeEditor lint gutter showing error and warning severity icons in the margin, with an inline diagnostic tooltip open — light mode](https://developer.dynatrace.com/assets/images/2026-10-01-editor-improvements-lint-gutter-light-b97d5584248f484e5f7172daaac17432.webp)
+![CodeEditor lint gutter showing error and warning severity icons in the margin, with an inline diagnostic tooltip open — light mode](https://public-developer.central.internal.dynatrace.com/assets/images/2026-10-01-editor-improvements-lint-gutter-light-b97d5584248f484e5f7172daaac17432.webp)
 
 ### Add diagnostics in CodeEditor
 

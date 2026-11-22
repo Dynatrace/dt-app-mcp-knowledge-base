@@ -19,4 +19,4 @@ App settings allow you to define secret properties to store sensitive informatio
 
 ### Local development
 
-For easier development, the **App Settings SDK** provides a plugin for the App Toolkit that enables you to provide mock data right out of your development environment and manipulate settings without deploying the app. To learn more, look at [Local development](https://developer.dynatrace.com/develop/guides/data/store-app-settings.md#local-development).
+For easier development, the **App Settings SDK** provides a plugin for the App Toolkit that enables you to provide mock data right out of your development environment and manipulate settings without deploying the app. To learn more, look at [Local development](https://public-developer.central.internal.dynatrace.com/develop/guides/data/store-app-settings.md#local-development).

@@ -18,7 +18,7 @@ In the next example, the action opens the Notebooks app:
 
 - Keep it to one to three words.
 - Remove unnecessary words such as "the", "a", or "an".
-- Don't use punctuation (no commas, ellipses, full stops, exclamations, or question marks). This differs from inline text links such as [ExternalLink](https://developer.dynatrace.com/design/components/typography/ExternalLink/usage.md) or [Link](https://developer.dynatrace.com/design/components/typography/Link/usage.md), which can end a sentence with a period. A button label never takes punctuation.
+- Don't use punctuation (no commas, ellipses, full stops, exclamations, or question marks). This differs from inline text links such as [ExternalLink](https://public-developer.central.internal.dynatrace.com/design/components/typography/ExternalLink/usage.md) or [Link](https://public-developer.central.internal.dynatrace.com/design/components/typography/Link/usage.md), which can end a sentence with a period. A button label never takes punctuation.
 - Start with a verb describing the user's next action → [Verb] or [Verb] + [noun].
 
 ![Example of two correct label forms: "Run" (verb only) and "Run query" (verb + noun) — both start with a verb and are acceptable.](../../components-docs-assets/button-content-examples-3-light.webp)&#x20;
@@ -43,6 +43,6 @@ In the next example, the action opens the Notebooks app:
 
 ![Example of a correct label "Edit workflow" that pairs a verb with the pencil icon, and an incorrect label "Workflow" that omits the verb and relies solely on the icon for meaning.](../../components-docs-assets/button-content-examples-9-light.webp)&#x20;
 
-- If the button opens another app, use [IntentButton](https://developer.dynatrace.com/design/components/buttons/IntentButton.md) instead. In `IntentButton`, the icon of the app that will open appears before the label.
+- If the button opens another app, use [IntentButton](https://public-developer.central.internal.dynatrace.com/design/components/buttons/IntentButton.md) instead. In `IntentButton`, the icon of the app that will open appears before the label.
 
-![Example of a correct "Automate" button as an IntentButton with an app icon and overflow menu, and an incorrect use as a plain Button without an icon that opens another app.](https://developer.dynatrace.com/assets/images/button-content-examples-10-light-cbdc45fcb98bca5d1aed0a26e72d665d.webp)&#x20;
+![Example of a correct "Automate" button as an IntentButton with an app icon and overflow menu, and an incorrect use as a plain Button without an icon that opens another app.](https://public-developer.central.internal.dynatrace.com/assets/images/button-content-examples-10-light-cbdc45fcb98bca5d1aed0a26e72d665d.webp)&#x20;

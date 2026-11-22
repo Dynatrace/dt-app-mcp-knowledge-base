@@ -28,7 +28,7 @@ The `Sparkline` component requires you to pass data of type `Timeseries` or `Tim
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/Sparkline/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/Sparkline/props.md).
 
 You can further customise the `Sparkline` by setting its `color` prop to any of the Design System `ColorPalette`.
 

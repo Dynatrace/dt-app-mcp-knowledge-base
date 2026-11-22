@@ -6,7 +6,7 @@ import { settingsManagementZonesClient } from '@dynatrace-sdk/client-classic-env
 
 ### getManagementZoneDetails
 
-**settingsManagementZonesClient.getManagementZoneDetails(config): Promise\<[ManagementZoneDetails](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#managementzonedetails)>**
+**settingsManagementZonesClient.getManagementZoneDetails(config): Promise\<[ManagementZoneDetails](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#managementzonedetails)>**
 
 Reads management zone details.
 
@@ -26,9 +26,9 @@ Allows to convert from an objectId to the ID of the management zone, and can ser
 
 #### Returns
 
-| Return type                                                                                                                           | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ManagementZoneDetails](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#managementzonedetails) | 200         | Success     |
+| Return type                                                                                                                                                   | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ManagementZoneDetails](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#managementzonedetails) | 200         | Success     |
 
 #### Throws
 

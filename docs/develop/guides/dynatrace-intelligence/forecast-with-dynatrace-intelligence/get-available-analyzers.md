@@ -14,6 +14,6 @@ Before getting started, one of the main questions to answer is which data analyz
   });
   ```
 
-  This operation requires the scope `davis:analyzers:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+  This operation requires the scope `davis:analyzers:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 Once you've chosen the analyzer that best fits your use case, you need to understand its requirements. The next section describes how to do that.

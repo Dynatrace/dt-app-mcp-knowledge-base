@@ -6,7 +6,7 @@ This hook expects the schema identifier in the `schemaId` parameter.
 
 By default, `useSettingsObjectsV2` only returns the `objectId` and `version` parameters. You can define extra fields to return by specifying them in a comma-separated string in the `addFields` parameter.
 
-By specifying the respective parameters, you can also [filter and sort](https://developer.dynatrace.com/develop/platform-services/core-concepts/filtering-sorting.md) the effective values. You can use the following fields to filter:
+By specifying the respective parameters, you can also [filter and sort](https://public-developer.central.internal.dynatrace.com/develop/platform-services/core-concepts/filtering-sorting.md) the effective values. You can use the following fields to filter:
 
 - `modificationInfo.createdBy`
 - `modificationInfo.createdTime`
@@ -54,4 +54,4 @@ export const App = () => {
 };
 ```
 
-This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

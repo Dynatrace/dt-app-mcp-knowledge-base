@@ -2,7 +2,7 @@
 
 Buttons come in five colors, each with a unique semantic meaning.
 
-![Five Button colors — Neutral, Primary, Success, Warning, and Critical — each shown in default, emphasized, and accent variants.](https://developer.dynatrace.com/assets/images/button-colors-light-1d78765190b1012594c34e6615cec576.webp)&#x20;
+![Five Button colors — Neutral, Primary, Success, Warning, and Critical — each shown in default, emphasized, and accent variants.](https://public-developer.central.internal.dynatrace.com/assets/images/button-colors-light-1d78765190b1012594c34e6615cec576.webp)&#x20;
 
 ### Neutral
 

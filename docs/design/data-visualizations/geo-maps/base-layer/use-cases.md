@@ -7,7 +7,7 @@ const include = ['ES-*', 'AT'];
 const exclude = ['ES-CT'];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/geo-maps/BaseLayer/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/BaseLayer/props.md).
 
 ### Inclusion/Exclusion of countries
 

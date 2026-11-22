@@ -22,7 +22,7 @@ For a categorical hive, the value is a string:
 ];
 ```
 
-The value field is resolved through the `valueAccessor` prop and the tile label is read from the `name` field. Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/HoneycombChart/props.md).
+The value field is resolved through the `valueAccessor` prop and the tile label is read from the `name` field. Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/HoneycombChart/props.md).
 
 Additionally, for numeric hives, you can set the boundaries of the data shown with the `min` and `max` props. These props support `data-max` in the `max` property and `data-min` in the `min` property. These special values allow for granular control over the boundaries. By default, the `min` prop uses the `data-min` value, and the `max` prop uses the `data-max` value. These modes automatically determine the hive's minimum and maximum values based on the chart's data.
 

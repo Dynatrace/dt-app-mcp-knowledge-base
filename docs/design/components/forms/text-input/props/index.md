@@ -3,7 +3,7 @@ Use the `TextInput` component to request a small amount of information, such as 
 **`TextInputProps`**
 
 ```ts
-export declare type TextInputProps = Pick<BaseInputProps, 'autoComplete' | 'placeholder' | 'variant' | 'minLength' | 'maxLength' | 'pattern' | 'onClick' | 'onKeyDown' | 'onKeyUp' | 'onFocus' | 'onBlur' | 'onValidityChange' | 'role' | 'className' | 'style' | 'data-testid' | 'data-dtrum-mask' | 'data-dtrum-allow'> & FormControlProps<string, (value: string, event: ChangeEvent<HTMLInputElement>) => void, HTMLInputElement> & WithChildren & BehaviorTrackingProps & {
+export declare type TextInputProps = Pick<BaseInputProps, 'autoComplete' | 'placeholder' | 'variant' | 'minLength' | 'maxLength' | 'pattern' | 'onClick' | 'onKeyDown' | 'onKeyUp' | 'onFocus' | 'onBlur' | 'onValidityChange' | 'role' | 'className' | 'style' | 'data-testid' | 'data-dtrum-mask' | 'data-dtrum-allow'> & FormControlProps<string | null, (value: string, event: ChangeEvent<HTMLInputElement>) => void, HTMLInputElement> & WithChildren & BehaviorTrackingProps & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

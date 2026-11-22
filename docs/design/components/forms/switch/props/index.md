@@ -3,7 +3,7 @@ Use the `Switch` to let users toggle a setting between on and off. The change ta
 **`SwitchProps`**
 
 ```ts
-export declare type SwitchProps = FormControlProps<boolean, (checked: boolean, event?: ChangeEvent<HTMLInputElement>) => void | never, HTMLDivElement> & StylingProps & DataTestId & MaskingProps & BehaviorTrackingProps & WithChildren & {
+export declare type SwitchProps = FormControlProps<boolean | null, (checked: boolean, event?: ChangeEvent<HTMLInputElement>) => void | never, HTMLDivElement> & StylingProps & DataTestId & MaskingProps & BehaviorTrackingProps & WithChildren & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

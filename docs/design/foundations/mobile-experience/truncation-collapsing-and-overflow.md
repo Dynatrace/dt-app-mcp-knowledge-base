@@ -1,6 +1,6 @@
 ## Truncation, collapsing, and overflow
 
-![Examples of truncation, collapsing, and overflow: a row truncated with an ellipsis, a group collapsed into a "+7 more" chip, and a progress bar overflowing its container](https://developer.dynatrace.com/assets/images/mobile-truncation-collapsing-overflow-light-e9808758c41f2d0205d16a2e16d4a6b8.webp)
+![Examples of truncation, collapsing, and overflow: a row truncated with an ellipsis, a group collapsed into a "+7 more" chip, and a progress bar overflowing its container](https://public-developer.central.internal.dynatrace.com/assets/images/mobile-truncation-collapsing-overflow-light-e9808758c41f2d0205d16a2e16d4a6b8.webp)
 
 - **Never delete**—anything hidden by a mobile pattern must be reachable (expandable content, overflow menu, secondary view).
 - **Prioritize**—decide what to collapse first based on importance, not DOM order.
@@ -27,7 +27,7 @@ The following recommendations apply to tags, chips, badges, and filter pills.
 | Vertical space is fixed (single-row context—table cell, card header, compact list row).         | Show what fits and collapse the rest into a "Show N more" `ChipGroup`.       |
 | Content is genuinely non-essential (related tags, inactive filters).                            | Horizontal scroll is acceptable only with a visible edge-fade or scroll cue. |
 
-![Do: chips wrap onto additional lines as the container narrows, keeping full labels readable, compared to Don't: chips are squeezed into a single row and truncated illegibly](https://developer.dynatrace.com/assets/images/mobile-minwidth-wrapping-light-39f61cc7722bf39c56654aa94e6a8b59.webp)
+![Do: chips wrap onto additional lines as the container narrows, keeping full labels readable, compared to Don't: chips are squeezed into a single row and truncated illegibly](https://public-developer.central.internal.dynatrace.com/assets/images/mobile-minwidth-wrapping-light-39f61cc7722bf39c56654aa94e6a8b59.webp)
 
 1. **Wrap, don't cram**—use wrapping to keep inline elements readable as the container narrows.
 2. **Set a min-width**—give interactive elements a minimum width so labels expose the action.

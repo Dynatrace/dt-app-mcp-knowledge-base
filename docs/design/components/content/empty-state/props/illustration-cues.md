@@ -2,7 +2,7 @@
 
 > **Tip**
 >
-> To learn when to use each type or context, see [Usage](https://developer.dynatrace.com/design/components/content/EmptyState/usage.md).
+> To learn when to use each type or context, see [Usage](https://public-developer.central.internal.dynatrace.com/design/components/content/EmptyState/usage.md).
 
 | `type`              | Cue           |
 | ------------------- | ------------- |

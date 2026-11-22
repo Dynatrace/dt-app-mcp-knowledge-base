@@ -1,6 +1,6 @@
 ## Show custom chip counter
 
-You can customize the counter within the control label by passing a number to the `ChipGroup.Control` `count` property. This is useful when the remaining chips are loaded asynchronously and the total number of chips is already known. For more advanced use-cases, the `useChipGroupContext` hook provides you with the number of [Chip](https://developer.dynatrace.com/design/components/content/Chip.md) components currently displayed or hidden.
+You can customize the counter within the control label by passing a number to the `ChipGroup.Control` `count` property. This is useful when the remaining chips are loaded asynchronously and the total number of chips is already known. For more advanced use-cases, the `useChipGroupContext` hook provides you with the number of [Chip](https://public-developer.central.internal.dynatrace.com/design/components/content/Chip.md) components currently displayed or hidden.
 
 **CustomCounter**
 

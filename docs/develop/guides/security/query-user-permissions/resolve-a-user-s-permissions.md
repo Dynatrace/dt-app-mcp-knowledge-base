@@ -1,6 +1,6 @@
 ## Resolve a user's permissions
 
-You can issue one or many permission requests with a call to `resolveEffectivePermissions` provided by the package's [effectivePermissionsClient](https://developer.dynatrace.com/contents/docs/develop/sdks/client-platform-management-service/index.md/#effectivepermissionsclient).
+You can issue one or many permission requests with a call to `resolveEffectivePermissions` provided by the package's [effectivePermissionsClient](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/client-platform-management-service/index.md/#effectivepermissionsclient).
 
 Optionally, you can provide a `context` object where you give the values for any conditions for the respective permission. The response object has a corresponding array of objects that have a `granted` field with the following possible values:
 
@@ -63,4 +63,4 @@ The second result is "false" because the user's policy doesn't allow `app-engine
 
 > **Tip**
 >
-> You can query app settings permissions using the [`client-app-settings-v2`](https://developer.dynatrace.com/develop/sdks/client-app-settings-v2.md) SDK or the [`useEffectivePermissionsV2`](https://developer.dynatrace.com/develop/guides/data/store-app-settings.md/#get-effective-settings-permissions) React hook.
+> You can query app settings permissions using the [`client-app-settings-v2`](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-app-settings-v2.md) SDK or the [`useEffectivePermissionsV2`](https://public-developer.central.internal.dynatrace.com/develop/guides/data/store-app-settings.md/#get-effective-settings-permissions) React hook.

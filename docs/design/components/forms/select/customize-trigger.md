@@ -1,6 +1,6 @@
 ## Customize trigger
 
-You can use the `Select.CustomTrigger` component to render custom content inside the trigger slot. If you do customize the trigger, be sure to make it accessible by adding an appropriate accessible name and ensuring that the trigger is keyboard navigable. See the [Accessibility tab](https://developer.dynatrace.com/design/components/forms/Select/a11y.md) for best practices.
+You can use the `Select.CustomTrigger` component to render custom content inside the trigger slot. If you do customize the trigger, be sure to make it accessible by adding an appropriate accessible name and ensuring that the trigger is keyboard navigable. See the [Accessibility tab](https://public-developer.central.internal.dynatrace.com/design/components/forms/Select/a11y.md) for best practices.
 
 The trigger may not be an interactive element. Also, for icon only buttons the aria-label must be passed to the `Select` component, not the trigger button.
 

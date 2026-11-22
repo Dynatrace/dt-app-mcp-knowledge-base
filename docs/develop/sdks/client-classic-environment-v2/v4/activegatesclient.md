@@ -6,7 +6,7 @@ import { activeGatesClient } from '@dynatrace-sdk/client-classic-environment-v2'
 
 ### getAllActiveGates
 
-**activeGatesClient.getAllActiveGates(config): Promise\<[ActiveGateList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegatelist)>**
+**activeGatesClient.getAllActiveGates(config): Promise\<[ActiveGateList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegatelist)>**
 
 Lists all available ActiveGates
 
@@ -41,9 +41,9 @@ The response includes all ActiveGates that are currently connected to the enviro
 
 #### Returns
 
-| Return type                                                                                                             | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ActiveGateList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegatelist) | 200         | Success     |
+| Return type                                                                                                                                     | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ActiveGateList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegatelist) | 200         | Success     |
 
 #### Throws
 
@@ -61,7 +61,7 @@ const data = await activeGatesClient.getAllActiveGates();
 
 ### getOneActiveGateById
 
-**activeGatesClient.getOneActiveGateById(config): Promise\<[ActiveGate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegate)>**
+**activeGatesClient.getOneActiveGateById(config): Promise\<[ActiveGate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegate)>**
 
 Gets the details of the specified ActiveGate
 
@@ -76,9 +76,9 @@ Gets the details of the specified ActiveGate
 
 #### Returns
 
-| Return type                                                                                                     | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ActiveGate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegate) | 200         | Success     |
+| Return type                                                                                                                             | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ActiveGate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegate) | 200         | Success     |
 
 #### Throws
 

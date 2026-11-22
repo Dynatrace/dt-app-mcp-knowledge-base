@@ -1,6 +1,6 @@
 ## Use selection style
 
-The selection style can be set to different `color` values. By default, it's set to `neutral`. Always consider the [meaning of the color](https://developer.dynatrace.com/design/patterns/status-and-health.md#colors) if you change it. The `color` also defines the color of the focus style applied when a `Surface` is interactive and focused.
+The selection style can be set to different `color` values. By default, it's set to `neutral`. Always consider the [meaning of the color](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md#colors) if you change it. The `color` also defines the color of the focus style applied when a `Surface` is interactive and focused.
 
 **Selected**
 

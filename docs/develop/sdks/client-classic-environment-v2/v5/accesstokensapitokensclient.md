@@ -6,7 +6,7 @@ import { accessTokensApiTokensClient } from '@dynatrace-sdk/client-classic-envir
 
 ### createApiToken
 
-**accessTokensApiTokensClient.createApiToken(config): Promise\<[ApiTokenCreated](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokencreated)>**
+**accessTokensApiTokensClient.createApiToken(config): Promise\<[ApiTokenCreated](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokencreated)>**
 
 Creates a new API token
 
@@ -19,15 +19,15 @@ Creating personal access tokens requires the `environment:roles:viewer` permissi
 
 #### Parameters
 
-| Name                   | Type                                                                                                                    |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [ApiTokenCreate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokencreate) |
+| Name                   | Type                                                                                                                                            |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [ApiTokenCreate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokencreate) |
 
 #### Returns
 
-| Return type                                                                                                               | Status code | Description                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------- |
-| [ApiTokenCreated](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokencreated) | 201         | Success. The token has been created. The body of the response contains the token secret. |
+| Return type                                                                                                                                       | Status code | Description                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------- |
+| [ApiTokenCreated](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokencreated) | 201         | Success. The token has been created. The body of the response contains the token secret. |
 
 #### Throws
 
@@ -86,7 +86,7 @@ const data =
 
 ### getApiToken
 
-**accessTokensApiTokensClient.getApiToken(config): Promise\<[ApiToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken)>**
+**accessTokensApiTokensClient.getApiToken(config): Promise\<[ApiToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken)>**
 
 Gets API token metadata by token ID
 
@@ -103,9 +103,9 @@ The token secret is **not** exposed.
 
 #### Returns
 
-| Return type                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ApiToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken) | 200         | Success     |
+| Return type                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ApiToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken) | 200         | Success     |
 
 #### Throws
 
@@ -125,7 +125,7 @@ const data = await accessTokensApiTokensClient.getApiToken({
 
 ### listApiTokens
 
-**accessTokensApiTokensClient.listApiTokens(config): Promise\<[ApiTokenList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokenlist)>**
+**accessTokensApiTokensClient.listApiTokens(config): Promise\<[ApiTokenList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokenlist)>**
 
 Lists all available API tokens
 
@@ -280,9 +280,9 @@ You can limit the output by using pagination:
 
 #### Returns
 
-| Return type                                                                                                         | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ApiTokenList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokenlist) | 200         | Success     |
+| Return type                                                                                                                                 | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ApiTokenList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokenlist) | 200         | Success     |
 
 #### Throws
 
@@ -301,7 +301,7 @@ const data =
 
 ### lookupApiToken
 
-**accessTokensApiTokensClient.lookupApiToken(config): Promise\<[ApiToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken)>**
+**accessTokensApiTokensClient.lookupApiToken(config): Promise\<[ApiToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken)>**
 
 Gets API token metadata by token secret
 
@@ -310,15 +310,15 @@ Gets API token metadata by token secret
 
 #### Parameters
 
-| Name                   | Type                                                                                                                    |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [ApiTokenSecret](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokensecret) |
+| Name                   | Type                                                                                                                                            |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [ApiTokenSecret](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokensecret) |
 
 #### Returns
 
-| Return type                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ApiToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken) | 200         | Success     |
+| Return type                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ApiToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitoken) | 200         | Success     |
 
 #### Throws
 
@@ -351,10 +351,10 @@ Updates an API token
 
 #### Parameters
 
-| Name                   | Type                                                                                                                    | Description                                                                                                    |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [ApiTokenUpdate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokenupdate) |                                                                                                                |
-| config.id (required)   | string                                                                                                                  | The ID of the token to be updated. You can't disable the token you're using for authentication of the request. |
+| Name                   | Type                                                                                                                                            | Description                                                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [ApiTokenUpdate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#apitokenupdate) |                                                                                                                |
+| config.id (required)   | string                                                                                                                                          | The ID of the token to be updated. You can't disable the token you're using for authentication of the request. |
 
 #### Returns
 

@@ -2,7 +2,7 @@
 
 Configure filter controls in `FilterBar` to be pinned, optional, or pinned-optional.
 
-![Examples of filter controls in the FilterBar component with different defaultPinnedState property values.](https://developer.dynatrace.com/assets/images/filterbar-filter-pinning-light-6a1596577ddcc4bf49836c1b0fe0e9cf.webp)
+![Examples of filter controls in the FilterBar component with different defaultPinnedState property values.](https://public-developer.central.internal.dynatrace.com/assets/images/filterbar-filter-pinning-light-6a1596577ddcc4bf49836c1b0fe0e9cf.webp)
 
 ### Pinned
 

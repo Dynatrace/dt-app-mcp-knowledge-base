@@ -32,7 +32,7 @@ A change to code that other packages depend on to run properly. If you're not fa
 
 ### Changelog entry
 
-Information that helps a product's users understand what's new in a specific software version and how it benefits the product. Strato changelog entries include breaking changes (MAJOR), updates (MINOR), bug fixes (PATCH), and dependency updates (MAJOR). Future breaking changes are published in [Upcoming changes](https://developer.dynatrace.com/changelogs/design-system/upcoming-changes.md).
+Information that helps a product's users understand what's new in a specific software version and how it benefits the product. Strato changelog entries include breaking changes (MAJOR), updates (MINOR), bug fixes (PATCH), and dependency updates (MAJOR). Future breaking changes are published in [Upcoming changes](https://public-developer.central.internal.dynatrace.com/changelogs/design-system/upcoming-changes.md).
 
 ### Upcoming change
 

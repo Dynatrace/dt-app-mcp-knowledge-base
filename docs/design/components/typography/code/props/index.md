@@ -1,1 +1,1 @@
-Use the `Code` component to display snippets of code inline. If you want to display a block of code, use the [`CodeSnippet`](https://developer.dynatrace.com/design/components/content/CodeSnippet.md) component instead.
+Use the `Code` component to display snippets of code inline. If you want to display a block of code, use the [`CodeSnippet`](https://public-developer.central.internal.dynatrace.com/design/components/content/CodeSnippet.md) component instead.

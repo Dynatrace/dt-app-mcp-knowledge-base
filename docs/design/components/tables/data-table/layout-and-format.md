@@ -726,6 +726,12 @@ const FullHeightEnabled = () => {
 };
 ```
 
+### Limit the table height for large data sets
+
+The `DataTable` only renders the rows that are currently visible, as long as its height is limited. If neither the table nor any of its parent elements has a definite height, the table grows to fit all rows and renders every row at once. For large data sets, this can slow down rendering and interactions considerably.
+
+To keep rendering efficient, place the table in a container with a definite height, for example a fixed height, or a flex item with `min-height: 0` inside a parent with a definite height. In development, the `DataTable` logs a warning when this happens.
+
 ### Fonts
 
 The `DataTable` allows for the customization of font styles across the entire table or within individual columns. This can be achieved by configuring it in the table variant options or the column definition.
@@ -1105,7 +1111,7 @@ const LineWrapControlled = () => {
 
 ### Export configuration
 
-The `DataTable`'s configuration can be exported at any time for various purposes, such as sharing the configuration with other applications [through an intent](https://developer.dynatrace.com/develop/guides/navigation/intents/send-intents.md). The current configuration can be retrieved by creating and assigning a `ref` to the corresponding `ref` property of the `DataTable`, and then calling `ref.getConfig()` function.
+The `DataTable`'s configuration can be exported at any time for various purposes, such as sharing the configuration with other applications [through an intent](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/send-intents.md). The current configuration can be retrieved by creating and assigning a `ref` to the corresponding `ref` property of the `DataTable`, and then calling `ref.getConfig()` function.
 
 > **Note**
 >

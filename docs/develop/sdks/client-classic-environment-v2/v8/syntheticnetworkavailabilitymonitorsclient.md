@@ -6,7 +6,7 @@ import { syntheticNetworkAvailabilityMonitorsClient } from '@dynatrace-sdk/clien
 
 ### createMonitor
 
-**syntheticNetworkAvailabilityMonitorsClient.createMonitor(config): Promise\<[MonitorEntityIdDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#monitorentityiddto)>**
+**syntheticNetworkAvailabilityMonitorsClient.createMonitor(config): Promise\<[MonitorEntityIdDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#monitorentityiddto)>**
 
 Creates a synthetic monitor definition. | maturity=EARLY_ADOPTER
 
@@ -15,15 +15,15 @@ Creates a synthetic monitor definition. | maturity=EARLY_ADOPTER
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SyntheticBrowserMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticbrowsermonitorrequest) \| [SyntheticHttpMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorrequest) \| [SyntheticMultiProtocolMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmultiprotocolmonitorrequest) |
+| Name                   | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SyntheticBrowserMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticbrowsermonitorrequest) \| [SyntheticHttpMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorrequest) \| [SyntheticMultiProtocolMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmultiprotocolmonitorrequest) |
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [MonitorEntityIdDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#monitorentityiddto) | 200         | Success     |
+| Return type                                                                                                                                             | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [MonitorEntityIdDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#monitorentityiddto) | 200         | Success     |
 
 #### Throws
 
@@ -82,7 +82,7 @@ const data =
 
 ### getMonitor
 
-**syntheticNetworkAvailabilityMonitorsClient.getMonitor(config): Promise\<[SyntheticBrowserMonitorResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticbrowsermonitorresponse) | [SyntheticHttpMonitorResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorresponse) | [SyntheticMultiProtocolMonitorResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmultiprotocolmonitorresponse)>**
+**syntheticNetworkAvailabilityMonitorsClient.getMonitor(config): Promise\<[SyntheticBrowserMonitorResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticbrowsermonitorresponse) | [SyntheticHttpMonitorResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorresponse) | [SyntheticMultiProtocolMonitorResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmultiprotocolmonitorresponse)>**
 
 Gets a synthetic monitor definition for the given monitor ID. | maturity=EARLY_ADOPTER
 
@@ -97,9 +97,9 @@ Gets a synthetic monitor definition for the given monitor ID. | maturity=EARLY_A
 
 #### Returns
 
-| Return type                                                                                                                                         | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SyntheticHttpMonitorResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorresponse) | 200         | Success     |
+| Return type                                                                                                                                                                 | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SyntheticHttpMonitorResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorresponse) | 200         | Success     |
 
 #### Throws
 
@@ -120,7 +120,7 @@ const data =
 
 ### getMonitors
 
-**syntheticNetworkAvailabilityMonitorsClient.getMonitors(config): Promise\<[SyntheticMonitorListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmonitorlistdto)>**
+**syntheticNetworkAvailabilityMonitorsClient.getMonitors(config): Promise\<[SyntheticMonitorListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmonitorlistdto)>**
 
 Gets all synthetic monitors. | maturity=EARLY_ADOPTER
 
@@ -180,9 +180,9 @@ Gets all synthetic monitors. | maturity=EARLY_ADOPTER
 
 #### Returns
 
-| Return type                                                                                                                               | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SyntheticMonitorListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmonitorlistdto) | 200         | Success     |
+| Return type                                                                                                                                                       | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SyntheticMonitorListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmonitorlistdto) | 200         | Success     |
 
 #### Throws
 
@@ -210,10 +210,10 @@ Updates a synthetic monitor definition for the given monitor ID. | maturity=EARL
 
 #### Parameters
 
-| Name                        | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Description                    |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| config.body (required)      | [SyntheticBrowserMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticbrowsermonitorrequest) \| [SyntheticHttpMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorrequest) \| [SyntheticMultiProtocolMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmultiprotocolmonitorrequest) |                                |
-| config.monitorId (required) | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | The identifier of the monitor. |
+| Name                        | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Description                    |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| config.body (required)      | [SyntheticBrowserMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticbrowsermonitorrequest) \| [SyntheticHttpMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#synthetichttpmonitorrequest) \| [SyntheticMultiProtocolMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#syntheticmultiprotocolmonitorrequest) |                                |
+| config.monitorId (required) | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | The identifier of the monitor. |
 
 #### Returns
 

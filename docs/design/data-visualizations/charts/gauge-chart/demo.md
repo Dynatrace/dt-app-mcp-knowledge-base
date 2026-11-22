@@ -4,7 +4,7 @@ The `GaugeChart` expects a numerical value as an input. This value needs to be p
 
 You can also provide custom `min` and `max` props to set the scale of the `GaugeChart`, and if none are provided, the default `min` will be 0 and `max` will be 100.
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/GaugeChart/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/GaugeChart/props.md).
 
 **AddData**
 

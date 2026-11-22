@@ -2670,4 +2670,4 @@ const AnnotationsVisibility = () => {
 
 The Annotations supports both default and custom tooltips for annotations. This allows creators to provide additional detailed information about specific datapoints or events in the chart.
 
-See [Annotations Tooltip](https://developer.dynatrace.com/design/data-visualizations/charts/AnnotationsChart.md#annotationscharttooltip) for details.
+See [Annotations Tooltip](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/AnnotationsChart.md#annotationscharttooltip) for details.

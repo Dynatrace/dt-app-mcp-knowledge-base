@@ -6,7 +6,7 @@ import { metricsClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### allMetrics
 
-**metricsClient.allMetrics(config): Promise\<[MetricDescriptorCollection](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptorcollection)>**
+**metricsClient.allMetrics(config): Promise\<[MetricDescriptorCollection](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptorcollection)>**
 
 Lists all available metrics
 
@@ -168,9 +168,9 @@ You can additionally limit the output by using pagination:
 
 #### Returns
 
-| Return type                                                                                                                                     | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [MetricDescriptorCollection](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptorcollection) | 200         | Success     |
+| Return type                                                                                                                                                             | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [MetricDescriptorCollection](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptorcollection) | 200         | Success     |
 
 #### Throws
 
@@ -270,7 +270,7 @@ const data = await metricsClient.delete({
 
 ### ingest
 
-**metricsClient.ingest(config): Promise\<[ValidationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#validationresponse)>**
+**metricsClient.ingest(config): Promise\<[ValidationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#validationresponse)>**
 
 Pushes metric data points to Dynatrace
 
@@ -310,7 +310,7 @@ const data = await metricsClient.ingest({
 
 ### metric
 
-**metricsClient.metric(config): Promise\<[MetricDescriptor](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptor)>**
+**metricsClient.metric(config): Promise\<[MetricDescriptor](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptor)>**
 
 Gets the descriptor of the specified metric
 
@@ -326,9 +326,9 @@ Gets the descriptor of the specified metric
 
 #### Returns
 
-| Return type                                                                                                                 | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [MetricDescriptor](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptor) | 200         | Success     |
+| Return type                                                                                                                                         | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [MetricDescriptor](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdescriptor) | 200         | Success     |
 
 #### Throws
 
@@ -349,7 +349,7 @@ const data = await metricsClient.metric({
 
 ### query
 
-**metricsClient.query(config): Promise\<[MetricData](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdata)>**
+**metricsClient.query(config): Promise\<[MetricData](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdata)>**
 
 Gets data points of the specified metrics
 
@@ -589,9 +589,9 @@ The **dimensionCountRatio** specifies the ratio of queried dimension tuples divi
 
 #### Returns
 
-| Return type                                                                                                     | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [MetricData](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdata) | 200         | Success     |
+| Return type                                                                                                                             | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [MetricData](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v7/types.md#metricdata) | 200         | Success     |
 
 #### Throws
 

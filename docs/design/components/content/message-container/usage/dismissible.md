@@ -5,4 +5,4 @@
 - Hide the `MessageContainer` if the situation is resolved or the information becomes irrelevant. Don't wait until users hide it if it's dismissible.
 - Consider storing that users have dismissed a `MessageContainer` and avoid showing it again.
 
-![A dismissible MessageContainer announcing a new app version, with an "Update now" action and a close button, above a non-dismissible one for a permission error.](https://developer.dynatrace.com/assets/images/messagecontainer-dismiss-light-cab976c308e4b225b43e5e2eef80f129.webp)&#x20;
+![A dismissible MessageContainer announcing a new app version, with an "Update now" action and a close button, above a non-dismissible one for a permission error.](https://public-developer.central.internal.dynatrace.com/assets/images/messagecontainer-dismiss-light-cab976c308e4b225b43e5e2eef80f129.webp)&#x20;

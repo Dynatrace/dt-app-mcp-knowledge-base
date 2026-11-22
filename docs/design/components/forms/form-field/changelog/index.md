@@ -4,4 +4,4 @@ It also features responsive design: small containers show the label elements ali
 
 The form field is child-agnostic.
 
-Package `@dynatrace/strato-components`, latest version **3.17.1**. Below are the changes to `FormField`. See [Components changelog](https://developer.dynatrace.com/changelogs/design-system/components-changelog.md) for all changes to the package.
+Package `@dynatrace/strato-components`, latest version **3.18.0**. Below are the changes to `FormField`. See [Components changelog](https://public-developer.central.internal.dynatrace.com/changelogs/design-system/components-changelog.md) for all changes to the package.

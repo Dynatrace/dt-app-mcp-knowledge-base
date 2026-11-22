@@ -6,7 +6,7 @@
 
 ![A FilterField with a link in the footer pointing to the user-facing filter
 field
-documentation.](https://developer.dynatrace.com/assets/images/filterfield-documentation-link-light-6e3895641323b1a899400270961ad093.webp)
+documentation.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-documentation-link-light-6e3895641323b1a899400270961ad093.webp)
 
 Every FilterField includes a link to the user-facing FilterField
 documentation.
@@ -35,5 +35,5 @@ Syntax validation shows users whether their input has the correct syntax. It's h
 
 Contextual validation shows users if the keys, comparison operators, and values they used are meaningful in the given context.
 
-- Use the `validatorMap` property to define specific valid keys, comparison operators, and values (e.g., error, info, warning) or general value types (e.g., string, number). Read more about the `validatorMap` property under [Validate user input](https://developer.dynatrace.com/design/components/filters/FilterField.md#validate-user-input).
+- Use the `validatorMap` property to define specific valid keys, comparison operators, and values (e.g., error, info, warning) or general value types (e.g., string, number). Read more about the `validatorMap` property under [Validate user input](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterField.md#validate-user-input).
 - Show custom error messages, such as backend timeouts or permission issues.

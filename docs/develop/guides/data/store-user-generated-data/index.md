@@ -3,5 +3,5 @@ This guide explains how you can store, update, and delete data from the document
 
 In the following examples, you'll see two code snippets for each type of operation.
 
-- The **React hook** version uses the [`@dynatrace-sdk/react-hooks`](https://developer.dynatrace.com/contents/docs/develop/sdks/react-hooks/index.md/) package for all the operations. You can use this in your React frontend code.
-- The **Client SDK** version uses the [`@dynatrace-sdk/client-document`](https://developer.dynatrace.com/contents/docs/develop/sdks/client-document/index.md/)) package for all the operations. The example code shown uses this package in an app function. You can use the same code in **Notebook**, **Dashboard**, and **Workflow** as well.
+- The **React hook** version uses the [`@dynatrace-sdk/react-hooks`](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/react-hooks/index.md/) package for all the operations. You can use this in your React frontend code.
+- The **Client SDK** version uses the [`@dynatrace-sdk/client-document`](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/client-document/index.md/)) package for all the operations. The example code shown uses this package in an app function. You can use the same code in **Notebook**, **Dashboard**, and **Workflow** as well.

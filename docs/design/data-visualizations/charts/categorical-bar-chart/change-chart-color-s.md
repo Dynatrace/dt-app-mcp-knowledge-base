@@ -10,7 +10,7 @@ The `CategoricalBarChart` provides several ways to customize the appearance of y
 
 The `CategoricalBarChart` accepts a `colorPaletteMode` prop that can be set to either `single-color` (default) or `multi-color`. In `single-color` mode, all categories take the first color of the palette, while in `multi-color` mode, colors are applied to categories by index or by value.
 
-For more details about available palettes and custom colors, see [Chart Coloring](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md).
+For more details about available palettes and custom colors, see [Chart Coloring](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md).
 
 ### Use color rules
 
@@ -87,7 +87,7 @@ const ColorRulesMultiDimensions = () => {
 };
 ```
 
-For more details about using color rules, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about using color rules, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
 
 **ColorPaletteModeSingleColor**
 

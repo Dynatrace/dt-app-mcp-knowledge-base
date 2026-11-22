@@ -8,7 +8,7 @@ import { activeGatesClient } from '@dynatrace-sdk/client-classic-environment-v2'
 
 > ⚠️ **Deprecated**
 
-**activeGatesClient.getAllActiveGates(config): Promise\<[ActiveGateList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatelist)>**
+**activeGatesClient.getAllActiveGates(config): Promise\<[ActiveGateList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatelist)>**
 
 Lists all available ActiveGates
 
@@ -50,9 +50,9 @@ The response includes all ActiveGates that are currently connected to the enviro
 
 #### Returns
 
-| Return type                                                                                                              | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [ActiveGateList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatelist) | 200         | Success     |
+| Return type                                                                                                                                      | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [ActiveGateList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatelist) | 200         | Success     |
 
 #### Throws
 
@@ -72,7 +72,7 @@ const data = await activeGatesClient.getAllActiveGates();
 
 > ⚠️ **Deprecated**
 
-**activeGatesClient.getOneActiveGateById(config): Promise\<[ActiveGate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegate)>**
+**activeGatesClient.getOneActiveGateById(config): Promise\<[ActiveGate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegate)>**
 
 Gets the details of the specified ActiveGate
 
@@ -96,9 +96,9 @@ Deprecated since version 1.343. Use DQL Smartscape nodes to query ActiveGate dat
 
 #### Returns
 
-| Return type                                                                                                      | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ActiveGate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegate) | 200         | Success     |
+| Return type                                                                                                                              | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ActiveGate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegate) | 200         | Success     |
 
 #### Throws
 

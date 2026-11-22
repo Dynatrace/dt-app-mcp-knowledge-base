@@ -1,5 +1,22 @@
 @dynatrace-sdk/client-automation
 
+## 10.1.0 (2026-11-20) \{#1010}
+
+### Minor changes
+
+- Add the optional `includeProblemsWithoutSeverity` field (default `false`) to `DavisProblemConfig`. When `severityThreshold` is set, the Davis problem trigger also fires for problems without a severity. It has no effect without a threshold.
+
+## 10.0.0 (2026-11-16) \{#1000}
+
+### Major changes
+
+- BREAKING: Change `WorkflowTemplateInput` from an interface to the union `WorkflowTemplateConnectionInput | WorkflowTemplateUserInput`, and narrow `type` to `'connection'` or `'userInput'`. Narrow on `type` before reading `schema` or `connectionFilter` from `WorkflowTemplateMetadata.inputs`.
+
+### Minor changes
+
+- Add `WorkflowTemplateConnectionInput` and `WorkflowTemplateUserInput` (`type: 'userInput'`, `dataType`, `label`, `hint`, `placeholder`, `initialValue`, `targets`) for user-entered workflow template inputs.
+- Document schedule triggers (`cron`, `interval`, `once`, `time`), `ScheduleFilterParameters` and related schedule models in more detail.
+
 ## 9.0.0 (2026-11-11) \{#900}
 
 ### Major changes

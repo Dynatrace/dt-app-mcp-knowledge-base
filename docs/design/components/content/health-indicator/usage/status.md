@@ -2,7 +2,7 @@
 
 `HealthIndicator` components come in five status levels.
 
-![Five HealthIndicator status levels — Ideal, Good, Neutral, Warning, and Critical — each shown twice: as a subtle shape, and as a more detailed icon.](https://developer.dynatrace.com/assets/images/healthindicator-status-levels-light-d27d5d91aa729a1080a8a9c6e5b3271f.webp)&#x20;
+![Five HealthIndicator status levels — Ideal, Good, Neutral, Warning, and Critical — each shown twice: as a subtle shape, and as a more detailed icon.](https://public-developer.central.internal.dynatrace.com/assets/images/healthindicator-status-levels-light-d27d5d91aa729a1080a8a9c6e5b3271f.webp)&#x20;
 
 ### Ideal
 

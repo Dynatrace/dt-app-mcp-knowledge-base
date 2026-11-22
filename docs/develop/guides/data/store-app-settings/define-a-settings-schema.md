@@ -100,8 +100,8 @@ Here is an example of a schema that allows you to configure connections to a fic
 
 The `maturity` field indicates the stability and readiness of the schema for production use. The available maturity levels are: `IN_DEVELOPMENT`, `EARLY_ADOPTER` and `GENERAL_AVAILABILITY`.
 
-Schemas with `IN_DEVELOPMENT` maturity are hidden from the settings menu and can't be accessed via either the [Settings Schemas](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2.md#settingsschemasclient) or [Settings Objects](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2.md#settingsobjectsclient) Environment API.
-However, you can still access and manage the setting objects of such schemas as described in this document or directly via the [App Settings V2 API](https://developer.dynatrace.com/develop/sdks/client-app-settings-v2.md).
+Schemas with `IN_DEVELOPMENT` maturity are hidden from the settings menu and can't be accessed via either the [Settings Schemas](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2.md#settingsschemasclient) or [Settings Objects](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2.md#settingsobjectsclient) Environment API.
+However, you can still access and manage the setting objects of such schemas as described in this document or directly via the [App Settings V2 API](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-app-settings-v2.md).
 
 Schemas with `EARLY_ADOPTER` maturity are available in all environments, but are less mature that those with the `GENERAL_AVAILABILITY` maturity. Even though incompatible changes for these schemas are not expected, since they aren't fully stable yet, incompatible changes may be necessary in rare cases.
 

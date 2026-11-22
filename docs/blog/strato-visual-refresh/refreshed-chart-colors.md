@@ -14,4 +14,4 @@ the Strato design tokens.
 More chart palettes are on the way, including a vivid categorical set and
 several themed palettes.
 
-![The five new chart palettes: Categorical Vivid, Neon, Aurora, Overdrive, and Tide](https://developer.dynatrace.com/assets/images/visual-refresh-chart-themes-light-2bbe2fec0df636afe5521405c63eec7d.webp)
+![The five new chart palettes: Categorical Vivid, Neon, Aurora, Overdrive, and Tide](https://public-developer.central.internal.dynatrace.com/assets/images/visual-refresh-chart-themes-light-2bbe2fec0df636afe5521405c63eec7d.webp)

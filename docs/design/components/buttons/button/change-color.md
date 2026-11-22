@@ -1,6 +1,6 @@
 ## Change color
 
-By default, the button has the color `neutral`. Always consider the [meaning of colors](https://developer.dynatrace.com/design/patterns/status-and-health.md) when changing this.
+By default, the button has the color `neutral`. Always consider the [meaning of colors](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md) when changing this.
 
 **Colors**
 

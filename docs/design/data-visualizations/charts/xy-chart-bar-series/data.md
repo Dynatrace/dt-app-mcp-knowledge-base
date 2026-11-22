@@ -4,7 +4,7 @@ The data provided to the `BarSeries` component via the `data` property will be u
 
 ### Coloring
 
-By using the `color` and `colorPalette` properties in the `BarSeries` you can overwrite the coloring from the `XYChart` component. These two properties are mutually exclusive. For more information about how to use coloring in the chart you can refer to the [XYChart](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
+By using the `color` and `colorPalette` properties in the `BarSeries` you can overwrite the coloring from the `XYChart` component. These two properties are mutually exclusive. For more information about how to use coloring in the chart you can refer to the [XYChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
 
 The `XYChart.BarSeries` subcomponent supports functions for the `color` and `colorPalette` props to customize coloring per series in case more than one series is presented in the same slot.
 
@@ -183,7 +183,7 @@ const BarSeriesColor = () => {
 
 ### Color rules
 
-`ColorRules` are advanced coloring tools for the chart, allowing you to apply conditional coloring based on data values. See more details in the [XYChart](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
+`ColorRules` are advanced coloring tools for the chart, allowing you to apply conditional coloring based on data values. See more details in the [XYChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
 
 ### Series actions
 

@@ -6,7 +6,7 @@ import { syntheticOnDemandMonitorExecutionsClient } from '@dynatrace-sdk/client-
 
 ### execute
 
-**syntheticOnDemandMonitorExecutionsClient.execute(config): Promise\<[SyntheticOnDemandExecutionResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult)>**
+**syntheticOnDemandMonitorExecutionsClient.execute(config): Promise\<[SyntheticOnDemandExecutionResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult)>**
 
 Triggers on-demand executions for synthetic monitors
 
@@ -15,15 +15,15 @@ Triggers on-demand executions for synthetic monitors
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                          |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SyntheticOnDemandExecutionRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionrequest) |
+| Name                   | Type                                                                                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SyntheticOnDemandExecutionRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionrequest) |
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| [SyntheticOnDemandExecutionResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult) | 201         | Success. The monitor's execution response details |
+| Return type                                                                                                                                                                         | Status code | Description                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
+| [SyntheticOnDemandExecutionResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult) | 201         | Success. The monitor's execution response details |
 
 #### Throws
 
@@ -44,7 +44,7 @@ const data =
 
 ### getBatch
 
-**syntheticOnDemandMonitorExecutionsClient.getBatch(config): Promise\<[SyntheticOnDemandBatchStatus](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandbatchstatus)>**
+**syntheticOnDemandMonitorExecutionsClient.getBatch(config): Promise\<[SyntheticOnDemandBatchStatus](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandbatchstatus)>**
 
 Gets summary information and the list of failed executions for the given batch ID
 
@@ -59,9 +59,9 @@ Gets summary information and the list of failed executions for the given batch I
 
 #### Returns
 
-| Return type                                                                                                                                         | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SyntheticOnDemandBatchStatus](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandbatchstatus) | 200         | Success     |
+| Return type                                                                                                                                                                 | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SyntheticOnDemandBatchStatus](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandbatchstatus) | 200         | Success     |
 
 #### Throws
 
@@ -82,7 +82,7 @@ const data =
 
 ### getExecution
 
-**syntheticOnDemandMonitorExecutionsClient.getExecution(config): Promise\<[SyntheticOnDemandExecution](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution)>**
+**syntheticOnDemandMonitorExecutionsClient.getExecution(config): Promise\<[SyntheticOnDemandExecution](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution)>**
 
 Gets basic results of the specified on-demand execution
 
@@ -97,9 +97,9 @@ Gets basic results of the specified on-demand execution
 
 #### Returns
 
-| Return type                                                                                                                                     | Status code | Description                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
-| [SyntheticOnDemandExecution](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution) | 200         | Success. The response contains basic information about the on-demand execution. |
+| Return type                                                                                                                                                             | Status code | Description                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
+| [SyntheticOnDemandExecution](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution) | 200         | Success. The response contains basic information about the on-demand execution. |
 
 #### Throws
 
@@ -120,7 +120,7 @@ const data =
 
 ### getExecutionFullReport
 
-**syntheticOnDemandMonitorExecutionsClient.getExecutionFullReport(config): Promise\<[SyntheticOnDemandExecution](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution)>**
+**syntheticOnDemandMonitorExecutionsClient.getExecutionFullReport(config): Promise\<[SyntheticOnDemandExecution](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution)>**
 
 Gets detailed results of the specified on-demand execution
 
@@ -135,9 +135,9 @@ Gets detailed results of the specified on-demand execution
 
 #### Returns
 
-| Return type                                                                                                                                     | Status code | Description                                                                        |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------- |
-| [SyntheticOnDemandExecution](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution) | 200         | Success. The response contains detailed information about the on-demand execution. |
+| Return type                                                                                                                                                             | Status code | Description                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------- |
+| [SyntheticOnDemandExecution](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecution) | 200         | Success. The response contains detailed information about the on-demand execution. |
 
 #### Throws
 
@@ -158,7 +158,7 @@ const data =
 
 ### getExecutions
 
-**syntheticOnDemandMonitorExecutionsClient.getExecutions(config): Promise\<[SyntheticOnDemandExecutions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutions)>**
+**syntheticOnDemandMonitorExecutionsClient.getExecutions(config): Promise\<[SyntheticOnDemandExecutions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutions)>**
 
 Gets the list of all on-demand executions of synthetic monitors
 
@@ -370,9 +370,9 @@ Gets the list of all on-demand executions of synthetic monitors
 
 #### Returns
 
-| Return type                                                                                                                                       | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SyntheticOnDemandExecutions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutions) | 200         | Success     |
+| Return type                                                                                                                                                               | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SyntheticOnDemandExecutions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutions) | 200         | Success     |
 
 #### Throws
 
@@ -391,7 +391,7 @@ const data =
 
 ### rerun
 
-**syntheticOnDemandMonitorExecutionsClient.rerun(config): Promise\<[SyntheticOnDemandExecutionResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult)>**
+**syntheticOnDemandMonitorExecutionsClient.rerun(config): Promise\<[SyntheticOnDemandExecutionResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult)>**
 
 Reruns specified on-demand execution of synthetic monitors
 
@@ -406,9 +406,9 @@ Reruns specified on-demand execution of synthetic monitors
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| [SyntheticOnDemandExecutionResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult) | 201         | Success. The monitor's execution response details |
+| Return type                                                                                                                                                                         | Status code | Description                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
+| [SyntheticOnDemandExecutionResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#syntheticondemandexecutionresult) | 201         | Success. The monitor's execution response details |
 
 #### Throws
 

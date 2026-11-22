@@ -6,7 +6,7 @@ Intents reach users through different mechanisms, ordered by specificity. Choosi
 
 Use an explicit intent when your app knows **exactly** where to send the user. The user clicks, the target app opens with all context applied. No dialog, no choices.
 
-![An IntentButton menu opened on a host entity, with the explicit intent "View host" (Hosts app icon highlighted) as the primary action, "Investigate" as a secondary action, and "Open with..." as the fallback entry at the bottom](https://developer.dynatrace.com/assets/images/intent-context-menu-99c671276043b238ac52dce6ef47d18a.png)
+![An IntentButton menu opened on a host entity, with the explicit intent "View host" (Hosts app icon highlighted) as the primary action, "Investigate" as a secondary action, and "Open with..." as the fallback entry at the bottom](https://public-developer.central.internal.dynatrace.com/assets/images/intent-context-menu-99c671276043b238ac52dce6ef47d18a.png)
 
 This is the most common pattern. It powers primary actions in intent menus and the left side of the `IntentButton` split button, the primary action such as **View in Hosts** or **Open in Notebooks**.
 
@@ -54,7 +54,7 @@ Use an add-on when the user should **stay in the current app** but borrow functi
 
 Add-ons differ from Design System components: a DS component gives you building blocks to shape your own UI, while an add-on delivers a self-contained experience built by a specialist team. Use an add-on when you need expert functionality (like Session Replay or anomaly detection) to appear identically across multiple apps.
 
-For details on building and consuming add-ons, see [Add-on intents](https://developer.dynatrace.com/develop/guides/navigation/intents/addon-intents.md).
+For details on building and consuming add-ons, see [Add-on intents](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/addon-intents.md).
 
 > **Caution**
 >

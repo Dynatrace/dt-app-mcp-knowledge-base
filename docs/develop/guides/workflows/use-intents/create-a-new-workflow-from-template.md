@@ -1,8 +1,8 @@
 ## Create a new workflow from template
 
-For an explanaition about workflow vs workflow template please see the description of the intent [Create a new workflow from template by id](https://developer.dynatrace.com/develop/guides/workflows/use-intents.md#create-a-new-workflow-from-template-by-id) -
+For an explanaition about workflow vs workflow template please see the description of the intent [Create a new workflow from template by id](https://public-developer.central.internal.dynatrace.com/develop/guides/workflows/use-intents.md#create-a-new-workflow-from-template-by-id) -
 
-We always recommend to use [Create a new workflow from template by id](https://developer.dynatrace.com/develop/guides/workflows/use-intents.md#create-a-new-workflow-from-template-by-id) over this intent, unless you encounter a limitation where you cant ship the template with your app. Please also mind the length restriction of an URL and therefore an intent, which effects the size of the workflow template you can provide.
+We always recommend to use [Create a new workflow from template by id](https://public-developer.central.internal.dynatrace.com/develop/guides/workflows/use-intents.md#create-a-new-workflow-from-template-by-id) over this intent, unless you encounter a limitation where you cant ship the template with your app. Please also mind the length restriction of an URL and therefore an intent, which effects the size of the workflow template you can provide.
 
 ### Define the intent
 

@@ -77,6 +77,6 @@ data record(val = 2),
 ```
 
 :::note Permissions
-The extension has all permissions to query DQL data, so the preview function returns data immediately. When you use the generated typescript function for this query, include the query scope in your [**app.config.json**](https://developer.dynatrace.com/quickstart/app-toolkit.md#configuration).
+The extension has all permissions to query DQL data, so the preview function returns data immediately. When you use the generated typescript function for this query, include the query scope in your [**app.config.json**](https://public-developer.central.internal.dynatrace.com/quickstart/app-toolkit.md#configuration).
 It requires either the `storage:events:read` or `storage:logs:read` permission.
 :::

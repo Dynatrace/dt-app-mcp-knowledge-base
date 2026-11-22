@@ -160,4 +160,4 @@ In the example above, we're using several rules:
 2. Color any value ending with "768C" with a specific hex color (#00ffff)
 3. Color any value exactly matching "Series 2" using the 'blue-turquoise-inverted' palette
 
-For more details about available comparators and options, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about available comparators and options, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.

@@ -6,7 +6,7 @@ import { syntheticNetworkAvailabilityMonitorsClient } from '@dynatrace-sdk/clien
 
 ### createMonitor
 
-**syntheticNetworkAvailabilityMonitorsClient.createMonitor(config): Promise\<[MonitorEntityIdDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#monitorentityiddto)>**
+**syntheticNetworkAvailabilityMonitorsClient.createMonitor(config): Promise\<[MonitorEntityIdDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#monitorentityiddto)>**
 
 Creates a synthetic monitor definition. Currently network availability monitors only. | maturity=EARLY_ADOPTER
 
@@ -15,15 +15,15 @@ Creates a synthetic monitor definition. Currently network availability monitors 
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SyntheticMultiProtocolMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorrequest) |
+| Name                   | Type                                                                                                                                                                                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SyntheticMultiProtocolMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorrequest) |
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [MonitorEntityIdDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#monitorentityiddto) | 200         | Success     |
+| Return type                                                                                                                                             | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [MonitorEntityIdDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#monitorentityiddto) | 200         | Success     |
 
 #### Throws
 
@@ -82,7 +82,7 @@ const data =
 
 ### getMonitor
 
-**syntheticNetworkAvailabilityMonitorsClient.getMonitor(config): Promise\<[SyntheticMultiProtocolMonitorResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorresponse)>**
+**syntheticNetworkAvailabilityMonitorsClient.getMonitor(config): Promise\<[SyntheticMultiProtocolMonitorResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorresponse)>**
 
 Gets a synthetic monitor definition for the given monitor ID. Currently network availability monitors only. | maturity=EARLY_ADOPTER
 
@@ -97,9 +97,9 @@ Gets a synthetic monitor definition for the given monitor ID. Currently network 
 
 #### Returns
 
-| Return type                                                                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SyntheticMultiProtocolMonitorResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorresponse) | 200         | Success     |
+| Return type                                                                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SyntheticMultiProtocolMonitorResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorresponse) | 200         | Success     |
 
 #### Throws
 
@@ -120,7 +120,7 @@ const data =
 
 ### getMonitors
 
-**syntheticNetworkAvailabilityMonitorsClient.getMonitors(config): Promise\<[SyntheticMonitorListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmonitorlistdto)>**
+**syntheticNetworkAvailabilityMonitorsClient.getMonitors(config): Promise\<[SyntheticMonitorListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmonitorlistdto)>**
 
 Gets all synthetic monitors. Currently network availability monitors only. | maturity=EARLY_ADOPTER
 
@@ -164,9 +164,9 @@ Gets all synthetic monitors. Currently network availability monitors only. | mat
 
 #### Returns
 
-| Return type                                                                                                                               | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SyntheticMonitorListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmonitorlistdto) | 200         | Success     |
+| Return type                                                                                                                                                       | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SyntheticMonitorListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmonitorlistdto) | 200         | Success     |
 
 #### Throws
 
@@ -194,10 +194,10 @@ Updates a synthetic monitor definition for the given monitor ID. Currently netwo
 
 #### Parameters
 
-| Name                        | Type                                                                                                                                                                | Description                    |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| config.body (required)      | [SyntheticMultiProtocolMonitorRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorrequest) |                                |
-| config.monitorId (required) | string                                                                                                                                                              | The identifier of the monitor. |
+| Name                        | Type                                                                                                                                                                                        | Description                    |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| config.body (required)      | [SyntheticMultiProtocolMonitorRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticmultiprotocolmonitorrequest) |                                |
+| config.monitorId (required) | string                                                                                                                                                                                      | The identifier of the monitor. |
 
 #### Returns
 

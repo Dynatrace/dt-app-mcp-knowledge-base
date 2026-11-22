@@ -1,6 +1,6 @@
 ## Use CodeEditor in a form
 
-Use `CodeEditor` inside a `FormField` with the `name` and `required` props to connect it to form validation. `FormFieldMessages` displays validation errors beneath the editor. Blur the editor to trigger validation: leaving the field empty shows a `valueMissing` error. When `language="json"` is set, the built-in linter also surfaces syntax errors as part of the validation state. Learn about using the [FormField](https://developer.dynatrace.com/design/components/forms/FormField.md).
+Use `CodeEditor` inside a `FormField` with the `name` and `required` props to connect it to form validation. `FormFieldMessages` displays validation errors beneath the editor. Blur the editor to trigger validation: leaving the field empty shows a `valueMissing` error. When `language="json"` is set, the built-in linter also surfaces syntax errors as part of the validation state. Learn about using the [FormField](https://public-developer.central.internal.dynatrace.com/design/components/forms/FormField.md).
 
 **FormValidation**
 

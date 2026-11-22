@@ -8,7 +8,7 @@ Develop Python extensions when:
 
 The [dt-extensions-sdk](https://pypi.org/project/dt-extensions-sdk/) python package provides a Software Development Kit (SDK) and a Command Line Interface (CLI) delivering support for your Python extension.
 
-Python extensions are also supported by our [Visual Studio Code Add-on](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode.md), our recommended way of developing them.
+Python extensions are also supported by our [Visual Studio Code Add-on](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode.md), our recommended way of developing them.
 
 ---
 

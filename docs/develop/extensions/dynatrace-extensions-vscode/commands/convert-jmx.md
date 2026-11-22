@@ -14,4 +14,4 @@ This command converts an existing JMX extension to Extension 2.0.
 
 > **Tip**
 >
-> You can explore this workflow as part of our [JMX 1.0 Conversion guide](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/guides/migrate/jmx-conversion.md).
+> You can explore this workflow as part of our [JMX 1.0 Conversion guide](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/guides/migrate/jmx-conversion.md).

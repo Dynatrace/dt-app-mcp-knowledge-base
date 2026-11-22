@@ -8,7 +8,7 @@ The `PieChart` provides several ways to customize the appearance of your data:
 
 ### Use color palettes
 
-The `PieChart` provides a set of predefined color palettes and it also accepts custom color palettes. See [coloring](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
+The `PieChart` provides a set of predefined color palettes and it also accepts custom color palettes. See [coloring](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
 
 ### Direct color assignment
 
@@ -183,4 +183,4 @@ Color rules can be applied based on different criteria:
 - **Date-based rules**: Color based on date comparisons
 - **Custom property rules**: Color based on any property in your data
 
-For more details about available comparators and options, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about available comparators and options, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.

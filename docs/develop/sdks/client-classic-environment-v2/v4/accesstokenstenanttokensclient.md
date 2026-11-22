@@ -6,7 +6,7 @@ import { accessTokensTenantTokensClient } from '@dynatrace-sdk/client-classic-en
 
 ### cancelRotation
 
-**accessTokensTenantTokensClient.cancelRotation(config): Promise\<[TenantTokenConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig)>**
+**accessTokensTenantTokensClient.cancelRotation(config): Promise\<[TenantTokenConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig)>**
 
 Cancels tenant token rotation
 
@@ -17,9 +17,9 @@ To learn how to rotate tokens, see [Token rotation](https://dt-url.net/1543sf6) 
 
 #### Returns
 
-| Return type                                                                                                                   | Status code | Description                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------- |
-| [TenantTokenConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig) | 200         | Success. Rotation process has been cancelled. The current tenant token remains valid. |
+| Return type                                                                                                                                           | Status code | Description                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------- |
+| [TenantTokenConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig) | 200         | Success. Rotation process has been cancelled. The current tenant token remains valid. |
 
 #### Throws
 
@@ -38,7 +38,7 @@ const data =
 
 ### finishRotation
 
-**accessTokensTenantTokensClient.finishRotation(config): Promise\<[TenantTokenConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig)>**
+**accessTokensTenantTokensClient.finishRotation(config): Promise\<[TenantTokenConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig)>**
 
 Finishes tenant token rotation
 
@@ -49,9 +49,9 @@ To learn how to rotate tokens, see [Token rotation](https://dt-url.net/1543sf6) 
 
 #### Returns
 
-| Return type                                                                                                                   | Status code | Description                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------- |
-| [TenantTokenConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig) | 200         | Success. The rotation process is completed. The **active** field of the response contains the new tenant token. |
+| Return type                                                                                                                                           | Status code | Description                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------- |
+| [TenantTokenConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig) | 200         | Success. The rotation process is completed. The **active** field of the response contains the new tenant token. |
 
 #### Throws
 
@@ -70,7 +70,7 @@ const data =
 
 ### startRotation
 
-**accessTokensTenantTokensClient.startRotation(config): Promise\<[TenantTokenConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig)>**
+**accessTokensTenantTokensClient.startRotation(config): Promise\<[TenantTokenConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig)>**
 
 Starts tenant token rotation
 
@@ -81,9 +81,9 @@ To learn how to rotate tokens, see [Token rotation](https://dt-url.net/1543sf6) 
 
 #### Returns
 
-| Return type                                                                                                                   | Status code | Description                                                                                                                                |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [TenantTokenConfig](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig) | 200         | Success. The new tenant token is created and will replace the old one. The **active** field of the response contains the new tenant token. |
+| Return type                                                                                                                                           | Status code | Description                                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| [TenantTokenConfig](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#tenanttokenconfig) | 200         | Success. The new tenant token is created and will replace the old one. The **active** field of the response contains the new tenant token. |
 
 #### Throws
 

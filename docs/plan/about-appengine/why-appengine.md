@@ -6,6 +6,6 @@ The following characteristics make AppEngine unique:
 - **Secure and scalable app runtime**: AppEngine adds security to your data by ensuring that the logic and data stay within security boundaries and everything runs within a defined scope. Furthermore, AppEngine makes sure your app scales up to your needs.
 - **Integration with your environment**: AppEngine enables you to create integrations to third-party systems, so you can solve all your custom use cases.
 
-Following image provides a visual representation of how Dynatrace Apps interact with the Dynatrace platform via APIs, other Apps via [intents](https://developer.dynatrace.com/develop/guides/navigation/intents.md), and third-party systems while also being able to connect to on-premises system through EdgeConnect.
+Following image provides a visual representation of how Dynatrace Apps interact with the Dynatrace platform via APIs, other Apps via [intents](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents.md), and third-party systems while also being able to connect to on-premises system through EdgeConnect.
 
-![Dynatrace platform architecture](https://developer.dynatrace.com/assets/images/platform-architecture-bc669f529f6eedcaa5e685b2b8384893.webp)
+![Dynatrace platform architecture](https://public-developer.central.internal.dynatrace.com/assets/images/platform-architecture-bc669f529f6eedcaa5e685b2b8384893.webp)

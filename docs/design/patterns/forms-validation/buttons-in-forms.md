@@ -2,7 +2,7 @@
 
 Use buttons in forms to let users submit or discard a form, or move forward in a multi-step form process.
 
-![Buttons in forms](https://developer.dynatrace.com/assets/images/forms-buttons-light-4836b5d3bbb624f9aabd542aac7cff94.webp)
+![Buttons in forms](https://public-developer.central.internal.dynatrace.com/assets/images/forms-buttons-light-4836b5d3bbb624f9aabd542aac7cff94.webp)
 
 ### Alignment
 
@@ -19,7 +19,7 @@ Vertical spacing between form elements and buttons is `Spacings.Size32` (32px). 
 
 ### Emphasis
 
-Use an accent emphasis button for the main action. For any other action, use minimal emphasis buttons. See [Button](https://developer.dynatrace.com/contents/docs/design/components/buttons/Button/usage.mdx/) for information about the different emphasis variants.
+Use an accent emphasis button for the main action. For any other action, use minimal emphasis buttons. See [Button](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/buttons/Button/usage.mdx/) for information about the different emphasis variants.
 
 The order of the buttons depends on their alignment:
 

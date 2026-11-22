@@ -1,7 +1,7 @@
 ## Update document
 
 Whenever you need to change the contents of a document, use the `useUpdateDocument` or the `useUpdateDocumentMetadata` hooks.
-For all modifying operations, keep [optimistic locking](https://developer.dynatrace.com/develop/platform-services/core-concepts/locking-strategies.md) in mind. Every document has a version that's incremented whenever its metadata or content is modified. For every modifying operation, you have to pass this exact version, which you can retrieve with the `useDocumentMetadata` hook. It could look like the following:
+For all modifying operations, keep [optimistic locking](https://public-developer.central.internal.dynatrace.com/develop/platform-services/core-concepts/locking-strategies.md) in mind. Every document has a version that's incremented whenever its metadata or content is modified. For every modifying operation, you have to pass this exact version, which you can retrieve with the `useDocumentMetadata` hook. It could look like the following:
 
 **React Hook**
 
@@ -97,4 +97,4 @@ export default async function (payload: unknown = undefined) {
 }
 ```
 
-This operation requires the scope `document:documents:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `document:documents:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

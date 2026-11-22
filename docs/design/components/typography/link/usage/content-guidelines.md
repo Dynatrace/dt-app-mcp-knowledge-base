@@ -23,6 +23,6 @@ A link can be inline or standalone:
 
 ![Example of a correct link in a sentence, linking only the page name "Platform tokens" within "For details, see Platform tokens," and an incorrect example linking the entire sentence, including the period: "For details, see Platform tokens."](../../components-docs-assets/link-content-examples-2-light.webp)
 
-![Correct example showing links used for in-app navigation inside a data table: the Name column entries "Getting started," "Log ingest overview," and "Troubleshooting" are links that lead to documents within the app.](https://developer.dynatrace.com/assets/images/link-content-examples-1-light-028f081b0914c3c7d8af5d0c1a783780.webp)
+![Correct example showing links used for in-app navigation inside a data table: the Name column entries "Getting started," "Log ingest overview," and "Troubleshooting" are links that lead to documents within the app.](https://public-developer.central.internal.dynatrace.com/assets/images/link-content-examples-1-light-028f081b0914c3c7d8af5d0c1a783780.webp)
 
 For further guidance, see [Link text](https://styleguide.dynatrace.com/docs/style/link-text) in the Dynatrace Content Style Guide.

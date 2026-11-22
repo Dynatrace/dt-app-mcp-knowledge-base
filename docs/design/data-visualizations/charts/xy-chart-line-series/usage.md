@@ -13,7 +13,7 @@ This series requires five essential properties that will function as data access
 
 These accessors will extract the specified data from the provided object array via the `data` property. It’s crucial to note that the accessors are used to position the data points in the 2-dimensional space; incorrect specification of any accessor will result in an inability to generate the LineSeries correctly.
 
-Additionally, a `XYChart.LineSeries` will need to be assigned to at least one x-axis and one y-axis via valid `xAxisId` and `yAxisId` properties. For a more detailed explanation of the axis configuration, please refer to the [XYChart docs](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md).
+Additionally, a `XYChart.LineSeries` will need to be assigned to at least one x-axis and one y-axis via valid `xAxisId` and `yAxisId` properties. For a more detailed explanation of the axis configuration, please refer to the [XYChart docs](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md).
 
 **LineSeriesSimple**
 
@@ -192,7 +192,7 @@ The data provided to the `LineSeries` component via the `data` property will be 
 
 ### Coloring
 
-By using the `color` and `colorPalette` properties in the `LineSeries` you can overwrite the coloring from the `XYChart` component. These two properties are mutually exclusive. For more information about how to use coloring in the chart you can refer to the [XYChart](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
+By using the `color` and `colorPalette` properties in the `LineSeries` you can overwrite the coloring from the `XYChart` component. These two properties are mutually exclusive. For more information about how to use coloring in the chart you can refer to the [XYChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
 
 The `XYChart.LineSeries` subcomponent supports functions for the `color` and `colorPalette` props to customize coloring per series in case more than one series is presented in the same slot.
 
@@ -373,7 +373,7 @@ const LineSeriesColor = () => {
 
 #### Color rules
 
-`ColorRules` are advanced coloring tools for the chart, allowing you to apply conditional coloring based on data values. See more details in the [XYChart](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
+`ColorRules` are advanced coloring tools for the chart, allowing you to apply conditional coloring based on data values. See more details in the [XYChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
 
 ### Series actions
 

@@ -3,7 +3,7 @@
   "chunks": [
     {
       "name": "What's New",
-      "description": "Learn how and when to optimize your app for mobile (2026-10-06): Use the new mobile experience guide to decide which parts of your app to optimize first and how to adapt layouts, tables, and overflow…",
+      "description": "Heavy DataTables now scroll as smoothly as light ones (2026-11-13): Strato 3.18 makes DataTable scrolling smooth for heavy tables. Dropped frames fell from 78% to 3% on a demanding tracing table, and…",
       "path": "docs/blog/index.md"
     },
     {
@@ -40,6 +40,41 @@
       "name": "Set custom browser-tab titles for your apps: Community works",
       "description": "This one closed a loop with the community — it started as a question on the Developer Q&A forum. If there's something you're missing, that's a good place to ask.",
       "path": "docs/blog/custom-page-titles/community-works.md"
+    },
+    {
+      "name": "Heavy DataTables now scroll as smoothly as light ones",
+      "description": "Scroll through thousands of rows in a demanding Strato DataTable—now it keeps up with you. Small, simple tables already scrolled smoothly. Now, with @dynatrace/strato-components 3.18, we bring the…",
+      "path": "docs/blog/datatable-scroll-performance/index.md"
+    },
+    {
+      "name": "Heavy DataTables now scroll as smoothly as light ones: Smooth scrolling through heavy tables",
+      "description": "Tables are at the heart of most Dynatrace apps. You scan logs, traces, problems, and entities in them all day, so every slow frame while scrolling adds up. We set out to fix that and measured each…",
+      "path": "docs/blog/datatable-scroll-performance/smooth-scrolling-through-heavy-tables.md"
+    },
+    {
+      "name": "Heavy DataTables now scroll as smoothly as light ones: Every heavy table we tested got faster",
+      "description": "The gains go beyond the tracing table. We benchmarked six heavy table shapes, from 10,000 rows with 20 columns to 200 columns of plain text. Wheel scrolling improved in all of them.",
+      "path": "docs/blog/datatable-scroll-performance/every-heavy-table-we-tested-got-faster.md"
+    },
+    {
+      "name": "Heavy DataTables now scroll as smoothly as light ones: What changed under the hood",
+      "description": "We made the following changes in small steps and measured each step against the preceding one",
+      "path": "docs/blog/datatable-scroll-performance/what-changed-under-the-hood.md"
+    },
+    {
+      "name": "Heavy DataTables now scroll as smoothly as light ones: Get it in your app",
+      "description": "Update to @dynatrace/strato-components 3.18 or later. Your heavy tables get faster with no code changes. For the full list of changes, see the Strato components 3.18.0 changelog.",
+      "path": "docs/blog/datatable-scroll-performance/get-it-in-your-app.md"
+    },
+    {
+      "name": "Heavy DataTables now scroll as smoothly as light ones: What's next",
+      "description": "The search for more speed continues. Here's what we'll do next",
+      "path": "docs/blog/datatable-scroll-performance/what-s-next.md"
+    },
+    {
+      "name": "Heavy DataTables now scroll as smoothly as light ones: How we measured",
+      "description": "We used an automated scroll benchmark built with Playwright, a tool that controls a real browser, on the Strato testing-app and development-app. Each scenario ran three times on the same machine with…",
+      "path": "docs/blog/datatable-scroll-performance/how-we-measured.md"
     },
     {
       "name": "Less friction, better answers: a year of improvements on Dynatrace Developer",
@@ -862,6 +897,16 @@
       "path": "docs/changelogs/design-system/index.md"
     },
     {
+      "name": "Components changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Dependency updates; Updates; General; Buttons; Charts; Editors; Filters; Forms; AiResponse; AnnotationsChart; AppHeader; Chip; CodeEditor; Combobox; DataTable; DateTimePicker; DQLEditor…",
+      "path": "docs/changelogs/design-system/components-changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
+      "name": "Components changelog: 3.17.2 (2026-11-04) {#3172}",
+      "description": "Updates; Editors",
+      "path": "docs/changelogs/design-system/components-changelog/3-17-2-2026-11-04-3172.md"
+    },
+    {
       "name": "Components changelog: 3.17.1 (2026-11-02) {#3171}",
       "description": "Updates; DateTimePicker",
       "path": "docs/changelogs/design-system/components-changelog/3-17-1-2026-11-02-3171.md"
@@ -872,6 +917,16 @@
       "path": "docs/changelogs/design-system/components-changelog/3-17-0-2026-10-29-3170.md"
     },
     {
+      "name": "Components changelog: 3.16.4 (2026-11-04) {#3164}",
+      "description": "Updates; Editors",
+      "path": "docs/changelogs/design-system/components-changelog/3-16-4-2026-11-04-3164.md"
+    },
+    {
+      "name": "Components changelog: 3.16.2 (2026-10-30) {#3162}",
+      "description": "Updates; TimeseriesChart; XYChart; DateTimePicker",
+      "path": "docs/changelogs/design-system/components-changelog/3-16-2-2026-10-30-3162.md"
+    },
+    {
       "name": "Components changelog: 3.16.1 (2026-10-21) {#3161}",
       "description": "Updates; SegmentSelector; Select",
       "path": "docs/changelogs/design-system/components-changelog/3-16-1-2026-10-21-3161.md"
@@ -880,6 +935,16 @@
       "name": "Components changelog: 3.16.0 (2026-10-16) {#3160}",
       "description": "Agentic upgrade instructions",
       "path": "docs/changelogs/design-system/components-changelog/3-16-0-2026-10-16-3160.md"
+    },
+    {
+      "name": "Components changelog: 3.15.6 (2026-11-04) {#3156}",
+      "description": "Updates; Editors",
+      "path": "docs/changelogs/design-system/components-changelog/3-15-6-2026-11-04-3156.md"
+    },
+    {
+      "name": "Components changelog: 3.15.5 (2026-11-02) {#3155}",
+      "description": "Updates; DateTimePicker",
+      "path": "docs/changelogs/design-system/components-changelog/3-15-5-2026-11-02-3155.md"
     },
     {
       "name": "Components changelog: 3.15.4 (2026-10-21) {#3154}",
@@ -907,6 +972,11 @@
       "path": "docs/changelogs/design-system/components-changelog/3-15-0-2026-10-01-3150.md"
     },
     {
+      "name": "Components changelog: 3.14.7 (2026-11-02) {#3147}",
+      "description": "Updates; DateTimePicker",
+      "path": "docs/changelogs/design-system/components-changelog/3-14-7-2026-11-02-3147.md"
+    },
+    {
       "name": "Components changelog: 3.14.6 (2026-10-22) {#3146}",
       "description": "Updates; SegmentSelector",
       "path": "docs/changelogs/design-system/components-changelog/3-14-6-2026-10-22-3146.md"
@@ -923,8 +993,13 @@
     },
     {
       "name": "Components changelog: 3.14.3 (2026-09-25) {#3143}",
-      "description": "Updates; DateTimePicker",
+      "description": "Changelogs for Strato’s stable components package.",
       "path": "docs/changelogs/design-system/components-changelog/3-14-3-2026-09-25-3143.md"
+    },
+    {
+      "name": "Components changelog: 3.13.9 (2026-11-03) {#3139}",
+      "description": "Updates; DateTimePicker",
+      "path": "docs/changelogs/design-system/components-changelog/3-13-9-2026-11-03-3139.md"
     },
     {
       "name": "Components changelog: 3.14.2 (2026-09-23) {#3142}",
@@ -3122,6 +3197,16 @@
       "path": "docs/changelogs/design-system/design-tokens-changelog/0-12-0-2023-04-11-0120.md"
     },
     {
+      "name": "Geo changelog: 4.1.0 (2026-11-12) {#410}",
+      "description": "Dependency updates; Updates; ChoroplethLayer; MapView",
+      "path": "docs/changelogs/design-system/geo-changelog/4-1-0-2026-11-12-410.md"
+    },
+    {
+      "name": "Geo changelog: 4.0.2 (2026-11-04) {#402}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/4-0-2-2026-11-04-402.md"
+    },
+    {
       "name": "Geo changelog: 4.0.1 (2026-11-02) {#401}",
       "description": "Dependency updates",
       "path": "docs/changelogs/design-system/geo-changelog/4-0-1-2026-11-02-401.md"
@@ -3132,6 +3217,16 @@
       "path": "docs/changelogs/design-system/geo-changelog/4-0-0-2026-10-29-400.md"
     },
     {
+      "name": "Geo changelog: 3.16.4 (2026-11-04) {#3164}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/3-16-4-2026-11-04-3164.md"
+    },
+    {
+      "name": "Geo changelog: 3.16.2 (2026-10-30) {#3162}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/3-16-2-2026-10-30-3162.md"
+    },
+    {
       "name": "Geo changelog: 3.16.1 (2026-10-21) {#3161}",
       "description": "Dependency updates",
       "path": "docs/changelogs/design-system/geo-changelog/3-16-1-2026-10-21-3161.md"
@@ -3140,6 +3235,16 @@
       "name": "Geo changelog: 3.16.0 (2026-10-16) {#3160}",
       "description": "Dependency updates",
       "path": "docs/changelogs/design-system/geo-changelog/3-16-0-2026-10-16-3160.md"
+    },
+    {
+      "name": "Geo changelog: 3.15.6 (2026-11-04) {#3156}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/3-15-6-2026-11-04-3156.md"
+    },
+    {
+      "name": "Geo changelog: 3.15.5 (2026-11-02) {#3155}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/3-15-5-2026-11-02-3155.md"
     },
     {
       "name": "Geo changelog: 3.15.4 (2026-10-21) {#3154}",
@@ -3165,6 +3270,11 @@
       "name": "Geo changelog: 3.15.0 (2026-10-01) {#3150}",
       "description": "Dependency updates",
       "path": "docs/changelogs/design-system/geo-changelog/3-15-0-2026-10-01-3150.md"
+    },
+    {
+      "name": "Geo changelog: 3.14.8 (2026-11-02) {#3148}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/3-14-8-2026-11-02-3148.md"
     },
     {
       "name": "Geo changelog: 3.14.7 (2026-10-22) {#3147}",
@@ -3205,6 +3315,11 @@
       "name": "Geo changelog: 3.14.0 (2026-09-17) {#3140}",
       "description": "Dependency updates; Updates; General; MapView",
       "path": "docs/changelogs/design-system/geo-changelog/3-14-0-2026-09-17-3140.md"
+    },
+    {
+      "name": "Geo changelog: 3.13.10 (2026-11-03) {#31310}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/3-13-10-2026-11-03-31310.md"
     },
     {
       "name": "Geo changelog: 3.13.9 (2026-10-22) {#3139}",
@@ -4542,6 +4657,11 @@
       "path": "docs/changelogs/design-system/geo-changelog/agentic-update/4-0-0/automated-migrations.md"
     },
     {
+      "name": "Icons changelog: 2.7.0 (2026-11-12) {#270}",
+      "description": "Updates; General; New icons; Changed icons",
+      "path": "docs/changelogs/design-system/icons-changelog/2-7-0-2026-11-12-270.md"
+    },
+    {
       "name": "Icons changelog: 2.6.1 (2026-09-17) {#261}",
       "description": "Updates; General",
       "path": "docs/changelogs/design-system/icons-changelog/2-6-1-2026-09-17-261.md"
@@ -5422,6 +5542,11 @@
       "path": "docs/changelogs/sdks/client-app-engine-registry/index.md"
     },
     {
+      "name": "AppEngine - registry - changelog: 5.1.0 (2026-11-16) {#510}",
+      "description": "Minor changes",
+      "path": "docs/changelogs/sdks/client-app-engine-registry/5-1-0-2026-11-16-510.md"
+    },
+    {
       "name": "AppEngine - registry - changelog: 5.0.0 (2026-11-04) {#500}",
       "description": "Major changes; Patch changes",
       "path": "docs/changelogs/sdks/client-app-engine-registry/5-0-0-2026-11-04-500.md"
@@ -5910,6 +6035,11 @@
       "name": "App settings v2 - changelog",
       "description": "@dynatrace-sdk/client-app-settings-v2",
       "path": "docs/changelogs/sdks/client-app-settings-v2/index.md"
+    },
+    {
+      "name": "App settings v2 - changelog: 1.3.3 (2026-11-16) {#133}",
+      "description": "Patch changes",
+      "path": "docs/changelogs/sdks/client-app-settings-v2/1-3-3-2026-11-16-133.md"
     },
     {
       "name": "App settings v2 - changelog: 1.3.2 (2026-10-20) {#132}",
@@ -8607,6 +8737,11 @@
       "path": "docs/changelogs/sdks/client-settings/index.md"
     },
     {
+      "name": "Settings - changelog: 2.2.0 (2026-11-18) {#220}",
+      "description": "Minor changes",
+      "path": "docs/changelogs/sdks/client-settings/2-2-0-2026-11-18-220.md"
+    },
+    {
       "name": "Settings - changelog: 2.1.0 (2026-11-03) {#210}",
       "description": "Minor changes; Patch changes",
       "path": "docs/changelogs/sdks/client-settings/2-1-0-2026-11-03-210.md"
@@ -8920,6 +9055,11 @@
       "name": "Navigation - changelog",
       "description": "@dynatrace-sdk/navigation",
       "path": "docs/changelogs/sdks/navigation/index.md"
+    },
+    {
+      "name": "Navigation - changelog: 2.4.0 (2026-11-17) {#240}",
+      "description": "Minor changes",
+      "path": "docs/changelogs/sdks/navigation/2-4-0-2026-11-17-240.md"
     },
     {
       "name": "Navigation - changelog: 2.3.2 (2026-10-20) {#232}",
@@ -10552,9 +10692,19 @@
       "path": "docs/design/components/content/ai-response/custom-code-block-renderers.md"
     },
     {
+      "name": "AiResponse - Overview: Platform links",
+      "description": "Links to intents, apps, and documents in the current environment open inside the platform, in the same tab. These are the links that getIntentLink, getAppLink, and getDocumentLink create. For details…",
+      "path": "docs/design/components/content/ai-response/platform-links.md"
+    },
+    {
       "name": "AiResponse - changelog",
       "description": "Use the AiResponse component to animate AI-generated content.",
       "path": "docs/design/components/content/ai-response/changelog/index.md"
+    },
+    {
+      "name": "AiResponse - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/content/ai-response/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "AiResponse - changelog: 3.15.0 (2026-10-01) {#3150}",
@@ -10817,6 +10967,11 @@
       "path": "docs/design/components/content/chip/changelog/index.md"
     },
     {
+      "name": "Chip - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/content/chip/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "Chip - changelog: 3.15.0 (2026-10-01) {#3150}",
       "description": "Updates",
       "path": "docs/design/components/content/chip/changelog/3-15-0-2026-10-01-3150.md"
@@ -11047,9 +11202,9 @@
       "path": "docs/design/components/content/code-snippet/expand-to-full-height.md"
     },
     {
-      "name": "CodeSnippet - Overview: Enable actions menu",
+      "name": "CodeSnippet - Overview: Enable actions",
       "description": "Use CodeSnippet.ActionsMenu as a child to replace the default \"Copy\" button with CodeSnippet.Copy, CodeSnippet.Download, or both. CodeSnippet.ActionsMenu is an empty wrapper. Use a single child for a…",
-      "path": "docs/design/components/content/code-snippet/enable-actions-menu.md"
+      "path": "docs/design/components/content/code-snippet/enable-actions.md"
     },
     {
       "name": "CodeSnippet - Overview: Wrap long lines",
@@ -11385,6 +11540,11 @@
       "name": "FeatureHighlight - changelog",
       "description": "Use the FeatureHighlight to introduce new features to users or guide new users through key functionality, positioned next to the relevant interface element.",
       "path": "docs/design/components/content/feature-highlight/changelog/index.md"
+    },
+    {
+      "name": "FeatureHighlight - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/content/feature-highlight/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "FeatureHighlight - changelog: 3.11.0 (2026-08-10) {#3110}",
@@ -11827,9 +11987,14 @@
       "path": "docs/design/components/content/markdown/changelog/index.md"
     },
     {
-      "name": "Markdown - changelog: Updates",
-      "description": "Inline code is now purple instead of neutral, with dedicated values for light and dark mode. (APPDEV-19763); The YAML frontmatter at the start of a document now renders as a metadata table, making its…",
-      "path": "docs/design/components/content/markdown/changelog/updates.md"
+      "name": "Markdown - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/content/markdown/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
+      "name": "Markdown - changelog: 3.13.0 (2026-09-03) {#3130}",
+      "description": "Updates",
+      "path": "docs/design/components/content/markdown/changelog/3-13-0-2026-09-03-3130.md"
     },
     {
       "name": "Markdown - Properties",
@@ -11990,6 +12155,11 @@
       "name": "Microguide - changelog",
       "description": "Use the Microguide to guide users through features or functionality in small steps, supporting onboarding of new users and the introduction of new features.",
       "path": "docs/design/components/content/microguide/changelog/index.md"
+    },
+    {
+      "name": "Microguide - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/content/microguide/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "Microguide - changelog: 3.10.0 (2026-07-28) {#3100}",
@@ -12563,7 +12733,7 @@
     },
     {
       "name": "FocusScope - Overview: Trap focus",
-      "description": "To trap focus within the FocusScope, use the trapFocus prop. This feature is particularly useful for overlays, ensuring that keyboard users remain within the overlay until they explicitly close it…",
+      "description": "To trap focus within the FocusScope, use the contain prop. This feature is particularly useful for overlays, ensuring that keyboard users remain within the overlay until they explicitly close it. The…",
       "path": "docs/design/components/core/components/focus-scope/trap-focus.md"
     },
     {
@@ -12872,6 +13042,11 @@
       "path": "docs/design/components/editors/code-editor/enable-line-wrap.md"
     },
     {
+      "name": "CodeEditor - Overview: Enable actions",
+      "description": "To display actions in the top-right corner of the editor, render CodeEditor.ActionsMenu as a child. An empty CodeEditor.ActionsMenu renders the built-in \"Copy\" button, which copies the current editor…",
+      "path": "docs/design/components/editors/code-editor/enable-actions.md"
+    },
+    {
       "name": "CodeEditor - Overview: Expand to full height",
       "description": "To expand the CodeEditor to the full available height of its parent, use the fullHeight property. If you want the CodeEditor to respect the min-height and max-height of the parent, use a flex…",
       "path": "docs/design/components/editors/code-editor/expand-to-full-height.md"
@@ -12910,6 +13085,11 @@
       "name": "CodeEditor - changelog",
       "description": "The CodeEditor provides a text input field that is specifically designed for editing code. It further offers properties to configure e.g. syntax highlighting, spell checks or line wrapping. Once the…",
       "path": "docs/design/components/editors/code-editor/changelog/index.md"
+    },
+    {
+      "name": "CodeEditor - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Editors",
+      "path": "docs/design/components/editors/code-editor/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "CodeEditor - changelog: 3.17.0 (2026-10-29) {#3170}",
@@ -12975,6 +13155,16 @@
       "name": "CodeEditor - Properties",
       "description": "The CodeEditor provides a text input field that is specifically designed for editing code. It further offers properties to configure e.g. syntax highlighting, spell checks or line wrapping. Once the…",
       "path": "docs/design/components/editors/code-editor/props/index.md"
+    },
+    {
+      "name": "CodeEditor - Properties: CodeEditor.ActionsMenu",
+      "description": "The CodeEditor.ActionsMenu slot component does not accept any props. Rendering it as a child of CodeEditor enables the built-in copy action, which renders as a button. When you add further actions…",
+      "path": "docs/design/components/editors/code-editor/props/codeeditor-actionsmenu.md"
+    },
+    {
+      "name": "CodeEditor - Properties: CodeEditor.Download",
+      "description": "CodeEditor slot definition for the \"Download\" action.",
+      "path": "docs/design/components/editors/code-editor/props/codeeditor-download.md"
     },
     {
       "name": "CodeEditor - Usage",
@@ -13067,6 +13257,11 @@
       "path": "docs/design/components/editors/dql-editor/changelog/index.md"
     },
     {
+      "name": "DQLEditor - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Editors",
+      "path": "docs/design/components/editors/dql-editor/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "DQLEditor - changelog: 3.17.0 (2026-10-29) {#3170}",
       "description": "Updates; Editors",
       "path": "docs/design/components/editors/dql-editor/changelog/3-17-0-2026-10-29-3170.md"
@@ -13155,6 +13350,11 @@
       "name": "DQLEditor - Properties: DQLEditor.ActionsMenu",
       "description": "The DQLEditor.ActionsMenu slot component does not accept any props. Rendering it as a child of DQLEditor enables the built-in actions menu.",
       "path": "docs/design/components/editors/dql-editor/props/dqleditor-actionsmenu.md"
+    },
+    {
+      "name": "DQLEditor - Properties: DQLEditor.Download",
+      "description": "DQLEditor slot definition for the \"Download\" action.",
+      "path": "docs/design/components/editors/dql-editor/props/dqleditor-download.md"
     },
     {
       "name": "DQLEditor - Usage",
@@ -13330,6 +13530,11 @@
       "name": "FilterComposition - changelog",
       "description": "Compound component that arranges SegmentSelector, FilterField, TimeframeSelector, and ApplyButton in the standard order with a built-in responsive layout.",
       "path": "docs/design/components/filters/filter-composition/changelog/index.md"
+    },
+    {
+      "name": "FilterComposition - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/filters/filter-composition/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "FilterComposition - changelog: 3.17.0 (2026-10-29) {#3170}",
@@ -13510,6 +13715,11 @@
       "name": "FilterField - changelog",
       "description": "FilterField is an advanced, text-based filtering component. It supports complex data filtering with intuitive filter field syntax and auto-suggestions.",
       "path": "docs/design/components/filters/filter-field/changelog/index.md"
+    },
+    {
+      "name": "FilterField - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Filters",
+      "path": "docs/design/components/filters/filter-field/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "FilterField - changelog: 3.16.0 (2026-10-16) {#3160}",
@@ -13820,6 +14030,11 @@
       "name": "SegmentSelector - changelog",
       "description": "Use the SegmentSelector as a top-level filter to narrow data by segment, setting the scope for any additional filters applied alongside it.",
       "path": "docs/design/components/filters/segment-selector/changelog/index.md"
+    },
+    {
+      "name": "SegmentSelector - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/filters/segment-selector/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "SegmentSelector - changelog: 3.16.1 (2026-10-21) {#3161}",
@@ -14287,6 +14502,11 @@
       "path": "docs/design/components/forms/checkbox/changelog/index.md"
     },
     {
+      "name": "Checkbox - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/checkbox/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "Checkbox - changelog: 3.11.3 (2026-08-20) {#3113}",
       "description": "Updates",
       "path": "docs/design/components/forms/checkbox/changelog/3-11-3-2026-08-20-3113.md"
@@ -14330,6 +14550,161 @@
       "name": "Checkbox - Usage: States",
       "description": "Checkbox supports three states (unchecked, checked, and indeterminate). Use the indeterminate state to convey that some children of a parent checkbox are checked. For example, a \"Select all\" checkbox…",
       "path": "docs/design/components/forms/checkbox/usage/states.md"
+    },
+    {
+      "name": "Combobox - Overview",
+      "description": "The Combobox component allows users to choose one option from a collapsed dropdown, filter options by typing, or create a new one.",
+      "path": "docs/design/components/forms/combobox/index.md"
+    },
+    {
+      "name": "Combobox - Overview: Import",
+      "description": "Select an option from a filterable list or create a new value by typing.",
+      "path": "docs/design/components/forms/combobox/import.md"
+    },
+    {
+      "name": "Combobox - Overview: Demo",
+      "description": "Basic",
+      "path": "docs/design/components/forms/combobox/demo.md"
+    },
+    {
+      "name": "Combobox - Overview: Options",
+      "description": "Group options together; Add icons; Disable options; Pass large amounts of data",
+      "path": "docs/design/components/forms/combobox/options.md"
+    },
+    {
+      "name": "Combobox - Overview: Control state",
+      "description": "Control the selected value of the Combobox with the value and onChange props. The onChange handler receives the value of the selected option, or null when the selection is cleared. To let the Combobox…",
+      "path": "docs/design/components/forms/combobox/control-state.md"
+    },
+    {
+      "name": "Combobox - Overview: Create custom values",
+      "description": "When users enter text that doesn't match an existing option, the Combobox shows an option to create a new value. Use the onCreateOption prop to react to the new value. The handler receives the trimmed…",
+      "path": "docs/design/components/forms/combobox/create-custom-values.md"
+    },
+    {
+      "name": "Combobox - Overview: Change create label",
+      "description": "Use the createLabel prop to change the action word in the create option. For example, createLabel=\"Use\" shows \"Use xyz\" instead of \"Create xyz\".",
+      "path": "docs/design/components/forms/combobox/change-create-label.md"
+    },
+    {
+      "name": "Combobox - Overview: States",
+      "description": "The Combobox supports an initial value, a disabled state, and a read-only state. In the read-only state, users can see the value but can't change it or open the dropdown.",
+      "path": "docs/design/components/forms/combobox/states.md"
+    },
+    {
+      "name": "Combobox - Overview: Show loading state",
+      "description": "You can show a loading state by adding the loading prop to Combobox.Content. While loading is true, a loading indicator replaces the options, and the option to create a new value is hidden. Screen…",
+      "path": "docs/design/components/forms/combobox/show-loading-state.md"
+    },
+    {
+      "name": "Combobox - Overview: Use in a form field",
+      "description": "Wrap the Combobox in a FormField to add a label, hint, required indicator, and validation messages. Add the name prop to include the value in native form submissions. Add the required prop to the…",
+      "path": "docs/design/components/forms/combobox/use-in-a-form-field.md"
+    },
+    {
+      "name": "Combobox - Overview: React to open state changes",
+      "description": "Use the onOpenChange prop to react when the dropdown opens or closes. The callback receives the new open state as a single boolean argument.",
+      "path": "docs/design/components/forms/combobox/react-to-open-state-changes.md"
+    },
+    {
+      "name": "Combobox - Accessibility",
+      "description": "The Combobox component allows users to choose one option from a collapsed dropdown, filter options by typing, or create a new one.",
+      "path": "docs/design/components/forms/combobox/a11y/index.md"
+    },
+    {
+      "name": "Combobox - Accessibility: Accessible names and roles",
+      "description": "Do verify that the visible label matches the accessible name, if a visible label is present. Wrapping the Combobox in a FormField with a Label handles this for you.; Do provide an aria-label that…",
+      "path": "docs/design/components/forms/combobox/a11y/accessible-names-and-roles.md"
+    },
+    {
+      "name": "Combobox - Accessibility: Keyboard accessibility and focus",
+      "description": "The Combobox handles focus management out of the box. Focus stays in the input while the dropdown is open, and the active option is announced. When users press Tab, the Combobox commits the typed text…",
+      "path": "docs/design/components/forms/combobox/a11y/keyboard-accessibility-and-focus.md"
+    },
+    {
+      "name": "Combobox - Accessibility: State announcements",
+      "description": "The Combobox announces its state out of the box. It sets aria-expanded to true when the dropdown is open and to false when it's closed.",
+      "path": "docs/design/components/forms/combobox/a11y/state-announcements.md"
+    },
+    {
+      "name": "Combobox - changelog",
+      "description": "The Combobox component allows users to choose one option from a collapsed dropdown, filter options by typing, or create a new one.",
+      "path": "docs/design/components/forms/combobox/changelog/index.md"
+    },
+    {
+      "name": "Combobox - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/forms/combobox/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
+      "name": "Combobox - changelog: 3.17.0 (2026-10-29) {#3170}",
+      "description": "Updates",
+      "path": "docs/design/components/forms/combobox/changelog/3-17-0-2026-10-29-3170.md"
+    },
+    {
+      "name": "Combobox - Properties",
+      "description": "The Combobox component allows users to choose one option from a collapsed dropdown, filter options by typing, or create a new one.",
+      "path": "docs/design/components/forms/combobox/props/index.md"
+    },
+    {
+      "name": "Combobox - Properties: Combobox.Content",
+      "description": "Combobox.Content wraps all options and groups. It's required.",
+      "path": "docs/design/components/forms/combobox/props/combobox-content.md"
+    },
+    {
+      "name": "Combobox - Properties: Combobox.Option",
+      "description": "Every option of the Combobox is represented by the children of Combobox.Option.",
+      "path": "docs/design/components/forms/combobox/props/combobox-option.md"
+    },
+    {
+      "name": "Combobox - Properties: Combobox.Group",
+      "description": "Use Combobox.Group to organize options into groups.",
+      "path": "docs/design/components/forms/combobox/props/combobox-group.md"
+    },
+    {
+      "name": "Combobox - Properties: Combobox.GroupLabel",
+      "description": "Add a Combobox.GroupLabel inside each Combobox.Group to name the group.",
+      "path": "docs/design/components/forms/combobox/props/combobox-grouplabel.md"
+    },
+    {
+      "name": "Combobox - Properties: Combobox.Prefix",
+      "description": "Combobox.Prefix can only be used inside Combobox.Option.",
+      "path": "docs/design/components/forms/combobox/props/combobox-prefix.md"
+    },
+    {
+      "name": "Combobox - Properties: Combobox.Suffix",
+      "description": "Combobox.Suffix can only be used inside Combobox.Option.",
+      "path": "docs/design/components/forms/combobox/props/combobox-suffix.md"
+    },
+    {
+      "name": "Combobox - Usage",
+      "description": "The Combobox component allows users to choose one option from a collapsed dropdown, filter options by typing, or create a new one.",
+      "path": "docs/design/components/forms/combobox/usage/index.md"
+    },
+    {
+      "name": "Combobox - Usage: When to use",
+      "description": "To let users choose one option from a list or enter a value that isn't already in the list.; To let users type to filter a long list of options.; The list of options is long, and users probably know…",
+      "path": "docs/design/components/forms/combobox/usage/when-to-use.md"
+    },
+    {
+      "name": "Combobox - Usage: When not to use",
+      "description": "Users must choose only from predefined options. Use Select instead.; Users should choose multiple options. Use Select with the multiple prop or Checkbox.; There are only two options. Use Radio or…",
+      "path": "docs/design/components/forms/combobox/usage/when-not-to-use.md"
+    },
+    {
+      "name": "Combobox - Usage: Create custom values",
+      "description": "Users can create a new value in the following ways",
+      "path": "docs/design/components/forms/combobox/usage/create-custom-values.md"
+    },
+    {
+      "name": "Combobox - Usage: Values not in the list",
+      "description": "The Combobox accepts a value that doesn't match any option and shows it as the selected value. This lets your app show previously saved data even if the list of options has changed.",
+      "path": "docs/design/components/forms/combobox/usage/values-not-in-the-list.md"
+    },
+    {
+      "name": "Combobox - Usage: Content guidelines",
+      "description": "Label (recommended); Placeholder; Hint (optional); Option labels; Create label",
+      "path": "docs/design/components/forms/combobox/usage/content-guidelines.md"
     },
     {
       "name": "DateTimePicker - Overview",
@@ -14392,6 +14767,11 @@
       "path": "docs/design/components/forms/date-time-picker/changelog/index.md"
     },
     {
+      "name": "DateTimePicker - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/forms/date-time-picker/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "DateTimePicker - changelog: 3.17.1 (2026-11-02) {#3171}",
       "description": "Updates",
       "path": "docs/design/components/forms/date-time-picker/changelog/3-17-1-2026-11-02-3171.md"
@@ -14402,14 +14782,29 @@
       "path": "docs/design/components/forms/date-time-picker/changelog/3-17-0-2026-10-29-3170.md"
     },
     {
+      "name": "DateTimePicker - changelog: 3.16.2 (2026-10-30) {#3162}",
+      "description": "Updates",
+      "path": "docs/design/components/forms/date-time-picker/changelog/3-16-2-2026-10-30-3162.md"
+    },
+    {
+      "name": "DateTimePicker - changelog: 3.15.5 (2026-11-02) {#3155}",
+      "description": "Updates",
+      "path": "docs/design/components/forms/date-time-picker/changelog/3-15-5-2026-11-02-3155.md"
+    },
+    {
       "name": "DateTimePicker - changelog: 3.15.0 (2026-10-01) {#3150}",
       "description": "Updates",
       "path": "docs/design/components/forms/date-time-picker/changelog/3-15-0-2026-10-01-3150.md"
     },
     {
-      "name": "DateTimePicker - changelog: 3.14.3 (2026-09-25) {#3143}",
+      "name": "DateTimePicker - changelog: 3.14.7 (2026-11-02) {#3147}",
       "description": "Updates",
-      "path": "docs/design/components/forms/date-time-picker/changelog/3-14-3-2026-09-25-3143.md"
+      "path": "docs/design/components/forms/date-time-picker/changelog/3-14-7-2026-11-02-3147.md"
+    },
+    {
+      "name": "DateTimePicker - changelog: 3.13.9 (2026-11-03) {#3139}",
+      "description": "Updates",
+      "path": "docs/design/components/forms/date-time-picker/changelog/3-13-9-2026-11-03-3139.md"
     },
     {
       "name": "DateTimePicker - changelog: 3.13.4 (2026-09-25) {#3134}",
@@ -14737,6 +15132,11 @@
       "path": "docs/design/components/forms/number-input-v2/changelog/index.md"
     },
     {
+      "name": "NumberInputV2 - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/forms/number-input-v2/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "NumberInputV2 - changelog: 3.10.0 (2026-07-28) {#3100}",
       "description": "Updates; Forms",
       "path": "docs/design/components/forms/number-input-v2/changelog/3-10-0-2026-07-28-3100.md"
@@ -14855,6 +15255,11 @@
       "name": "PasswordInput - changelog",
       "description": "The PasswordInput component can be used to hide user input. Always use a PasswordInput when your app asks for sensitive data, such as a password. Users can click on the eye icon to hide or show their…",
       "path": "docs/design/components/forms/password-input/changelog/index.md"
+    },
+    {
+      "name": "PasswordInput - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/password-input/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "PasswordInput - changelog: 3.10.0 (2026-07-28) {#3100}",
@@ -15042,6 +15447,11 @@
       "path": "docs/design/components/forms/search-input/changelog/index.md"
     },
     {
+      "name": "SearchInput - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/search-input/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "SearchInput - changelog: 3.11.0 (2026-08-10) {#3110}",
       "description": "Updates",
       "path": "docs/design/components/forms/search-input/changelog/3-11-0-2026-08-10-3110.md"
@@ -15115,6 +15525,71 @@
       "name": "SearchInput - Usage: Use a stepper",
       "description": "The stepper is for scenarios where matches are highlighted in place rather than filtered out. Use it when",
       "path": "docs/design/components/forms/search-input/usage/use-a-stepper.md"
+    },
+    {
+      "name": "SecretInput - Overview",
+      "description": "Use the SecretInput to let users enter write-only secrets, such as API tokens. After a secret is stored, the input shows a fixed mask with a \"Replace\" button, so the secret can be changed but never…",
+      "path": "docs/design/components/forms/secret-input/index.md"
+    },
+    {
+      "name": "SecretInput - Overview: Import",
+      "description": "Use the SecretInput to let users enter write-only secrets, such as API tokens. After a secret is stored, the input shows a fixed mask with a \"Replace\" button, so the secret can be changed but never…",
+      "path": "docs/design/components/forms/secret-input/import.md"
+    },
+    {
+      "name": "SecretInput - Overview: Demo",
+      "description": "This is the simplest version of the SecretInput, which is uncontrolled and therefore handles its state internally. You can also set a specific initial value using the defaultValue prop.",
+      "path": "docs/design/components/forms/secret-input/demo.md"
+    },
+    {
+      "name": "SecretInput - Overview: Control state",
+      "description": "The SecretInput can also be controlled, meaning that you can handle the state. To do so, you need to use the onChange prop to provide a handler that is called when the internal state of the input…",
+      "path": "docs/design/components/forms/secret-input/control-state.md"
+    },
+    {
+      "name": "SecretInput - Overview: Locked mode",
+      "description": "For security reasons, form fields with sensitive credentials cannot be refilled with persisted data once saved. For this purpose the SecretInput can be set to locked mode by simply passing null to the…",
+      "path": "docs/design/components/forms/secret-input/locked-mode.md"
+    },
+    {
+      "name": "SecretInput - Overview: Validation",
+      "description": "For validation patterns including custom hints and errors, see show custom hints and errors in the FormField documentation.",
+      "path": "docs/design/components/forms/secret-input/validation.md"
+    },
+    {
+      "name": "SecretInput - changelog",
+      "description": "Use the SecretInput to let users enter write-only secrets, such as API tokens. After a secret is stored, the input shows a fixed mask with a \"Replace\" button, so the secret can be changed but never…",
+      "path": "docs/design/components/forms/secret-input/changelog/index.md"
+    },
+    {
+      "name": "SecretInput - changelog: Updates",
+      "description": "You can now use SecretInput to let users enter write-only secrets, such as API tokens, that are shown as a fixed mask and can only be replaced, never displayed again. (PS-51980)",
+      "path": "docs/design/components/forms/secret-input/changelog/updates.md"
+    },
+    {
+      "name": "SecretInput - Properties",
+      "description": "Use the SecretInput to let users enter write-only secrets, such as API tokens. After a secret is stored, the input shows a fixed mask with a \"Replace\" button, so the secret can be changed but never…",
+      "path": "docs/design/components/forms/secret-input/props/index.md"
+    },
+    {
+      "name": "SecretInput - Usage",
+      "description": "Use the SecretInput to let users enter write-only secrets, such as API tokens. After a secret is stored, the input shows a fixed mask with a \"Replace\" button, so the secret can be changed but never…",
+      "path": "docs/design/components/forms/secret-input/usage/index.md"
+    },
+    {
+      "name": "SecretInput - Usage: When to use",
+      "description": "Users need to enter sensitive credentials such as API keys, or tokens.; Users need to reenter sensitive credentials as part of a form where editing related form fields could lead to token exposure.",
+      "path": "docs/design/components/forms/secret-input/usage/when-to-use.md"
+    },
+    {
+      "name": "SecretInput - Usage: When not to use",
+      "description": "The data isn't sensitive and doesn't require masking (names, addresses, preferences). Use TextInput instead.; Users need to enter multi-line sensitive data. Use TextArea with appropriate security…",
+      "path": "docs/design/components/forms/secret-input/usage/when-not-to-use.md"
+    },
+    {
+      "name": "SecretInput - Usage: Content guidelines",
+      "description": "Label (recommended); Placeholder (required); Hint (optional)",
+      "path": "docs/design/components/forms/secret-input/usage/content-guidelines.md"
     },
     {
       "name": "Select - Overview",
@@ -15255,6 +15730,11 @@
       "name": "Select - changelog",
       "description": "The Select component allows you to choose one or multiple options from a collapsed dropdown with options.",
       "path": "docs/design/components/forms/select/changelog/index.md"
+    },
+    {
+      "name": "Select - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/select/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "Select - changelog: 3.17.0 (2026-10-29) {#3170}",
@@ -15422,6 +15902,11 @@
       "path": "docs/design/components/forms/switch/changelog/index.md"
     },
     {
+      "name": "Switch - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/switch/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "Switch - changelog: 3.10.0 (2026-07-28) {#3100}",
       "description": "Updates; Forms",
       "path": "docs/design/components/forms/switch/changelog/3-10-0-2026-07-28-3100.md"
@@ -15490,6 +15975,11 @@
       "name": "TextArea - changelog",
       "description": "The TextArea component can be used as a multi-line plain-text editing control to enter free-form text, such as a comment on a form. The component uses a fallback FormFieldMessages context if it wasn't…",
       "path": "docs/design/components/forms/text-area/changelog/index.md"
+    },
+    {
+      "name": "TextArea - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/text-area/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "TextArea - changelog: 3.10.1 (2026-07-29) {#3101}",
@@ -15575,6 +16065,11 @@
       "name": "TextInput - changelog",
       "description": "Use the TextInput component to request a small amount of information, such as a name or an email address. To let users input larger amounts of text, use a TextArea instead.",
       "path": "docs/design/components/forms/text-input/changelog/index.md"
+    },
+    {
+      "name": "TextInput - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/text-input/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "TextInput - changelog: 3.11.0 (2026-08-10) {#3110}",
@@ -15675,6 +16170,11 @@
       "name": "ToggleButtonGroup - changelog",
       "description": "ToggleButtonGroup lets users toggle between a set of related options, typically with one preselected. It's best for switching between views or a compact group of options with immediate effect.",
       "path": "docs/design/components/forms/toggle-button-group/changelog/index.md"
+    },
+    {
+      "name": "ToggleButtonGroup - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates; Forms",
+      "path": "docs/design/components/forms/toggle-button-group/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "ToggleButtonGroup - changelog: 3.17.0 (2026-10-29) {#3170}",
@@ -15785,6 +16285,11 @@
       "name": "AppHeader - changelog",
       "description": "Use the AppHeader to provide a persistent responsive header with app navigation, home button, and global action items available throughout your app.",
       "path": "docs/design/components/layouts/app-header/changelog/index.md"
+    },
+    {
+      "name": "AppHeader - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/layouts/app-header/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "AppHeader - changelog: 3.17.0 (2026-10-29) {#3170}",
@@ -16215,6 +16720,11 @@
       "name": "InputGroup - changelog",
       "description": "Use the InputGroup as the outermost layout wrapper for form field components such as TextInput to support horizontal grouping of fields.",
       "path": "docs/design/components/layouts/input-group/changelog/index.md"
+    },
+    {
+      "name": "InputGroup - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/layouts/input-group/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "InputGroup - changelog: 3.11.0 (2026-08-10) {#3110}",
@@ -17602,6 +18112,11 @@
       "path": "docs/design/components/overlays/tooltip/changelog/index.md"
     },
     {
+      "name": "Tooltip - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/overlays/tooltip/changelog/3-18-0-2026-11-12-3180.md"
+    },
+    {
       "name": "Tooltip - changelog: 3.17.0 (2026-10-29) {#3170}",
       "description": "Updates",
       "path": "docs/design/components/overlays/tooltip/changelog/3-17-0-2026-10-29-3170.md"
@@ -17728,7 +18243,7 @@
     },
     {
       "name": "DataTable - Overview: Layout and format",
-      "description": "Customize visual representation; Row density; Row separation; Vertical dividers; Borders; Hide header; Vertical alignment; Enable full width; Enable full height; Fonts; Text alignment; Enable line…",
+      "description": "Customize visual representation; Row density; Row separation; Vertical dividers; Borders; Hide header; Vertical alignment; Enable full width; Enable full height; Limit the table height for large data…",
       "path": "docs/design/components/tables/data-table/layout-and-format.md"
     },
     {
@@ -17755,6 +18270,11 @@
       "name": "DataTable - changelog",
       "description": "Use DataTable to display and manage datasets with rich interactions such as sorting, filtering, pagination, and row selection.",
       "path": "docs/design/components/tables/data-table/changelog/index.md"
+    },
+    {
+      "name": "DataTable - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/tables/data-table/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "DataTable - changelog: 3.17.0 (2026-10-29) {#3170}",
@@ -18137,6 +18657,16 @@
       "path": "docs/design/components/tables/simple-table/configure-variant.md"
     },
     {
+      "name": "SimpleTable - changelog",
+      "description": "Use SimpleTable to display small sets of data and Markdown. It doesn't support sorting, resizing, filtering, or virtualization. It behaves like a native HTML table.",
+      "path": "docs/design/components/tables/simple-table/changelog/index.md"
+    },
+    {
+      "name": "SimpleTable - changelog: Updates",
+      "description": "Fixed custom cell and header renderers remounting on every render, which reset their state, focus, and text selection. (APPDEV-20987)",
+      "path": "docs/design/components/tables/simple-table/changelog/updates.md"
+    },
+    {
       "name": "SimpleTable - Properties",
       "description": "Use SimpleTable to display small sets of data and Markdown. It doesn't support sorting, resizing, filtering, or virtualization. It behaves like a native HTML table.",
       "path": "docs/design/components/tables/simple-table/props/index.md"
@@ -18440,6 +18970,11 @@
       "name": "Highlight - changelog",
       "description": "Use the Highlight component to highlight one or more substrings within a text.",
       "path": "docs/design/components/typography/highlight/changelog/index.md"
+    },
+    {
+      "name": "Highlight - changelog: 3.18.0 (2026-11-12) {#3180}",
+      "description": "Updates",
+      "path": "docs/design/components/typography/highlight/changelog/3-18-0-2026-11-12-3180.md"
     },
     {
       "name": "Highlight - changelog: 3.11.0 (2026-08-10) {#3110}",
@@ -21622,8 +22157,8 @@
       "path": "docs/design/foundations/navigation/navigation-components.md"
     },
     {
-      "name": "Functional icons - Overview",
-      "description": "Functional icons visually highlight key functionalities. Used well, they can reduce clutter and help users easily understand the interface and their options.",
+      "name": "Icons",
+      "description": "Strato’s library of visual symbols help you represent and highlight themes, actions, objects, technologies, and much more.",
       "path": "docs/design/icons/index.md"
     },
     {
@@ -21953,7 +22488,7 @@
     },
     {
       "name": "Strato versioning and releases: Strato support",
-      "description": "We support two MAJOR versions at once: the latest version and the one before it.",
+      "description": "We provide support as needed to fix the current and previous MAJOR versions of Strato. Some of those fixes are eligible for backporting, which means we apply the fix from the current MAJOR version to…",
       "path": "docs/design/strato-versioning/strato-support.md"
     },
     {
@@ -23210,6 +23745,11 @@
       "name": "Page titles: Set page titles for apps",
       "description": "The app shell composes the final browser tab title in the following format",
       "path": "docs/develop/guides/navigation/page-titles/set-page-titles-for-apps.md"
+    },
+    {
+      "name": "Page titles: Page titles in Recents",
+      "description": "The Recents action in the Dock lists the pages users recently visited. The page title you set also labels your app's entries there",
+      "path": "docs/develop/guides/navigation/page-titles/page-titles-in-recents.md"
     },
     {
       "name": "Page titles: Set page titles for widgets",

@@ -1,2 +1,2 @@
-- [About extensions](https://developer.dynatrace.com/develop/extensions/about-extensions-v2.md): Introduction to ingesting data into Dynatrace with Extensions
-- [Add-on for VS Code](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode.md): Introduction to the Dynatrace Extensions add-on for VS Code
+- [About extensions](https://public-developer.central.internal.dynatrace.com/develop/extensions/about-extensions-v2.md): Introduction to ingesting data into Dynatrace with Extensions
+- [Add-on for VS Code](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode.md): Introduction to the Dynatrace Extensions add-on for VS Code

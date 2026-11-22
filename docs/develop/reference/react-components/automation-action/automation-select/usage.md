@@ -1,6 +1,6 @@
 ## Usage
 
-`AutomationSelect` accepts the same structure as the Strato [`Select`](https://developer.dynatrace.com/contents/docs/design/components/forms/Select/index.mdx/) component. For basic usage, refer to the [Select](https://developer.dynatrace.com/contents/docs/design/components/forms/Select/index.mdx/) component documentation.
+`AutomationSelect` accepts the same structure as the Strato [`Select`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/forms/Select/index.mdx/) component. For basic usage, refer to the [Select](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/forms/Select/index.mdx/) component documentation.
 
 Options must be wrapped in `<Select.Content>`:
 

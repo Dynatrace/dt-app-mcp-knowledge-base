@@ -1,6 +1,6 @@
 ## Content guidelines
 
-![Anatomy of a Microguide component with callouts mapped to the elements described below: Title, Visual, Content, Step count, Actions](https://developer.dynatrace.com/assets/images/microguide-content-anatomy-light-85ad8ae1d753c112600885d6d6c058ef.webp)&#x20;
+![Anatomy of a Microguide component with callouts mapped to the elements described below: Title, Visual, Content, Step count, Actions](https://public-developer.central.internal.dynatrace.com/assets/images/microguide-content-anatomy-light-85ad8ae1d753c112600885d6d6c058ef.webp)&#x20;
 
 1. Title (required)
 2. Visual (optional)
@@ -29,7 +29,7 @@
 - Test visuals with users at actual size to confirm they're clear.
 - Don't include a visual unless it adds value.
 
-![Image of a microguide that shows users how to configure notifications about problems. The image focuses on the specific area of the screen, so the details are visible and uncomplicated for users to read within a small microguide.](https://developer.dynatrace.com/assets/images/microguide-content-example-2-light-e092d5d23b526eb9193b820e897f2e66.webp)&#x20;
+![Image of a microguide that shows users how to configure notifications about problems. The image focuses on the specific area of the screen, so the details are visible and uncomplicated for users to read within a small microguide.](https://public-developer.central.internal.dynatrace.com/assets/images/microguide-content-example-2-light-e092d5d23b526eb9193b820e897f2e66.webp)&#x20;
 
 ### Content
 
@@ -40,7 +40,7 @@
 
 ### Step count
 
-- The step count is provided out of the box if you [define multiple steps](https://developer.dynatrace.com/design/components/content/Microguide.md#define-multiple-steps).
+- The step count is provided out of the box if you [define multiple steps](https://public-developer.central.internal.dynatrace.com/design/components/content/Microguide.md#define-multiple-steps).
 
 ### Actions
 

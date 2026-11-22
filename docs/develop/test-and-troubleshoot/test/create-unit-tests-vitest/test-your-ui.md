@@ -1,6 +1,6 @@
 ## Test your UI
 
-Testing your app's UI components helps you recognize errors early on. The [Strato Design System](https://developer.dynatrace.com/design.md) offers features to help you write unit tests for your React app with Vitest.
+Testing your app's UI components helps you recognize errors early on. The [Strato Design System](https://public-developer.central.internal.dynatrace.com/design.md) offers features to help you write unit tests for your React app with Vitest.
 
 ### Install dependencies
 

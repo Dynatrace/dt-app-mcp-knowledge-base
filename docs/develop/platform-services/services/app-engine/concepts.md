@@ -20,13 +20,13 @@ The function executor is an API that allows you to execute code (that you haven'
 
 ### Dynatrace JavaScript runtime
 
-In addition to code executed in the browser, you can provide backend code using Dynatrace app functions powered by the Dynatrace JavaScript runtime. The runtime executes app functions and code sent to the function executor (for example, within Notebooks and Workflows). Follow the [App building tutorial](https://developer.dynatrace.com/quickstart/tutorial.md) or read more in the [app functions reference](https://developer.dynatrace.com/develop/guides/app-functions.md) to start with app functions. Read more about all available APIs in the Dynatrace JavaScript runtime in the [JavaScript runtime reference](contents/docs/develop/reference/javascript-runtime.md).
+In addition to code executed in the browser, you can provide backend code using Dynatrace app functions powered by the Dynatrace JavaScript runtime. The runtime executes app functions and code sent to the function executor (for example, within Notebooks and Workflows). Follow the [App building tutorial](https://public-developer.central.internal.dynatrace.com/quickstart/tutorial.md) or read more in the [app functions reference](https://public-developer.central.internal.dynatrace.com/develop/guides/app-functions.md) to start with app functions. Read more about all available APIs in the Dynatrace JavaScript runtime in the [JavaScript runtime reference](contents/docs/develop/reference/javascript-runtime.md).
 
 Code inside the runtime runs sandboxed, and communication with resources outside the Dynatrace platform is restricted. Code inside the Dynatrace JavaScript runtime may use the fetch function to execute HTTP requests to external and platform service APIs. If the `resource` parameter of the fetch function is a relative path, the request can interact with Dynatrace platform services. In that case, the Dynatrace platform handles the authentication and routing to the right environment for you.
 
 ### Outbound connections from functions
 
-By default, you can't access external hosts from the Dynatrace runtime. To learn more about managing the list of allowed hosts, read [Allow outbound connections](https://developer.dynatrace.com/develop/guides/app-functions.md).
+By default, you can't access external hosts from the Dynatrace runtime. To learn more about managing the list of allowed hosts, read [Allow outbound connections](https://public-developer.central.internal.dynatrace.com/develop/guides/app-functions.md).
 
 ### EdgeConnect
 

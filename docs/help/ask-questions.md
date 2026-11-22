@@ -6,4 +6,4 @@ Get help on questions related to app development from these resources:
 
 **[Attend office hours](https://dt-url.net/office-hours)**: Ask us questions and hear the news in this monthly session.
 
-**[Discover what's new](https://developer.dynatrace.com/blog.md)**: Keep up to date on recent releases and new content.
+**[Discover what's new](https://public-developer.central.internal.dynatrace.com/blog.md)**: Keep up to date on recent releases and new content.

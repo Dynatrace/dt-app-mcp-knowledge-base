@@ -1,6 +1,6 @@
 ## Trap focus
 
-To trap focus within the `FocusScope`, use the `trapFocus` prop. This feature is particularly useful for overlays, ensuring that keyboard users remain within the overlay until they explicitly close it. However, if there are no focusable elements within the `FocusScope`, trapping focus can hinder keyboard navigation. Therefore, ensure that focusable elements are present, or avoid using it in such cases to ensure keyboard users can still navigate.
+To trap focus within the `FocusScope`, use the `contain` prop. This feature is particularly useful for overlays, ensuring that keyboard users remain within the overlay until they explicitly close it. The content outside the `FocusScope` becomes inert, and focus moves to the first focusable element inside, unless an element inside already has focus. However, if there are no focusable elements within the `FocusScope`, trapping focus can hinder keyboard navigation. Therefore, ensure that focusable elements are present, or avoid using it in such cases to ensure keyboard users can still navigate.
 
 **TrapFocus**
 

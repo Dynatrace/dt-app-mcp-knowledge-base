@@ -1,6 +1,6 @@
 ## Show tooltip on text overflow
 
-To let users access the full text when it gets truncated, wrap `TextEllipsis` inside a [Tooltip](https://developer.dynatrace.com/design/components/overlays/Tooltip.md) and use the `onTextOverflow` callback to enable the tooltip only when the text is actually overflowing.
+To let users access the full text when it gets truncated, wrap `TextEllipsis` inside a [Tooltip](https://public-developer.central.internal.dynatrace.com/design/components/overlays/Tooltip.md) and use the `onTextOverflow` callback to enable the tooltip only when the text is actually overflowing.
 
 **FullTextOnHover**
 

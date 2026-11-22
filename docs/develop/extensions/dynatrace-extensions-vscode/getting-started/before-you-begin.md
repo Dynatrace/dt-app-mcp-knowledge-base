@@ -52,4 +52,4 @@ Register your dedicated environment URL in the file you've opened and either pro
 
 > **Note**
 >
-> You can explore these settings in more detail [here](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/settings.md#tenant-connectivity-settings)
+> You can explore these settings in more detail [here](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/settings.md#tenant-connectivity-settings)

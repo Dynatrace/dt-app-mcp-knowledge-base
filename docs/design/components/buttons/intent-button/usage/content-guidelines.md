@@ -18,16 +18,16 @@
 
 - Keep it to one to three words.
 - Use sentence case (capitalize only the first word and any proper nouns, such as brand names).
-- Don't use punctuation (no commas, ellipses, full stops, exclamations, or question marks). This differs from inline text links such as [ExternalLink](https://developer.dynatrace.com/design/components/typography/ExternalLink/usage.md) or [Link](https://developer.dynatrace.com/design/components/typography/Link/usage.md), which can end a sentence with a period.
+- Don't use punctuation (no commas, ellipses, full stops, exclamations, or question marks). This differs from inline text links such as [ExternalLink](https://public-developer.central.internal.dynatrace.com/design/components/typography/ExternalLink/usage.md) or [Link](https://public-developer.central.internal.dynatrace.com/design/components/typography/Link/usage.md), which can end a sentence with a period.
 - Use a consistent structure: **[Verb] + [object]**. For example: View trace, View host, Add to dashboard, Analyze query results.
 - Don't use different verbs for the same action. For example, use "view" consistently instead of "show" or "open".
 - Focus on the user's goal and be specific about what will happen.
 
 To check if your label works, complete the sentence: "This will [label]." If it reads naturally, it's a good label. For example, "This will add to dashboard" works, but "This will dashboard" doesn't.
 
-![Example of a correct intent label "Add to dashboard" using a descriptive verb, and an incorrect label "Go to Dashboards" pointing only to the destination.](https://developer.dynatrace.com/assets/images/intentbutton-content-examples-1-light-6c3545a2fef171e5565f3efd7984a0ad.webp)
+![Example of a correct intent label "Add to dashboard" using a descriptive verb, and an incorrect label "Go to Dashboards" pointing only to the destination.](https://public-developer.central.internal.dynatrace.com/assets/images/intentbutton-content-examples-1-light-6c3545a2fef171e5565f3efd7984a0ad.webp)
 
-![Example of a correct intent label "View service" with a three-dot menu listing verb-led options "Analyze exceptions", "Analyze failures", "Analyze response time", and "Open with...". Next to it, an incorrect example with labels using app names only.](https://developer.dynatrace.com/assets/images/intentbutton-content-examples-2-light-4a571f9c6103243d9a353642618071d2.webp)
+![Example of a correct intent label "View service" with a three-dot menu listing verb-led options "Analyze exceptions", "Analyze failures", "Analyze response time", and "Open with...". Next to it, an incorrect example with labels using app names only.](https://public-developer.central.internal.dynatrace.com/assets/images/intentbutton-content-examples-2-light-4a571f9c6103243d9a353642618071d2.webp)
 
 ### Three-dot menu
 
@@ -36,4 +36,4 @@ To check if your label works, complete the sentence: "This will [label]." If it 
 - List each available app as a separate entry, using the same intent label conventions → [Verb] + [object].
 - Place "Open with..." (with ellipsis) last. It's the fallback that lets users choose which app handles the intent.
 
-![Example of correct three-dot menu entries with verb-led labels "View trace", "View user session", and "Open with...". Next to it, an incorrect example with destination-based labels "Open in Distributed Tracing", and "Open with" missing the ellipsis.](https://developer.dynatrace.com/assets/images/intentbutton-content-examples-3-light-05b019d567b34946e961a9f8d4a76d55.webp)
+![Example of correct three-dot menu entries with verb-led labels "View trace", "View user session", and "Open with...". Next to it, an incorrect example with destination-based labels "Open in Distributed Tracing", and "Open with" missing the ellipsis.](https://public-developer.central.internal.dynatrace.com/assets/images/intentbutton-content-examples-3-light-05b019d567b34946e961a9f8d4a76d55.webp)

@@ -1,6 +1,6 @@
 ## Demo
 
-The `SingleValue` expects a single value as an input. You must pass this value to the visualisation's `data` prop as either a `Number` or `String`. Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/SingleValue/props.md).
+The `SingleValue` expects a single value as an input. You must pass this value to the visualisation's `data` prop as either a `Number` or `String`. Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/SingleValue/props.md).
 
 **AddData**
 

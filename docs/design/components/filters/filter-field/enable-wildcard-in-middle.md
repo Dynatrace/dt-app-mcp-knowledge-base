@@ -32,6 +32,6 @@ For per-key scoping, use the existing `validatorMap.comparisonOperators` allow-l
 
 > **Note**
 >
-> `matchesWildcardConversion` will be enabled by default with the next major release. See [Upcoming changes](https://developer.dynatrace.com/changelogs/design-system/upcoming-changes.md) for details.
+> `matchesWildcardConversion` will be enabled by default with the next major release. See [Upcoming changes](https://public-developer.central.internal.dynatrace.com/changelogs/design-system/upcoming-changes.md) for details.
 
 For details on mapping `matches-wildcard` and `not-matches-wildcard` to a DQL command, see the section [Convert syntax tree to DQL](#convert-syntax-tree-to-dql).

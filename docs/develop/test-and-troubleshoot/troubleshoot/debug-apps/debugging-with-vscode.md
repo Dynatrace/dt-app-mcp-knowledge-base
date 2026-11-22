@@ -2,7 +2,7 @@
 
 Projects generated with the App Toolkit include launch configurations for debugging apps with Visual Studio Code. To get started, open the **Run and Debug** tab on the left bar, then select the configuration you want to use:
 
-![Debug Configurations](https://developer.dynatrace.com/assets/images/debug-configurations-ce3334051d082ebdc53b12a4a91c0570.png)
+![Debug Configurations](https://public-developer.central.internal.dynatrace.com/assets/images/debug-configurations-ce3334051d082ebdc53b12a4a91c0570.png)
 
 Next, select the **Run** button to start debugging. To see the output of the App Toolkit, select **Debug Console** in the bottom pane.
 

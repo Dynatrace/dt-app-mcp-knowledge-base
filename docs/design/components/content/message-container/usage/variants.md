@@ -2,7 +2,7 @@
 
 `MessageContainer` components come in five variants. Each has a different semantic meaning.
 
-![Five MessageContainer variants: Neutral, Primary, Success, Warning, and Critical.](https://developer.dynatrace.com/assets/images/messagecontainer-variants-light-f4858789d49370d1b925fdc484a99586.webp)&#x20;
+![Five MessageContainer variants: Neutral, Primary, Success, Warning, and Critical.](https://public-developer.central.internal.dynatrace.com/assets/images/messagecontainer-variants-light-f4858789d49370d1b925fdc484a99586.webp)&#x20;
 
 ### Neutral
 
@@ -25,4 +25,4 @@
 
 - Use the critical variant for errors, when something went wrong, or for issues that require immediate attention. For example, a failed process that can lead to negative consequences or a validation error summary.
 
-See the best practices in [Status and health](https://developer.dynatrace.com/design/patterns/status-and-health.md#when-to-show-status) for more detail.
+See the best practices in [Status and health](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md#when-to-show-status) for more detail.

@@ -3,7 +3,7 @@ The `Select` component allows you to choose one or multiple options from a colla
 **`SelectFormsProps`**
 
 ```ts
-export declare type SelectFormsProps<OptionValue, Multiple extends boolean> = SelectBaseProps<OptionValue, Multiple> & FormControlProps<Multiple extends true ? SelectMultiValue<OptionValue> : SelectSingleValue<OptionValue>, (value: SelectOnChangeValue<OptionValue, Multiple>) => void, HTMLElement> & FormControlStateProps & DOMProps & StylingProps & DataTestId & BehaviorTrackingProps;
+export declare type SelectFormsProps<OptionValue, Multiple extends boolean> = SelectBaseProps<OptionValue, Multiple> & FormControlProps<(Multiple extends true ? SelectMultiValue<OptionValue> : SelectSingleValue<OptionValue>) | null, (value: SelectOnChangeValue<OptionValue, Multiple>) => void, HTMLElement> & FormControlStateProps & DOMProps & StylingProps & DataTestId & BehaviorTrackingProps;
 ```
 
 **`SelectBaseProps`**

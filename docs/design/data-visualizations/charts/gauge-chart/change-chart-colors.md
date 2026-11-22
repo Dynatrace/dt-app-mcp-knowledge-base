@@ -166,4 +166,4 @@ When multiple rules match, the most specific rule (highest `matchValue` for 'gre
 
 You can combine color rules with threshold indicators to create clear visual cues for different value ranges in your gauge charts.
 
-For more details about available comparators and options, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about available comparators and options, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.

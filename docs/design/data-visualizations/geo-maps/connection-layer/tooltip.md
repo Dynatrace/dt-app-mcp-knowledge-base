@@ -1,6 +1,6 @@
 ## Tooltip
 
-The `Connection Layer` provides a tooltip that displays additional information about the connected points, when hovering over a connection. It can be [customized or hidden](https://developer.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#tooltip).
+The `Connection Layer` provides a tooltip that displays additional information about the connected points, when hovering over a connection. It can be [customized or hidden](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#tooltip).
 
 **ConnectionLayerTooltip**
 

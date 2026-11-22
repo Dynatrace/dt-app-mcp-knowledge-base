@@ -6,7 +6,7 @@ A form is composed of related form elements. The following guidelines ensure tha
 
 Spacing communicates the relationship and hierarchy between individual form elements. Use the following guideline to ensure sufficient spacing between form elements:
 
-![Spacing in forms](https://developer.dynatrace.com/assets/images/forms-spacing-light-2c875a04db89f8e9afeeaa38fb4cf441.webp)
+![Spacing in forms](https://public-developer.central.internal.dynatrace.com/assets/images/forms-spacing-light-2c875a04db89f8e9afeeaa38fb4cf441.webp)
 
 - Vertical spacing between groups of form elements is `Spacings.Size32` (32px).
 - Vertical spacing between form elements is `Spacings.Size16` (16px).

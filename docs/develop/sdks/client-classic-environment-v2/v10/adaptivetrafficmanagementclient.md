@@ -6,7 +6,7 @@ import { adaptiveTrafficManagementClient } from '@dynatrace-sdk/client-classic-e
 
 ### getRootSpansPerMinute
 
-**adaptiveTrafficManagementClient.getRootSpansPerMinute(config): Promise\<[AdaptiveTrafficManagementDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#adaptivetrafficmanagementdto)>**
+**adaptiveTrafficManagementClient.getRootSpansPerMinute(config): Promise\<[AdaptiveTrafficManagementDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#adaptivetrafficmanagementdto)>**
 
 Gets sampling configuration.
 
@@ -14,9 +14,9 @@ Gets sampling configuration.
 
 #### Returns
 
-| Return type                                                                                                                                          | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AdaptiveTrafficManagementDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#adaptivetrafficmanagementdto) | 200         | Success     |
+| Return type                                                                                                                                                                  | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AdaptiveTrafficManagementDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#adaptivetrafficmanagementdto) | 200         | Success     |
 
 #### Throws
 

@@ -3,7 +3,7 @@ Use the `Checkbox` to let users select one or more options from a list, or to co
 **`CheckboxProps`**
 
 ```ts
-export declare type CheckboxProps = FormControlProps<boolean | 'indeterminate', (checked: boolean, event?: ChangeEvent<HTMLInputElement>) => void | never, HTMLDivElement> & StylingProps & DataTestId & WithChildren & MaskingProps & BehaviorTrackingProps & {
+export declare type CheckboxProps = FormControlProps<boolean | 'indeterminate' | null, (checked: boolean, event?: ChangeEvent<HTMLInputElement>) => void | never, HTMLDivElement> & StylingProps & DataTestId & WithChildren & MaskingProps & BehaviorTrackingProps & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

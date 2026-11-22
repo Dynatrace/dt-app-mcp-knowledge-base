@@ -1,6 +1,6 @@
 ## Content guidelines
 
-![Anatomy of an ExpandableText component with callouts mapping to the parts described below: summary, expand/collapse button, details.](https://developer.dynatrace.com/assets/images/expandabletext-content-anatomy-light-19484e55f46ff23920a5b66f03c624c8.webp)
+![Anatomy of an ExpandableText component with callouts mapping to the parts described below: summary, expand/collapse button, details.](https://public-developer.central.internal.dynatrace.com/assets/images/expandabletext-content-anatomy-light-19484e55f46ff23920a5b66f03c624c8.webp)
 
 1. Summary (required)
 2. Expand/collapse button (required)
@@ -22,5 +22,5 @@
 ### Details
 
 - Use for additional, non-critical information that is relevant and meaningful to the user's context. This is often the rest of the clipped summary text.
-- Be clear and concise. If the details are an explanation and even more information would be relevant, provide links. Use the [ExternalLink](https://developer.dynatrace.com/design/components/typography/ExternalLink.md) component for external pages or the [Link](https://developer.dynatrace.com/design/components/typography/Link.md) component for pages within the same app.
+- Be clear and concise. If the details are an explanation and even more information would be relevant, provide links. Use the [ExternalLink](https://public-developer.central.internal.dynatrace.com/design/components/typography/ExternalLink.md) component for external pages or the [Link](https://public-developer.central.internal.dynatrace.com/design/components/typography/Link.md) component for pages within the same app.
 - Write in sentence case and end sentences with periods.

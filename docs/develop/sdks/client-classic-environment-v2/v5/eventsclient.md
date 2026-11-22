@@ -6,7 +6,7 @@ import { eventsClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### createEvent
 
-**eventsClient.createEvent(config): Promise\<[EventIngestResults](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventingestresults)>**
+**eventsClient.createEvent(config): Promise\<[EventIngestResults](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventingestresults)>**
 
 Ingests a custom event
 
@@ -24,15 +24,15 @@ The ingestion of custom events is subject to licensing (see [licensing documenta
 
 #### Parameters
 
-| Name                   | Type                                                                                                              |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [EventIngest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventingest) |
+| Name                   | Type                                                                                                                                      |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [EventIngest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventingest) |
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [EventIngestResults](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventingestresults) | 201         | The event ingest request was received by the server. The response body indicates for each event whether its creation was successful. |
+| Return type                                                                                                                                             | Status code | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [EventIngestResults](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventingestresults) | 201         | The event ingest request was received by the server. The response body indicates for each event whether its creation was successful. |
 
 #### Throws
 
@@ -52,7 +52,7 @@ const data = await eventsClient.createEvent({
 
 ### getEvent
 
-**eventsClient.getEvent(config): Promise\<[Event](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#event)>**
+**eventsClient.getEvent(config): Promise\<[Event](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#event)>**
 
 Gets the properties of an event
 
@@ -67,9 +67,9 @@ Gets the properties of an event
 
 #### Returns
 
-| Return type                                                                                           | Status code | Description                                                    |
-| ----------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------- |
-| [Event](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#event) | 200         | Success. The response contains the configuration of the event. |
+| Return type                                                                                                                   | Status code | Description                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------- |
+| [Event](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#event) | 200         | Success. The response contains the configuration of the event. |
 
 #### Throws
 
@@ -89,7 +89,7 @@ const data = await eventsClient.getEvent({
 
 ### getEventProperties
 
-**eventsClient.getEventProperties(config): Promise\<[EventPropertiesList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertieslist)>**
+**eventsClient.getEventProperties(config): Promise\<[EventPropertiesList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertieslist)>**
 
 Lists all event properties
 
@@ -105,9 +105,9 @@ Lists all event properties
 
 #### Returns
 
-| Return type                                                                                                                       | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EventPropertiesList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertieslist) | 200         | Success     |
+| Return type                                                                                                                                               | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EventPropertiesList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertieslist) | 200         | Success     |
 
 #### Throws
 
@@ -125,7 +125,7 @@ const data = await eventsClient.getEventProperties();
 
 ### getEventProperty
 
-**eventsClient.getEventProperty(config): Promise\<[EventPropertyDetails](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertydetails)>**
+**eventsClient.getEventProperty(config): Promise\<[EventPropertyDetails](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertydetails)>**
 
 Gets the details of an event property
 
@@ -140,9 +140,9 @@ Gets the details of an event property
 
 #### Returns
 
-| Return type                                                                                                                         | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EventPropertyDetails](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertydetails) | 200         | Success     |
+| Return type                                                                                                                                                 | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EventPropertyDetails](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventpropertydetails) | 200         | Success     |
 
 #### Throws
 
@@ -162,7 +162,7 @@ const data = await eventsClient.getEventProperty({
 
 ### getEventType
 
-**eventsClient.getEventType(config): Promise\<[EventType](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtype)>**
+**eventsClient.getEventType(config): Promise\<[EventType](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtype)>**
 
 Gets the properties of an event type
 
@@ -177,9 +177,9 @@ Gets the properties of an event type
 
 #### Returns
 
-| Return type                                                                                                   | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EventType](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtype) | 200         | Success     |
+| Return type                                                                                                                           | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EventType](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtype) | 200         | Success     |
 
 #### Throws
 
@@ -199,7 +199,7 @@ const data = await eventsClient.getEventType({
 
 ### getEventTypes
 
-**eventsClient.getEventTypes(config): Promise\<[EventTypeList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtypelist)>**
+**eventsClient.getEventTypes(config): Promise\<[EventTypeList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtypelist)>**
 
 Lists all event types
 
@@ -215,9 +215,9 @@ Lists all event types
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EventTypeList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtypelist) | 200         | Success     |
+| Return type                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EventTypeList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventtypelist) | 200         | Success     |
 
 #### Throws
 
@@ -235,7 +235,7 @@ const data = await eventsClient.getEventTypes();
 
 ### getEvents
 
-**eventsClient.getEvents(config): Promise\<[EventList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventlist)>**
+**eventsClient.getEvents(config): Promise\<[EventList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventlist)>**
 
 Lists events within the specified timeframe
 
@@ -440,9 +440,9 @@ Lists events within the specified timeframe
 
 #### Returns
 
-| Return type                                                                                                   | Status code | Description                                        |
-| ------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------- |
-| [EventList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventlist) | 200         | Success. The response contains the list of events. |
+| Return type                                                                                                                           | Status code | Description                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------- |
+| [EventList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#eventlist) | 200         | Success. The response contains the list of events. |
 
 #### Throws
 

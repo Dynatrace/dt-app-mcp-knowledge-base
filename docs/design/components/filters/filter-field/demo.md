@@ -1,6 +1,6 @@
 ## Demo
 
-`FilterField` uses a simple and intuitive [filter field syntax](https://docs.dynatrace.com/docs/shortlink/ui-filter-field). When the user begins to type, a dropdown with suggestions for the next key, value, or operator appears. See [Usage](https://developer.dynatrace.com/design/components/filters/FilterField/usage.md) for best practices to implement the component.
+`FilterField` uses a simple and intuitive [filter field syntax](https://docs.dynatrace.com/docs/shortlink/ui-filter-field). When the user begins to type, a dropdown with suggestions for the next key, value, or operator appears. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterField/usage.md) for best practices to implement the component.
 
 **StaticSuggestions**
 

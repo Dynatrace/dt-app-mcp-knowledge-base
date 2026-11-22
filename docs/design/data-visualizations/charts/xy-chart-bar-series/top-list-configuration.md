@@ -1,6 +1,6 @@
 ## Top-list configuration
 
-It is possible to display a top-list visualization using `XYChart.BarSeries` with the `labelAccessor` prop. The standalone [TopList](https://developer.dynatrace.com/design/data-visualizations/charts/TopList.md) component builds this layout automatically; use `XYChart.BarSeries` directly when you need full control over axis configuration, coloring rules, or layout direction.
+It is possible to display a top-list visualization using `XYChart.BarSeries` with the `labelAccessor` prop. The standalone [TopList](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/TopList.md) component builds this layout automatically; use `XYChart.BarSeries` directly when you need full control over axis configuration, coloring rules, or layout direction.
 
 To set it up, add `variant="single"` to `XYChart.BarSeries` and provide `labelAccessor` for the in-bar text. For the default horizontal layout, use `y0Accessor` (category) and `x1Accessor` (numerical value).
 

@@ -1,2 +1,2 @@
-- [Test](https://developer.dynatrace.com/develop/test-and-troubleshoot/test.md): Overview of the testing frameworks available within Dynatrace Apps
-- [Troubleshoot](https://developer.dynatrace.com/develop/test-and-troubleshoot/troubleshoot.md): Index for the troubleshooting guides for Dynatrace Apps
+- [Test](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/test.md): Overview of the testing frameworks available within Dynatrace Apps
+- [Troubleshoot](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/troubleshoot.md): Index for the troubleshooting guides for Dynatrace Apps

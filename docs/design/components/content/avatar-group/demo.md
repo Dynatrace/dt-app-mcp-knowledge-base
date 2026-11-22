@@ -1,6 +1,6 @@
 ## Demo
 
-The `AvatarGroup` is a wrapper that stacks multiple [Avatar](https://developer.dynatrace.com/design/components/content/Avatar.md) elements together. The focus can be moved with the `arrow-left` and `arrow-right` keys, as well as the `tab` key.
+The `AvatarGroup` is a wrapper that stacks multiple [Avatar](https://public-developer.central.internal.dynatrace.com/design/components/content/Avatar.md) elements together. The focus can be moved with the `arrow-left` and `arrow-right` keys, as well as the `tab` key.
 
 **Basic**
 

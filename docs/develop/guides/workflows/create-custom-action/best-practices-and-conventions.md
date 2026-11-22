@@ -35,7 +35,7 @@ Existing workflows are not migrated when you change an action, so an action's in
 A custom action typically integrates one of two things:
 
 - **A third-party service** reached over its HTTP API, such as Slack, Jira, or ServiceNow. The action resolves a connection into credentials and calls the remote API with `fetch`. All knowledge of that API is portable and independent of the Dynatrace platform.
-- **A Dynatrace platform service** reached through an official TypeScript SDK client (`@dynatrace-sdk/client-*`), for example to run a DQL query or create a problem. Authentication flows from the workflow's actor context, so there's no third-party connection to resolve. Check the [SDK for TypeScript](https://developer.dynatrace.com/develop/sdks.md) to see whether a client exists for the service you want to call.
+- **A Dynatrace platform service** reached through an official TypeScript SDK client (`@dynatrace-sdk/client-*`), for example to run a DQL query or create a problem. Authentication flows from the workflow's actor context, so there's no third-party connection to resolve. Check the [SDK for TypeScript](https://public-developer.central.internal.dynatrace.com/develop/sdks.md) to see whether a client exists for the service you want to call.
 
 Both shapes share the same skeleton: validate the input, do the work, surface any failure with a clear message (see [End an action early](#end-an-action-early)), and log. They differ only in the "do the work" layer. A single action can also mix both, for example calling a platform service and a third-party API.
 
@@ -57,7 +57,7 @@ const response = await fetch(url, {
 });
 ```
 
-Keep the timeout well under the app function's runtime budget, so your action can still handle the error, and log a useful message. See [Runtime limitations](https://developer.dynatrace.com/develop/guides/app-functions.md#runtime-limitations) for the app function time limit.
+Keep the timeout well under the app function's runtime budget, so your action can still handle the error, and log a useful message. See [Runtime limitations](https://public-developer.central.internal.dynatrace.com/develop/guides/app-functions.md#runtime-limitations) for the app function time limit.
 
 ### Separate business logic from platform plumbing
 

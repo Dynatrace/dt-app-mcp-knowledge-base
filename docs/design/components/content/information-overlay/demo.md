@@ -1,6 +1,6 @@
 ## Demo
 
-Provide context, guidance, feedback, and other helpful information with the `InformationOverlay` component. The `InformationOverlay.Trigger` slot is optional — when omitted, a default trigger icon is rendered. See [Usage](https://developer.dynatrace.com/design/components/content/InformationOverlay/usage.md) for best practices, including content guidelines.
+Provide context, guidance, feedback, and other helpful information with the `InformationOverlay` component. The `InformationOverlay.Trigger` slot is optional — when omitted, a default trigger icon is rendered. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/content/InformationOverlay/usage.md) for best practices, including content guidelines.
 
 **Basic**
 

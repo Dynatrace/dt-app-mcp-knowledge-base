@@ -8,7 +8,7 @@ The `HoneycombChart` provides several ways to customize the appearance of your d
 
 ### Use color palettes
 
-The `HoneycombChart` provides a set of predefined color palettes that can be used out of the box to provide more appealing visualizations. See [Charts Colors](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more info.
+The `HoneycombChart` provides a set of predefined color palettes that can be used out of the box to provide more appealing visualizations. See [Charts Colors](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more info.
 
 ### Use predefined color palette
 
@@ -336,7 +336,7 @@ Color rules can be applied to both numerical and categorical data:
 />
 ```
 
-For more details about available comparators and options, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about available comparators and options, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
 
 ### Filter values in numeric dataset
 

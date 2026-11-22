@@ -1,6 +1,6 @@
 ## Add label and icons
 
-Buttons can consist of a label, a prefix icon, and a suffix icon. Buttons should always use a label unless the icon displayed is universally understood and accessible. If you make a button icon-only, place the icon in the prefix or suffix slot and add an `aria-label`. See the [Accessibility tab](https://developer.dynatrace.com/design/components/buttons/Button/a11y.md) for more best practices.
+Buttons can consist of a label, a prefix icon, and a suffix icon. Buttons should always use a label unless the icon displayed is universally understood and accessible. If you make a button icon-only, place the icon in the prefix or suffix slot and add an `aria-label`. See the [Accessibility tab](https://public-developer.central.internal.dynatrace.com/design/components/buttons/Button/a11y.md) for more best practices.
 
 **PrefixSuffixLabel**
 

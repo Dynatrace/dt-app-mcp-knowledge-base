@@ -1,6 +1,6 @@
 ## Use different variants
 
-Use the `variant` prop to change the color theme of the `MessageContainer`. Each `variant` value has a matching default icon, which is based on the [status and health](https://developer.dynatrace.com/design/components/content/HealthIndicator.md) design concept, so changing the `variant` also changes the provided default prefix icon.
+Use the `variant` prop to change the color theme of the `MessageContainer`. Each `variant` value has a matching default icon, which is based on the [status and health](https://public-developer.central.internal.dynatrace.com/design/components/content/HealthIndicator.md) design concept, so changing the `variant` also changes the provided default prefix icon.
 
 **Variants**
 

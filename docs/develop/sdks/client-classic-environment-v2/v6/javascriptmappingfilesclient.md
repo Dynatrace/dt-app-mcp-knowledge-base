@@ -86,7 +86,7 @@ const data =
 
 > ⚠️ **Deprecated**
 
-**javaScriptMappingFilesClient.getJavaScriptMappingFilesMetadata(config): Promise\<[JavaScriptMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto)>**
+**javaScriptMappingFilesClient.getJavaScriptMappingFilesMetadata(config): Promise\<[JavaScriptMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto)>**
 
 Lists metadata of JavaScript mapping files
 
@@ -103,9 +103,9 @@ Lists metadata of JavaScript mapping files
 
 #### Returns
 
-| Return type                                                                                                                                         | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [JavaScriptMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto) | 200         | Success.    |
+| Return type                                                                                                                                                                 | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [JavaScriptMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto) | 200         | Success.    |
 
 #### Throws
 
@@ -124,7 +124,7 @@ const data =
 
 ### getJavaScriptMappingFilesMetadataAlias
 
-**javaScriptMappingFilesClient.getJavaScriptMappingFilesMetadataAlias(config): Promise\<[JavaScriptMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto)>**
+**javaScriptMappingFilesClient.getJavaScriptMappingFilesMetadataAlias(config): Promise\<[JavaScriptMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto)>**
 
 Lists metadata of JavaScript mapping files
 
@@ -141,9 +141,9 @@ Lists metadata of JavaScript mapping files
 
 #### Returns
 
-| Return type                                                                                                                                         | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [JavaScriptMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto) | 200         | Success.    |
+| Return type                                                                                                                                                                 | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [JavaScriptMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilelistdto) | 200         | Success.    |
 
 #### Throws
 
@@ -164,7 +164,7 @@ const data =
 
 > ⚠️ **Deprecated**
 
-**javaScriptMappingFilesClient.updateJavaScriptMappingFileMetadata(config): Promise\<[JavaScriptMappingFileDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto)>**
+**javaScriptMappingFilesClient.updateJavaScriptMappingFileMetadata(config): Promise\<[JavaScriptMappingFileDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto)>**
 
 Updates metadata of the specified JavaScript mapping file
 
@@ -172,17 +172,17 @@ Updates metadata of the specified JavaScript mapping file
 
 #### Parameters
 
-| Name                                | Type                                                                                                                                                        | Description                              |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)              | [JavaScriptMappingFileMetadataDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilemetadatadto) |                                          |
-| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                       | The type of the JavaScript mapping file. |
-| config.minifiedJsFileUrl (required) | string                                                                                                                                                      | The URL of the minified JavaScript file. |
+| Name                                | Type                                                                                                                                                                                | Description                              |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)              | [JavaScriptMappingFileMetadataDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilemetadatadto) |                                          |
+| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                                               | The type of the JavaScript mapping file. |
+| config.minifiedJsFileUrl (required) | string                                                                                                                                                                              | The URL of the minified JavaScript file. |
 
 #### Returns
 
-| Return type                                                                                                                                 | Status code | Description                |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------- |
-| [JavaScriptMappingFileDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto) | 200         | Success. Metadata updated. |
+| Return type                                                                                                                                                         | Status code | Description                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------- |
+| [JavaScriptMappingFileDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto) | 200         | Success. Metadata updated. |
 
 #### Throws
 
@@ -207,7 +207,7 @@ const data =
 
 ### updateJavaScriptMappingFileMetadataAlias
 
-**javaScriptMappingFilesClient.updateJavaScriptMappingFileMetadataAlias(config): Promise\<[JavaScriptMappingFileDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto)>**
+**javaScriptMappingFilesClient.updateJavaScriptMappingFileMetadataAlias(config): Promise\<[JavaScriptMappingFileDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto)>**
 
 Updates metadata of the specified JavaScript mapping file
 
@@ -215,17 +215,17 @@ Updates metadata of the specified JavaScript mapping file
 
 #### Parameters
 
-| Name                                | Type                                                                                                                                                        | Description                              |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)              | [JavaScriptMappingFileMetadataDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilemetadatadto) |                                          |
-| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                       | The type of the JavaScript mapping file. |
-| config.minifiedJsFileUrl (required) | string                                                                                                                                                      | The URL of the minified JavaScript file. |
+| Name                                | Type                                                                                                                                                                                | Description                              |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)              | [JavaScriptMappingFileMetadataDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfilemetadatadto) |                                          |
+| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                                               | The type of the JavaScript mapping file. |
+| config.minifiedJsFileUrl (required) | string                                                                                                                                                                              | The URL of the minified JavaScript file. |
 
 #### Returns
 
-| Return type                                                                                                                                 | Status code | Description                |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------- |
-| [JavaScriptMappingFileDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto) | 200         | Success. Metadata updated. |
+| Return type                                                                                                                                                         | Status code | Description                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------- |
+| [JavaScriptMappingFileDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#javascriptmappingfiledto) | 200         | Success. Metadata updated. |
 
 #### Throws
 
@@ -260,11 +260,11 @@ Uploads new or updates existing JavaScript mapping file
 
 #### Parameters
 
-| Name                                | Type                                                                                                                                                      | Description                              |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)              | [UploadJavaScriptMappingFileBody](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#uploadjavascriptmappingfilebody) |                                          |
-| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                     | The type of the JavaScript mapping file. |
-| config.minifiedJsFileUrl (required) | string                                                                                                                                                    | The URL of the minified JavaScript file. |
+| Name                                | Type                                                                                                                                                                              | Description                              |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)              | [UploadJavaScriptMappingFileBody](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#uploadjavascriptmappingfilebody) |                                          |
+| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                                             | The type of the JavaScript mapping file. |
+| config.minifiedJsFileUrl (required) | string                                                                                                                                                                            | The URL of the minified JavaScript file. |
 
 #### Returns
 
@@ -304,11 +304,11 @@ Uploads new or updates existing JavaScript mapping file
 
 #### Parameters
 
-| Name                                | Type                                                                                                                                                                | Description                              |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| config.body (required)              | [UploadJavaScriptMappingFileAliasBody](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#uploadjavascriptmappingfilealiasbody) |                                          |
-| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                               | The type of the JavaScript mapping file. |
-| config.minifiedJsFileUrl (required) | string                                                                                                                                                              | The URL of the minified JavaScript file. |
+| Name                                | Type                                                                                                                                                                                        | Description                              |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| config.body (required)              | [UploadJavaScriptMappingFileAliasBody](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#uploadjavascriptmappingfilealiasbody) |                                          |
+| config.fileType (required)          | "MINIFIED" \| "SOURCE" \| "SOURCEMAP"                                                                                                                                                       | The type of the JavaScript mapping file. |
+| config.minifiedJsFileUrl (required) | string                                                                                                                                                                                      | The URL of the minified JavaScript file. |
 
 #### Returns
 

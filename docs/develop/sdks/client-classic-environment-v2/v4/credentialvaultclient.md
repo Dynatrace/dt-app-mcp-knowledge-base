@@ -6,7 +6,7 @@ import { credentialVaultClient } from '@dynatrace-sdk/client-classic-environment
 
 ### createCredentials
 
-**credentialVaultClient.createCredentials(config): Promise\<[CredentialsId](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid)>**
+**credentialVaultClient.createCredentials(config): Promise\<[CredentialsId](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid)>**
 
 Creates a new credentials set.
 
@@ -17,15 +17,15 @@ The body must not provide an ID. An ID is assigned automatically by the Dynatrac
 
 #### Parameters
 
-| Name                   | Type                                                                                                              |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [Credentials](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentials) |
+| Name                   | Type                                                                                                                                      |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [Credentials](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentials) |
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------- |
-| [CredentialsId](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid) | 201         | Success. The new credentials set has been created. The response contains the ID of the set. |
+| Return type                                                                                                                                   | Status code | Description                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------- |
+| [CredentialsId](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid) | 201         | Success. The new credentials set has been created. The response contains the ID of the set. |
 
 #### Throws
 
@@ -49,7 +49,7 @@ const data = await credentialVaultClient.createCredentials({
 
 ### getCredentials
 
-**credentialVaultClient.getCredentials(config): Promise\<[CredentialsResponseElement](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsresponseelement)>**
+**credentialVaultClient.getCredentials(config): Promise\<[CredentialsResponseElement](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsresponseelement)>**
 
 Gets the metadata of the specified credentials set.
 
@@ -66,9 +66,9 @@ The credentials set itself (e.g. username/certificate and password) is not inclu
 
 #### Returns
 
-| Return type                                                                                                                                     | Status code | Description                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------- |
-| [CredentialsResponseElement](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsresponseelement) | 200         | Success. The response contains the metadata of the credentials set. |
+| Return type                                                                                                                                                             | Status code | Description                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------- |
+| [CredentialsResponseElement](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsresponseelement) | 200         | Success. The response contains the metadata of the credentials set. |
 
 #### Throws
 
@@ -88,7 +88,7 @@ const data = await credentialVaultClient.getCredentials({
 
 ### getCredentialsDetails
 
-**credentialVaultClient.getCredentialsDetails(config): Promise\<[AbstractCredentialsResponseElement](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#abstractcredentialsresponseelement)>**
+**credentialVaultClient.getCredentialsDetails(config): Promise\<[AbstractCredentialsResponseElement](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#abstractcredentialsresponseelement)>**
 
 Gets the details of the specified credentials set.
 
@@ -104,9 +104,9 @@ The credentials set including username/certificate, password or token is include
 
 #### Returns
 
-| Return type                                                                                                                                                     | Status code | Description                                                        |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------ |
-| [AbstractCredentialsResponseElement](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#abstractcredentialsresponseelement) | 200         | Success. The response contains the details of the credentials set. |
+| Return type                                                                                                                                                                             | Status code | Description                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------ |
+| [AbstractCredentialsResponseElement](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#abstractcredentialsresponseelement) | 200         | Success. The response contains the details of the credentials set. |
 
 #### Throws
 
@@ -127,7 +127,7 @@ const data =
 
 ### listCredentials
 
-**credentialVaultClient.listCredentials(config): Promise\<[CredentialsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialslist)>**
+**credentialVaultClient.listCredentials(config): Promise\<[CredentialsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialslist)>**
 
 Lists all sets of credentials in your environment.
 
@@ -149,9 +149,9 @@ The credentials set itself (username/certificate and password) is not included i
 
 #### Returns
 
-| Return type                                                                                                               | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [CredentialsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialslist) | 200         | Success     |
+| Return type                                                                                                                                       | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [CredentialsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialslist) | 200         | Success     |
 
 #### Throws
 
@@ -208,7 +208,7 @@ const data = await credentialVaultClient.removeCredentials({
 
 ### updateCredentials
 
-**credentialVaultClient.updateCredentials(config): Promise\<void | [CredentialsId](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid)>**
+**credentialVaultClient.updateCredentials(config): Promise\<void | [CredentialsId](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid)>**
 
 Updates the specified credentials set.
 
@@ -219,17 +219,17 @@ The body must not provide an ID. The ID should be provided in the path.
 
 #### Parameters
 
-| Name                   | Type                                                                                                              | Description                                                   |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| config.body (required) | [Credentials](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentials) |                                                               |
-| config.id (required)   | string                                                                                                            | The Dynatrace entity ID of the credentials set to be updated. |
+| Name                   | Type                                                                                                                                      | Description                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| config.body (required) | [Credentials](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentials) |                                                               |
+| config.id (required)   | string                                                                                                                                    | The Dynatrace entity ID of the credentials set to be updated. |
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------- |
-| [CredentialsId](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid) | 201         | Success. The new credentials set has been created. The response contains the ID of the set. |
-| void                                                                                                                  | 204         | Success. The credentials set has been updated. Response doesn't have a body.                |
+| Return type                                                                                                                                   | Status code | Description                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------- |
+| [CredentialsId](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#credentialsid) | 201         | Success. The new credentials set has been created. The response contains the ID of the set. |
+| void                                                                                                                                          | 204         | Success. The credentials set has been updated. Response doesn't have a body.                |
 
 #### Throws
 

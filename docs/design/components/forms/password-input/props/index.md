@@ -3,7 +3,7 @@ The `PasswordInput` component can be used to hide user input. Always use a `Pass
 **`PasswordInputProps`**
 
 ```ts
-export declare type PasswordInputProps = Pick<BaseInputProps, 'placeholder' | 'autoComplete' | 'minLength' | 'maxLength' | 'pattern' | 'onFocus' | 'onBlur' | 'onKeyDown' | 'onKeyUp' | 'className' | 'style' | 'data-testid' | 'data-dtrum-mask' | 'data-dtrum-allow'> & FormControlProps<string, (value: string, event?: ChangeEvent<HTMLInputElement>) => void, HTMLInputElement> & WithChildren & BehaviorTrackingProps & {
+export declare type PasswordInputProps = Pick<BaseInputProps, 'placeholder' | 'autoComplete' | 'minLength' | 'maxLength' | 'pattern' | 'onFocus' | 'onBlur' | 'onKeyDown' | 'onKeyUp' | 'className' | 'style' | 'data-testid' | 'data-dtrum-mask' | 'data-dtrum-allow'> & FormControlProps<string | null, (value: string, event?: ChangeEvent<HTMLInputElement>) => void, HTMLInputElement> & WithChildren & BehaviorTrackingProps & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

@@ -3,7 +3,7 @@ Use the `SearchInput` component for search queries. It includes a built-in `Clea
 **`SearchInputProps`**
 
 ```ts
-export declare type SearchInputProps = Pick<BaseInputProps, 'variant' | 'onBlur' | 'autoComplete' | 'placeholder' | 'minLength' | 'maxLength'> & FormControlStateProps & WithChildren & StylingProps & DataTestId & MaskingProps & FormControlProps<string, (value: string) => void, HTMLInputElement> & BehaviorTrackingProps & {
+export declare type SearchInputProps = Pick<BaseInputProps, 'variant' | 'onBlur' | 'autoComplete' | 'placeholder' | 'minLength' | 'maxLength'> & FormControlStateProps & WithChildren & StylingProps & DataTestId & MaskingProps & FormControlProps<string | null, (value: string) => void, HTMLInputElement> & BehaviorTrackingProps & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

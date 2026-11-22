@@ -2,7 +2,7 @@
 
 The tooltip can be customized using a **template-based** approach with `Tooltip.Header`, `Tooltip.Body`, and `Tooltip.Footer` sections for full layout control.
 
-Each data layer page documents how to pass a render function as children of its `.Tooltip` slot and which data the render function receives. See [DotLayer](https://developer.dynatrace.com/design/data-visualizations/geo-maps/DotLayer.md#custom-tooltip), [BubbleLayer](https://developer.dynatrace.com/design/data-visualizations/geo-maps/BubbleLayer.md#custom-tooltip), [ConnectionLayer](https://developer.dynatrace.com/design/data-visualizations/geo-maps/ConnectionLayer.md#custom-tooltip), and [ChoroplethLayer](https://developer.dynatrace.com/design/data-visualizations/geo-maps/ChoroplethLayer.md#custom-tooltip) for examples.
+Each data layer page documents how to pass a render function as children of its `.Tooltip` slot and which data the render function receives. See [DotLayer](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/DotLayer.md#custom-tooltip), [BubbleLayer](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/BubbleLayer.md#custom-tooltip), [ConnectionLayer](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/ConnectionLayer.md#custom-tooltip), and [ChoroplethLayer](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/ChoroplethLayer.md#custom-tooltip) for examples.
 
 Every `.Tooltip` slot also accepts the following optional props:
 

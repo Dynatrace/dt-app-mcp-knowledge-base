@@ -27,4 +27,4 @@ The time dimension can either be handled as a `timestamp` if only a start timest
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/TimeseriesChart/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/TimeseriesChart/props.md).

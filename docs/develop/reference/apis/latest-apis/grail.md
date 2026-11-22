@@ -2,7 +2,7 @@
 
 **[Data Forwarding Validation](https://wkf10640.apps.dynatrace.com/platform/swagger-ui/index.html?urls.primaryName=Data+Forwarding+Validation)**: Validates data forwarding connection configurations before pipeline activation.
 
-**[Grail DQL Query API](https://wkf10640.apps.dynatrace.com/platform/swagger-ui/index.html?urls.primaryName=Grail+DQL+Query+API)**: Executes DQL queries and returns query results with consistent execution, validation, and response semantics.
+**[Grail DQL Query](https://wkf10640.apps.dynatrace.com/platform/swagger-ui/index.html?urls.primaryName=Grail+DQL+Query)**: Executes DQL queries and returns query results with consistent execution, validation, and response semantics.
 
 **[Grail External Datastore Management](https://wkf10640.apps.dynatrace.com/platform/swagger-ui/index.html?urls.primaryName=Grail+External+Datastore+Management)**: Defines and manages external datastores used to query data from external sources.
 
@@ -14,4 +14,4 @@
 
 **[Grail Storage Management API](https://wkf10640.apps.dynatrace.com/platform/swagger-ui/index.html?urls.primaryName=Grail+Storage+Management+API)**: Manages Grail bucket definitions including creation, configuration, and lifecycle administration.
 
-**[Grail Storage Record Deletion API](https://wkf10640.apps.dynatrace.com/platform/swagger-ui/index.html?urls.primaryName=Grail+Storage+Record+Deletion+API)**: Allows deletion of records from Grail, designed primarily for sensitive data removal. Leverages DQL to select records to be deleted.
+**[Grail Storage Record Deletion](https://wkf10640.apps.dynatrace.com/platform/swagger-ui/index.html?urls.primaryName=Grail+Storage+Record+Deletion)**: Allows deletion of records from Grail, designed primarily for sensitive data removal. Leverages DQL to select records to be deleted.

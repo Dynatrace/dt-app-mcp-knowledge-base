@@ -10,6 +10,6 @@ To guide you through the different privacy requirements, you should consider thr
 2. Is the PII relevant and necessary for the app's core functionalities?
 3. Does a retention period apply to the PII ingested in the app?
 
-- [Identify PII](https://developer.dynatrace.com/develop/guides/privacy/identify-pii.md): Basic concepts of Personally Identifiable Information
-- [Limit storage time](https://developer.dynatrace.com/develop/guides/privacy/limit-storage-time.md): Requirements to comply with storage limitations for PII
-- [Minimize data](https://developer.dynatrace.com/develop/guides/privacy/minimize-data.md): Guidelines to minimize the amount of personally identifiable information processed by a Dynatrace app
+- [Identify PII](https://public-developer.central.internal.dynatrace.com/develop/guides/privacy/identify-pii.md): Basic concepts of Personally Identifiable Information
+- [Limit storage time](https://public-developer.central.internal.dynatrace.com/develop/guides/privacy/limit-storage-time.md): Requirements to comply with storage limitations for PII
+- [Minimize data](https://public-developer.central.internal.dynatrace.com/develop/guides/privacy/minimize-data.md): Guidelines to minimize the amount of personally identifiable information processed by a Dynatrace app

@@ -9,4 +9,4 @@ Four new `@dynatrace-sdk` packages are now documented on the portal:
 
 The [SDKs overview](pathname:///develop/sdks/overview/) page is also new — a single place to see all available packages and what each one does. A version picker on each SDK reference page lets you switch between the latest publicly released version, the latest internal preview release, and past major versions.
 
-![SDK version picker — light mode](https://developer.dynatrace.com/assets/images/2026-09-21-year-in-review-sdk-version-picker-light-5afdadd8059da5264634ceaf9d42dd50.webp)
+![SDK version picker — light mode](https://public-developer.central.internal.dynatrace.com/assets/images/2026-09-21-year-in-review-sdk-version-picker-light-5afdadd8059da5264634ceaf9d42dd50.webp)

@@ -6,7 +6,7 @@ Show different suggestions in the FilterField depending on the user's input and 
 
 ![A FilterField with an open suggestions overlay below it, displaying
 suggestions that update as the user
-types.](https://developer.dynatrace.com/assets/images/filterfield-suggestions-light-a1d3e4e0c624fce0401285765ec6a318.webp)
+types.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-suggestions-light-a1d3e4e0c624fce0401285765ec6a318.webp)
 
 The FilterField suggestions are shown in an overlay and react to user input.
 
@@ -42,7 +42,7 @@ Keys are filterable attributes or fields in a dataset that users can select to d
 
 ![A FilterField suggestions overlay showing key suggestions, each prefixed
 with an icon indicating the data
-type.](https://developer.dynatrace.com/assets/images/filterfield-key-suggestions-light-65a90a7576e0b7cacc171db36aa796a0.webp)
+type.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-key-suggestions-light-65a90a7576e0b7cacc171db36aa796a0.webp)
 
 Key suggestions include an icon that indicates the data type.
 
@@ -61,7 +61,7 @@ If you include filter statement suggestions, follow these rules:
 
 ![A FilterField overlay showing filter statement suggestions such as "Status
 equals error", listed below the key suggestion after the user typed
-"error".](https://developer.dynatrace.com/assets/images/filterfield-statement-suggestions-light-29cd8fed357b20be1d011b03fac95f4e.webp)
+"error".](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-statement-suggestions-light-29cd8fed357b20be1d011b03fac95f4e.webp)
 
 Filter statement suggestions are shown for matching filter values and
 commonly used keys.
@@ -82,7 +82,7 @@ Comparison operators define how a key compares to a value. For example, equals `
 ![Example of a correct operator list for the text key "Status" — Equals,
 Doesn't equal, and Contains — and an incorrect one offering numeric operators
 it doesn't support, such as Less than and Greater
-than.](https://developer.dynatrace.com/assets/images/filterfield-comparison-operator-suggestions-light-8cb03b524ab62460bba8dd9035dd52f1.webp)
+than.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-comparison-operator-suggestions-light-8cb03b524ab62460bba8dd9035dd52f1.webp)
 
 Only suggest comparison operators that are supported for the entered key.
 
@@ -101,7 +101,7 @@ Values are data that define a given key. For example, `Warning` and `Error` are 
 ![A FilterField suggestions overlay listing the possible values for the
 "Status" key — NONE, INFO, WARN, and ERROR — shown as soon as the user selects
 the equals
-operator.](https://developer.dynatrace.com/assets/images/filterfield-value-suggestions-light-b51643023bc6e6fbd44454a52a39ae0d.webp)
+operator.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-value-suggestions-light-b51643023bc6e6fbd44454a52a39ae0d.webp)
 
 After a comparison operator has been selected, suggested values for the
 entered key appear.
@@ -120,7 +120,7 @@ Logical operators connect multiple filter statements. The FilterField automatica
 ![Example of a correct suggestions overlay that lists "OR" below the key
 suggestions, and an incorrect one that suggests "AND" and places both
 operators above
-them.](https://developer.dynatrace.com/assets/images/filterfield-logical-operator-suggestions-light-d7b1b3c4961be0208cad278d9f77038b.webp)
+them.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-logical-operator-suggestions-light-d7b1b3c4961be0208cad278d9f77038b.webp)
 
 Show the OR suggestion below the key suggestions and don't include a
 suggestion for the AND operator.

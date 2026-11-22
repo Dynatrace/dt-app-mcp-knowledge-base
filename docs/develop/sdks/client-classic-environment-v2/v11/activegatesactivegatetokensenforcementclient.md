@@ -6,7 +6,7 @@ import { activeGatesActiveGateTokensEnforcementClient } from '@dynatrace-sdk/cli
 
 ### getTokenEnforcement
 
-**activeGatesActiveGateTokensEnforcementClient.getTokenEnforcement(config): Promise\<[ActiveGateTokenEnforcement](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenenforcement)>**
+**activeGatesActiveGateTokensEnforcementClient.getTokenEnforcement(config): Promise\<[ActiveGateTokenEnforcement](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenenforcement)>**
 
 Gets the status of ActiveGate tokens enforcement
 
@@ -18,9 +18,9 @@ Gets the status of ActiveGate tokens enforcement
 
 #### Returns
 
-| Return type                                                                                                                                      | Status code | Description                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | -------------------------------------------------------------------------- |
-| [ActiveGateTokenEnforcement](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenenforcement) | 200         | Success. The response contains the status of ActiveGate tokens enforcement |
+| Return type                                                                                                                                                              | Status code | Description                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | -------------------------------------------------------------------------- |
+| [ActiveGateTokenEnforcement](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenenforcement) | 200         | Success. The response contains the status of ActiveGate tokens enforcement |
 
 #### Throws
 

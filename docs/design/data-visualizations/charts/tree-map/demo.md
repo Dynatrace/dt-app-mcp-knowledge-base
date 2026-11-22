@@ -37,7 +37,7 @@ const data: ChartData = [
 
 The displayed data can be adjusted by setting limits using the `min` and `max` props. This is particularly useful when displaying numerical values in the legend via `nameAccessor`. Both props accept a numeric value, or the special strings `'data-min'` and `'data-max'` to use the minimum and maximum values present in the data.
 
-Learn more about the available props [here](https://developer.dynatrace.com/design/data-visualizations/charts/TreeMap/props.md).
+Learn more about the available props [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/TreeMap/props.md).
 
 **Data**
 

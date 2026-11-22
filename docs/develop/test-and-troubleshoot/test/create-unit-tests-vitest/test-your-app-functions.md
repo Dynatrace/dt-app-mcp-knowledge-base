@@ -1,6 +1,6 @@
 ## Test your app functions
 
-> Vitest support for app functions is limited. App functions run in the Dynatrace JavaScript runtime, which doesn't provide all Node.js APIs. Don't run function tests in Vitest's `node` environment, because they can pass even though your function uses Node.js APIs that aren't available at runtime. The App Toolkit doesn't generate Vitest configuration or test files for functions. To test app functions with the generated setup, use [Jest](https://developer.dynatrace.com/develop/test-and-troubleshoot/test/create-unit-tests-jest.md#test-your-app-functions).
+> Vitest support for app functions is limited. App functions run in the Dynatrace JavaScript runtime, which doesn't provide all Node.js APIs. Don't run function tests in Vitest's `node` environment, because they can pass even though your function uses Node.js APIs that aren't available at runtime. The App Toolkit doesn't generate Vitest configuration or test files for functions. To test app functions with the generated setup, use [Jest](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/test/create-unit-tests-jest.md#test-your-app-functions).
 
 If you still want to unit test pure logic that you've extracted from your functions, keep that logic free of Node.js-specific imports and APIs, and test it in a separate Vitest project. The following sections show the mocking patterns that work in any Vitest test.
 

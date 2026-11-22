@@ -1,6 +1,6 @@
 ## Demo
 
-For reference on what notification types and resources can be configured, please refer to the [notification sdk](https://developer.dynatrace.com/develop/sdks/client-notification.md).
+For reference on what notification types and resources can be configured, please refer to the [notification sdk](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-notification.md).
 
 **Basic**
 

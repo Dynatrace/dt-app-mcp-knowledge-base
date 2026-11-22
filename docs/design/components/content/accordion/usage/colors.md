@@ -26,4 +26,4 @@
 
 > **Tip**
 >
-> For more information about the semantic meaning of colors, see [Status and health](https://developer.dynatrace.com/design/patterns/status-and-health.md).
+> For more information about the semantic meaning of colors, see [Status and health](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md).

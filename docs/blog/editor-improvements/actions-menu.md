@@ -4,7 +4,7 @@
 
 > **Note:** The **Format query** action requires [`@dynatrace-sdk/dqlint`](https://www.npmjs.com/package/@dynatrace-sdk/dqlint) as a peer dependency. The option is only present when this package is installed.
 
-![DQLEditor actions menu showing Copy query, Format query, and Open documentation items — light mode](https://developer.dynatrace.com/assets/images/2026-10-01-editor-improvements-actions-menu-light-21dd1b44b52541638728dfbb43ab6a59.webp)
+![DQLEditor actions menu showing Copy query, Format query, and Open documentation items — light mode](https://public-developer.central.internal.dynatrace.com/assets/images/2026-10-01-editor-improvements-actions-menu-light-21dd1b44b52541638728dfbb43ab6a59.webp)
 
 ### Add custom actions
 

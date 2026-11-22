@@ -53,7 +53,7 @@ This operation requires the following scopes:
 - `state:app-states:read`
 - `state:user-app-states:read`
 
-[guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+[guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 These operations throw an exception when the state you try to retrieve doesn't exist. If that's an expected scenario in your app, you should add
 some exception handling. Alternatively, you could use the [useAppStates](#filter-states) hook and filter for a specific key to get an empty array if it doesn't exist.

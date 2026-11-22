@@ -1,6 +1,6 @@
 ## Action logic
 
-The App Toolkit generates a default action logic in the `/actions` directory. This default code handles the `connectionId` and the `name` payload sent by the widget interface. You can find the file at `/actions/greeter.actions.ts`. This file is an [app function](https://developer.dynatrace.com/develop/guides/app-functions.md) explicitly for the **greeter** action.
+The App Toolkit generates a default action logic in the `/actions` directory. This default code handles the `connectionId` and the `name` payload sent by the widget interface. You can find the file at `/actions/greeter.actions.ts`. This file is an [app function](https://public-developer.central.internal.dynatrace.com/develop/guides/app-functions.md) explicitly for the **greeter** action.
 
 It's essential to understand the following things:
 
@@ -29,7 +29,7 @@ A workflow runs on behalf of the actor, so that person's identity must be able t
 Admin access won't even work as a workaround. When you read a settings object with admin access, the system hides the values of any field of type `secret`. So the action ends up with a connection that has no token and it still can't authenticate with the external system.
 :::
 
-It's essential to understand that there are different types of fields in settings. Especially for any credentials like `token`, the [`"type": "secret"` should be used](https://developer.dynatrace.com/develop/guides/data/store-app-settings.md#use-secrets).
+It's essential to understand that there are different types of fields in settings. Especially for any credentials like `token`, the [`"type": "secret"` should be used](https://public-developer.central.internal.dynatrace.com/develop/guides/data/store-app-settings.md#use-secrets).
 
 ### Log messages
 

@@ -6,7 +6,7 @@ import { activeGatesRemoteConfigurationManagementClient } from '@dynatrace-sdk/c
 
 ### createRemoteIdentityOperationJob
 
-**activeGatesRemoteConfigurationManagementClient.createRemoteIdentityOperationJob(config): Promise\<[RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob)>**
+**activeGatesRemoteConfigurationManagementClient.createRemoteIdentityOperationJob(config): Promise\<[RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob)>**
 
 Creates a new remote configuration management job
 
@@ -18,15 +18,15 @@ Creates a new remote configuration management job
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                      |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [RemoteConfigurationManagementOperationActiveGateRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementoperationactivegaterequest) |
+| Name                   | Type                                                                                                                                                                                                                              |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [RemoteConfigurationManagementOperationActiveGateRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementoperationactivegaterequest) |
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob) | 201         | Created     |
+| Return type                                                                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob) | 201         | Created     |
 
 #### Throws
 
@@ -55,7 +55,7 @@ const data =
 
 ### createRemoteIdentityOperationPreview
 
-**activeGatesRemoteConfigurationManagementClient.createRemoteIdentityOperationPreview(config): Promise\<[RemoteConfigurationManagementPreviewList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementpreviewlist)>**
+**activeGatesRemoteConfigurationManagementClient.createRemoteIdentityOperationPreview(config): Promise\<[RemoteConfigurationManagementPreviewList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementpreviewlist)>**
 
 Creates a preview for remote configuration management job - applicable only to network zone and ActiveGate group
 
@@ -67,15 +67,15 @@ Creates a preview for remote configuration management job - applicable only to n
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                      |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [RemoteConfigurationManagementOperationActiveGateRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementoperationactivegaterequest) |
+| Name                   | Type                                                                                                                                                                                                                              |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [RemoteConfigurationManagementOperationActiveGateRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementoperationactivegaterequest) |
 
 #### Returns
 
-| Return type                                                                                                                                                                 | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [RemoteConfigurationManagementPreviewList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementpreviewlist) | 200         | Success     |
+| Return type                                                                                                                                                                                         | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [RemoteConfigurationManagementPreviewList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementpreviewlist) | 200         | Success     |
 
 #### Throws
 
@@ -104,7 +104,7 @@ const data =
 
 ### getCurrentRemoteIdentityOperationJob
 
-**activeGatesRemoteConfigurationManagementClient.getCurrentRemoteIdentityOperationJob(config): Promise\<void | [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob)>**
+**activeGatesRemoteConfigurationManagementClient.getCurrentRemoteIdentityOperationJob(config): Promise\<void | [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob)>**
 
 Gets remote configuration management job that is currently running
 
@@ -118,10 +118,10 @@ The currently running remote configuration management job may be related to Acti
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------- |
-| [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob) | 200         | Success                                                     |
-| void                                                                                                                                                        | 204         | No remote configuration management job is currently running |
+| Return type                                                                                                                                                                         | Status code | Description                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------- |
+| [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob) | 200         | Success                                                     |
+| void                                                                                                                                                                                | 204         | No remote configuration management job is currently running |
 
 #### Throws
 
@@ -140,7 +140,7 @@ const data =
 
 ### getRemoteIdentityOperationJob
 
-**activeGatesRemoteConfigurationManagementClient.getRemoteIdentityOperationJob(config): Promise\<[RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob)>**
+**activeGatesRemoteConfigurationManagementClient.getRemoteIdentityOperationJob(config): Promise\<[RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob)>**
 
 Gets the specified remote configuration management job
 
@@ -158,9 +158,9 @@ Gets the specified remote configuration management job
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob) | 200         | Success     |
+| Return type                                                                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjob) | 200         | Success     |
 
 #### Throws
 
@@ -181,7 +181,7 @@ const data =
 
 ### getRemoteIdentityOperations
 
-**activeGatesRemoteConfigurationManagementClient.getRemoteIdentityOperations(config): Promise\<[RemoteConfigurationManagementJobList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjoblist)>**
+**activeGatesRemoteConfigurationManagementClient.getRemoteIdentityOperations(config): Promise\<[RemoteConfigurationManagementJobList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjoblist)>**
 
 Lists finished ActiveGate remote configuration management jobs
 
@@ -264,9 +264,9 @@ The response includes finished jobs for the last 7 days.
 
 #### Returns
 
-| Return type                                                                                                                                                         | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [RemoteConfigurationManagementJobList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjoblist) | 200         | Success     |
+| Return type                                                                                                                                                                                 | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [RemoteConfigurationManagementJobList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementjoblist) | 200         | Success     |
 
 #### Throws
 
@@ -297,9 +297,9 @@ Validates the payload for the `POST /activeGates/remoteConfigurationManagement` 
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                      |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [RemoteConfigurationManagementOperationActiveGateRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementoperationactivegaterequest) |
+| Name                   | Type                                                                                                                                                                                                                              |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [RemoteConfigurationManagementOperationActiveGateRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#remoteconfigurationmanagementoperationactivegaterequest) |
 
 #### Returns
 

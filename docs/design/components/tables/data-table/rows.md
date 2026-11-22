@@ -1439,7 +1439,7 @@ const RowThresholds = () => {
 
 ### Define custom comparator
 
-You can define a custom `comparator` function to evaluate the `threshold` using your own logic. This function should return a `boolean`. If it returns `true`, the `threshold` is applied; if `false`, it's not. The function receives the row data as input. Please note that this custom `comparator` function will not be serialized for sharing via [intents](https://developer.dynatrace.com/develop/guides/navigation/intents.md).
+You can define a custom `comparator` function to evaluate the `threshold` using your own logic. This function should return a `boolean`. If it returns `true`, the `threshold` is applied; if `false`, it's not. The function receives the row data as input. Please note that this custom `comparator` function will not be serialized for sharing via [intents](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents.md).
 
 **CustomComparator**
 

@@ -1,6 +1,6 @@
 Use `DataTable` to display and manage datasets with rich interactions such as sorting, filtering, pagination, and row selection.
 
-Many features below expose a controlled and an uncontrolled variant of their props (for example `columnOrder` versus `defaultColumnOrder`). For guidance on when to use each and how they interact, see [Controlled and uncontrolled state](https://developer.dynatrace.com/design/components/tables/DataTable.md#controlled-and-uncontrolled-state).
+Many features below expose a controlled and an uncontrolled variant of their props (for example `columnOrder` versus `defaultColumnOrder`). For guidance on when to use each and how they interact, see [Controlled and uncontrolled state](https://public-developer.central.internal.dynatrace.com/design/components/tables/DataTable.md#controlled-and-uncontrolled-state).
 
 **`DataTableProps`**
 

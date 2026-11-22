@@ -6,7 +6,7 @@ import { syntheticLocationsNodesAndConfigurationClient } from '@dynatrace-sdk/cl
 
 ### addLocation
 
-**syntheticLocationsNodesAndConfigurationClient.addLocation(config): Promise\<[SyntheticLocationIdsDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocationidsdto)>**
+**syntheticLocationsNodesAndConfigurationClient.addLocation(config): Promise\<[SyntheticLocationIdsDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocationidsdto)>**
 
 Creates a new private synthetic location
 
@@ -15,15 +15,15 @@ Creates a new private synthetic location
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [PrivateSyntheticLocation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#privatesyntheticlocation) |
+| Name                   | Type                                                                                                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [PrivateSyntheticLocation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#privatesyntheticlocation) |
 
 #### Returns
 
-| Return type                                                                                                                               | Status code | Description                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
-| [SyntheticLocationIdsDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocationidsdto) | 201         | Success. The private location has been created. The response contains the ID of the new location. |
+| Return type                                                                                                                                                       | Status code | Description                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| [SyntheticLocationIdsDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocationidsdto) | 201         | Success. The private location has been created. The response contains the ID of the new location. |
 
 #### Throws
 
@@ -52,7 +52,7 @@ const data =
 
 ### getConfiguration
 
-**syntheticLocationsNodesAndConfigurationClient.getConfiguration(config): Promise\<[SyntheticConfigDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto)>**
+**syntheticLocationsNodesAndConfigurationClient.getConfiguration(config): Promise\<[SyntheticConfigDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto)>**
 
 Gets set of synthetic related parameters defined for whole tenant (affects all monitors and all private locations). | maturity=EARLY_ADOPTER
 
@@ -61,9 +61,9 @@ Gets set of synthetic related parameters defined for whole tenant (affects all m
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------- |
-| [SyntheticConfigDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto) | 200         | Success. The response contains synthetic related parameters defined for whole tenant. |
+| Return type                                                                                                                                             | Status code | Description                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------- |
+| [SyntheticConfigDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto) | 200         | Success. The response contains synthetic related parameters defined for whole tenant. |
 
 #### Throws
 
@@ -82,7 +82,7 @@ const data =
 
 ### getLocation
 
-**syntheticLocationsNodesAndConfigurationClient.getLocation(config): Promise\<[PrivateSyntheticLocation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#privatesyntheticlocation) | [SyntheticLocation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocation)>**
+**syntheticLocationsNodesAndConfigurationClient.getLocation(config): Promise\<[PrivateSyntheticLocation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#privatesyntheticlocation) | [SyntheticLocation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocation)>**
 
 Gets properties of the specified location
 
@@ -97,9 +97,9 @@ Gets properties of the specified location
 
 #### Returns
 
-| Return type                                                                                                                                 | Status code | Description                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------- |
-| [PrivateSyntheticLocation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#privatesyntheticlocation) | 200         | Success. The response contains parameters of the synthetic location. |
+| Return type                                                                                                                                                         | Status code | Description                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------- |
+| [PrivateSyntheticLocation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#privatesyntheticlocation) | 200         | Success. The response contains parameters of the synthetic location. |
 
 #### Throws
 
@@ -242,7 +242,7 @@ const data =
 
 ### getLocations
 
-**syntheticLocationsNodesAndConfigurationClient.getLocations(config): Promise\<[SyntheticLocations](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocations)>**
+**syntheticLocationsNodesAndConfigurationClient.getLocations(config): Promise\<[SyntheticLocations](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocations)>**
 
 Lists all synthetic locations (both public and private) available for your environment
 
@@ -259,9 +259,9 @@ Lists all synthetic locations (both public and private) available for your envir
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SyntheticLocations](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocations) | 200         | Success     |
+| Return type                                                                                                                                             | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SyntheticLocations](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocations) | 200         | Success     |
 
 #### Throws
 
@@ -280,7 +280,7 @@ const data =
 
 ### getLocationsStatus
 
-**syntheticLocationsNodesAndConfigurationClient.getLocationsStatus(config): Promise\<[SyntheticPublicLocationsStatus](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticpubliclocationsstatus)>**
+**syntheticLocationsNodesAndConfigurationClient.getLocationsStatus(config): Promise\<[SyntheticPublicLocationsStatus](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticpubliclocationsstatus)>**
 
 Checks the status of public synthetic locations
 
@@ -289,9 +289,9 @@ Checks the status of public synthetic locations
 
 #### Returns
 
-| Return type                                                                                                                                             | Status code | Description                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------- |
-| [SyntheticPublicLocationsStatus](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticpubliclocationsstatus) | 200         | Success. The response contains the public locations status. |
+| Return type                                                                                                                                                                     | Status code | Description                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------- |
+| [SyntheticPublicLocationsStatus](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticpubliclocationsstatus) | 200         | Success. The response contains the public locations status. |
 
 #### Throws
 
@@ -310,7 +310,7 @@ const data =
 
 ### getNode
 
-**syntheticLocationsNodesAndConfigurationClient.getNode(config): Promise\<[Node](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#node)>**
+**syntheticLocationsNodesAndConfigurationClient.getNode(config): Promise\<[Node](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#node)>**
 
 Lists properties of the specified synthetic node
 
@@ -325,9 +325,9 @@ Lists properties of the specified synthetic node
 
 #### Returns
 
-| Return type                                                                                         | Status code | Description |
-| --------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Node](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#node) | 200         | Success     |
+| Return type                                                                                                                 | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Node](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#node) | 200         | Success     |
 
 #### Throws
 
@@ -348,7 +348,7 @@ const data =
 
 ### getNodes
 
-**syntheticLocationsNodesAndConfigurationClient.getNodes(config): Promise\<[Nodes](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#nodes)>**
+**syntheticLocationsNodesAndConfigurationClient.getNodes(config): Promise\<[Nodes](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#nodes)>**
 
 Lists all synthetic nodes available in your environment
 
@@ -364,9 +364,9 @@ Lists all synthetic nodes available in your environment
 
 #### Returns
 
-| Return type                                                                                           | Status code | Description |
-| ----------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Nodes](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#nodes) | 200         | Success     |
+| Return type                                                                                                                   | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Nodes](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#nodes) | 200         | Success     |
 
 #### Throws
 
@@ -423,7 +423,7 @@ const data =
 
 ### updateConfiguration
 
-**syntheticLocationsNodesAndConfigurationClient.updateConfiguration(config): Promise\<[SyntheticConfigDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto)>**
+**syntheticLocationsNodesAndConfigurationClient.updateConfiguration(config): Promise\<[SyntheticConfigDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto)>**
 
 Updates set of synthetic related parameters defined for whole tenant (affects all monitors and all private locations). | maturity=EARLY_ADOPTER
 
@@ -432,15 +432,15 @@ Updates set of synthetic related parameters defined for whole tenant (affects al
 
 #### Parameters
 
-| Name                   | Type                                                                                                                            |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SyntheticConfigDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto) |
+| Name                   | Type                                                                                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SyntheticConfigDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto) |
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------ |
-| [SyntheticConfigDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto) | 204         | Success. The set of synthetic related parameters has been updated. Response doesn't have a body. |
+| Return type                                                                                                                                             | Status code | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------ |
+| [SyntheticConfigDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticconfigdto) | 204         | Success. The set of synthetic related parameters has been updated. Response doesn't have a body. |
 
 #### Throws
 
@@ -472,10 +472,10 @@ For public locations you can only change the location status.
 
 #### Parameters
 
-| Name                         | Type                                                                                                                                      | Description                                                      |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| config.body (required)       | [SyntheticLocationUpdate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocationupdate) |                                                                  |
-| config.locationId (required) | string                                                                                                                                    | The Dynatrace entity ID of the synthetic location to be updated. |
+| Name                         | Type                                                                                                                                                              | Description                                                      |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| config.body (required)       | [SyntheticLocationUpdate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticlocationupdate) |                                                                  |
+| config.locationId (required) | string                                                                                                                                                            | The Dynatrace entity ID of the synthetic location to be updated. |
 
 #### Returns
 
@@ -511,9 +511,9 @@ Changes the status of public synthetic locations
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SyntheticPublicLocationsStatus](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticpubliclocationsstatus) |
+| Name                   | Type                                                                                                                                                                            |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SyntheticPublicLocationsStatus](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#syntheticpubliclocationsstatus) |
 
 #### Returns
 

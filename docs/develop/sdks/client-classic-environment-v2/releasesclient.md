@@ -6,7 +6,7 @@ import { releasesClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### getReleases
 
-**releasesClient.getReleases(config): Promise\<[Releases](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#releases)>**
+**releasesClient.getReleases(config): Promise\<[Releases](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#releases)>**
 
 Returns all releases
 
@@ -102,9 +102,9 @@ Returns all releases
 
 #### Returns
 
-| Return type                                                                                              | Status code | Description |
-| -------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Releases](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#releases) | 200         | Success     |
+| Return type                                                                                                                      | Status code | Description |
+| -------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Releases](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/types.md#releases) | 200         | Success     |
 
 #### Throws
 

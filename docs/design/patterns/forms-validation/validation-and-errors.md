@@ -32,7 +32,7 @@ Never block users from submitting a form by disabling the submit button. Sometim
 
 #### Complex inputs
 
-Complex inputs are controls that accept structured values—such as expressions, filter clauses, or query fragments. [FilterField](https://developer.dynatrace.com/design/components/filters/FilterField/usage.md) is an example of a complex input.
+Complex inputs are controls that accept structured values—such as expressions, filter clauses, or query fragments. [FilterField](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterField/usage.md) is an example of a complex input.
 
 The lifecycle of the error message shown below a complex input differs from immediate and on-submit validation:
 

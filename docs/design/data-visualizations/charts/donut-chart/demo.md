@@ -11,7 +11,7 @@ The `DonutChart` accepts `data` as `ChartData`, a flat array of data-point objec
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/DonutChart/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/DonutChart/props.md).
 
 **AddData**
 

@@ -1,6 +1,6 @@
 ## Demo
 
-`SegmentSelector` lets users filter data from specific datasets called [Segments](https://docs.dynatrace.com/docs/shortlink/segments). The `useSegments` hook provides access to the selected values. See [Usage](https://developer.dynatrace.com/design/components/filters/SegmentSelector/usage.md) for best practices.
+`SegmentSelector` lets users filter data from specific datasets called [Segments](https://docs.dynatrace.com/docs/shortlink/segments). The `useSegments` hook provides access to the selected values. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/SegmentSelector/usage.md) for best practices.
 
 **Basic**
 

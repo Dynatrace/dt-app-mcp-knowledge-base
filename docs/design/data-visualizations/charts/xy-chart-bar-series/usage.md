@@ -17,4 +17,4 @@ Additionally:
 - `seriesIdAccessor`: groups datapoints into series (enables multiple series in one BarSeries slot)
 - `nameAccessor`: series label for legends and tooltips
 
-Assign the series to axes via `xAxisId` and `yAxisId`. See [XYChart docs](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md) for axis configuration.
+Assign the series to axes via `xAxisId` and `yAxisId`. See [XYChart docs](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md) for axis configuration.

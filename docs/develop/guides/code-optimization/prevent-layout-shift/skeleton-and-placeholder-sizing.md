@@ -71,4 +71,4 @@ The `opacity` transition signals a background refresh without moving anything. Z
 
 > **Note**
 >
-> Learn more about [Stale-While-Revalidate (SWR)](https://developer.dynatrace.com/develop/guides/code-optimization/stale-while-revalidate.md).
+> Learn more about [Stale-While-Revalidate (SWR)](https://public-developer.central.internal.dynatrace.com/develop/guides/code-optimization/stale-while-revalidate.md).

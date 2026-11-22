@@ -1,6 +1,6 @@
 ## Content guidelines
 
-![Anatomy of a FeatureHighlight component with four numbered callouts mapping to the parts described below: Title, Visual, Content, and Actions.](https://developer.dynatrace.com/assets/images/featurehighlight-content-anatomy-light-25386aa4d878889be347999ceaa7e354.webp)
+![Anatomy of a FeatureHighlight component with four numbered callouts mapping to the parts described below: Title, Visual, Content, and Actions.](https://public-developer.central.internal.dynatrace.com/assets/images/featurehighlight-content-anatomy-light-25386aa4d878889be347999ceaa7e354.webp)
 
 1. Title (optional)
 2. Visual (optional)
@@ -29,9 +29,9 @@
 
 - Keep the content brief and action-oriented. Avoid excessive detail.
 - Don't repeat the title in the content.
-- If you include links, follow the usage guidance for [Link](https://developer.dynatrace.com/design/components/typography/Link/usage.md).
+- If you include links, follow the usage guidance for [Link](https://public-developer.central.internal.dynatrace.com/design/components/typography/Link/usage.md).
 
 ### Actions
 
-- Use buttons for actions and follow the usage guidance for [Button](https://developer.dynatrace.com/design/components/buttons/Button/usage.md).
+- Use buttons for actions and follow the usage guidance for [Button](https://public-developer.central.internal.dynatrace.com/design/components/buttons/Button/usage.md).
 - If you need to point to more information, include a link in the content instead.

@@ -22,7 +22,7 @@ Use the `BubbleLayer` component to render data points with customizable radius. 
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/geo-maps/BubbleLayer/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/BubbleLayer/props.md).
 
 **BubbleLayerSimple**
 
@@ -371,7 +371,7 @@ Be aware, that the `radiusRange` prop is not supported in `none` scaling mode be
 
 ### Tooltip
 
-The `BubbleLayer` component displays a tooltip by default when hovering over a data point. By default, the tooltip will display the location information of the hovered bubble, but [it can be heavily customized](https://developer.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#customize-tooltip).
+The `BubbleLayer` component displays a tooltip by default when hovering over a data point. By default, the tooltip will display the location information of the hovered bubble, but [it can be heavily customized](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#customize-tooltip).
 
 **BubbleLayerTooltip**
 

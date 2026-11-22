@@ -10,4 +10,4 @@
 
 > **Tip**
 >
-> Learn more about Dynatrace Extensions [custom diagnostics.](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#diagnostics)
+> Learn more about Dynatrace Extensions [custom diagnostics.](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#diagnostics)

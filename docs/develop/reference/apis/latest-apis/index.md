@@ -4,4 +4,4 @@ Here's a list of all APIs for Platform Services available for latest Dynatrace.
 
 > **Tip**
 >
-> Read more about [each Platform Service](https://developer.dynatrace.com/develop/platform-services.md), and [find our SDKs here](https://developer.dynatrace.com/develop/sdks.md).
+> Read more about [each Platform Service](https://public-developer.central.internal.dynatrace.com/develop/platform-services.md), and [find our SDKs here](https://public-developer.central.internal.dynatrace.com/develop/sdks.md).

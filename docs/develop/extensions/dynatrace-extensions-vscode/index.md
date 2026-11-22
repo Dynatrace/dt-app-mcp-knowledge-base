@@ -6,4 +6,4 @@ It gives you access to a specialized toolkit that's ready to use and helps you o
 2. Content creation
 3. Content validation
 
-Check out the instructions for [getting started](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/getting-started.md), or keep reading to learn some of its features.
+Check out the instructions for [getting started](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/getting-started.md), or keep reading to learn some of its features.

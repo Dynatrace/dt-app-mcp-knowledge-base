@@ -24,7 +24,7 @@ await settingsPermissionsClient.transferSettingsObjectOwnership({
 });
 ```
 
-This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Add permissions for an accessor
 
@@ -45,7 +45,7 @@ await settingsPermissionsClient.addSettingsObjectAccessorPermissions({
 });
 ```
 
-This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Get permissions for all accessors
 
@@ -59,7 +59,7 @@ const permissions = await settingsPermissionsClient.getSettingsObjectPermissions
 });
 ```
 
-This operation requires the scope `settings:objects:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `settings:objects:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Update permissions for an accessor
 
@@ -78,7 +78,7 @@ await settingsPermissionsClient.updateSettingsObjectAccessorPermissions({
 });
 ```
 
-This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Remove permissions for an accessor
 
@@ -92,7 +92,7 @@ await settingsPermissionsClient.deleteSettingsObjectAllUsersPermissions({
 });
 ```
 
-This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Administrator access
 
@@ -113,4 +113,4 @@ This operation requires the following scopes:
 - `settings:objects:write`
 - `settings:objects:admin`
 
-[guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+[guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

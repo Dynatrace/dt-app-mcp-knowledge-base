@@ -1,6 +1,6 @@
 ## Add-on-specific intent properties
 
-For general intent properties, see the [Receive intents guide](https://developer.dynatrace.com/develop/guides/navigation/intents/receive-intents.md).
+For general intent properties, see the [Receive intents guide](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/receive-intents.md).
 
 | Property               | Type                                                | Required                                                                                                                  | Description                                                                                                    |
 | ---------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |

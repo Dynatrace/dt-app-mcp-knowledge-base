@@ -6,7 +6,7 @@ import { oneAgentRemoteConfigurationManagementClient } from '@dynatrace-sdk/clie
 
 ### createRemoteIdentityOperationJob_1
 
-**oneAgentRemoteConfigurationManagementClient.createRemoteIdentityOperationJob_1(config): Promise\<[RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob)>**
+**oneAgentRemoteConfigurationManagementClient.createRemoteIdentityOperationJob_1(config): Promise\<[RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob)>**
 
 Creates a new remote configuration management job
 
@@ -18,16 +18,16 @@ Creates a new remote configuration management job
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                   | Description                                                                                                                                                                                                                                     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [RemoteConfigurationManagementOperationOneAgentRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementoperationoneagentrequest) |                                                                                                                                                                                                                                                 |
-| config.restart         | boolean                                                                                                                                                                                                | One Agents will be restarted (`true`) or not (`false`) after configuration. By default OneAgents will be restarted when network zone, host group, host tags or host properties are reconfigured - the restart is required to apply the changes. |
+| Name                   | Type                                                                                                                                                                                                                           | Description                                                                                                                                                                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [RemoteConfigurationManagementOperationOneAgentRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementoperationoneagentrequest) |                                                                                                                                                                                                                                                 |
+| config.restart         | boolean                                                                                                                                                                                                                        | One Agents will be restarted (`true`) or not (`false`) after configuration. By default OneAgents will be restarted when network zone, host group, host tags or host properties are reconfigured - the restart is required to apply the changes. |
 
 #### Returns
 
-| Return type                                                                                                                                                  | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob) | 201         | Created     |
+| Return type                                                                                                                                                                          | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob) | 201         | Created     |
 
 #### Throws
 
@@ -58,7 +58,7 @@ const data =
 
 ### createRemoteIdentityOperationPreview_1
 
-**oneAgentRemoteConfigurationManagementClient.createRemoteIdentityOperationPreview_1(config): Promise\<[RemoteConfigurationManagementPreviewList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementpreviewlist)>**
+**oneAgentRemoteConfigurationManagementClient.createRemoteIdentityOperationPreview_1(config): Promise\<[RemoteConfigurationManagementPreviewList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementpreviewlist)>**
 
 Creates a preview for remote configuration management job - applicable only to network zone and host group
 
@@ -70,15 +70,15 @@ Creates a preview for remote configuration management job - applicable only to n
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                   |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| config.body (required) | [RemoteConfigurationManagementOperationOneAgentRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementoperationoneagentrequest) |
+| Name                   | Type                                                                                                                                                                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| config.body (required) | [RemoteConfigurationManagementOperationOneAgentRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementoperationoneagentrequest) |
 
 #### Returns
 
-| Return type                                                                                                                                                                  | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [RemoteConfigurationManagementPreviewList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementpreviewlist) | 200         | Success     |
+| Return type                                                                                                                                                                                          | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [RemoteConfigurationManagementPreviewList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementpreviewlist) | 200         | Success     |
 
 #### Throws
 
@@ -109,7 +109,7 @@ const data =
 
 ### getCurrentRemoteIdentityOperationJob_1
 
-**oneAgentRemoteConfigurationManagementClient.getCurrentRemoteIdentityOperationJob_1(config): Promise\<void | [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob)>**
+**oneAgentRemoteConfigurationManagementClient.getCurrentRemoteIdentityOperationJob_1(config): Promise\<void | [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob)>**
 
 Gets remote configuration management job that is currently running
 
@@ -123,10 +123,10 @@ The currently running remote configuration management job may be related to Acti
 
 #### Returns
 
-| Return type                                                                                                                                                  | Status code | Description                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------------------------------------------------------- |
-| [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob) | 200         | Success                                                     |
-| void                                                                                                                                                         | 204         | No remote configuration management job is currently running |
+| Return type                                                                                                                                                                          | Status code | Description                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------------------------------------------------------- |
+| [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob) | 200         | Success                                                     |
+| void                                                                                                                                                                                 | 204         | No remote configuration management job is currently running |
 
 #### Throws
 
@@ -145,7 +145,7 @@ const data =
 
 ### getRemoteIdentityOperationJob_1
 
-**oneAgentRemoteConfigurationManagementClient.getRemoteIdentityOperationJob_1(config): Promise\<[RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob)>**
+**oneAgentRemoteConfigurationManagementClient.getRemoteIdentityOperationJob_1(config): Promise\<[RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob)>**
 
 Gets the specified remote configuration management job
 
@@ -163,9 +163,9 @@ Gets the specified remote configuration management job
 
 #### Returns
 
-| Return type                                                                                                                                                  | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [RemoteConfigurationManagementJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob) | 200         | Success     |
+| Return type                                                                                                                                                                          | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [RemoteConfigurationManagementJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjob) | 200         | Success     |
 
 #### Throws
 
@@ -186,7 +186,7 @@ const data =
 
 ### getRemoteIdentityOperations_1
 
-**oneAgentRemoteConfigurationManagementClient.getRemoteIdentityOperations_1(config): Promise\<[RemoteConfigurationManagementJobList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjoblist)>**
+**oneAgentRemoteConfigurationManagementClient.getRemoteIdentityOperations_1(config): Promise\<[RemoteConfigurationManagementJobList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjoblist)>**
 
 Lists finished OneAgent remote configuration management jobs
 
@@ -269,9 +269,9 @@ The response includes finished jobs for the last 7 days.
 
 #### Returns
 
-| Return type                                                                                                                                                          | Status code | Description |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [RemoteConfigurationManagementJobList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjoblist) | 200         | Success     |
+| Return type                                                                                                                                                                                  | Status code | Description |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [RemoteConfigurationManagementJobList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementjoblist) | 200         | Success     |
 
 #### Throws
 
@@ -302,9 +302,9 @@ Validates the payload for the `POST /oneagents/remoteConfigurationManagement` re
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                                                                   |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| config.body (required) | [RemoteConfigurationManagementOperationOneAgentRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementoperationoneagentrequest) |
+| Name                   | Type                                                                                                                                                                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| config.body (required) | [RemoteConfigurationManagementOperationOneAgentRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#remoteconfigurationmanagementoperationoneagentrequest) |
 
 #### Returns
 

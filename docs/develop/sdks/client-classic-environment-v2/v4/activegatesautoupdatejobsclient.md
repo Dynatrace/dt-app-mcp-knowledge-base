@@ -6,7 +6,7 @@ import { activeGatesAutoUpdateJobsClient } from '@dynatrace-sdk/client-classic-e
 
 ### createUpdateJobForAg
 
-**activeGatesAutoUpdateJobsClient.createUpdateJobForAg(config): Promise\<[UpdateJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob)>**
+**activeGatesAutoUpdateJobsClient.createUpdateJobForAg(config): Promise\<[UpdateJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob)>**
 
 Creates a new update job for the specified ActiveGate
 
@@ -15,16 +15,16 @@ Creates a new update job for the specified ActiveGate
 
 #### Parameters
 
-| Name                   | Type                                                                                                          | Description                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| config.agId (required) | string                                                                                                        | The ID of the required ActiveGate. |
-| config.body (required) | [UpdateJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) |                                    |
+| Name                   | Type                                                                                                                                  | Description                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| config.agId (required) | string                                                                                                                                | The ID of the required ActiveGate. |
+| config.body (required) | [UpdateJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) |                                    |
 
 #### Returns
 
-| Return type                                                                                                   | Status code | Description                                |
-| ------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------ |
-| [UpdateJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) | 201         | Success. The update-job have been created. |
+| Return type                                                                                                                           | Status code | Description                                |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------ |
+| [UpdateJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) | 201         | Success. The update-job have been created. |
 
 #### Throws
 
@@ -87,7 +87,7 @@ const data =
 
 ### getAllUpdateJobList
 
-**activeGatesAutoUpdateJobsClient.getAllUpdateJobList(config): Promise\<[UpdateJobsAll](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejobsall)>**
+**activeGatesAutoUpdateJobsClient.getAllUpdateJobList(config): Promise\<[UpdateJobsAll](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejobsall)>**
 
 List ActiveGates with update jobs
 
@@ -173,9 +173,9 @@ The response includes ActiveGates that have both completed (successful and faile
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [UpdateJobsAll](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejobsall) | 200         | Success     |
+| Return type                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [UpdateJobsAll](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejobsall) | 200         | Success     |
 
 #### Throws
 
@@ -194,7 +194,7 @@ const data =
 
 ### getUpdateJobByJobIdForAg
 
-**activeGatesAutoUpdateJobsClient.getUpdateJobByJobIdForAg(config): Promise\<[UpdateJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob)>**
+**activeGatesAutoUpdateJobsClient.getUpdateJobByJobIdForAg(config): Promise\<[UpdateJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob)>**
 
 Gets the parameters of the specified update job
 
@@ -210,9 +210,9 @@ Gets the parameters of the specified update job
 
 #### Returns
 
-| Return type                                                                                                   | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [UpdateJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) | 200         | Success     |
+| Return type                                                                                                                           | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [UpdateJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) | 200         | Success     |
 
 #### Throws
 
@@ -233,7 +233,7 @@ const data =
 
 ### getUpdateJobListByAgId
 
-**activeGatesAutoUpdateJobsClient.getUpdateJobListByAgId(config): Promise\<[UpdateJobList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejoblist)>**
+**activeGatesAutoUpdateJobsClient.getUpdateJobListByAgId(config): Promise\<[UpdateJobList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejoblist)>**
 
 Lists update jobs for the specified ActiveGate
 
@@ -320,9 +320,9 @@ The job can update the ActiveGate to the specified version or the latest availab
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [UpdateJobList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejoblist) | 200         | Success     |
+| Return type                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [UpdateJobList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejoblist) | 200         | Success     |
 
 #### Throws
 
@@ -352,10 +352,10 @@ Validates the payload for the `POST /activeGates/{agId}/updateJobs` request.
 
 #### Parameters
 
-| Name                   | Type                                                                                                          | Description                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| config.agId (required) | string                                                                                                        | The ID of the required ActiveGate. |
-| config.body (required) | [UpdateJob](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) |                                    |
+| Name                   | Type                                                                                                                                  | Description                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| config.agId (required) | string                                                                                                                                | The ID of the required ActiveGate. |
+| config.body (required) | [UpdateJob](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#updatejob) |                                    |
 
 #### Returns
 

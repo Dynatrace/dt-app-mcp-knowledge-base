@@ -6,7 +6,7 @@ import { logsClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### exportLogRecords
 
-**logsClient.exportLogRecords(config): Promise\<[ExportedLogRecordList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#exportedlogrecordlist)>**
+**logsClient.exportLogRecords(config): Promise\<[ExportedLogRecordList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#exportedlogrecordlist)>**
 
 Exports log records | maturity=EARLY_ADOPTER
 
@@ -99,9 +99,9 @@ Please note that export works **only** for *Logs Classic*.
 
 #### Returns
 
-| Return type                                                                                                                           | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ExportedLogRecordList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#exportedlogrecordlist) | 200         | Success     |
+| Return type                                                                                                                                                   | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ExportedLogRecordList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#exportedlogrecordlist) | 200         | Success     |
 
 #### Throws
 
@@ -119,7 +119,7 @@ const data = await logsClient.exportLogRecords();
 
 ### getLogHistogramData
 
-**logsClient.getLogHistogramData(config): Promise\<[AggregatedLog](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#aggregatedlog)>**
+**logsClient.getLogHistogramData(config): Promise\<[AggregatedLog](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#aggregatedlog)>**
 
 Gets aggregated log records | maturity=EARLY_ADOPTER
 
@@ -218,9 +218,9 @@ It is **not** recommended to run Grail queries using Logs v2 API, please use Gra
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AggregatedLog](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#aggregatedlog) | 200         | Success     |
+| Return type                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AggregatedLog](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#aggregatedlog) | 200         | Success     |
 
 #### Throws
 
@@ -238,7 +238,7 @@ const data = await logsClient.getLogHistogramData();
 
 ### getLogRecords
 
-**logsClient.getLogRecords(config): Promise\<[LogRecordsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#logrecordslist)>**
+**logsClient.getLogRecords(config): Promise\<[LogRecordsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#logrecordslist)>**
 
 Reads log records | maturity=EARLY_ADOPTER
 
@@ -339,9 +339,9 @@ It is **not** recommended to run Grail queries using Logs v2 API, please use Gra
 
 #### Returns
 
-| Return type                                                                                                             | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [LogRecordsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#logrecordslist) | 200         | Success     |
+| Return type                                                                                                                                     | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [LogRecordsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#logrecordslist) | 200         | Success     |
 
 #### Throws
 
@@ -359,7 +359,7 @@ const data = await logsClient.getLogRecords();
 
 ### storeLog
 
-**logsClient.storeLog(config): Promise\<void | [SuccessEnvelope](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#successenvelope)>**
+**logsClient.storeLog(config): Promise\<void | [SuccessEnvelope](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#successenvelope)>**
 
 Pushes log records to Dynatrace
 
@@ -405,10 +405,10 @@ It is recommended to use an exponential backoff strategy for retrying requests.
 
 #### Returns
 
-| Return type                                                                                                               | Status code | Description                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------- |
-| [SuccessEnvelope](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#successenvelope) | 200         | Only a part of input events were ingested due to event invalidity. For details, check the response body. |
-| void                                                                                                                      | 204         | Success. Response doesn't have a body.                                                                   |
+| Return type                                                                                                                                       | Status code | Description                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------- |
+| [SuccessEnvelope](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#successenvelope) | 200         | Only a part of input events were ingested due to event invalidity. For details, check the response body. |
+| void                                                                                                                                              | 204         | Success. Response doesn't have a body.                                                                   |
 
 #### Throws
 

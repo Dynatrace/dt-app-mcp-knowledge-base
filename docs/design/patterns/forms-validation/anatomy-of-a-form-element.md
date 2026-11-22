@@ -32,11 +32,11 @@ If a value is required for a particular form field, put an asterisk at the end o
 
 ### Form element states
 
-![A TextInput in enabled, disabled, and read-only state.](https://developer.dynatrace.com/assets/images/forms-element-states-light-6f6fd86fba7d2491741472559b118173.webp)
+![A TextInput in enabled, disabled, and read-only state.](https://public-developer.central.internal.dynatrace.com/assets/images/forms-element-states-light-6f6fd86fba7d2491741472559b118173.webp)
 
 Form elements can be enabled, disabled, or read only. While disabled and read-only states both prevent editing, they behave differently:
 
-- **Disabled:** Elements cannot be focused or submitted, but assistive technologies can still discover and announce them as disabled. If a disabled element must remain accessible to explain why it's unavailable, use [ariaDisabled](https://developer.dynatrace.com/design/components/forms/FormField/props.md) and prevent interaction in your code.
+- **Disabled:** Elements cannot be focused or submitted, but assistive technologies can still discover and announce them as disabled. If a disabled element must remain accessible to explain why it's unavailable, use [ariaDisabled](https://public-developer.central.internal.dynatrace.com/design/components/forms/FormField/props.md) and prevent interaction in your code.
 - **Read only:** Values cannot be changed but are relevant and submitted with the form. Users can focus the input and highlight the content.
 
-See [Interaction states](https://developer.dynatrace.com/design/foundations/interaction-states.md/) for guidance on when to use each.
+See [Interaction states](https://public-developer.central.internal.dynatrace.com/design/foundations/interaction-states.md/) for guidance on when to use each.

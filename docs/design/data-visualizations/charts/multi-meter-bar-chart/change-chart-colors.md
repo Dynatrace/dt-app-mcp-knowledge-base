@@ -8,7 +8,7 @@ The `MultiMeterBarChart` provides several ways to customize the appearance of yo
 
 ### Use color palettes
 
-The `MultiMeterBarChart` has a default color palette for the segments. This could be changed with the `colorPalette` prop that can be set to any of predefined color palettes and it also accepts custom color palettes. See [coloring](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
+The `MultiMeterBarChart` has a default color palette for the segments. This could be changed with the `colorPalette` prop that can be set to any of predefined color palettes and it also accepts custom color palettes. See [coloring](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
 
 **ChangeColor**
 

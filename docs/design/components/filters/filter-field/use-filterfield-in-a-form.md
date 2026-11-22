@@ -4,9 +4,9 @@ The user can submit a filter statement using `Enter` or `Ctrl / Cmd + Enter`. Th
 
 When the `FilterField` is the only control in a form and no `onFilter` handler is set, `Enter` submits the form, the way a lone text input does. Setting `onFilter` takes that over: the callback fires and the form is not submitted, so one keystroke is handled once.
 
-`FilterField` can be displayed in a form. By default, the form shows a set of error messages based on the entered value, rendered as tooltips. Use the `FormField` to make the error state visible and add an error message beneath the `FilterField`. Learn about using the [FormField](https://developer.dynatrace.com/design/components/forms/FormField.md).
+`FilterField` can be displayed in a form. By default, the form shows a set of error messages based on the entered value, rendered as tooltips. Use the `FormField` to make the error state visible and add an error message beneath the `FilterField`. Learn about using the [FormField](https://public-developer.central.internal.dynatrace.com/design/components/forms/FormField.md).
 
-To provide the same functionality for pointer users, add a dedicated button next to the `FilterField`, as outlined in [Usage](https://developer.dynatrace.com/design/components/filters/FilterField/usage.md).
+To provide the same functionality for pointer users, add a dedicated button next to the `FilterField`, as outlined in [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterField/usage.md).
 
 **FormValidation**
 

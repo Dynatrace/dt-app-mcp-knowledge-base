@@ -2,7 +2,7 @@
 
 Extend the `HostData` type with these two properties: `hostId` and `hostName`.
 
-Then, create a row action in our [`DataTable`](https://developer.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/) and add the [`IntentButton`](https://developer.dynatrace.com/contents/docs/design/components/buttons/IntentButton/index.mdx/) component with the payload in the `HostList` component as follows:
+Then, create a row action in our [`DataTable`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/tables/DataTable/index.mdx/) and add the [`IntentButton`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/buttons/IntentButton/index.mdx/) component with the payload in the `HostList` component as follows:
 
 ```tsx title="ui/app/pages/HostList.tsx"
 import React, { useMemo } from 'react';
@@ -120,8 +120,8 @@ export const HostList = () => {
 };
 ```
 
-With these lines of code, you've created an app that can interact with other apps using [intents](https://developer.dynatrace.com/develop/guides/navigation/intents.md).
+With these lines of code, you've created an app that can interact with other apps using [intents](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents.md).
 
-![row-actions-intent-dark](https://developer.dynatrace.com/assets/images/row-actions-intent-dark-086953da4bde074b69d372e8e23999aa.gif)
+![row-actions-intent-dark](https://public-developer.central.internal.dynatrace.com/assets/images/row-actions-intent-dark-086953da4bde074b69d372e8e23999aa.gif)
 
 In the next section, we'll fetch and visualize the data from external APIs.

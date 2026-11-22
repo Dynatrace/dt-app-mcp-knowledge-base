@@ -10,13 +10,13 @@ Our grid and flex components will help you establish a responsive layout that ad
 
 ![Grid](./assets/layout-grid-light.webp)
 
-The [grid component](https://developer.dynatrace.com/contents/docs/design/components/layouts/Grid/index.mdx/) divides your content into rows and columns, creating a grid-like structure without visual styling. Use the grid component to create a basic layout and apply your visual styling to achieve the desired look and feel.
+The [grid component](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/layouts/Grid/index.mdx/) divides your content into rows and columns, creating a grid-like structure without visual styling. Use the grid component to create a basic layout and apply your visual styling to achieve the desired look and feel.
 
 ### Flex
 
 ![Flex](./assets/layout-flex-light.webp)
 
-Use the [flex component](https://developer.dynatrace.com/contents/docs/design/components/layouts/Flex/index.mdx/) to lay out content vertically or horizontally and create flexible layouts that adjust to the available space. It comes without visual styling. Use the flex component to create a basic layout and apply your visual styling to achieve the desired look and feel.
+Use the [flex component](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/layouts/Flex/index.mdx/) to lay out content vertically or horizontally and create flexible layouts that adjust to the available space. It comes without visual styling. Use the flex component to create a basic layout and apply your visual styling to achieve the desired look and feel.
 
 ### Breakpoints
 

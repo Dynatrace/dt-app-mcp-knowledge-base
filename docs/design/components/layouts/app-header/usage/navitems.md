@@ -7,4 +7,4 @@
   - If the app's home summarizes information or data from further parts of the app and acts as an entry point, consider calling it "Overview".
 - Avoid prefix icons for only some `NavItems`. If you use icons, ensure all items have them.
 
-![Example of correct AppHeader NavItems using the descriptive label "Overview" with no prefix icons, and an incorrect set labeled "Home" with icons on only some items.](https://developer.dynatrace.com/assets/images/appheader-navitems-light-6bb9965efb21df295ed1b7842ddf7156.webp)
+![Example of correct AppHeader NavItems using the descriptive label "Overview" with no prefix icons, and an incorrect set labeled "Home" with icons on only some items.](https://public-developer.central.internal.dynatrace.com/assets/images/appheader-navitems-light-6bb9965efb21df295ed1b7842ddf7156.webp)

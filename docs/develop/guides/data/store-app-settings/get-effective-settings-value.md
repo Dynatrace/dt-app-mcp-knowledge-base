@@ -41,4 +41,4 @@ The default value depends on the `multiObject` property of the schema:
 - `false`: if it's false, a single default object is created. Its properties are propagated with the default values defined in your schema.
 - `true`: if it's true, an empty collection is created.
 
-This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

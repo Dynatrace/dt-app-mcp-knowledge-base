@@ -23,4 +23,4 @@ The result depends on the `multiObject` property of the schema:
 - `false`: a single object is returned, containing either the persisted value or the schema default.
 - `true`: the merged list of persisted objects along the hierarchy is returned, or an empty list if nothing is persisted and no default is defined.
 
-This operation requires the scope `settings:objects:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `settings:objects:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

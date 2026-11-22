@@ -2,7 +2,7 @@
 
 Strato provides **four types** of toast. Each type has unique uses and behaviors, as described below.
 
-![Four Toast types, each with a distinct color and icon: Default, Success, Warning, and Critical.](https://developer.dynatrace.com/assets/images/toast-types-light-ace539c99c825a96f3bb2f849a9f84c3.webp)
+![Four Toast types, each with a distinct color and icon: Default, Success, Warning, and Critical.](https://public-developer.central.internal.dynatrace.com/assets/images/toast-types-light-ace539c99c825a96f3bb2f849a9f84c3.webp)
 
 ### Default toast
 

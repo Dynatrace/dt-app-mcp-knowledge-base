@@ -17,6 +17,7 @@ export declare type MapViewProps = MapViewBaseProps & (MapViewControlledProps | 
 | `truncationMode`     | `TruncationMode`                                    | `'middle'` | The truncation mode to be used as start, middle or end in the long legend labels                                                                                                                                                                   |
 | `formatter`          | `Formatter \| FormatOptions<Unit, ConvertibleUnit>` |            | Map View formatter options                                                                                                                                                                                                                         |
 | `onContextLostError` | `() => void`                                        |            | Callback fired when the map context is lost. Browsers have a limit of active WebGL canvas contexts. The map will automatically show an error state, but this callback allows consumers to perform additional actions (e.g., analytics, custom UI). |
+| `ref`                | `Ref<MapViewRef>`                                   |            | Ref to the imperative handle of the map                                                                                                                                                                                                            |
 
 **`MapViewControlledProps`**
 

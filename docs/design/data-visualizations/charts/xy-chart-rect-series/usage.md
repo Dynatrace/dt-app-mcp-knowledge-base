@@ -12,7 +12,7 @@ This series requires five essential properties that will function as data access
 
 These accessors will extract the specified data from the provided object array via the `data` property. It’s crucial to note that the accessors are used to construct each cell’s dimensions; incorrect specification of any accessor will result in an inability to generate the correct rect series.
 
-Additionally, a `XYChart.RectSeries` will need to be assigned to at least one x-axis and one y-axis via valid `xAxisId` and `yAxisId` properties. For a more detailed explanation of the axis configuration, please refer to the [XYChart docs](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md).
+Additionally, a `XYChart.RectSeries` will need to be assigned to at least one x-axis and one y-axis via valid `xAxisId` and `yAxisId` properties. For a more detailed explanation of the axis configuration, please refer to the [XYChart docs](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md).
 
 **RectSimple**
 
@@ -241,11 +241,11 @@ The data provided to the `RectSeries` component via the `data` property will be 
 
 ### Coloring
 
-By using the `colorPalette` property in the `RectSeries` you can overwrite the coloring from the `XYChart` component. For more information about how to use coloring in the chart you can refer to the [XYChart](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
+By using the `colorPalette` property in the `RectSeries` you can overwrite the coloring from the `XYChart` component. For more information about how to use coloring in the chart you can refer to the [XYChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
 
 #### Color rules
 
-`ColorRules` are advanced coloring tools for the chart, allowing you to apply conditional coloring based on data values. See more details in the [XYChart](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
+`ColorRules` are advanced coloring tools for the chart, allowing you to apply conditional coloring based on data values. See more details in the [XYChart](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart.md) docs.
 
 #### Overlapping tiles
 

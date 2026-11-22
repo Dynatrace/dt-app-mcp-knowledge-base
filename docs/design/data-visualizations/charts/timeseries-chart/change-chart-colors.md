@@ -8,7 +8,7 @@ The `TimeseriesChart` provides several ways to customize the appearance of your 
 
 ### Use color palettes
 
-The `TimeseriesChart` provides a set of predefined color palettes and it also accepts custom color palettes. See [coloring](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
+The `TimeseriesChart` provides a set of predefined color palettes and it also accepts custom color palettes. See [coloring](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
 
 ### Use color rules
 

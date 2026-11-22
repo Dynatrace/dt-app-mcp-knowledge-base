@@ -30,4 +30,4 @@ This operation requires the following scopes:
 - `state:app-states:delete`
 - `state:user-app-states:delete`
 
-[guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+[guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

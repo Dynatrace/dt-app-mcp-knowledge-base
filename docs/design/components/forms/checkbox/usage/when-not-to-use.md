@@ -1,3 +1,3 @@
 ## When not to use
 
-- To toggle a setting on and off. Use [Switch](https://developer.dynatrace.com/design/components/forms/Switch.md) instead.
+- To toggle a setting on and off. Use [Switch](https://public-developer.central.internal.dynatrace.com/design/components/forms/Switch.md) instead.

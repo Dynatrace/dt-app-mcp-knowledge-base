@@ -131,7 +131,7 @@ After the secrets are defined, you can now use them in the `values.json` file:
 ]
 ```
 
-If the settings are now read via [App functions](https://developer.dynatrace.com/develop/guides/app-functions.md), the secrets are returned in plain text. However, if you read them elsewhere, they will be returned as a masked value, similar to when deploying the app.
+If the settings are now read via [App functions](https://public-developer.central.internal.dynatrace.com/develop/guides/app-functions.md), the secrets are returned in plain text. However, if you read them elsewhere, they will be returned as a masked value, similar to when deploying the app.
 
 Note, however, that when you update a value locally via the SDK, the `secrets.json` file isn't updated, and the property loses its secret attributes.
 

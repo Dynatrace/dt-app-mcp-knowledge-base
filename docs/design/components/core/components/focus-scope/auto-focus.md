@@ -2,6 +2,8 @@
 
 To automatically set focus on the first focusable element within the `FocusScope`, use the `autoFocus` prop. This feature is particularly beneficial for overlays containing focusable elements, such as input fields. When the overlay opens, the input field will be focused automatically, allowing the user to start typing immediately.
 
+If an element inside the `FocusScope` already has focus when the scope mounts, for example because the content focuses a specific element itself, the `FocusScope` keeps the focus on that element.
+
 **AutoFocus**
 
 ```tsx

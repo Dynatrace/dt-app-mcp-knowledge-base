@@ -13,9 +13,9 @@ Follow these established Dynatrace filter patterns to maintain consistency and p
 3. Place `TimeframeSelector` at the end.
 4. Place additional action buttons or menus on the right side of the filter group.
 
-![FilterBar layout](https://developer.dynatrace.com/assets/images/filters-layout-filterbar-light-128cf94a1e7987def24e67c4f5382a86.webp)
+![FilterBar layout](https://public-developer.central.internal.dynatrace.com/assets/images/filters-layout-filterbar-light-128cf94a1e7987def24e67c4f5382a86.webp)
 
-![FilterBar layout](https://developer.dynatrace.com/assets/images/filters-layout-filterfield-light-25523d1f15ceaf119bdd806add0e5b42.webp)
+![FilterBar layout](https://public-developer.central.internal.dynatrace.com/assets/images/filters-layout-filterfield-light-25523d1f15ceaf119bdd806add0e5b42.webp)
 
 #### Note about filters in the sidebar
 
@@ -43,7 +43,7 @@ In rare cases, a combination of `FilterField` plus a few form component filters 
 
 - If there are no results to a user’s filter selection, provide a "No results found" message with suggestions to adjust the filters.
 
-![No results message](https://developer.dynatrace.com/assets/images/filters-no-results-light-8150847724c09231628bd1377ae74b7b.webp)
+![No results message](https://public-developer.central.internal.dynatrace.com/assets/images/filters-no-results-light-8150847724c09231628bd1377ae74b7b.webp)
 
 #### Dynamic vs batch filtering
 

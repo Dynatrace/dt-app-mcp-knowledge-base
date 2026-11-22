@@ -6,4 +6,4 @@ If status indicators refer to a whole section of an app, show them at the very t
 
 If a status indicator refers to a specific element in the user interface, place it in **close proximity** to that element.
 
-![A page example with numerous status indicators that are based on the reading flow of the user](https://developer.dynatrace.com/assets/images/status-and-health-where-to-show-light-39dadecb4e979863b7553ee917db6b24.webp)
+![A page example with numerous status indicators that are based on the reading flow of the user](https://public-developer.central.internal.dynatrace.com/assets/images/status-and-health-where-to-show-light-39dadecb4e979863b7553ee917db6b24.webp)

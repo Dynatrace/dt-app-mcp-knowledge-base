@@ -10,7 +10,7 @@ The app header may include a horizontal set of tabs to accommodate primary navig
 
 Use the app header as primary navigation when you have a flat navigation hierarchy with only a few main navigational entry points.
 
-To learn more, visit the [app header component documentation](https://developer.dynatrace.com/contents/docs/design/components/layouts/AppHeader/index.mdx/).
+To learn more, visit the [app header component documentation](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/layouts/AppHeader/index.mdx/).
 
 ### Breadcrumbs
 
@@ -20,7 +20,7 @@ Breadcrumbs are a horizontal list of links that show the path to the users’ cu
 
 Use breadcrumbs when you have a deeply nested navigation hierarchy and want to show the users’ path to the current location.
 
-To learn more, visit the [breadcrumbs component documentation](https://developer.dynatrace.com/contents/docs/design/components/navigation/Breadcrumbs/index.mdx/).
+To learn more, visit the [breadcrumbs component documentation](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/navigation/Breadcrumbs/index.mdx/).
 
 ### Tabs
 
@@ -30,7 +30,7 @@ Tabs group related content into multiple sections.
 
 Use tabs when you want users to be able to switch between different groups of related content quickly.
 
-To learn more, visit the [tabs component documentation](https://developer.dynatrace.com/contents/docs/design/components/navigation/Tabs/index.mdx/).
+To learn more, visit the [tabs component documentation](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/navigation/Tabs/index.mdx/).
 
 ### Menu
 
@@ -40,7 +40,7 @@ Menus display a list of links (or actions) from which users can choose.
 
 Use the menu to group related navigational elements or to progressively reveal more options to the user. This grouping will help to keep your user interface clean and prevents users from being overwhelmed with too many options.
 
-To learn more, visit the [menu component documentation](https://developer.dynatrace.com/contents/docs/design/components/navigation/Menu/index.mdx/).
+To learn more, visit the [menu component documentation](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/navigation/Menu/index.mdx/).
 
 ### Links
 
@@ -50,4 +50,4 @@ Links allow users to navigate between different pages or sections of your app an
 
 Use links to allow users to navigate your app. The rule of thumb is: Whenever the URL of your app changes, use a link. Although it's tempting, don't use buttons for navigation. For accessibility reasons, users should always be able to identify links (see: [WCAG 2.1, providing additional visual cues for links](https://www.w3.org/WAI/WCAG21/Techniques/general/G183).
 
-To learn more, visit the [link component documentation](https://developer.dynatrace.com/contents/docs/design/components/typography/Link/index.mdx/).
+To learn more, visit the [link component documentation](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/typography/Link/index.mdx/).

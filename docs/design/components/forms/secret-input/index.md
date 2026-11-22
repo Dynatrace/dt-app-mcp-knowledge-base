@@ -1,0 +1,1 @@
+Use the `SecretInput` to let users enter write-only secrets, such as API tokens. After a secret is stored, the input shows a fixed mask with a "Replace" button, so the secret can be changed but never displayed again.

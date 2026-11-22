@@ -8,9 +8,9 @@ AI triggers prompt Dynatrace Intelligence to perform a pre-defined task, such as
 
 #### Strato components
 
-- [Button](https://developer.dynatrace.com/design/components/buttons/Button.md)
-- [Menu.Item](https://developer.dynatrace.com/design/components/navigation/Menu.md)
-- [AiIcon](https://developer.dynatrace.com/design/icons/functional-icons.md)
+- [Button](https://public-developer.central.internal.dynatrace.com/design/components/buttons/Button.md)
+- [Menu.Item](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu.md)
+- [AiIcon](https://public-developer.central.internal.dynatrace.com/design/icons/functional-icons.md)
 
 #### Content patterns
 
@@ -22,7 +22,7 @@ The content pattern varies slightly depending on where the trigger is located an
 
 **If trigger is in app interface**: `AiIcon` + [Imperative verb capitalized] + \[object in lowercase, unless it's a brand name]
 
-![AI trigger in app](https://developer.dynatrace.com/assets/images/ai-presence-conversation-starter-in-app-light-42b7e0149c3287679b9d358b2e49dcde.webp)
+![AI trigger in app](https://public-developer.central.internal.dynatrace.com/assets/images/ai-presence-conversation-starter-in-app-light-42b7e0149c3287679b9d358b2e49dcde.webp)
 
 | Do                                | Don't                         |
 | --------------------------------- | ----------------------------- |
@@ -32,7 +32,7 @@ The content pattern varies slightly depending on where the trigger is located an
 
 **If trigger is in Assist and preceded by an imperative verb, such as "Understand", "Configure", "Analyze"**: \[Object in sentence case]
 
-![AI trigger in chat](https://developer.dynatrace.com/assets/images/ai-presence-conversation-starter-in-chat-light-5fe784756b24abe1b06cb52f9c3fc76c.webp)
+![AI trigger in chat](https://public-developer.central.internal.dynatrace.com/assets/images/ai-presence-conversation-starter-in-chat-light-5fe784756b24abe1b06cb52f9c3fc76c.webp)
 
 | Do                 | Don't                                   |
 | ------------------ | --------------------------------------- |
@@ -54,8 +54,8 @@ Any feature powered by AI, including AI-generated content, must be labeled accor
 
 #### Strato components
 
-- [Chip](https://developer.dynatrace.com/design/components/content/Chip.md) - Make the chip interactive and include a tooltip, such as “AI-powered feature”.
-- [AiIcon](https://developer.dynatrace.com/design/icons/functional-icons.md)
+- [Chip](https://public-developer.central.internal.dynatrace.com/design/components/content/Chip.md) - Make the chip interactive and include a tooltip, such as “AI-powered feature”.
+- [AiIcon](https://public-developer.central.internal.dynatrace.com/design/icons/functional-icons.md)
 
 #### Content patterns
 
@@ -81,7 +81,7 @@ The AI loading animation must appear whenever the AI is working on a response.
 
 #### Strato components
 
-- [AiLoadingIndicator](https://developer.dynatrace.com/design/components/content/AiLoadingIndicator.md)
+- [AiLoadingIndicator](https://public-developer.central.internal.dynatrace.com/design/components/content/AiLoadingIndicator.md)
 
 #### Content patterns
 
@@ -109,8 +109,8 @@ The disclaimer is added automatically to outputs in Assist. App creators must ad
 
 #### Strato components
 
-- [Text](https://developer.dynatrace.com/design/components/typography/Text.md)
-- [ExternalLink](https://developer.dynatrace.com/design/components/typography/ExternalLink.md)
+- [Text](https://public-developer.central.internal.dynatrace.com/design/components/typography/Text.md)
+- [ExternalLink](https://public-developer.central.internal.dynatrace.com/design/components/typography/ExternalLink.md)
 
 #### Content pattern
 
@@ -118,4 +118,4 @@ Use this exact phrase: "Dynatrace Intelligence is an AI system. Verify before ac
 
 - Use the `ExternalLink` component to link the words "Dynatrace Intelligence" to the Dynatrace Intelligence overview page in Dynatrace Documentation.
 
-![AI disclaimer](https://developer.dynatrace.com/assets/images/ai-presence-disclaimer-light-067a6bac99634b688134148c21c5d700.webp)
+![AI disclaimer](https://public-developer.central.internal.dynatrace.com/assets/images/ai-presence-disclaimer-light-067a6bac99634b688134148c21c5d700.webp)

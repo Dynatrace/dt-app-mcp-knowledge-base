@@ -6,7 +6,7 @@ import { fleetManagementContainerImagesClient } from '@dynatrace-sdk/client-clas
 
 ### getContainerImages
 
-**fleetManagementContainerImagesClient.getContainerImages(config): Promise\<[ContainerImageData](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#containerimagedata)>**
+**fleetManagementContainerImagesClient.getContainerImages(config): Promise\<[ContainerImageData](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#containerimagedata)>**
 
 Returns container images data
 
@@ -31,9 +31,9 @@ Returns container image references for Dynatrace components from the specified r
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description                    |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------ |
-| [ContainerImageData](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#containerimagedata) | 200         | Container images data returned |
+| Return type                                                                                                                                             | Status code | Description                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------ |
+| [ContainerImageData](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#containerimagedata) | 200         | Container images data returned |
 
 #### Throws
 

@@ -16,7 +16,7 @@ The `CategoricalBarChart` expects a data structure composed of an array of `cate
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/CategoricalBarChart/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/CategoricalBarChart/props.md).
 
 **AddData**
 

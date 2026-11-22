@@ -31,9 +31,9 @@ Every environment has some settings that include the following:
 
 Environment effective permissions provide information on whether the calling user has specific IAM permissions (or scopes) for the environment as listed in the [IAM service reference page](https://docs.dynatrace.com/docs/shortlink/iam-policystatements).
 
-As explained in [Authentication](https://developer.dynatrace.com/develop/platform-services/core-concepts/authentication.md), access to Dynatrace API endpoints is only allowed if the calling user is granted the corresponding scope using some policy and group assignment.
-You can use the `effective-permissions` endpoint or the corresponding SDK method to check a user's permissions before calling the endpoint guarded by that scope. For more information, visit the [Query user permissions](https://developer.dynatrace.com/develop/guides/security/query-user-permissions.md) guide and learn how to use the SDK.
+As explained in [Authentication](https://public-developer.central.internal.dynatrace.com/develop/platform-services/core-concepts/authentication.md), access to Dynatrace API endpoints is only allowed if the calling user is granted the corresponding scope using some policy and group assignment.
+You can use the `effective-permissions` endpoint or the corresponding SDK method to check a user's permissions before calling the endpoint guarded by that scope. For more information, visit the [Query user permissions](https://public-developer.central.internal.dynatrace.com/develop/guides/security/query-user-permissions.md) guide and learn how to use the SDK.
 
 > **Tip**
 >
-> You can query app settings permissions using the [`client-app-settings-v2`](https://developer.dynatrace.com/develop/sdks/client-app-settings-v2.md) SDK or the [`useEffectivePermissionsV2`](https://developer.dynatrace.com/develop/guides/data/store-app-settings.md/#get-effective-settings-permissions) React hook.
+> You can query app settings permissions using the [`client-app-settings-v2`](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-app-settings-v2.md) SDK or the [`useEffectivePermissionsV2`](https://public-developer.central.internal.dynatrace.com/develop/guides/data/store-app-settings.md/#get-effective-settings-permissions) React hook.

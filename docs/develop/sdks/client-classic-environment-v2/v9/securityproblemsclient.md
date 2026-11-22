@@ -6,7 +6,7 @@ import { securityProblemsClient } from '@dynatrace-sdk/client-classic-environmen
 
 ### bulkMuteRemediationItems
 
-**securityProblemsClient.bulkMuteRemediationItems(config): Promise\<[RemediationItemsBulkMuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkmuteresponse)>**
+**securityProblemsClient.bulkMuteRemediationItems(config): Promise\<[RemediationItemsBulkMuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkmuteresponse)>**
 
 Mutes several remediation items
 
@@ -15,16 +15,16 @@ Mutes several remediation items
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                        | Description                                           |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| config.body (required) | [RemediationItemsBulkMute](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkmute) |                                                       |
-| config.id (required)   | string                                                                                                                                      | The ID of the requested third-party security problem. |
+| Name                   | Type                                                                                                                                                                | Description                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| config.body (required) | [RemediationItemsBulkMute](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkmute) |                                                       |
+| config.id (required)   | string                                                                                                                                                              | The ID of the requested third-party security problem. |
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| [RemediationItemsBulkMuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkmuteresponse) | 200         | Success. The remediation item(s) have been muted. |
+| Return type                                                                                                                                                                         | Status code | Description                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
+| [RemediationItemsBulkMuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkmuteresponse) | 200         | Success. The remediation item(s) have been muted. |
 
 #### Throws
 
@@ -49,7 +49,7 @@ const data =
 
 ### bulkMuteSecurityProblems
 
-**securityProblemsClient.bulkMuteSecurityProblems(config): Promise\<[SecurityProblemsBulkMuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkmuteresponse)>**
+**securityProblemsClient.bulkMuteSecurityProblems(config): Promise\<[SecurityProblemsBulkMuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkmuteresponse)>**
 
 Mutes several security problems
 
@@ -58,15 +58,15 @@ Mutes several security problems
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SecurityProblemsBulkMute](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkmute) |
+| Name                   | Type                                                                                                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SecurityProblemsBulkMute](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkmute) |
 
 #### Returns
 
-| Return type                                                                                                                                                 | Status code | Description                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| [SecurityProblemsBulkMuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkmuteresponse) | 200         | Success. The security problem(s) have been muted. |
+| Return type                                                                                                                                                                         | Status code | Description                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
+| [SecurityProblemsBulkMuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkmuteresponse) | 200         | Success. The security problem(s) have been muted. |
 
 #### Throws
 
@@ -90,7 +90,7 @@ const data =
 
 ### bulkUnmuteRemediationItems
 
-**securityProblemsClient.bulkUnmuteRemediationItems(config): Promise\<[RemediationItemsBulkUnmuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkunmuteresponse)>**
+**securityProblemsClient.bulkUnmuteRemediationItems(config): Promise\<[RemediationItemsBulkUnmuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkunmuteresponse)>**
 
 Un-mutes several remediation items
 
@@ -99,16 +99,16 @@ Un-mutes several remediation items
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                            | Description                                           |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| config.body (required) | [RemediationItemsBulkUnmute](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkunmute) |                                                       |
-| config.id (required)   | string                                                                                                                                          | The ID of the requested third-party security problem. |
+| Name                   | Type                                                                                                                                                                    | Description                                           |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| config.body (required) | [RemediationItemsBulkUnmute](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkunmute) |                                                       |
+| config.id (required)   | string                                                                                                                                                                  | The ID of the requested third-party security problem. |
 
 #### Returns
 
-| Return type                                                                                                                                                     | Status code | Description                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------- |
-| [RemediationItemsBulkUnmuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkunmuteresponse) | 200         | Success. The remediation item(s) have been un-muted. |
+| Return type                                                                                                                                                                             | Status code | Description                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------- |
+| [RemediationItemsBulkUnmuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkunmuteresponse) | 200         | Success. The remediation item(s) have been un-muted. |
 
 #### Throws
 
@@ -133,7 +133,7 @@ const data =
 
 ### bulkUnmuteSecurityProblems
 
-**securityProblemsClient.bulkUnmuteSecurityProblems(config): Promise\<[SecurityProblemsBulkUnmuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkunmuteresponse)>**
+**securityProblemsClient.bulkUnmuteSecurityProblems(config): Promise\<[SecurityProblemsBulkUnmuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkunmuteresponse)>**
 
 Un-mutes several security problems
 
@@ -142,15 +142,15 @@ Un-mutes several security problems
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                            |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SecurityProblemsBulkUnmute](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkunmute) |
+| Name                   | Type                                                                                                                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SecurityProblemsBulkUnmute](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkunmute) |
 
 #### Returns
 
-| Return type                                                                                                                                                     | Status code | Description                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------- |
-| [SecurityProblemsBulkUnmuteResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkunmuteresponse) | 200         | Success. The security problem(s) have been un-muted. |
+| Return type                                                                                                                                                                             | Status code | Description                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------- |
+| [SecurityProblemsBulkUnmuteResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemsbulkunmuteresponse) | 200         | Success. The security problem(s) have been un-muted. |
 
 #### Throws
 
@@ -174,7 +174,7 @@ const data =
 
 ### getEventsForSecurityProblem
 
-**securityProblemsClient.getEventsForSecurityProblem(config): Promise\<[SecurityProblemEventsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemeventslist)>**
+**securityProblemsClient.getEventsForSecurityProblem(config): Promise\<[SecurityProblemEventsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemeventslist)>**
 
 Lists all events of a security problem
 
@@ -256,9 +256,9 @@ Lists all events of a security problem
 
 #### Returns
 
-| Return type                                                                                                                                   | Status code | Description                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------- |
-| [SecurityProblemEventsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemeventslist) | 200         | Success. The response contains the list of security problem events. |
+| Return type                                                                                                                                                           | Status code | Description                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------- |
+| [SecurityProblemEventsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemeventslist) | 200         | Success. The response contains the list of security problem events. |
 
 #### Throws
 
@@ -279,7 +279,7 @@ const data =
 
 ### getRemediationItem
 
-**securityProblemsClient.getRemediationItem(config): Promise\<[RemediationDetailsItem](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationdetailsitem)>**
+**securityProblemsClient.getRemediationItem(config): Promise\<[RemediationDetailsItem](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationdetailsitem)>**
 
 Gets parameters of a remediation item of a security problem
 
@@ -298,9 +298,9 @@ Gets parameters of a remediation item of a security problem
 
 #### Returns
 
-| Return type                                                                                                                             | Status code | Description                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------ |
-| [RemediationDetailsItem](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationdetailsitem) | 200         | Success. The response contains details of a single remediation item of a security problem. |
+| Return type                                                                                                                                                     | Status code | Description                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------ |
+| [RemediationDetailsItem](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationdetailsitem) | 200         | Success. The response contains details of a single remediation item of a security problem. |
 
 #### Throws
 
@@ -322,7 +322,7 @@ const data =
 
 ### getRemediationItems
 
-**securityProblemsClient.getRemediationItems(config): Promise\<[RemediationItemList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemlist)>**
+**securityProblemsClient.getRemediationItems(config): Promise\<[RemediationItemList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemlist)>**
 
 Lists remediation items of a third-party security problem
 
@@ -413,9 +413,9 @@ Lists remediation items of a third-party security problem
 
 #### Returns
 
-| Return type                                                                                                                       | Status code | Description                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------- |
-| [RemediationItemList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemlist) | 200         | Success. The response contains the list of remediation items of a problem. |
+| Return type                                                                                                                                               | Status code | Description                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------- |
+| [RemediationItemList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemlist) | 200         | Success. The response contains the list of remediation items of a problem. |
 
 #### Throws
 
@@ -436,7 +436,7 @@ const data =
 
 ### getRemediationProgressEntities
 
-**securityProblemsClient.getRemediationProgressEntities(config): Promise\<[RemediationProgressEntityList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationprogressentitylist)>**
+**securityProblemsClient.getRemediationProgressEntities(config): Promise\<[RemediationProgressEntityList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationprogressentitylist)>**
 
 Lists remediation progress entities
 
@@ -497,9 +497,9 @@ Lists remediation progress entities
 
 #### Returns
 
-| Return type                                                                                                                                           | Status code | Description                                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [RemediationProgressEntityList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationprogressentitylist) | 200         | Success. The response contains a list of remediation progress entities of a remediation item of a security problem. The number of entities returned is limited. |
+| Return type                                                                                                                                                                   | Status code | Description                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [RemediationProgressEntityList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationprogressentitylist) | 200         | Success. The response contains a list of remediation progress entities of a remediation item of a security problem. The number of entities returned is limited. |
 
 #### Throws
 
@@ -520,7 +520,7 @@ const data =
 
 ### getSecurityProblem
 
-**securityProblemsClient.getSecurityProblem(config): Promise\<[SecurityProblemDetails](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemdetails)>**
+**securityProblemsClient.getSecurityProblem(config): Promise\<[SecurityProblemDetails](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemdetails)>**
 
 Gets parameters of a security problem
 
@@ -604,9 +604,9 @@ Gets parameters of a security problem
 
 #### Returns
 
-| Return type                                                                                                                             | Status code | Description                                                        |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------ |
-| [SecurityProblemDetails](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemdetails) | 200         | Success. The response contains parameters of the security problem. |
+| Return type                                                                                                                                                     | Status code | Description                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------ |
+| [SecurityProblemDetails](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemdetails) | 200         | Success. The response contains parameters of the security problem. |
 
 #### Throws
 
@@ -627,7 +627,7 @@ const data =
 
 ### getSecurityProblems
 
-**securityProblemsClient.getSecurityProblems(config): Promise\<[SecurityProblemList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemlist)>**
+**securityProblemsClient.getSecurityProblems(config): Promise\<[SecurityProblemList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemlist)>**
 
 Lists all security problems
 
@@ -1065,9 +1065,9 @@ Lists all security problems
 
 #### Returns
 
-| Return type                                                                                                                       | Status code | Description                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
-| [SecurityProblemList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemlist) | 200         | Success. The response contains the list of security problems. |
+| Return type                                                                                                                                               | Status code | Description                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
+| [SecurityProblemList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemlist) | 200         | Success. The response contains the list of security problems. |
 
 #### Throws
 
@@ -1086,7 +1086,7 @@ const data =
 
 ### getVulnerableFunctions
 
-**securityProblemsClient.getVulnerableFunctions(config): Promise\<[VulnerableFunctionsContainer](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#vulnerablefunctionscontainer)>**
+**securityProblemsClient.getVulnerableFunctions(config): Promise\<[VulnerableFunctionsContainer](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#vulnerablefunctionscontainer)>**
 
 Lists all vulnerable functions and their usage for a third-party security problem
 
@@ -1126,9 +1126,9 @@ Lists all vulnerable functions and their usage for a third-party security proble
 
 #### Returns
 
-| Return type                                                                                                                                         | Status code | Description                                                      |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------- |
-| [VulnerableFunctionsContainer](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#vulnerablefunctionscontainer) | 200         | Success. The response contains the list of vulnerable functions. |
+| Return type                                                                                                                                                                 | Status code | Description                                                      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------- |
+| [VulnerableFunctionsContainer](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#vulnerablefunctionscontainer) | 200         | Success. The response contains the list of vulnerable functions. |
 
 #### Throws
 
@@ -1158,10 +1158,10 @@ Mutes a security problem
 
 #### Parameters
 
-| Name                   | Type                                                                                                                              | Description                               |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| config.body (required) | [SecurityProblemMute](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemmute) |                                           |
-| config.id (required)   | string                                                                                                                            | The ID of the requested security problem. |
+| Name                   | Type                                                                                                                                                      | Description                               |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| config.body (required) | [SecurityProblemMute](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemmute) |                                           |
+| config.id (required)   | string                                                                                                                                                    | The ID of the requested security problem. |
 
 #### Returns
 
@@ -1199,11 +1199,11 @@ Sets the mute state of a remediation item
 
 #### Parameters
 
-| Name                                | Type                                                                                                                                                    | Description                                           |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| config.body (required)              | [RemediationItemMuteStateChange](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemmutestatechange) |                                                       |
-| config.id (required)                | string                                                                                                                                                  | The ID of the requested third-party security problem. |
-| config.remediationItemId (required) | string                                                                                                                                                  | The ID of the remediation item.                       |
+| Name                                | Type                                                                                                                                                                            | Description                                           |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| config.body (required)              | [RemediationItemMuteStateChange](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemmutestatechange) |                                                       |
+| config.id (required)                | string                                                                                                                                                                          | The ID of the requested third-party security problem. |
+| config.remediationItemId (required) | string                                                                                                                                                                          | The ID of the remediation item.                       |
 
 #### Returns
 
@@ -1246,10 +1246,10 @@ Updates the external tracking links of the remediation items. | maturity=EARLY_A
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                                              | Description                                           |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| config.body (required) | [RemediationItemsBulkUpdateDeleteDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkupdatedeletedto) |                                                       |
-| config.id (required)   | string                                                                                                                                                            | The ID of the requested third-party security problem. |
+| Name                   | Type                                                                                                                                                                                      | Description                                           |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| config.body (required) | [RemediationItemsBulkUpdateDeleteDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#remediationitemsbulkupdatedeletedto) |                                                       |
+| config.id (required)   | string                                                                                                                                                                                    | The ID of the requested third-party security problem. |
 
 #### Returns
 
@@ -1285,10 +1285,10 @@ Un-mutes a security problem
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                  | Description                               |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| config.body (required) | [SecurityProblemUnmute](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemunmute) |                                           |
-| config.id (required)   | string                                                                                                                                | The ID of the requested security problem. |
+| Name                   | Type                                                                                                                                                          | Description                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| config.body (required) | [SecurityProblemUnmute](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#securityproblemunmute) |                                           |
+| config.id (required)   | string                                                                                                                                                        | The ID of the requested security problem. |
 
 #### Returns
 

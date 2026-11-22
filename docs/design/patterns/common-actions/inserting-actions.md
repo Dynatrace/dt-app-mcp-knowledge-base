@@ -25,7 +25,7 @@ Always include **New** (or **Create**) in the label. The verb makes the action c
 
 For [configuration modals](https://developer.dynatrace.com/design/components/overlays/Modal/usage/), it's best to use **Create** as the button label:
 
-![Configuration modals light](https://developer.dynatrace.com/assets/images/common-actions-configuration-modals-light-29dd372f1b55a665ad75b33e43597487.webp)
+![Configuration modals light](https://public-developer.central.internal.dynatrace.com/assets/images/common-actions-configuration-modals-light-29dd372f1b55a665ad75b33e43597487.webp)
 
 ### Add
 
@@ -53,7 +53,7 @@ If there is a label, it must include the word **Add**. In the table below, words
 
 **New** comes first, then **Add**, because a workflow, notebook, guardian, etc., must exist before anything can be added to it.
 
-![New vs Add light](https://developer.dynatrace.com/assets/images/common-actions-new-vs-add-light-ad0c9b5971a41e30bc9702e3eb61abc7.webp)
+![New vs Add light](https://public-developer.central.internal.dynatrace.com/assets/images/common-actions-new-vs-add-light-ad0c9b5971a41e30bc9702e3eb61abc7.webp)
 
 |                      | New (or Create)                                                                                                                                                                         | Add                                                                                                            |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |

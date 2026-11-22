@@ -4,4 +4,4 @@ The left-hand navigation got a structural overhaul, not just a tidy-up. Expandab
 
 We also moved pages where they belong and streamlined Strato's component libraries to make finding the right component or icon easier. We also added descriptive labels to let you know if a page is a guide, a reference, a release note, or something different; how long it takes to read it; and whether it's new or deprecated.
 
-![Animation showing how navigation items expand and collapse](https://developer.dynatrace.com/assets/images/2026-09-21-year-in-review-navigation-3885aaa5a182483543596894e5b22a9a.webp)
+![Animation showing how navigation items expand and collapse](https://public-developer.central.internal.dynatrace.com/assets/images/2026-09-21-year-in-review-navigation-3885aaa5a182483543596894e5b22a9a.webp)

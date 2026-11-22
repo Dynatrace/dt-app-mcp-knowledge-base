@@ -1,6 +1,6 @@
 ## Override segment color
 
-The `MultiMeterBarChart.Segment` has `color` prop that can be set to override the color that comes from the color palette. See [coloring](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
+The `MultiMeterBarChart.Segment` has `color` prop that can be set to override the color that comes from the color palette. See [coloring](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md) for more details.
 
 **ChangeSegmentColor**
 

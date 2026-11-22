@@ -1,6 +1,6 @@
 ## Demo
 
-The `XYChart` encompasses various types of charts that utilize both X-axis and Y-axis for data representation, designed to visually display and analyze data that involve two numerical variables. The following variants are currently supported: [RectSeries](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart-RectSeries.md), [DotSeries](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart-DotSeries.md), [LineSeries](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart-LineSeries.md) and [BarSeries](https://developer.dynatrace.com/design/data-visualizations/charts/XYChart-BarSeries.md).
+The `XYChart` encompasses various types of charts that utilize both X-axis and Y-axis for data representation, designed to visually display and analyze data that involve two numerical variables. The following variants are currently supported: [RectSeries](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart-RectSeries.md), [DotSeries](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart-DotSeries.md), [LineSeries](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart-LineSeries.md) and [BarSeries](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/XYChart-BarSeries.md).
 
 **XYChartSimple**
 

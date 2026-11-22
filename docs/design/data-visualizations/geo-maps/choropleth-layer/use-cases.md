@@ -24,7 +24,7 @@ You can use the `regionAccessor` prop to access the region where the color needs
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/geo-maps/ChoroplethLayer/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/ChoroplethLayer/props.md).
 
 **ChoroplethLayerSimple**
 
@@ -129,7 +129,7 @@ const ChoroplethLayerSimple = () => {
 
 ### Tooltip
 
-Finally, when hovering a region in the `ChoroplethLayer`, the tooltip will output the region `name`, the `color` and all the additional custom props inside a `data` object. It can be [customized or hidden](https://developer.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#tooltip).
+Finally, when hovering a region in the `ChoroplethLayer`, the tooltip will output the region `name`, the `color` and all the additional custom props inside a `data` object. It can be [customized or hidden](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/MapView/Tooltip.md#tooltip).
 
 **ChoroplethLayerTooltip**
 

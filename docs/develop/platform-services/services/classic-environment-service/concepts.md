@@ -8,7 +8,7 @@ The classic endpoints are authorized via OAuth and enforce the user's permission
 
 ### Access classic endpoints with role-based permissions
 
-As described above, OAuth enforces the user's role-based permissions to access classic API endpoints. For app developers, every endpoint has dedicated requirements regarding the permissions that the user needs in order to access it via the app. You can find the details of every method in the [Classic Environment V2](https://developer.dynatrace.com/contents/docs/develop/sdks/client-classic-environment-v2/index.md/) reference.
+As described above, OAuth enforces the user's role-based permissions to access classic API endpoints. For app developers, every endpoint has dedicated requirements regarding the permissions that the user needs in order to access it via the app. You can find the details of every method in the [Classic Environment V2](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/client-classic-environment-v2/index.md/) reference.
 
 The following example lists the required information to get an auto-update configuration for an ActiveGate:
 

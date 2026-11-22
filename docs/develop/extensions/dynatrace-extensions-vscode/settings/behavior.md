@@ -4,13 +4,13 @@ The add-on aims to allow users to customize their extension development experien
 
 ### Features
 
-| Setting                                       | Default value | Description                                                                                                                                                                |
-| --------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dynatraceExtensions.metricSelectorsCodeLens` | true          | [Metric selector code lens](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#metric-selectors)                     |
-| `dynatraceExtensions.entitySelectorsCodeLens` | true          | [Entity selector code lens](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#entity-selectors)                     |
-| `dynatraceExtensions.fastDevelopmentMode`     | false         | [Fast development mode](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#fast-development-mode)                    |
-| `dynatraceExtensions.wmiCodeLens`             | true          | [WMI queries code lens](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#windows-management-interface-wmi-queries) |
-| `dynatraceExtensions.screenCodeLens`          | true          | [Unified analysis screen code lens](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#unified-analysis-screens)     |
+| Setting                                       | Default value | Description                                                                                                                                                                                        |
+| --------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dynatraceExtensions.metricSelectorsCodeLens` | true          | [Metric selector code lens](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#metric-selectors)                     |
+| `dynatraceExtensions.entitySelectorsCodeLens` | true          | [Entity selector code lens](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#entity-selectors)                     |
+| `dynatraceExtensions.fastDevelopmentMode`     | false         | [Fast development mode](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#fast-development-mode)                    |
+| `dynatraceExtensions.wmiCodeLens`             | true          | [WMI queries code lens](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#windows-management-interface-wmi-queries) |
+| `dynatraceExtensions.screenCodeLens`          | true          | [Unified analysis screen code lens](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/development_assistance.md#unified-analysis-screens)     |
 
 ### Logging
 

@@ -1,6 +1,6 @@
 ## Convert the queried data
 
-The [HistogramChart](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/HistogramChart/index.mdx/) component expects `HistogramSeries[]` as data prop. A `HistogramSeries` object contains `HistogramBin[]` and name property. The `HistogramBin` object consists of `value`, `start`, and `end`. The `start` and `end` properties correspond with the start and end values from the query result. In the code below, you extract these values from the query result and construct a `HistogramSeries[]` that you can pass to the component, as follows:
+The [HistogramChart](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/HistogramChart/index.mdx/) component expects `HistogramSeries[]` as data prop. A `HistogramSeries` object contains `HistogramBin[]` and name property. The `HistogramBin` object consists of `value`, `start`, and `end`. The `start` and `end` properties correspond with the start and end values from the query result. In the code below, you extract these values from the query result and construct a `HistogramSeries[]` that you can pass to the component, as follows:
 
 ```tsx title="ui/app/components/HistogramPage.tsx"
 import React from 'react';

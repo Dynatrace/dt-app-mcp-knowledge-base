@@ -7,7 +7,7 @@ The standard pattern is to disable the form fields and the **Save** button, and 
 Cover both cases:
 
 - **When an object exists**, request `resourceContext` alongside the value. Its `operations` array lists what the current user may do with the object. The user is read-only when it doesn't include `write`.
-- **When no object exists yet**, there's no `resourceContext` to read, so a check based on it alone would incorrectly disable the form and prevent the user from creating the first object. Fall back to the schema-level write permission through `useEffectivePermissionsV2` instead. For more information, see how to [Get effective settings permissions](https://developer.dynatrace.com/develop/guides/data/store-app-settings.md#get-effective-settings-permissions).
+- **When no object exists yet**, there's no `resourceContext` to read, so a check based on it alone would incorrectly disable the form and prevent the user from creating the first object. Fall back to the schema-level write permission through `useEffectivePermissionsV2` instead. For more information, see how to [Get effective settings permissions](https://public-developer.central.internal.dynatrace.com/develop/guides/data/store-app-settings.md#get-effective-settings-permissions).
 
 The complete form includes the permission check, the read-only messaging, and error handling on top of the [save changes setup](#save-changes).
 

@@ -1,15 +1,15 @@
 ## Strato support
 
-We support two MAJOR versions at once: the latest version and the one before it.
+We provide support as needed to fix the current and previous MAJOR versions of Strato. Some of those fixes are eligible for backporting, which means we apply the fix from the current MAJOR version to the previous MAJOR version as well.
 
-### Supported issues
+### Fixes we backport
 
 - Bugs that matter
 - Security vulnerabilities
 - Issues that could break features or apps
 - Dependencies
 
-### Unsupported issues
+### Fixes we don't backport
 
 - Minor bugs with minimal impact on users
 - Minor visual improvements

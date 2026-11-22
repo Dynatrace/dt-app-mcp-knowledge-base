@@ -3,7 +3,7 @@
 **`FilterFieldProps`**
 
 ````ts
-export declare type FilterFieldProps = PropsWithChildren<StylingProps & DataTestId & MaskingProps & BehaviorTrackingProps & FormControlProps<string, (value: string, tree: FilterFieldTree, isValid: boolean) => void, HTMLDivElement> & {
+export declare type FilterFieldProps = PropsWithChildren<StylingProps & DataTestId & MaskingProps & BehaviorTrackingProps & FormControlProps<string | null, (value: string, tree: FilterFieldTree, isValid: boolean) => void, HTMLDivElement> & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

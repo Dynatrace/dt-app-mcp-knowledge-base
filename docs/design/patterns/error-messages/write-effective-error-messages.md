@@ -37,7 +37,7 @@ When space is limited, and the solution is self-explanatory, leaving it out can 
 
 ### Avoid generic errors or raw codes
 
-Unless no further context is available, don't fall back on "Something went wrong". Even then, pair it with plain-language context or next step rather than showing it alone. When surfacing server-side errors (400, 401, 403, 404, 500, etc.), follow the [Error handling](https://developer.dynatrace.com/develop/platform-services/core-concepts/error-handling.md) reference. Don't make a raw error code the entire message.
+Unless no further context is available, don't fall back on "Something went wrong". Even then, pair it with plain-language context or next step rather than showing it alone. When surfacing server-side errors (400, 401, 403, 404, 500, etc.), follow the [Error handling](https://public-developer.central.internal.dynatrace.com/develop/platform-services/core-concepts/error-handling.md) reference. Don't make a raw error code the entire message.
 
 |  Do                                                   |  Don't                           |
 | ----------------------------------------------------- | -------------------------------- |

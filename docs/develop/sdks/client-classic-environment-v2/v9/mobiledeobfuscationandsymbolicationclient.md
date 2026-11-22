@@ -105,7 +105,7 @@ const data =
 
 ### list
 
-**mobileDeobfuscationAndSymbolicationClient.list(config): Promise\<[ReactNativeMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto)>**
+**mobileDeobfuscationAndSymbolicationClient.list(config): Promise\<[ReactNativeMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto)>**
 
 Lists all React Native files | maturity=EARLY_ADOPTER
 
@@ -128,9 +128,9 @@ Lists all React Native files | maturity=EARLY_ADOPTER
 
 #### Returns
 
-| Return type                                                                                                                                           | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ReactNativeMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto) | 200         | Success.    |
+| Return type                                                                                                                                                                   | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ReactNativeMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto) | 200         | Success.    |
 
 #### Throws
 
@@ -149,7 +149,7 @@ const data =
 
 ### list_1
 
-**mobileDeobfuscationAndSymbolicationClient.list_1(config): Promise\<[ReactNativeMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto)>**
+**mobileDeobfuscationAndSymbolicationClient.list_1(config): Promise\<[ReactNativeMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto)>**
 
 Lists React Native files belonging to certain application | maturity=EARLY_ADOPTER
 
@@ -173,9 +173,9 @@ Lists React Native files belonging to certain application | maturity=EARLY_ADOPT
 
 #### Returns
 
-| Return type                                                                                                                                           | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ReactNativeMappingFileListDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto) | 200         | Success.    |
+| Return type                                                                                                                                                                   | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ReactNativeMappingFileListDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilelistdto) | 200         | Success.    |
 
 #### Throws
 
@@ -204,14 +204,14 @@ Adds new or updates existing React Native mapping file | maturity=EARLY_ADOPTER
 
 #### Parameters
 
-| Name                            | Type                                                                                                      | Description                                                                      |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| config.appId (required)         | string                                                                                                    | The UUID of the application the mapping file belongs to.                         |
-| config.body (required)          | [PutBody](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#putbody) |                                                                                  |
-| config.bundleName (required)    | string                                                                                                    | The name of the bundle.                                                          |
-| config.bundleVersion (required) | string                                                                                                    | The version of the bundle.                                                       |
-| config.fileName (required)      | string                                                                                                    | The name of the mapping file, e.g. "index.android.bundle" or "index.ios.bundle". |
-| config.platform (required)      | "ANDROID" \| "IOS"                                                                                        | The platform (operating system) the mapping file belongs to.                     |
+| Name                            | Type                                                                                                                              | Description                                                                      |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| config.appId (required)         | string                                                                                                                            | The UUID of the application the mapping file belongs to.                         |
+| config.body (required)          | [PutBody](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#putbody) |                                                                                  |
+| config.bundleName (required)    | string                                                                                                                            | The name of the bundle.                                                          |
+| config.bundleVersion (required) | string                                                                                                                            | The version of the bundle.                                                       |
+| config.fileName (required)      | string                                                                                                                            | The name of the mapping file, e.g. "index.android.bundle" or "index.ios.bundle". |
+| config.platform (required)      | "ANDROID" \| "IOS"                                                                                                                | The platform (operating system) the mapping file belongs to.                     |
 
 #### Returns
 
@@ -244,7 +244,7 @@ const data =
 
 ### putMetadata
 
-**mobileDeobfuscationAndSymbolicationClient.putMetadata(config): Promise\<[ReactNativeMappingFileMetadataDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilemetadatadto)>**
+**mobileDeobfuscationAndSymbolicationClient.putMetadata(config): Promise\<[ReactNativeMappingFileMetadataDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilemetadatadto)>**
 
 Updates metadata of the specified React Native mapping file | maturity=EARLY_ADOPTER
 
@@ -252,20 +252,20 @@ Updates metadata of the specified React Native mapping file | maturity=EARLY_ADO
 
 #### Parameters
 
-| Name                            | Type                                                                                                                                                                      | Description                                                                      |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| config.appId (required)         | string                                                                                                                                                                    | The UUID of the application the mapping file belongs to.                         |
-| config.body (required)          | [ReactNativeMappingFileMetadataUpdateDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilemetadataupdatedto) |                                                                                  |
-| config.bundleName (required)    | string                                                                                                                                                                    | The name of the bundle.                                                          |
-| config.bundleVersion (required) | string                                                                                                                                                                    | The version of the bundle.                                                       |
-| config.fileName (required)      | string                                                                                                                                                                    | The name of the mapping file, e.g. "index.android.bundle" or "index.ios.bundle". |
-| config.platform (required)      | "ANDROID" \| "IOS"                                                                                                                                                        | The platform (operating system) the mapping file belongs to.                     |
+| Name                            | Type                                                                                                                                                                                              | Description                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| config.appId (required)         | string                                                                                                                                                                                            | The UUID of the application the mapping file belongs to.                         |
+| config.body (required)          | [ReactNativeMappingFileMetadataUpdateDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilemetadataupdatedto) |                                                                                  |
+| config.bundleName (required)    | string                                                                                                                                                                                            | The name of the bundle.                                                          |
+| config.bundleVersion (required) | string                                                                                                                                                                                            | The version of the bundle.                                                       |
+| config.fileName (required)      | string                                                                                                                                                                                            | The name of the mapping file, e.g. "index.android.bundle" or "index.ios.bundle". |
+| config.platform (required)      | "ANDROID" \| "IOS"                                                                                                                                                                                | The platform (operating system) the mapping file belongs to.                     |
 
 #### Returns
 
-| Return type                                                                                                                                                   | Status code | Description                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------- |
-| [ReactNativeMappingFileMetadataDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilemetadatadto) | 200         | Success. Metadata updated. |
+| Return type                                                                                                                                                                           | Status code | Description                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------- |
+| [ReactNativeMappingFileMetadataDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v9/types.md#reactnativemappingfilemetadatadto) | 200         | Success. Metadata updated. |
 
 #### Throws
 

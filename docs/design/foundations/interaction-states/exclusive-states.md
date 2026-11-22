@@ -2,7 +2,7 @@
 
 Rest, hover, active, drag, or disabled states are mutually exclusive, meaning that an interactive element can always only be in one of those states. These states are communicated by a change of color, which is reflected in the naming of our color tokens.
 
-![Exclusive states](https://developer.dynatrace.com/assets/images/interaction-states-exclusive-light-5ee2924cc50495c0652165c868628434.webp)
+![Exclusive states](https://public-developer.central.internal.dynatrace.com/assets/images/interaction-states-exclusive-light-5ee2924cc50495c0652165c868628434.webp)
 
 ### Rest
 
@@ -54,4 +54,4 @@ Disabled and read-only states both prevent editing, but they each carry a differ
 | User interaction | Users can focus the input, read, and copy values, but not edit them.                                                                                                                                                                                                                                                                                                                           | Users cannot focus or interact with the element, but assistive technologies can still discover and announce it as disabled.                                                                                                                                                                                                 |
 | Form submission  | Values are included in form submission.                                                                                                                                                                                                                                                                                                                                                        | Values are excluded from form submission.                                                                                                                                                                                                                                                                                   |
 
-If a disabled element must remain accessible to explain why it's unavailable, use [ariaDisabled](https://developer.dynatrace.com/design/components/forms/FormField/props.md) and prevent interaction in your code.
+If a disabled element must remain accessible to explain why it's unavailable, use [ariaDisabled](https://public-developer.central.internal.dynatrace.com/design/components/forms/FormField/props.md) and prevent interaction in your code.

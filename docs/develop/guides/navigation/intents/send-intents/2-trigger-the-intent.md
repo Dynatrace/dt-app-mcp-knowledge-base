@@ -6,7 +6,7 @@ You can trigger the intent from your app in one of three ways, using the:
 - `sendIntent` method
 - `getIntentLink` method
 
-### The [`<IntentButton>`](https://developer.dynatrace.com/contents/docs/design/components/buttons/IntentButton/index.mdx/) option
+### The [`<IntentButton>`](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/buttons/IntentButton/index.mdx/) option
 
 Use the `<IntentButton>` for straightforward use cases where you want to trigger a declarative intent.
 
@@ -31,7 +31,7 @@ export const App = () => {
 };
 ```
 
-### The [`sendIntent`](https://developer.dynatrace.com/contents/docs/develop/sdks/navigation/index.md/#sendintent) method
+### The [`sendIntent`](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/navigation/index.md/#sendintent) method
 
 Use the `sendIntent` method if you need more control than the `<IntentButton>` provides to trigger an intent from the `@dynatrace-sdk/navigation` programmatically. The `sendIntent` method takes an `intentPayload` and optional `sendIntentOptions` parameter.
 
@@ -88,7 +88,7 @@ sendIntent(complexRowData, {
 });
 ```
 
-### The [`getIntentLink`](https://developer.dynatrace.com/contents/docs/develop/sdks/navigation/index.md/#getintentlink) method
+### The [`getIntentLink`](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/navigation/index.md/#getintentlink) method
 
 Use the `getIntentLink` method to create a static URL link that users can copy, share, and bookmark in their browser. The `getIntentLink` method takes an `intentPayload` and optional `appId` and `intentId` parameters.
 

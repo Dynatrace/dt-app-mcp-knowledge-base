@@ -42,8 +42,8 @@ By running a workflow, you'll end up in the execution monitor. Within there, you
 >
 > To find the details about building and monitoring workflows, visit [Introduction to workflows](https://dt-url.net/workflows-documentation)
 
-| Input Tab                                                                                                                   | Result Tab                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| ![greeter_input_tab](https://developer.dynatrace.com/assets/images/action_input_tab-edf5aad4babf1cf6a20cb5a0d8d265a8.png) | ![greeter_result_tab](https://developer.dynatrace.com/assets/images/action_result_tab-4dee3c0887ef43544f974087726e3ceb.png) |
+| Input Tab                                                                                                                                           | Result Tab                                                                                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![greeter_input_tab](https://public-developer.central.internal.dynatrace.com/assets/images/action_input_tab-edf5aad4babf1cf6a20cb5a0d8d265a8.png) | ![greeter_result_tab](https://public-developer.central.internal.dynatrace.com/assets/images/action_result_tab-4dee3c0887ef43544f974087726e3ceb.png) |
 
 Congratulations. You ran a task successfully with your custom action.

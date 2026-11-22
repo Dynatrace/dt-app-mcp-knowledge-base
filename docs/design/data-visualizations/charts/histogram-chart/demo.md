@@ -17,7 +17,7 @@ Each `bin` represents a continuous range of values. A bin is defined by two key 
  }
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/charts/HistogramChart/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/HistogramChart/props.md).
 
 **NormalDistribution**
 
@@ -846,4 +846,4 @@ const StackedBins = () => {
 };
 ```
 
-> ℹ️ If you are interested in how to prepare your data for passing it to the [this article](https://developer.dynatrace.com/develop/guides/visualize-data-in-apps/prepare-histogram-data.md) might
+> ℹ️ If you are interested in how to prepare your data for passing it to the [this article](https://public-developer.central.internal.dynatrace.com/develop/guides/visualize-data-in-apps/prepare-histogram-data.md) might

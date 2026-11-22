@@ -52,7 +52,7 @@ export const App = () => {
 };
 ```
 
-This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Add permissions for an accessor to an object
 
@@ -99,7 +99,7 @@ export const App = () => {
 };
 ```
 
-This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Get permissions of all accessors of an object
 
@@ -139,7 +139,7 @@ export const App = () => {
 };
 ```
 
-This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Get permissions of a single accessor on an object
 
@@ -220,7 +220,7 @@ export const App = () => {
 };
 ```
 
-This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:read` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Update permissions for an accessor on an object
 
@@ -266,7 +266,7 @@ export const App = () => {
 };
 ```
 
-This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Remove permissions for an accessor on an object
 
@@ -307,7 +307,7 @@ export const App = () => {
 };
 ```
 
-This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+This operation requires the scope `app-settings:objects:write` Read more about scopes in this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 ### Administrator access
 
@@ -366,4 +366,4 @@ This operation requires the following scopes:
 - `app-settings:objects:write`
 - `app-settings:objects:admin`
 
-[guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+[guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).

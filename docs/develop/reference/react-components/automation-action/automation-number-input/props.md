@@ -1,6 +1,6 @@
 ## Props
 
-The props are the same as for the [Strato `NumberInput` component](https://developer.dynatrace.com/contents/docs/design/components/forms/NumberInput/props.mdx/) except for the `value` prop, which also supports [expressions](https://dt-url.net/workflows-expression-reference).
+The props are the same as for the [Strato `NumberInput` component](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/forms/NumberInput/props.mdx/) except for the `value` prop, which also supports [expressions](https://dt-url.net/workflows-expression-reference).
 
 ```tsx title="Example.tsx"
 import { useState } from 'react';

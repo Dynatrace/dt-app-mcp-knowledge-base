@@ -1,1 +1,1 @@
-Check this page regularly for a preview of upcoming breaking changes in future MAJOR releases. MAJOR releases happen once per year, around the end of CQ1. Learn more about [Strato versioning and releases](https://developer.dynatrace.com/design/strato-versioning.md).
+Check this page regularly for a preview of upcoming breaking changes in future MAJOR releases. MAJOR releases happen once per year, around the end of CQ1. Learn more about [Strato versioning and releases](https://public-developer.central.internal.dynatrace.com/design/strato-versioning.md).

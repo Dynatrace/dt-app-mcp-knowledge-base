@@ -6,7 +6,7 @@ We use **color, shape, and symbols as foundational building blocks** for indicat
 
 The assigned colors to status levels stem from **universal mental models**. For example, we use red when something goes wrong and green when something goes well.
 
-By reusing the user interface colors, we ensure that status indicators go hand in hand with other components, such as critical colored [Buttons](https://developer.dynatrace.com/design/components/buttons/Button/index.mdx/) and [Containers](https://developer.dynatrace.com/design/components/layouts/Container/index.mdx/). When you use data visualization components such as charts to indicate the statuses of specific data points, use the chart status palette or the tokens listed below.
+By reusing the user interface colors, we ensure that status indicators go hand in hand with other components, such as critical colored [Buttons](https://public-developer.central.internal.dynatrace.com/design/components/buttons/Button/index.mdx/) and [Containers](https://public-developer.central.internal.dynatrace.com/design/components/layouts/Container/index.mdx/). When you use data visualization components such as charts to indicate the statuses of specific data points, use the chart status palette or the tokens listed below.
 
 | Status   | User interface colors                       | Chart color token                     | Indicates                                            |
 | :------- | :------------------------------------------ | :------------------------------------ | :--------------------------------------------------- |
@@ -50,7 +50,7 @@ Keep your custom building blocks to a minimum and use the ones defined in this f
 
 ### Accessibility
 
-To create an accessible, inclusive, and enjoyable experience for every user on the platform, you should follow the [AA level](https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels) of the [WCAG 2.1 accessibility guidelines](https://www.w3.org/TR/WCAG21). Therefore, never use color alone to convey information (see [success criterion 1.4.1](https://www.w3.org/TR/WCAG21/#use-of-color)).
+To create an accessible, inclusive, and enjoyable experience for every user on the platform, you should follow the [AA level](https://www.w3.org/WAI/WCAG22/Understanding/conformance#levels) of the [WCAG 2.2 accessibility guidelines](https://www.w3.org/TR/WCAG22). Therefore, never use color alone to convey information (see [success criterion 1.4.1](https://www.w3.org/TR/WCAG22/#use-of-color)). For more information, see [Accessibility](https://public-developer.central.internal.dynatrace.com/design/foundations/accessibility.md).
 
 Make sure that, if you indicate statuses with colors, they're always accompanied by either:
 

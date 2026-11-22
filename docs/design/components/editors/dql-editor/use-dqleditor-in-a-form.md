@@ -1,6 +1,6 @@
 ## Use DQLEditor in a form
 
-Use `DQLEditor` inside a `FormField` with the `name` and `required` props to connect it to form validation. `FormFieldMessages` displays validation errors beneath the editor. Blur the editor to trigger validation: leaving the field empty shows a `valueMissing` error; entering an invalid DQL query shows a `syntaxError`. Learn about using the [FormField](https://developer.dynatrace.com/design/components/forms/FormField.md).
+Use `DQLEditor` inside a `FormField` with the `name` and `required` props to connect it to form validation. `FormFieldMessages` displays validation errors beneath the editor. Blur the editor to trigger validation: leaving the field empty shows a `valueMissing` error; entering an invalid DQL query shows a `syntaxError`. Learn about using the [FormField](https://public-developer.central.internal.dynatrace.com/design/components/forms/FormField.md).
 
 **FormValidation**
 

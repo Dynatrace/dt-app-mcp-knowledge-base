@@ -6,7 +6,7 @@ import { settingsSchemasClient } from '@dynatrace-sdk/client-classic-environment
 
 ### getAvailableSchemaDefinitions
 
-**settingsSchemasClient.getAvailableSchemaDefinitions(config): Promise\<[SchemaList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemalist)>**
+**settingsSchemasClient.getAvailableSchemaDefinitions(config): Promise\<[SchemaList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemalist)>**
 
 Lists available settings schemas
 
@@ -24,9 +24,9 @@ Lists available settings schemas
 
 #### Returns
 
-| Return type                                                                                                     | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SchemaList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemalist) | 200         | Success     |
+| Return type                                                                                                                             | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SchemaList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemalist) | 200         | Success     |
 
 #### Throws
 
@@ -45,7 +45,7 @@ const data =
 
 ### getSchemaDefinition
 
-**settingsSchemasClient.getSchemaDefinition(config): Promise\<[SchemaDefinitionRestDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemadefinitionrestdto)>**
+**settingsSchemasClient.getSchemaDefinition(config): Promise\<[SchemaDefinitionRestDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemadefinitionrestdto)>**
 
 Gets parameters of the specified settings schema
 
@@ -64,9 +64,9 @@ Gets parameters of the specified settings schema
 
 #### Returns
 
-| Return type                                                                                                                               | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SchemaDefinitionRestDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemadefinitionrestdto) | 200         | Success     |
+| Return type                                                                                                                                                       | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SchemaDefinitionRestDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#schemadefinitionrestdto) | 200         | Success     |
 
 #### Throws
 

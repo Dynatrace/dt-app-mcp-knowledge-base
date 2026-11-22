@@ -39,7 +39,7 @@ The `ConnectionLayer` automatically connects the points in the paths with lines.
 ];
 ```
 
-Learn more about the data format [here](https://developer.dynatrace.com/design/data-visualizations/geo-maps/ConnectionLayer/props.md).
+Learn more about the data format [here](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/geo-maps/ConnectionLayer/props.md).
 
 **ConnectionLayerSimple**
 

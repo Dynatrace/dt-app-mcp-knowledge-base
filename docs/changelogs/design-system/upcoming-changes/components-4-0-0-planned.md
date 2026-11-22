@@ -94,7 +94,7 @@ When you select a suggestion inside an `in (...)` list, the component automatica
 
 ### Core
 
-The `FocusEvents` interface will be removed, along with its re-export from the `core` entry point. Use the `onFocus` and `onBlur` props on `FormControlProps` instead. See the property reference of any form component, such as [Checkbox](https://developer.dynatrace.com/design/components/forms/Checkbox/props.md), to see how it works.
+The `FocusEvents` interface will be removed, along with its re-export from the `core` entry point. Use the `onFocus` and `onBlur` props on `FormControlProps` instead. See the property reference of any form component, such as [Checkbox](https://public-developer.central.internal.dynatrace.com/design/components/forms/Checkbox/props.md), to see how it works.
 
 In addition, the `onFocusChange` prop will be removed from the following form components, with no replacement:
 

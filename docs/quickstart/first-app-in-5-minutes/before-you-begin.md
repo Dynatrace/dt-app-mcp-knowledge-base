@@ -4,4 +4,4 @@
 
 > **Tip**
 >
-> You'll want a basic understanding of [React](https://developer.dynatrace.com/quickstart/learn-react.md) and [TypeScript](https://developer.dynatrace.com/quickstart/learn-typescript.md) to do this tutorial manually. Alternatively, go to [Build apps with AI](https://developer.dynatrace.com/quickstart/app-development-with-ai.md) to vibe code a Dynatrace App.
+> You'll want a basic understanding of [React](https://public-developer.central.internal.dynatrace.com/quickstart/learn-react.md) and [TypeScript](https://public-developer.central.internal.dynatrace.com/quickstart/learn-typescript.md) to do this tutorial manually. Alternatively, go to [Build apps with AI](https://public-developer.central.internal.dynatrace.com/quickstart/app-development-with-ai.md) to vibe code a Dynatrace App.

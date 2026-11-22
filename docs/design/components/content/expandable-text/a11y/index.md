@@ -2,4 +2,4 @@ The `ExpandableText` component provides expand and collapse functionality for in
 
 > **Note**
 >
-> See [Accessibility](https://developer.dynatrace.com/design/foundations/accessibility.md) in Design Foundations for explanations of key concepts and best practices.
+> See [Accessibility](https://public-developer.central.internal.dynatrace.com/design/foundations/accessibility.md) in Design Foundations for explanations of key concepts and best practices.

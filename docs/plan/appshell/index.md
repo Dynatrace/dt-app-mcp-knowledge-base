@@ -3,7 +3,7 @@ When an app is running on the platform, it gets wrapped within an `iframe` by th
 
 In particular it
 
-- Handles cross-app communication (via [intents](https://developer.dynatrace.com/develop/guides/navigation/intents.md) and [page tokens](https://developer.dynatrace.com/develop/guides/navigation/page-tokens.md))
+- Handles cross-app communication (via [intents](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents.md) and [page tokens](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/page-tokens.md))
 - Renders common parts of the Platform UI, including Dock, "Open with" dialog, and error views
 - Synchronizes your app routing with the platform and browser
 - Catches unhandled errors from your app and maintains the Platform stability

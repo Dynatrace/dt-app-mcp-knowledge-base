@@ -10,7 +10,7 @@ Status highlights allow you to add **additional visibility** to the status of an
 
 Status highlights **must be accompanied by other status indicators** nearby to be considered accessible.
 
-![Example of a status highlight in a table row](https://developer.dynatrace.com/assets/images/status-and-health-status-highlights-light-980117743ae06ff4c47e4918f1b34cf5.webp)
+![Example of a status highlight in a table row](https://public-developer.central.internal.dynatrace.com/assets/images/status-and-health-status-highlights-light-980117743ae06ff4c47e4918f1b34cf5.webp)
 
 ### Trend indicators
 

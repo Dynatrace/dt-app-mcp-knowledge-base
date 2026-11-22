@@ -12,8 +12,8 @@ calmer, dense pages are easier to scan, and a surface now genuinely means
 
 ### Before
 
-![Strato components before the visual refresh](https://developer.dynatrace.com/assets/images/visual-refresh-before-light-64c4881a1a20ad678963b474d198172d.webp)
+![Strato components before the visual refresh](https://public-developer.central.internal.dynatrace.com/assets/images/visual-refresh-before-light-64c4881a1a20ad678963b474d198172d.webp)
 
 ### After
 
-![Strato components after the visual refresh](https://developer.dynatrace.com/assets/images/visual-refresh-after-light-42136cd9515709c92e5bd312a42ab11b.webp)
+![Strato components after the visual refresh](https://public-developer.central.internal.dynatrace.com/assets/images/visual-refresh-after-light-42136cd9515709c92e5bd312a42ab11b.webp)

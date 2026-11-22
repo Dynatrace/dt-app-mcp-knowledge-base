@@ -10,6 +10,6 @@ You can also provide an option for users to set an interval for automatic timefr
 
 ### Last updated
 
-If possible, show when the timeframe was last updated and what the active timeframe is. Use [InformationOverlay](https://developer.dynatrace.com/design/components/content/InformationOverlay.md) next to `TimeframeSelector` to show this.
+If possible, show when the timeframe was last updated and what the active timeframe is. Use [InformationOverlay](https://public-developer.central.internal.dynatrace.com/design/components/content/InformationOverlay.md) next to `TimeframeSelector` to show this.
 
-![A TimeframeSelector with a manual refresh button next to it and an InformationOverlay showing when the timeframe was last updated.](https://developer.dynatrace.com/assets/images/timeframeselector-refresh-light-4b789a1604167b5040ded01ce4e9e39d.webp)&#x20;
+![A TimeframeSelector with a manual refresh button next to it and an InformationOverlay showing when the timeframe was last updated.](https://public-developer.central.internal.dynatrace.com/assets/images/timeframeselector-refresh-light-4b789a1604167b5040ded01ce4e9e39d.webp)&#x20;

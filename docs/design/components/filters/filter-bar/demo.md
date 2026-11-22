@@ -1,6 +1,6 @@
 ## Demo
 
-`FilterBar` is designed for filtering with multiple controls. This example shows a `FilterBar` with a `TextInput`, a single `Select`, a multi-select `Select`, and a `TimeframeSelector`. See [Usage](https://developer.dynatrace.com/design/components/filters/FilterBar/usage.md) for best practices.
+`FilterBar` is designed for filtering with multiple controls. This example shows a `FilterBar` with a `TextInput`, a single `Select`, a multi-select `Select`, and a `TimeframeSelector`. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterBar/usage.md) for best practices.
 
 **MultipleFilters**
 

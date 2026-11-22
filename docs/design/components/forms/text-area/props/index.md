@@ -3,7 +3,7 @@ The `TextArea` component can be used as a multi-line plain-text editing control 
 **`TextAreaProps`**
 
 ```ts
-export declare type TextAreaProps = FormControlProps<string, (value: string, event: ChangeEvent<HTMLTextAreaElement>) => void | never, HTMLDivElement> & StylingProps & DataTestId & MaskingProps & KeyboardEvents & BehaviorTrackingProps & {
+export declare type TextAreaProps = FormControlProps<string | null, (value: string, event: ChangeEvent<HTMLTextAreaElement>) => void | never, HTMLDivElement> & StylingProps & DataTestId & MaskingProps & KeyboardEvents & BehaviorTrackingProps & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.

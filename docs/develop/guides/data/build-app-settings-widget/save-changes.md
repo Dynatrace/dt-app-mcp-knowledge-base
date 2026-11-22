@@ -73,9 +73,9 @@ This operation requires the following scopes:
 - `app-settings:objects:read`
 - `app-settings:objects:write`
 
-[guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+[guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 > **Note**
 >
 > `useSettingsObjectsV2` returns only stored objects, which is what a form needs. To read a value elsewhere in the app, or get the schema defaults before anything is stored, use `useSettingsV2`.
-> For more information, see how to [Get effective settings value](https://developer.dynatrace.com/develop/guides/data/store-app-settings.md#get-effective-settings-value).
+> For more information, see how to [Get effective settings value](https://public-developer.central.internal.dynatrace.com/develop/guides/data/store-app-settings.md#get-effective-settings-value).

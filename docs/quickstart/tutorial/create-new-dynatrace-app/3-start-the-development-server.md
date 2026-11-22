@@ -12,6 +12,6 @@ After executing this command, the app will automatically open in a new browser w
 >
 > For Chrome 142 or later, you need to give permission to the browser to connect to any device on your local network.
 >
-> For more info about the above, and for any other issues with local app development, visit the [troubleshooting information](https://developer.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-app-development.md).
+> For more info about the above, and for any other issues with local app development, visit the [troubleshooting information](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/troubleshoot/troubleshoot-app-development.md).
 
 You've successfully set up your development environment. In the next section, we'll fetch and visualize the data stored in Grail.

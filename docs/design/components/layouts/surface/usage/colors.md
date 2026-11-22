@@ -2,7 +2,7 @@
 
 Surfaces come in five semantic colors, which are noticeable when interactive and selected or focused.
 
-![Five Surface colors — Neutral, Primary, Success, Warning, and Critical — each shown as a white surface with a colored border.](https://developer.dynatrace.com/assets/images/surface-colors-light-5a0ad73db6eca20f587ec280bf04323a.webp)&#x20;
+![Five Surface colors — Neutral, Primary, Success, Warning, and Critical — each shown as a white surface with a colored border.](https://public-developer.central.internal.dynatrace.com/assets/images/surface-colors-light-5a0ad73db6eca20f587ec280bf04323a.webp)&#x20;
 
 ### Neutral
 
@@ -29,6 +29,6 @@ Surfaces come in five semantic colors, which are noticeable when interactive and
 
 - Use the critical color to indicate a negative condition of the surface's content that requires immediate attention. :::tip
 
-Learn more about the semantic meaning of colors in [Status and health](https://developer.dynatrace.com/design/patterns/status-and-health.md).
+Learn more about the semantic meaning of colors in [Status and health](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md).
 
 :::

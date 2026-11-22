@@ -56,7 +56,7 @@ export const App = () => {
 
 With the new page in place, we can now use the app function within it.
 
-In the `StatusHistory` component, call the [`useAppFunction`](https://developer.dynatrace.com/contents/docs/develop/sdks/react-hooks/index.md/#app-functions) hook from the `@dynatrace-sdk/react-hooks` package. We must provide the app function's name and payload as the first argument and a type argument, which we'll call `StatusItem`. Next, add the loading indicator and iterate over the data to visualize its contents using a few other components from the Strato Design System as follows:
+In the `StatusHistory` component, call the [`useAppFunction`](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/react-hooks/index.md/#app-functions) hook from the `@dynatrace-sdk/react-hooks` package. We must provide the app function's name and payload as the first argument and a type argument, which we'll call `StatusItem`. Next, add the loading indicator and iterate over the data to visualize its contents using a few other components from the Strato Design System as follows:
 
 ```tsx testable title="ui/app/pages/StatusHistory.tsx"
 import React from 'react';
@@ -124,10 +124,10 @@ export const StatusHistory = () => {
 
 > **Tip**
 >
-> Learn more about [Container](https://developer.dynatrace.com/contents/docs/design/components/layouts/Container/index.mdx/), [Heading](https://developer.dynatrace.com/contents/docs/design/components/typography/Heading/index.mdx/) and [Chip](https://developer.dynatrace.com/contents/docs/design/components/content/Chip/index.mdx/).
+> Learn more about [Container](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/layouts/Container/index.mdx/), [Heading](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/typography/Heading/index.mdx/) and [Chip](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/content/Chip/index.mdx/).
 
 That's it. You now know how to access an external API, customize the result, and use it in the UI. At this point, the app should look like this:
 
-![status-history-dark](https://developer.dynatrace.com/assets/images/status-history-dark-191c0ce2f549adfde046995d1d20376f.png)
+![status-history-dark](https://public-developer.central.internal.dynatrace.com/assets/images/status-history-dark-191c0ce2f549adfde046995d1d20376f.png)
 
 Congratulations on your first Dynatrace app. We're happy to have you on board.

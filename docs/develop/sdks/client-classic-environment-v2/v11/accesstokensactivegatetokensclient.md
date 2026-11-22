@@ -6,7 +6,7 @@ import { accessTokensActiveGateTokensClient } from '@dynatrace-sdk/client-classi
 
 ### createToken
 
-**accessTokensActiveGateTokensClient.createToken(config): Promise\<[ActiveGateTokenCreated](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokencreated)>**
+**accessTokensActiveGateTokensClient.createToken(config): Promise\<[ActiveGateTokenCreated](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokencreated)>**
 
 Creates a new ActiveGate token
 
@@ -26,15 +26,15 @@ The newly created token will be owned by the same user who owns the token used f
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                   |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [ActiveGateTokenCreate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokencreate) |
+| Name                   | Type                                                                                                                                                           |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [ActiveGateTokenCreate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokencreate) |
 
 #### Returns
 
-| Return type                                                                                                                              | Status code | Description                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------- |
-| [ActiveGateTokenCreated](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokencreated) | 201         | Success. The token has been created. The body of the response contains the token secret. |
+| Return type                                                                                                                                                      | Status code | Description                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------- |
+| [ActiveGateTokenCreated](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokencreated) | 201         | Success. The token has been created. The body of the response contains the token secret. |
 
 #### Throws
 
@@ -58,7 +58,7 @@ const data =
 
 ### getToken
 
-**accessTokensActiveGateTokensClient.getToken(config): Promise\<[ActiveGateToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetoken)>**
+**accessTokensActiveGateTokensClient.getToken(config): Promise\<[ActiveGateToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetoken)>**
 
 Gets metadata of an ActiveGate token
 
@@ -82,9 +82,9 @@ The token secret is **not** exposed.
 
 #### Returns
 
-| Return type                                                                                                                | Status code | Description                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------- |
-| [ActiveGateToken](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetoken) | 200         | Success. The response contains the metadata of the tokens. |
+| Return type                                                                                                                                        | Status code | Description                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------- |
+| [ActiveGateToken](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetoken) | 200         | Success. The response contains the metadata of the tokens. |
 
 #### Throws
 
@@ -105,7 +105,7 @@ const data =
 
 ### listTokens
 
-**accessTokensActiveGateTokensClient.listTokens(config): Promise\<[ActiveGateTokenList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenlist)>**
+**accessTokensActiveGateTokensClient.listTokens(config): Promise\<[ActiveGateTokenList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenlist)>**
 
 Lists all available ActiveGate tokens
 
@@ -133,9 +133,9 @@ You can limit the output by using pagination:
 
 #### Returns
 
-| Return type                                                                                                                        | Status code | Description                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
-| [ActiveGateTokenList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenlist) | 200         | Success. The response contains the list of ActiveGate tokens. |
+| Return type                                                                                                                                                | Status code | Description                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
+| [ActiveGateTokenList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#activegatetokenlist) | 200         | Success. The response contains the list of ActiveGate tokens. |
 
 #### Throws
 

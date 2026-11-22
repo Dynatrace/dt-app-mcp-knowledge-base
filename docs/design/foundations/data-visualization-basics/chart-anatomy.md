@@ -1,8 +1,8 @@
 ## Chart anatomy
 
-![Line chart](https://developer.dynatrace.com/assets/images/dataviz-chart-anatomy-line-light-72c327a7195033ac5dc72b6305ea9a84.webp)
+![Line chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-anatomy-line-light-72c327a7195033ac5dc72b6305ea9a84.webp)
 
-![Pie chart](https://developer.dynatrace.com/assets/images/dataviz-chart-anatomy-pie-light-32081337387d450dea82a104b131a924.webp)
+![Pie chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-anatomy-pie-light-32081337387d450dea82a104b131a924.webp)
 
 1. **Value labels:** Range of values representing a variable.
 2. **Chart tooltip:** Displays additional information about the hovered data points. Allows additional actions when selected.
@@ -15,6 +15,6 @@
 
 ### Interactivity in charts
 
-[Chart Interactions](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#chart-interactions) enable additional possibilities for end users to interact with the data plotted within the chart area. The interactive options currently supported within the [Timeseries charts](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/) are [zoom in](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#zoom-in-and-zoom-out), [zoom out](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#zoom-in-and-zoom-out), [x-axis zoom](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#zoom-in-and-zoom-out) and [pan](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#pan). To user these interactions, add the **ChartInteractions** subcomponent to the **TimeseriesChart**.
+[Chart Interactions](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#chart-interactions) enable additional possibilities for end users to interact with the data plotted within the chart area. The interactive options currently supported within the [Timeseries charts](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/) are [zoom in](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#zoom-in-and-zoom-out), [zoom out](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#zoom-in-and-zoom-out), [x-axis zoom](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#zoom-in-and-zoom-out) and [pan](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#pan). To user these interactions, add the **ChartInteractions** subcomponent to the **TimeseriesChart**.
 
-![Chart interaction x-axis zoom](https://developer.dynatrace.com/assets/images/dataviz-chart-interaction-explore-zoom-light-c4195a54fbcebb2d61385379d24ad2bb.webp)
+![Chart interaction x-axis zoom](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-interaction-explore-zoom-light-c4195a54fbcebb2d61385379d24ad2bb.webp)

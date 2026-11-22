@@ -13,14 +13,14 @@ Python extensions are simply Python modules that must follow the [PEP8](https://
 >
 > To run a command on Visual Studio Code, press `F1` or `Ctrl+Shift+P` and type the command name.
 
-![python project type](https://developer.dynatrace.com/assets/images/python-tutorial-project-type-61c850e015ffaec952ad8d9b6d22d5e0.png)
+![python project type](https://public-developer.central.internal.dynatrace.com/assets/images/python-tutorial-project-type-61c850e015ffaec952ad8d9b6d22d5e0.png)
 
 Our Visual Studio Code extension will automatically invoke the `dt-sdk create` command, which will create the necessary files and folders for the extension.
 
 If you open the file `extension/extension.yaml`, you can examine the construction of a Python extension.\
 It declares the Python module name, the minimum Python version, and the activation schema for a remote ActiveGate or local OneAgent extension.
 
-![python extension yaml](https://developer.dynatrace.com/assets/images/python-tutorial-extension-yaml-ae95c0a449e398b93fa2dbad94dfc129.png)
+![python extension yaml](https://public-developer.central.internal.dynatrace.com/assets/images/python-tutorial-extension-yaml-ae95c0a449e398b93fa2dbad94dfc129.png)
 
 Clicking the `Simulate extension` code lens will start the extension in the Visual Studio Code environment.
 
@@ -28,4 +28,4 @@ Clicking the `Simulate extension` code lens will start the extension in the Visu
 >
 > If you don't see the `Simulate extension` button, reload the Visual Studio Code window with `F1 > Reload Window`.
 
-![python extension simulate](https://developer.dynatrace.com/assets/images/python-tutorial-simulate-09c2b21dbf161bdef6c1a2114ab6eb64.png)
+![python extension simulate](https://public-developer.central.internal.dynatrace.com/assets/images/python-tutorial-simulate-09c2b21dbf161bdef6c1a2114ab6eb64.png)

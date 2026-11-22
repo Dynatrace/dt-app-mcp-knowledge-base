@@ -6,7 +6,7 @@ import { serviceLevelObjectivesClient } from '@dynatrace-sdk/client-classic-envi
 
 ### createAlert
 
-**serviceLevelObjectivesClient.createAlert(config): Promise\<[EntityShortRepresentation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#entityshortrepresentation)>**
+**serviceLevelObjectivesClient.createAlert(config): Promise\<[EntityShortRepresentation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#entityshortrepresentation)>**
 
 Creates an alert of the provided alert type for an SLO
 
@@ -18,10 +18,10 @@ Creates an alert of the provided alert type for an SLO
 
 #### Parameters
 
-| Name                   | Type                                                                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [AbstractSloAlertDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#abstractsloalertdto) |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| config.from            | string                                                                                                                            | The start of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
+| Name                   | Type                                                                                                                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [AbstractSloAlertDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#abstractsloalertdto) |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| config.from            | string                                                                                                                                                    | The start of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
 * Human-readable format of&#x20;
   `2021-01-25T05:57:01.123+01:00`
   . If no time zone is specified, UTC is used. You can use a space character instead of the&#x20;
@@ -53,8 +53,8 @@ Creates an alert of the provided alert type for an SLO
   - `y`
     : years
   &#x20; If not set, the relative timeframe of two weeks is used (`now-2w`). |
-| config.id (required)   | string                                                                                                                            | The ID of the required SLO.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| config.timeFrame       | "CURRENT" \| "GTF"                                                                                                                | The timeframe to calculate the SLO values: * `CURRENT`
+| config.id (required)   | string                                                                                                                                                    | The ID of the required SLO.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| config.timeFrame       | "CURRENT" \| "GTF"                                                                                                                                        | The timeframe to calculate the SLO values: * `CURRENT`
   : SLO's own timeframe.
 * `GTF`
   : timeframe specified by&#x20;
@@ -62,7 +62,7 @@ Creates an alert of the provided alert type for an SLO
    and&#x20;
   **to**
    parameters. If not set, the `CURRENT` value is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| config.to              | string                                                                                                                            | The end of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
+| config.to              | string                                                                                                                                                    | The end of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
 * Human-readable format of&#x20;
   `2021-01-25T05:57:01.123+01:00`
   . If no time zone is specified, UTC is used. You can use a space character instead of the&#x20;
@@ -97,9 +97,9 @@ Creates an alert of the provided alert type for an SLO
 
 #### Returns
 
-| Return type                                                                                                                                   | Status code | Description                                                                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [EntityShortRepresentation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#entityshortrepresentation) | 201         | Success. The new alert has been created. The response contains the parameters of the new alert. The **location** response header contains the ID of the new alert. |
+| Return type                                                                                                                                                           | Status code | Description                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [EntityShortRepresentation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#entityshortrepresentation) | 201         | Success. The new alert has been created. The response contains the parameters of the new alert. The **location** response header contains the ID of the new alert. |
 
 #### Throws
 
@@ -138,9 +138,9 @@ Creates a new SLO
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [SloConfigItemDtoImpl](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#sloconfigitemdtoimpl) |
+| Name                   | Type                                                                                                                                                        |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [SloConfigItemDtoImpl](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#sloconfigitemdtoimpl) |
 
 #### Returns
 
@@ -212,7 +212,7 @@ const data = await serviceLevelObjectivesClient.deleteSlo({
 
 ### getSlo
 
-**serviceLevelObjectivesClient.getSlo(config): Promise\<[SLOs](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slos)>**
+**serviceLevelObjectivesClient.getSlo(config): Promise\<[SLOs](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slos)>**
 
 Lists all available SLOs along with calculated values
 
@@ -345,9 +345,9 @@ By default the values are calculated for the SLO's own timeframe. You can use a 
 
 #### Returns
 
-| Return type                                                                                         | Status code | Description                                                                               |
-| --------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------- |
-| [SLOs](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slos) | 200         | Success. The response contains the parameters and calculated values of the requested SLO. |
+| Return type                                                                                                                 | Status code | Description                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------- |
+| [SLOs](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slos) | 200         | Success. The response contains the parameters and calculated values of the requested SLO. |
 
 #### Throws
 
@@ -365,7 +365,7 @@ const data = await serviceLevelObjectivesClient.getSlo();
 
 ### getSloById
 
-**serviceLevelObjectivesClient.getSloById(config): Promise\<[SLO](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slo)>**
+**serviceLevelObjectivesClient.getSloById(config): Promise\<[SLO](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slo)>**
 
 Gets parameters and calculated values of a specific SLO
 
@@ -457,9 +457,9 @@ If **from** and **to** parameters are provided, the SLO is calculated for that t
 
 #### Returns
 
-| Return type                                                                                       | Status code | Description                                                                               |
-| ------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------- |
-| [SLO](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slo) | 200         | Success. The response contains the parameters and calculated values of the requested SLO. |
+| Return type                                                                                                               | Status code | Description                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------- |
+| [SLO](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#slo) | 200         | Success. The response contains the parameters and calculated values of the requested SLO. |
 
 #### Throws
 
@@ -491,10 +491,10 @@ Updates an existing SLO
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                | Description                 |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| config.body (required) | [SloConfigItemDtoImpl](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#sloconfigitemdtoimpl) |                             |
-| config.id (required)   | string                                                                                                                              | The ID of the required SLO. |
+| Name                   | Type                                                                                                                                                        | Description                 |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| config.body (required) | [SloConfigItemDtoImpl](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v8/types.md#sloconfigitemdtoimpl) |                             |
+| config.id (required)   | string                                                                                                                                                      | The ID of the required SLO. |
 
 #### Returns
 

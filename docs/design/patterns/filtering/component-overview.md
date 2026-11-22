@@ -4,9 +4,9 @@ Choose the simplest filter component or combination that meets users' filtering 
 
 ### FilterField
 
-**Description:** An advanced filtering component that supports complex filtering using [Filter field syntax](https://docs.dynatrace.com/docs/shortlink/ui-filter-field), plus auto-suggestions. See [Usage](https://developer.dynatrace.com/design/components/filters/FilterField/usage.md).
+**Description:** An advanced filtering component that supports complex filtering using [Filter field syntax](https://docs.dynatrace.com/docs/shortlink/ui-filter-field), plus auto-suggestions. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterField/usage.md).
 
-![FilterField](https://developer.dynatrace.com/assets/images/filters-filterfield-light-e1c8fe15473e011da3264c7fc3964583.webp)
+![FilterField](https://public-developer.central.internal.dynatrace.com/assets/images/filters-filterfield-light-e1c8fe15473e011da3264c7fc3964583.webp)
 
 **Best for:**
 
@@ -21,9 +21,9 @@ Choose the simplest filter component or combination that meets users' filtering 
 
 ### FilterBar
 
-**Description:** A versatile filtering component that supports a variety of filter methods, including text input, single or multiple selection, booleans, and more, based on form components. See [Usage](https://developer.dynatrace.com/design/components/filters/FilterBar/usage.md).
+**Description:** A versatile filtering component that supports a variety of filter methods, including text input, single or multiple selection, booleans, and more, based on form components. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterBar/usage.md).
 
-![FilterBar](https://developer.dynatrace.com/assets/images/filters-filterbar-light-c676fa993585e9b00646c8c63705516d.webp)
+![FilterBar](https://public-developer.central.internal.dynatrace.com/assets/images/filters-filterbar-light-c676fa993585e9b00646c8c63705516d.webp)
 
 **Best for:**
 
@@ -34,9 +34,9 @@ Choose the simplest filter component or combination that meets users' filtering 
 
 ### SegmentSelector
 
-**Description:** Component for filtering data by pre-defined [Segments](https://docs.dynatrace.com/docs/shortlink/segments) (applications, infrastructure, organizational units, etc.). Functions as a top-level filter, setting the scope for additional filters. See [Usage](https://developer.dynatrace.com/design/components/filters/SegmentSelector/usage.md).
+**Description:** Component for filtering data by pre-defined [Segments](https://docs.dynatrace.com/docs/shortlink/segments) (applications, infrastructure, organizational units, etc.). Functions as a top-level filter, setting the scope for additional filters. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/SegmentSelector/usage.md).
 
-![SegmentSelector](https://developer.dynatrace.com/assets/images/filters-segmentselector-light-0ee95015b7bb8e813280b5a13a9bd824.webp)
+![SegmentSelector](https://public-developer.central.internal.dynatrace.com/assets/images/filters-segmentselector-light-0ee95015b7bb8e813280b5a13a9bd824.webp)
 
 **Best for:**
 
@@ -44,9 +44,9 @@ Choose the simplest filter component or combination that meets users' filtering 
 
 ### TimeframeSelector
 
-**Description:** Component for filtering data from specific timeframes. See [Usage](https://developer.dynatrace.com/design/components/filters/TimeframeSelector/usage.md).
+**Description:** Component for filtering data from specific timeframes. See [Usage](https://public-developer.central.internal.dynatrace.com/design/components/filters/TimeframeSelector/usage.md).
 
-![TimeframeSelector](https://developer.dynatrace.com/assets/images/filters-timeframeselector-light-10478540f3207c293fbafae172194cae.webp)
+![TimeframeSelector](https://public-developer.central.internal.dynatrace.com/assets/images/filters-timeframeselector-light-10478540f3207c293fbafae172194cae.webp)
 
 **Best for:**
 

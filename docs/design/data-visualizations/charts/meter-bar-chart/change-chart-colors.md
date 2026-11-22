@@ -124,4 +124,4 @@ In the example above, we're using rules to change the bar color based on value t
 
 You can combine multiple rules to create complex coloring schemes. When multiple rules match, the most specific rule (highest `matchValue` for 'greater' comparators, lowest for 'less' comparators) will take precedence.
 
-For more details about available comparators and options, see the [Color Rules](https://developer.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.
+For more details about available comparators and options, see the [Color Rules](https://public-developer.central.internal.dynatrace.com/design/data-visualizations/charts/ChartColoring.md#override-series-color-with-colorrule) section.

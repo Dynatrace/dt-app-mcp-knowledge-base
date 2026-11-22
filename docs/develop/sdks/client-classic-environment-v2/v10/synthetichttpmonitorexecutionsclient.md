@@ -6,7 +6,7 @@ import { syntheticHttpMonitorExecutionsClient } from '@dynatrace-sdk/client-clas
 
 ### getExecutionResult
 
-**syntheticHttpMonitorExecutionsClient.getExecutionResult(config): Promise\<[MonitorExecutionResults](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#monitorexecutionresults)>**
+**syntheticHttpMonitorExecutionsClient.getExecutionResult(config): Promise\<[MonitorExecutionResults](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#monitorexecutionresults)>**
 
 Gets detailed information about the last execution of the specified HTTP monitor
 
@@ -23,9 +23,9 @@ Gets detailed information about the last execution of the specified HTTP monitor
 
 #### Returns
 
-| Return type                                                                                                                                | Status code | Description                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------------------------------------------- |
-| [MonitorExecutionResults](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#monitorexecutionresults) | 200         | Success. The response contains detailed data. |
+| Return type                                                                                                                                                        | Status code | Description                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------------------------------------------- |
+| [MonitorExecutionResults](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#monitorexecutionresults) | 200         | Success. The response contains detailed data. |
 
 #### Throws
 

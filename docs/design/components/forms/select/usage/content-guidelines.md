@@ -32,7 +32,7 @@ Don't use the placeholder for information users need to complete the task, as pl
 
 ### Hint (optional)
 
-Use the hint ([FormFieldMessages](https://developer.dynatrace.com/design/components/forms/FormField.md#show-custom-hints-and-errors) component) for information users need to avoid errors or work efficiently. Always provide any error messages here too.
+Use the hint ([FormFieldMessages](https://public-developer.central.internal.dynatrace.com/design/components/forms/FormField.md#show-custom-hints-and-errors) component) for information users need to avoid errors or work efficiently. Always provide any error messages here too.
 
 Example: Select 1-3 options.
 

@@ -4,7 +4,7 @@ All the above-mentioned points have effects on your local development experience
 
 ### Access Dynatrace data during development
 
-When starting your [local development server](https://developer.dynatrace.com/quickstart/tutorial/create-new-dynatrace-app.md#3-start-the-development-server), the App Toolkit automatically proxies all the requests to the Dynatrace platform to the environment specified in your [app configuration file](https://developer.dynatrace.com/contents/docs/quickstart/app-toolkit/index.mdx/#app-options).
+When starting your [local development server](https://public-developer.central.internal.dynatrace.com/quickstart/tutorial/create-new-dynatrace-app.md#3-start-the-development-server), the App Toolkit automatically proxies all the requests to the Dynatrace platform to the environment specified in your [app configuration file](https://public-developer.central.internal.dynatrace.com/contents/docs/quickstart/app-toolkit/index.mdx/#app-options).
 Therefore, you can use data from your Dynatrace environment during the development phase to ensure that your app works correctly in the real-world environment.
 
 ### Run your app outside of the iframe context

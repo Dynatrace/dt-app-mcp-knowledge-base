@@ -7,7 +7,7 @@ Props are automatically applied with the custom trigger we provide to ensure cor
 - The first object provides access to the default `displayValue` and the `isLoading` state.
 - The second object provides all the trigger props necessary for the trigger button to function.
 
-If you override the default trigger, make sure to spread the props to the trigger element to tie interactions back to the `SegmentSelector`. This enables you to customize the trigger component, while leveraging the internal logic of the `SegmentSelector` component. See the [Accessibility tab](https://developer.dynatrace.com/design/components/filters/SegmentSelector/a11y.md) for best practices.
+If you override the default trigger, make sure to spread the props to the trigger element to tie interactions back to the `SegmentSelector`. This enables you to customize the trigger component, while leveraging the internal logic of the `SegmentSelector` component. See the [Accessibility tab](https://public-developer.central.internal.dynatrace.com/design/components/filters/SegmentSelector/a11y.md) for best practices.
 
 **CustomTrigger**
 

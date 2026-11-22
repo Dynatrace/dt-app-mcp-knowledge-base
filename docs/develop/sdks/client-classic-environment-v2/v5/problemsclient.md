@@ -6,7 +6,7 @@ import { problemsClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### closeProblem
 
-**problemsClient.closeProblem(config): Promise\<void | [ProblemCloseResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problemcloseresult)>**
+**problemsClient.closeProblem(config): Promise\<void | [ProblemCloseResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problemcloseresult)>**
 
 Closes the specified problem and adds a closing comment on it
 
@@ -15,17 +15,17 @@ Closes the specified problem and adds a closing comment on it
 
 #### Parameters
 
-| Name                        | Type                                                                                                                                            | Description                     |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| config.body (required)      | [ProblemCloseRequestDtoImpl](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problemcloserequestdtoimpl) |                                 |
-| config.problemId (required) | string                                                                                                                                          | The ID of the required problem. |
+| Name                        | Type                                                                                                                                                                    | Description                     |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| config.body (required)      | [ProblemCloseRequestDtoImpl](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problemcloserequestdtoimpl) |                                 |
+| config.problemId (required) | string                                                                                                                                                                  | The ID of the required problem. |
 
 #### Returns
 
-| Return type                                                                                                                     | Status code | Description                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------- |
-| [ProblemCloseResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problemcloseresult) | 200         | Success                                                         |
-| void                                                                                                                            | 204         | The problem is closed already the request hasn't been executed. |
+| Return type                                                                                                                                             | Status code | Description                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------- |
+| [ProblemCloseResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problemcloseresult) | 200         | Success                                                         |
+| void                                                                                                                                                    | 204         | The problem is closed already the request hasn't been executed. |
 
 #### Throws
 
@@ -55,10 +55,10 @@ Adds a new comment on the specified problem
 
 #### Parameters
 
-| Name                        | Type                                                                                                                                  | Description                     |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| config.body (required)      | [CommentRequestDtoImpl](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentrequestdtoimpl) |                                 |
-| config.problemId (required) | string                                                                                                                                | The ID of the required problem. |
+| Name                        | Type                                                                                                                                                          | Description                     |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| config.body (required)      | [CommentRequestDtoImpl](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentrequestdtoimpl) |                                 |
+| config.problemId (required) | string                                                                                                                                                        | The ID of the required problem. |
 
 #### Returns
 
@@ -124,7 +124,7 @@ const data = await problemsClient.deleteComment({
 
 ### getComment
 
-**problemsClient.getComment(config): Promise\<[Comment](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#comment)>**
+**problemsClient.getComment(config): Promise\<[Comment](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#comment)>**
 
 Gets the specified comment on a problem
 
@@ -140,9 +140,9 @@ Gets the specified comment on a problem
 
 #### Returns
 
-| Return type                                                                                               | Status code | Description |
-| --------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Comment](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#comment) | 200         | Success     |
+| Return type                                                                                                                       | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Comment](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#comment) | 200         | Success     |
 
 #### Throws
 
@@ -163,7 +163,7 @@ const data = await problemsClient.getComment({
 
 ### getComments
 
-**problemsClient.getComments(config): Promise\<[CommentsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentslist)>**
+**problemsClient.getComments(config): Promise\<[CommentsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentslist)>**
 
 Gets all comments on the specified problem
 
@@ -180,9 +180,9 @@ Gets all comments on the specified problem
 
 #### Returns
 
-| Return type                                                                                                         | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [CommentsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentslist) | 200         | Success     |
+| Return type                                                                                                                                 | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [CommentsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentslist) | 200         | Success     |
 
 #### Throws
 
@@ -202,7 +202,7 @@ const data = await problemsClient.getComments({
 
 ### getProblem
 
-**problemsClient.getProblem(config): Promise\<[Problem](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problem)>**
+**problemsClient.getProblem(config): Promise\<[Problem](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problem)>**
 
 Gets the properties of the specified problem
 
@@ -223,9 +223,9 @@ Gets the properties of the specified problem
 
 #### Returns
 
-| Return type                                                                                               | Status code | Description |
-| --------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Problem](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problem) | 200         | Success     |
+| Return type                                                                                                                       | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Problem](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problem) | 200         | Success     |
 
 #### Throws
 
@@ -245,7 +245,7 @@ const data = await problemsClient.getProblem({
 
 ### getProblems
 
-**problemsClient.getProblems(config): Promise\<[Problems](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problems)>**
+**problemsClient.getProblems(config): Promise\<[Problems](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problems)>**
 
 Lists problems observed within the specified timeframe
 
@@ -510,9 +510,9 @@ Lists problems observed within the specified timeframe
 
 #### Returns
 
-| Return type                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Problems](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problems) | 200         | Success     |
+| Return type                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Problems](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#problems) | 200         | Success     |
 
 #### Throws
 
@@ -539,11 +539,11 @@ Updates the specified comment on a problem
 
 #### Parameters
 
-| Name                        | Type                                                                                                                                  | Description                     |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| config.body (required)      | [CommentRequestDtoImpl](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentrequestdtoimpl) |                                 |
-| config.commentId (required) | string                                                                                                                                | The ID of the required comment. |
-| config.problemId (required) | string                                                                                                                                | The ID of the required problem. |
+| Name                        | Type                                                                                                                                                          | Description                     |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| config.body (required)      | [CommentRequestDtoImpl](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#commentrequestdtoimpl) |                                 |
+| config.commentId (required) | string                                                                                                                                                        | The ID of the required comment. |
+| config.problemId (required) | string                                                                                                                                                        | The ID of the required problem. |
 
 #### Returns
 

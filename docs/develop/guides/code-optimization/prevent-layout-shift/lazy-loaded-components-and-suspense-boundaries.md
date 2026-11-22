@@ -1,6 +1,6 @@
 ## Lazy-loaded components and Suspense boundaries
 
-When using [lazy loading](https://developer.dynatrace.com/develop/guides/code-optimization/lazy-loading.md), a Suspense fallback is shown while the chunk downloads. When the real component mounts, it replaces the fallback. If the two have different heights, you get a layout shift.
+When using [lazy loading](https://public-developer.central.internal.dynatrace.com/develop/guides/code-optimization/lazy-loading.md), a Suspense fallback is shown while the chunk downloads. When the real component mounts, it replaces the fallback. If the two have different heights, you get a layout shift.
 
 ### Size your Suspense wrapper
 

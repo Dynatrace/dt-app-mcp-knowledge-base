@@ -19,4 +19,4 @@ client-<Service-Namespace>-<Service-Name>-v<Version>
 
 ### Example
 
-![SDK naming](https://developer.dynatrace.com/assets/images/sdk-1056ab155ef87cafa3574f7ed20ccbd1.png)
+![SDK naming](https://public-developer.central.internal.dynatrace.com/assets/images/sdk-1056ab155ef87cafa3574f7ed20ccbd1.png)

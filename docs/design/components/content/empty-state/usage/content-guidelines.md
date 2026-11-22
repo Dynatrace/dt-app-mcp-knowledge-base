@@ -39,7 +39,7 @@ In one or two sentences, explain what the user can do next. If there's no action
 
 ### Actions
 
-Keep the label to one or two words, starting with an imperative verb. Learn more about the [Button](https://developer.dynatrace.com/design/components/buttons/Button.md) component.
+Keep the label to one or two words, starting with an imperative verb. Learn more about the [Button](https://public-developer.central.internal.dynatrace.com/design/components/buttons/Button.md) component.
 
 - The label should describe the action the user will take.
 - Omit the button:
@@ -52,7 +52,7 @@ Keep the label to one or two words, starting with an imperative verb. Learn more
 
 ### Footer
 
-Include a footer only when a documentation link or support article is genuinely useful. Don't add one by default. See [Links](https://developer.dynatrace.com/design/components/typography/Link.md).
+Include a footer only when a documentation link or support article is genuinely useful. Don't add one by default. See [Links](https://public-developer.central.internal.dynatrace.com/design/components/typography/Link.md).
 
 |  Do                            |            |
 | ------------------------------ | ---------- |

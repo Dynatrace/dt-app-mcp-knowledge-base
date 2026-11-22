@@ -4,7 +4,7 @@ Begin by connecting with your Dynatrace environment. To connect, you need to do 
 
 - Go to the Dynatrace Extensions view in the VS Code UI, then select the **Add environment** button as shown.
 
-  ![add_environment](https://developer.dynatrace.com/assets/images/add_environment-a438b5d678b6e54660009c7592482f7c.png)
+  ![add_environment](https://public-developer.central.internal.dynatrace.com/assets/images/add_environment-a438b5d678b6e54660009c7592482f7c.png)
 
   You'll need to provide the base URL to access Dynatrace. It should follow one of these patterns:
 
@@ -18,4 +18,4 @@ Begin by connecting with your Dynatrace environment. To connect, you need to do 
 
 - Set this as your current environment.
 
-The add-on displays your environment in the list and will use the current environment for all API operations. Visit [Environments](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/specialized_views.md#environments) to learn more about using the Environment view.
+The add-on displays your environment in the list and will use the current environment for all API operations. Visit [Environments](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/specialized_views.md#environments) to learn more about using the Environment view.

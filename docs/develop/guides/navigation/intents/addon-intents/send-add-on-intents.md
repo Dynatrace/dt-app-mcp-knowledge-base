@@ -1,6 +1,6 @@
 ## Send add-on intents
 
-You can send add-on intent in apps. Learn more about how to send an intent in the [Send intents guide](https://developer.dynatrace.com/develop/guides/navigation/intents/send-intents.md).
+You can send add-on intent in apps. Learn more about how to send an intent in the [Send intents guide](https://public-developer.central.internal.dynatrace.com/develop/guides/navigation/intents/send-intents.md).
 
 When sending an intent, the source app can't control the visual mode of the app receiving the intent. However, the target app can opt in to the add-on using the intent's declaration in the app manifest.
 

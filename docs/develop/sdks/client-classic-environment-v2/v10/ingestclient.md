@@ -6,7 +6,7 @@ import { ingestClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### ingest
 
-**ingestClient.ingest(config): Promise\<[ValidationResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#validationresponse)>**
+**ingestClient.ingest(config): Promise\<[ValidationResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#validationresponse)>**
 
 Pushes metric data points to Dynatrace
 
@@ -46,7 +46,7 @@ const data = await ingestClient.ingest({
 
 ### storeLog
 
-**ingestClient.storeLog(config): Promise\<void | [SuccessEnvelope](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#successenvelope)>**
+**ingestClient.storeLog(config): Promise\<void | [SuccessEnvelope](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#successenvelope)>**
 
 Pushes log records to Dynatrace
 
@@ -79,10 +79,10 @@ It is recommended to use an exponential backoff strategy when retrying requests.
 
 #### Returns
 
-| Return type                                                                                                                | Status code | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------- |
-| [SuccessEnvelope](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#successenvelope) | 200         | Only a part of input events were ingested due to event invalidity. For details, check the response body. |
-| void                                                                                                                       | 204         | Success. Response doesn't have a body.                                                                   |
+| Return type                                                                                                                                        | Status code | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------- |
+| [SuccessEnvelope](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v10/types.md#successenvelope) | 200         | Only a part of input events were ingested due to event invalidity. For details, check the response body. |
+| void                                                                                                                                               | 204         | Success. Response doesn't have a body.                                                                   |
 
 #### Throws
 

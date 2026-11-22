@@ -79,4 +79,4 @@ let gpsLocation: GeoLocation = {
 
 TypeScript gives you auto-completion because it knows the structure:
 
-![TypScript autocompletion](https://developer.dynatrace.com/assets/images/typescript-e99b03101d8016419aa5dec7af52379d.png)
+![TypScript autocompletion](https://public-developer.central.internal.dynatrace.com/assets/images/typescript-e99b03101d8016419aa5dec7af52379d.png)

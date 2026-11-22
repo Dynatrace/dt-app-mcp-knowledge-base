@@ -6,7 +6,7 @@ import { auditLogsClient } from '@dynatrace-sdk/client-classic-environment-v2';
 
 ### getLog
 
-**auditLogsClient.getLog(config): Promise\<[AuditLogEntry](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlogentry)>**
+**auditLogsClient.getLog(config): Promise\<[AuditLogEntry](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlogentry)>**
 
 Gets the specified entry of the audit log | maturity=EARLY_ADOPTER
 
@@ -21,9 +21,9 @@ Gets the specified entry of the audit log | maturity=EARLY_ADOPTER
 
 #### Returns
 
-| Return type                                                                                                           | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AuditLogEntry](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlogentry) | 200         | Success     |
+| Return type                                                                                                                                   | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AuditLogEntry](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlogentry) | 200         | Success     |
 
 #### Throws
 
@@ -41,7 +41,7 @@ const data = await auditLogsClient.getLog({ id: "..." });
 
 ### getLogs
 
-**auditLogsClient.getLogs(config): Promise\<[AuditLog](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog)>**
+**auditLogsClient.getLogs(config): Promise\<[AuditLog](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog)>**
 
 Gets the audit log of your Dynatrace environment | maturity=EARLY_ADOPTER
 
@@ -173,9 +173,9 @@ You can limit the output by using pagination:
 
 #### Returns
 
-| Return type                                                                                                 | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AuditLog](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog) | 200         | Success     |
+| Return type                                                                                                                         | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AuditLog](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#auditlog) | 200         | Success     |
 
 #### Throws
 

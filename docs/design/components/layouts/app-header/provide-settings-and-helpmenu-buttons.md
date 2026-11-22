@@ -37,4 +37,4 @@ const Menus = () => {
 };
 ```
 
-Read more about `HelpMenu` in the [HelpMenu](https://developer.dynatrace.com/design/components/layouts/HelpMenu.md) docs.
+Read more about `HelpMenu` in the [HelpMenu](https://public-developer.central.internal.dynatrace.com/design/components/layouts/HelpMenu.md) docs.

@@ -4,7 +4,7 @@ Chips come in five colors. Each has a different semantic meaning.
 
 Never use color alone to communicate a condition. Instead, combine it with a descriptive label to ensure an accessible experience.
 
-![Five Chip colors — Neutral, Primary, Success, Warning, and Critical — each shown in Emphasized and Accent variants.](https://developer.dynatrace.com/assets/images/chip-colors-light-2df5fb256329d69f69370d0c3e4128bc.webp)&#x20;
+![Five Chip colors — Neutral, Primary, Success, Warning, and Critical — each shown in Emphasized and Accent variants.](https://public-developer.central.internal.dynatrace.com/assets/images/chip-colors-light-2df5fb256329d69f69370d0c3e4128bc.webp)&#x20;
 
 ### Neutral
 
@@ -33,4 +33,4 @@ Never use color alone to communicate a condition. Instead, combine it with a des
 
 > **Tip**
 >
-> Learn more about the semantic meaning of colors in [Status and health](https://developer.dynatrace.com/design/patterns/status-and-health.md).
+> Learn more about the semantic meaning of colors in [Status and health](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md).

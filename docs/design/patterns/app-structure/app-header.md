@@ -1,6 +1,6 @@
 ## App header
 
-The [app header component](https://developer.dynatrace.com/contents/docs/design/components/layouts/AppHeader/index.mdx/) is essential to the user experience. It serves as a visual anchor for users to orient themselves and includes the highest level of navigation and app-wide functions and actions. It should always be present at the top of your app.
+The [app header component](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/layouts/AppHeader/index.mdx/) is essential to the user experience. It serves as a visual anchor for users to orient themselves and includes the highest level of navigation and app-wide functions and actions. It should always be present at the top of your app.
 
 ![App header component](./assets/app-structure-app-header-light.webp)
 

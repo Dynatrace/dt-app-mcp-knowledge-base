@@ -4,7 +4,7 @@ You need to know the following concepts to work with the document service.
 
 ### Document
 
-Every document consists of metadata and content. The metadata contains information such as the document name and timestamps, which you can use to [filter and sort](https://developer.dynatrace.com/develop/platform-services/core-concepts/filtering-sorting.md) your documents.
+Every document consists of metadata and content. The metadata contains information such as the document name and timestamps, which you can use to [filter and sort](https://public-developer.central.internal.dynatrace.com/develop/platform-services/core-concepts/filtering-sorting.md) your documents.
 
 Following are some essential things to remember about documents:
 
@@ -27,7 +27,7 @@ Users with elevated privileges may request admin access and act with the same pe
 ### Sharing documents
 
 By default, only the document owner can share a document. However, the owner can allow everyone with the **Can edit** permission to also share the document through the **Allow editors to share** toggle.
-The document owner can grant either **read-only** or **read-write** access to the document for other users. Document service also prevents accidental overwriting due to collaboration using [optimistic locking](https://developer.dynatrace.com/develop/platform-services/core-concepts/locking-strategies.md)
+The document owner can grant either **read-only** or **read-write** access to the document for other users. Document service also prevents accidental overwriting due to collaboration using [optimistic locking](https://public-developer.central.internal.dynatrace.com/develop/platform-services/core-concepts/locking-strategies.md)
 
 There are three ways to share documents:
 

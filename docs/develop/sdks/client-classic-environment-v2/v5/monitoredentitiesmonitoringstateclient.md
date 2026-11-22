@@ -6,7 +6,7 @@ import { monitoredEntitiesMonitoringStateClient } from '@dynatrace-sdk/client-cl
 
 ### getStates
 
-**monitoredEntitiesMonitoringStateClient.getStates(config): Promise\<[MonitoredStates](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoredstates)>**
+**monitoredEntitiesMonitoringStateClient.getStates(config): Promise\<[MonitoredStates](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoredstates)>**
 
 Lists monitoring states of entities
 
@@ -170,9 +170,9 @@ Only process group instances are supported.
 
 #### Returns
 
-| Return type                                                                                                               | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [MonitoredStates](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoredstates) | 200         | Success     |
+| Return type                                                                                                                                       | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [MonitoredStates](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v5/types.md#monitoredstates) | 200         | Success     |
 
 #### Throws
 

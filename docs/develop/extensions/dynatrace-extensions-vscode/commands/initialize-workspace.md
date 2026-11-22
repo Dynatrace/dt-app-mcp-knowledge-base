@@ -2,7 +2,7 @@
 
 This command initializes a new or existing workspace for Extension 2.0 development and registers it with our VS Code add-on. As part of initialization, a starting folder structure and some template extension files are created to help any project start correctly.
 
-You can explore this command in detail by visiting our [Getting started guide](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/getting-started.md).
+You can explore this command in detail by visiting our [Getting started guide](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/getting-started.md).
 
 ### Command prerequisites
 

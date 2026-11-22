@@ -6,7 +6,7 @@ To recap, here are some best practices for preventing layout shift in your Dynat
 
 2. **Match skeleton dimensions to resolved content.** A skeleton should approximate the height, width, and structure of the component it's standing in for. Use multiple skeleton rows for tables.
 
-3. **Use SWR to eliminate loading states on revisits.** Cached data from `useDql` renders instantly with no skeleton-to-content transition at all. See [Stale-While-Revalidate Guide](https://developer.dynatrace.com/develop/guides/code-optimization/stale-while-revalidate.md).
+3. **Use SWR to eliminate loading states on revisits.** Cached data from `useDql` renders instantly with no skeleton-to-content transition at all. See [Stale-While-Revalidate Guide](https://public-developer.central.internal.dynatrace.com/develop/guides/code-optimization/stale-while-revalidate.md).
 
 4. **Use `placeholderData` for filter changes.** When query parameters change, keep the previous results visible instead of flashing to a skeleton. This eliminates a full empty-to-loaded shift.
 

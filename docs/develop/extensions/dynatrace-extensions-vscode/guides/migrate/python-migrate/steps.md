@@ -11,12 +11,12 @@ To migrate an existing Python EF1 extension using Visual Studio Code, follow the
 1. Open an empty folder in Visual Studio Code, then run the `Dynatrace extensions: Initialize Workspace` command.
 2. Select the schema version (latest recommended) and the certificates you want to use to sign the extension.
 
-![initialize workspace](https://developer.dynatrace.com/assets/images/python_initialize_workspace-c35bc7e7fa90541b334c2d929f3bcf1c.png)
+![initialize workspace](https://public-developer.central.internal.dynatrace.com/assets/images/python_initialize_workspace-c35bc7e7fa90541b334c2d929f3bcf1c.png)
 
 1. Choose the `Python Extension 2.0` project type.
 2. Give your extension a name; it must respect the Python module naming convention using all lowercase with optional underscores.
 
-![project type](https://developer.dynatrace.com/assets/images/python_project_type-3d4e4d28cac4aba245b3ec00d1851d36.png)
+![project type](https://public-developer.central.internal.dynatrace.com/assets/images/python_project_type-3d4e4d28cac4aba245b3ec00d1851d36.png)
 
 ### Import the existing EF1 extension
 

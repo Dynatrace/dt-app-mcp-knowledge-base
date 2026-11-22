@@ -9,4 +9,4 @@ In this tutorial, you'll learn how to:
 
 And here's what the final app will look like:
 
-![final app](https://developer.dynatrace.com/assets/images/final-app-4c6b62be57ec85d9fad8efbe430189ac.png)
+![final app](https://public-developer.central.internal.dynatrace.com/assets/images/final-app-4c6b62be57ec85d9fad8efbe430189ac.png)

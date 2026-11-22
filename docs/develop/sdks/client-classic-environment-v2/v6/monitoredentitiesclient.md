@@ -8,7 +8,7 @@ import { monitoredEntitiesClient } from '@dynatrace-sdk/client-classic-environme
 
 > ⚠️ **Deprecated**
 
-**monitoredEntitiesClient.deleteSecurityContext(config): Promise\<[SecurityContextResultDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto)>**
+**monitoredEntitiesClient.deleteSecurityContext(config): Promise\<[SecurityContextResultDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto)>**
 
 Deletes the security context for all entities matching the entity selector.
 
@@ -173,9 +173,9 @@ Automatic management zone rules will apply again to entities without a security 
 
 #### Returns
 
-| Return type                                                                                                                                 | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SecurityContextResultDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto) | 200         | Success     |
+| Return type                                                                                                                                                         | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SecurityContextResultDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto) | 200         | Success     |
 
 #### Throws
 
@@ -196,7 +196,7 @@ const data =
 
 ### getEntities
 
-**monitoredEntitiesClient.getEntities(config): Promise\<[EntitiesList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitieslist)>**
+**monitoredEntitiesClient.getEntities(config): Promise\<[EntitiesList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitieslist)>**
 
 Gets the information about monitored entities
 
@@ -373,9 +373,9 @@ You can limit the output by using pagination:
 
 #### Returns
 
-| Return type                                                                                                         | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EntitiesList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitieslist) | 200         | Success     |
+| Return type                                                                                                                                 | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EntitiesList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitieslist) | 200         | Success     |
 
 #### Throws
 
@@ -393,7 +393,7 @@ const data = await monitoredEntitiesClient.getEntities();
 
 ### getEntity
 
-**monitoredEntitiesClient.getEntity(config): Promise\<[Entity](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entity)>**
+**monitoredEntitiesClient.getEntity(config): Promise\<[Entity](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entity)>**
 
 Gets the properties of the specified monitored entity
 
@@ -473,9 +473,9 @@ Gets the properties of the specified monitored entity
 
 #### Returns
 
-| Return type                                                                                             | Status code | Description |
-| ------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [Entity](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entity) | 200         | Success     |
+| Return type                                                                                                                     | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [Entity](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entity) | 200         | Success     |
 
 #### Throws
 
@@ -495,7 +495,7 @@ const data = await monitoredEntitiesClient.getEntity({
 
 ### getEntityType
 
-**monitoredEntitiesClient.getEntityType(config): Promise\<[EntityType](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytype)>**
+**monitoredEntitiesClient.getEntityType(config): Promise\<[EntityType](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytype)>**
 
 Gets a list of properties for the specified entity type
 
@@ -510,9 +510,9 @@ Gets a list of properties for the specified entity type
 
 #### Returns
 
-| Return type                                                                                                     | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EntityType](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytype) | 200         | Success     |
+| Return type                                                                                                                             | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EntityType](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytype) | 200         | Success     |
 
 #### Throws
 
@@ -532,7 +532,7 @@ const data = await monitoredEntitiesClient.getEntityType({
 
 ### getEntityTypes
 
-**monitoredEntitiesClient.getEntityTypes(config): Promise\<[EntityTypeList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytypelist)>**
+**monitoredEntitiesClient.getEntityTypes(config): Promise\<[EntityTypeList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytypelist)>**
 
 Gets a list of properties for all entity types
 
@@ -553,9 +553,9 @@ You can limit the output by using pagination:
 
 #### Returns
 
-| Return type                                                                                                             | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EntityTypeList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytypelist) | 200         | Success     |
+| Return type                                                                                                                                     | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EntityTypeList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#entitytypelist) | 200         | Success     |
 
 #### Throws
 
@@ -573,7 +573,7 @@ const data = await monitoredEntitiesClient.getEntityTypes();
 
 ### pushCustomDevice
 
-**monitoredEntitiesClient.pushCustomDevice(config): Promise\<void | [CustomDeviceCreationResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#customdevicecreationresult)>**
+**monitoredEntitiesClient.pushCustomDevice(config): Promise\<void | [CustomDeviceCreationResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#customdevicecreationresult)>**
 
 Creates or updates a custom device
 
@@ -582,17 +582,17 @@ Creates or updates a custom device
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                | Description                                                                                                    |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| config.body (required) | [CustomDeviceCreation](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#customdevicecreation) |                                                                                                                |
-| config.uiBased         | boolean                                                                                                                             | If true, it will be handled as if it was created via UI. It will be refreshed automatically and won't age out. |
+| Name                   | Type                                                                                                                                                        | Description                                                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| config.body (required) | [CustomDeviceCreation](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#customdevicecreation) |                                                                                                                |
+| config.uiBased         | boolean                                                                                                                                                     | If true, it will be handled as if it was created via UI. It will be refreshed automatically and won't age out. |
 
 #### Returns
 
-| Return type                                                                                                                                     | Status code | Description |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [CustomDeviceCreationResult](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#customdevicecreationresult) | 201         | Success     |
-| void                                                                                                                                            | 204         | Success     |
+| Return type                                                                                                                                                             | Status code | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [CustomDeviceCreationResult](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#customdevicecreationresult) | 201         | Success     |
+| void                                                                                                                                                                    | 204         | Success     |
 
 #### Throws
 
@@ -614,7 +614,7 @@ const data = await monitoredEntitiesClient.pushCustomDevice(
 
 > ⚠️ **Deprecated**
 
-**monitoredEntitiesClient.setSecurityContext(config): Promise\<[SecurityContextResultDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto)>**
+**monitoredEntitiesClient.setSecurityContext(config): Promise\<[SecurityContextResultDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto)>**
 
 Sets the given security context for all entities matching the entity selector.
 
@@ -630,10 +630,10 @@ Automatic management zone rules will not apply to entities with a set security c
 
 #### Parameters
 
-| Name                             | Type                                                                                                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| config.body (required)           | [SecurityContextDtoImpl](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextdtoimpl) |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| config.entitySelector (required) | string                                                                                                                                  | Defines the scope of the entities to set the security context for. Only entities that can have management zones are considered for this operation You must set one of these criteria: * Entity type:&#x20;
+| Name                             | Type                                                                                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| config.body (required)           | [SecurityContextDtoImpl](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextdtoimpl) |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| config.entitySelector (required) | string                                                                                                                                                          | Defines the scope of the entities to set the security context for. Only entities that can have management zones are considered for this operation You must set one of these criteria: * Entity type:&#x20;
   `type("TYPE")`
 * Dynatrace entity ID:&#x20;
   `entityId("id")`
@@ -715,7 +715,7 @@ Automatic management zone rules will not apply to entities with a set security c
   . Inverts any criterion except for&#x20;
   **type**
   . For more information, see [Entity selector](https://dt-url.net/apientityselector) in Dynatrace Documentation. To set several criteria, separate them with a comma (`,`). For example, `type("HOST"),healthState("HEALTHY")`. Only results matching **all** criteria are included in the response. The maximum string length is 2,000 characters. |
-| config.from                      | string                                                                                                                                  | The start of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
+| config.from                      | string                                                                                                                                                          | The start of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
 * Human-readable format of&#x20;
   `2021-01-25T05:57:01.123+01:00`
   . If no time zone is specified, UTC is used. You can use a space character instead of the&#x20;
@@ -747,7 +747,7 @@ Automatic management zone rules will not apply to entities with a set security c
   - `y`
     : years
   &#x20; If not set, the relative timeframe of three days is used (`now-3d`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| config.to                        | string                                                                                                                                  | The end of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
+| config.to                        | string                                                                                                                                                          | The end of the requested timeframe. You can use one of the following formats: * Timestamp in UTC milliseconds.
 * Human-readable format of&#x20;
   `2021-01-25T05:57:01.123+01:00`
   . If no time zone is specified, UTC is used. You can use a space character instead of the&#x20;
@@ -782,9 +782,9 @@ Automatic management zone rules will not apply to entities with a set security c
 
 #### Returns
 
-| Return type                                                                                                                                 | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SecurityContextResultDto](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto) | 200         | Success     |
+| Return type                                                                                                                                                         | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SecurityContextResultDto](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v6/types.md#securitycontextresultdto) | 200         | Success     |
 
 #### Throws
 

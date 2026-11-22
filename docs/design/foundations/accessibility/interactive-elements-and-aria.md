@@ -8,4 +8,4 @@ ARIA (Accessible Rich Internet Applications) attributes help make complex and cu
 
 To provide high-quality experiences for all users, follow established ARIA authoring patterns for all components, apply tabindex values deliberately and conservatively, and avoid nesting interactive elements inside one another.
 
-**Example components:** [AiLoadingIndicator](https://developer.dynatrace.com/design/components/content/AiLoadingIndicator/a11y.md)
+**Example components:** [AiLoadingIndicator](https://public-developer.central.internal.dynatrace.com/design/components/content/AiLoadingIndicator/a11y.md)

@@ -9,4 +9,4 @@ Examples include:
 
 From a code perspective, add-ons and regular intents use the same declaration format. The difference is the `addonMode` property in the intent configuration: setting it to `"overlay"` tells the AppShell to load the target app in an overlay instead of navigating to it.
 
-![Add-on anatomy ](https://developer.dynatrace.com/assets/images/add-on-anatomy-599470c839100cff490664affaade7ef.png)
+![Add-on anatomy ](https://public-developer.central.internal.dynatrace.com/assets/images/add-on-anatomy-599470c839100cff490664affaade7ef.png)

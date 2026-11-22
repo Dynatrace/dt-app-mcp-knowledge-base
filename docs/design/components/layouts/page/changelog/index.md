@@ -6,6 +6,6 @@ The `Page` component is deprecated and will be removed in a future release. Plea
 
 The `Page` component provides the basic layout for your app with slots for a header, sidebar, main content, and a detail view. The `Main` slot is the only slot that is mandatory for rendering the `Page`; every other slot is optional.
 
-Check out the [UI and design guidelines](https://developer.dynatrace.com/design/patterns/app-structure.md#page) for more information on how to structure your app using the page.
+Check out the [UI and design guidelines](https://public-developer.central.internal.dynatrace.com/design/patterns/app-structure.md#page) for more information on how to structure your app using the page.
 
-Package `@dynatrace/strato-components`, latest version **3.17.1**. Below are the changes to `Page`. See [Components changelog](https://developer.dynatrace.com/changelogs/design-system/components-changelog.md) for all changes to the package.
+Package `@dynatrace/strato-components`, latest version **3.18.0**. Below are the changes to `Page`. See [Components changelog](https://public-developer.central.internal.dynatrace.com/changelogs/design-system/components-changelog.md) for all changes to the package.

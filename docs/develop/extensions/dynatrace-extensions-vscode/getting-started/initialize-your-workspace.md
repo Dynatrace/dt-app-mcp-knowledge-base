@@ -2,9 +2,9 @@
 
 It's time to create your first project. If you need to open a different workspace folder, select **Open folder**. Otherwise, select the **Initialize workspace** button to start.
 
-![workspaces_view_empty](https://developer.dynatrace.com/assets/images/workspaces_view_empty-74f60729d3d81d8da644434a98335a05.png)
+![workspaces_view_empty](https://public-developer.central.internal.dynatrace.com/assets/images/workspaces_view_empty-74f60729d3d81d8da644434a98335a05.png)
 
-To learn how to use the Workspaces view, visit [Extension 2.0 workspaces](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/specialized_views.md#extension-20-workspaces).
+To learn how to use the Workspaces view, visit [Extension 2.0 workspaces](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/specialized_views.md#extension-20-workspaces).
 
 ### 1. Schema validation
 
@@ -16,7 +16,7 @@ Extensions 2.0 use developer certificates for signing and packaging extensions. 
 
 > **Tip**
 >
-> Check the extension's [settings](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/settings.md) to get the exact path to where your credentials are stored.
+> Check the extension's [settings](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/settings.md) to get the exact path to where your credentials are stored.
 
 The workflow offers some additional convenience steps:
 
@@ -36,19 +36,19 @@ The workflow offers some additional convenience steps:
 
 - Whether to upload the new CA certificate to locally installed OneAgents and ActiveGates.
 
-  ![convenience step 3](https://developer.dynatrace.com/assets/images/setup_convenience_3-933e05007356129afdb2ea12df97c96e.png)
+  ![convenience step 3](https://public-developer.central.internal.dynatrace.com/assets/images/setup_convenience_3-933e05007356129afdb2ea12df97c96e.png)
 
   - This step only appears if a local OneAgent or ActiveGate installation is detected.
   - This step requires running VS Code with Administrator privileges.
   - As part of this guide, choose **No**.
 
-To learn how to use your existing developer certificates, visit [Credentials](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/settings.md#credentials).
+To learn how to use your existing developer certificates, visit [Credentials](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/settings.md#credentials).
 
 ### 3. Project template
 
 The final step of the workflow is to choose the type of project you want to start. It allows the extension to generate relevant files.
 
-![project_templates](https://developer.dynatrace.com/assets/images/project_templates-d402d734dfb92b5e30f4720208652c4c.png)
+![project_templates](https://public-developer.central.internal.dynatrace.com/assets/images/project_templates-d402d734dfb92b5e30f4720208652c4c.png)
 
 Since this is your first extension, choose **Extension 2.0 ⭐** at this step.
 
@@ -59,7 +59,7 @@ This option is the default choice for new projects and will create the following
 
 > **Note**
 >
-> To learn more about the other types of projects, visit [Project templates](https://developer.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/commands.md#project-templates).
+> To learn more about the other types of projects, visit [Project templates](https://public-developer.central.internal.dynatrace.com/develop/extensions/dynatrace-extensions-vscode/commands.md#project-templates).
 
 In addition, all templates also create the following folders and files:
 

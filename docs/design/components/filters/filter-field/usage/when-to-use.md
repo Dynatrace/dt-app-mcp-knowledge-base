@@ -8,6 +8,6 @@
 
 ![A FilterField placed above a data table, combined with other filter
 components such as a SegmentSelector and
-TimeframeSelector.](https://developer.dynatrace.com/assets/images/filterfield-definitions-light-dfd78b30ee317dccca787984d15584e7.webp)
+TimeframeSelector.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-definitions-light-dfd78b30ee317dccca787984d15584e7.webp)
 
 A FilterField in combination with other filter components above a table.

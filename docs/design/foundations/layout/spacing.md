@@ -8,7 +8,7 @@ To ensure visual consistency across the Dynatrace platform, we provide spacing t
 
 ### Vertical spacing
 
-![Vertical spacing](https://developer.dynatrace.com/assets/images/layout-vertical-spacing-light-edf7c4acb170325b265d63a9b0e3b88e.webp)
+![Vertical spacing](https://public-developer.central.internal.dynatrace.com/assets/images/layout-vertical-spacing-light-edf7c4acb170325b265d63a9b0e3b88e.webp)
 
 - Vertical spacing between **groups of user interface elements** is `Spacings.Size32` (32px).
 - The default vertical spacing between **user interface elements** is `Spacings.Size16` (16px).
@@ -22,7 +22,7 @@ When using a divider is present to separate content areas, use half of the spaci
 
 The vertical spacing between the following text styles is always `Spacings.Size4` (4px):
 
-![Typography spacing](https://developer.dynatrace.com/assets/images/layout-spacing-typography-light-448ec68afdd25fc1eaaf94f11aacbe68.webp)
+![Typography spacing](https://public-developer.central.internal.dynatrace.com/assets/images/layout-spacing-typography-light-448ec68afdd25fc1eaaf94f11aacbe68.webp)
 
 - Display and subtitle
 - Heading and subtitle
@@ -32,7 +32,7 @@ For any other scenario, use the default spacing mentioned above. You must use ou
 
 ### Horizontal spacing
 
-![Horizontal spacing](https://developer.dynatrace.com/assets/images/layout-horizontal-spacing-light-6746eb47e4465413e2ea460cf30c6ce9.webp)
+![Horizontal spacing](https://public-developer.central.internal.dynatrace.com/assets/images/layout-horizontal-spacing-light-6746eb47e4465413e2ea460cf30c6ce9.webp)
 
 - Horizontal spacing between **groups of user interface elements** is `Spacings.Size32` (32px).
 - The default horizontal spacing between **user interface elements** is `Spacings.Size16` (16px).
@@ -56,4 +56,4 @@ You must use our spacing tokens when applying inset spacing.
 
 To ensure visual balance in layouts, use at least one smaller spacing token for the top or bottom inset if text borders the element's outer top or bottom bound.
 
-![Visual balance](https://developer.dynatrace.com/assets/images/layout-inset-balance-light-d346ba198c0587c2fb15c1c510736837.webp)
+![Visual balance](https://public-developer.central.internal.dynatrace.com/assets/images/layout-inset-balance-light-d346ba198c0587c2fb15c1c510736837.webp)

@@ -20,7 +20,7 @@ External links can be inline or standalone:
 - Link only the destination text, not the whole sentence.
 - Use external links sparingly. Too many links clutter a view and make it harder for users to find their next step.
 - Use patterns such as "Learn more about [topic]" or "Visit [resource name]".
-- When an external link ends a sentence, place the period directly after the `ExternalLinkIcon` with no space in between, and keep it outside the link so it isn't part of the underlined text. This differs from [Button](https://developer.dynatrace.com/design/components/buttons/Button/usage.md) and [IntentButton](https://developer.dynatrace.com/design/components/buttons/IntentButton/usage.md) labels, which never take punctuation.
+- When an external link ends a sentence, place the period directly after the `ExternalLinkIcon` with no space in between, and keep it outside the link so it isn't part of the underlined text. This differs from [Button](https://public-developer.central.internal.dynatrace.com/design/components/buttons/Button/usage.md) and [IntentButton](https://public-developer.central.internal.dynatrace.com/design/components/buttons/IntentButton/usage.md) labels, which never take punctuation.
 
 ![Example of a correct external link in a sentence, linking only the descriptive page "Ingest data into Dynatrace," within "Learn how to Ingest data into Dynatrace," and the incorrect example linking the whole sentence.](../../components-docs-assets/externallink-content-examples-1-light.webp)
 

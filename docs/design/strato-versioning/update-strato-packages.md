@@ -12,7 +12,7 @@ npx dt-app update
 
 This command will update all Strato packages and run any necessary migrations in your environment. All details are provided in the terminal when you run the command.
 
-See the App Toolkit [Command reference](https://developer.dynatrace.com/quickstart/app-toolkit.md#command-reference) for more commands.
+See the App Toolkit [Command reference](https://public-developer.central.internal.dynatrace.com/quickstart/app-toolkit.md#command-reference) for more commands.
 
 ### npm
 

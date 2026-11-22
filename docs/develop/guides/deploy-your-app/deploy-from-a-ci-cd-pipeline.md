@@ -1,6 +1,6 @@
 ## Deploy from a CI/CD pipeline
 
-1. Create an [OAuth client](https://developer.dynatrace.com/develop/guides/access-platform-apis-from-outside.md#create-an-oauth-client) that has the required IAM permissions.
+1. Create an [OAuth client](https://public-developer.central.internal.dynatrace.com/develop/guides/access-platform-apis-from-outside.md#create-an-oauth-client) that has the required IAM permissions.
 2. In your CI/CD pipeline, set the environment variables `DT_APP_OAUTH_CLIENT_ID` and `DT_APP_OAUTH_CLIENT_SECRET` with the generated client ID and client secret.
 3. Run the following command within your pipeline:
 

@@ -1,6 +1,6 @@
 ## Groups and icons
 
-You can organize menu items into logical groups, with or without icons. To add icons, use `Menu.Prefix` or `Menu.Suffix`. See the [Accessibility tab](https://developer.dynatrace.com/design/components/navigation/Menu/a11y.md) for guidance on labeling for screen readers.
+You can organize menu items into logical groups, with or without icons. To add icons, use `Menu.Prefix` or `Menu.Suffix`. See the [Accessibility tab](https://public-developer.central.internal.dynatrace.com/design/components/navigation/Menu/a11y.md) for guidance on labeling for screen readers.
 
 **Grouped**
 

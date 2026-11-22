@@ -6,7 +6,7 @@ import { activeGatesActiveGateGroupsClient } from '@dynatrace-sdk/client-classic
 
 ### getActiveGateGroups
 
-**activeGatesActiveGateGroupsClient.getActiveGateGroups(config): Promise\<[ActiveGateGroups](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegategroups)>**
+**activeGatesActiveGateGroupsClient.getActiveGateGroups(config): Promise\<[ActiveGateGroups](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegategroups)>**
 
 Lists ActiveGate groups
 
@@ -15,9 +15,9 @@ Lists ActiveGate groups
 
 #### Returns
 
-| Return type                                                                                                                 | Status code | Description |
-| --------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [ActiveGateGroups](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegategroups) | 200         | Success     |
+| Return type                                                                                                                                         | Status code | Description |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [ActiveGateGroups](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v4/types.md#activegategroups) | 200         | Success     |
 
 #### Throws
 

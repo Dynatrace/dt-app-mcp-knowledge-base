@@ -12,7 +12,7 @@ With Strato visualizations, you can visualize a variety of data types, such as:
 ### Time series data
 
 Time series data consists of sequences of numeric values gathered over time measured at consistent time intervals (for example, every minute, hour, or day).
-Use **TimeseriesCharts** to visualize your time series data as [lines](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#variants), [bars](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#variants), or [areas](https://developer.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#variants). However, you should select the right chart type based on the use case and the data provided.
+Use **TimeseriesCharts** to visualize your time series data as [lines](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#variants), [bars](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#variants), or [areas](https://public-developer.central.internal.dynatrace.com/contents/docs/design/data-visualizations/charts/TimeseriesChart/index.mdx/#variants). However, you should select the right chart type based on the use case and the data provided.
 
 We use time series data for changes in variables over time, such as:
 
@@ -50,11 +50,11 @@ Timeframe data includes two timestamps per data point: a **start** and an **end*
 
 ##### Time series line chart
 
-![Time series line chart](https://developer.dynatrace.com/assets/images/dataviz-chart-timeseries-line-light-18ef2caa13000cffdce33d2aae1425bf.webp)
+![Time series line chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-timeseries-line-light-18ef2caa13000cffdce33d2aae1425bf.webp)
 
 ##### Time series area chart
 
-![Time series area chart](https://developer.dynatrace.com/assets/images/dataviz-chart-timeseries-area-light-0149209f36c9b524fc08c3f1e41aa095.webp)
+![Time series area chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-timeseries-area-light-0149209f36c9b524fc08c3f1e41aa095.webp)
 
 ##### Time series bar chart
 
@@ -62,7 +62,7 @@ Timeframe data includes two timestamps per data point: a **start** and an **end*
 
 ##### Time series band chart
 
-![Time series band chart](https://developer.dynatrace.com/assets/images/dataviz-chart-timeseries-band-light-2c58635ff5e816f8c4b1ff2e409ab5b0.webp)
+![Time series band chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-timeseries-band-light-2c58635ff5e816f8c4b1ff2e409ab5b0.webp)
 
 ### Categorical data
 
@@ -83,7 +83,7 @@ We use categorical data to compare aggregated data, such as:
 
 ##### Categorical pie/donut chart
 
-![Categorical pie/donut chart](https://developer.dynatrace.com/assets/images/dataviz-chart-donut-pie-light-91337a23a52f64b6c7afba65ff9a3a78.webp)
+![Categorical pie/donut chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-donut-pie-light-91337a23a52f64b6c7afba65ff9a3a78.webp)
 
 ##### Categorical bar chart
 
@@ -103,7 +103,7 @@ We use categorical data to compare aggregated data, such as:
 
 ##### Honeycomb
 
-![Honeycomb](https://developer.dynatrace.com/assets/images/dataviz-chart-categorical-honeycomb-light-2db2eedecdb8b352f0bd9c3bc33a8e50.webp)
+![Honeycomb](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-categorical-honeycomb-light-2db2eedecdb8b352f0bd9c3bc33a8e50.webp)
 
 ##### Treemap
 
@@ -111,7 +111,7 @@ We use categorical data to compare aggregated data, such as:
 
 ##### Heatmap
 
-![Heatmap](https://developer.dynatrace.com/assets/images/dataviz-chart-heatmap-light-436f01743695c03d03579e84c3530065.webp)
+![Heatmap](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-heatmap-light-436f01743695c03d03579e84c3530065.webp)
 
 ### KPI data
 
@@ -123,7 +123,7 @@ We use key performance indicators (KPIs) to track performance variables over tim
 
 #### Single value chart
 
-![Single value chart](https://developer.dynatrace.com/assets/images/dataviz-chart-singleValue-light-b7583deed39798a0ca0a8a67662f47b0.webp)
+![Single value chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-singleValue-light-b7583deed39798a0ca0a8a67662f47b0.webp)
 
 #### Meter bar and muli meter bar
 
@@ -139,18 +139,18 @@ We use geospatial data to represent data on a map. The map consists of a base la
 
 #### Dot and bubble layer
 
-![Dot and bubble layer](https://developer.dynatrace.com/assets/images/dataviz-chart-worldmap-bubble-light-5d5d8e6a5391b1b8c971606697e0a10d.webp)
+![Dot and bubble layer](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-worldmap-bubble-light-5d5d8e6a5391b1b8c971606697e0a10d.webp)
 
 #### Choropleth layer
 
-![Choropleth layer](https://developer.dynatrace.com/assets/images/dataviz-chart-worldmap-choropleth-light-fbd2524b06ea326821d30be0258a3745.webp)
+![Choropleth layer](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-worldmap-choropleth-light-fbd2524b06ea326821d30be0258a3745.webp)
 
 #### Connection layer
 
-![Connection layer](https://developer.dynatrace.com/assets/images/dataviz-chart-worldmap-connection-light-523815eceaa098ea1266054b1317847e.webp)
+![Connection layer](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-worldmap-connection-light-523815eceaa098ea1266054b1317847e.webp)
 
 ### Annotations
 
 #### Annotations standalone chart
 
-![Annotations chart](https://developer.dynatrace.com/assets/images/dataviz-chart-annotations-light-7002275872b251d2b64a20ef68828530.webp)
+![Annotations chart](https://public-developer.central.internal.dynatrace.com/assets/images/dataviz-chart-annotations-light-7002275872b251d2b64a20ef68828530.webp)

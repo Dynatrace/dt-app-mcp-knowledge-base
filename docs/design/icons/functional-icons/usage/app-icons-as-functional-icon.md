@@ -2,4 +2,4 @@
 
 To reference a specific app, use its full-color **app icon**.
 
-![App as a functional icon](https://developer.dynatrace.com/assets/images/functional-icon-guidelines-appicons-light-7e337eb5f0160f052f24aacfd8a4abc8.webp)
+![App as a functional icon](https://public-developer.central.internal.dynatrace.com/assets/images/functional-icon-guidelines-appicons-light-fdd2b83415c39bfa8b7b739c701c9d7d.webp)&#x20;

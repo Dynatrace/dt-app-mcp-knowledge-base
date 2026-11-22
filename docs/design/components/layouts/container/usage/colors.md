@@ -28,4 +28,4 @@ Containers come in five colors. Each has a different semantic meaning.
 
 > **Tip**
 >
-> Learn more about the semantic meaning of colors in [Status and health](https://developer.dynatrace.com/design/patterns/status-and-health.md).
+> Learn more about the semantic meaning of colors in [Status and health](https://public-developer.central.internal.dynatrace.com/design/patterns/status-and-health.md).

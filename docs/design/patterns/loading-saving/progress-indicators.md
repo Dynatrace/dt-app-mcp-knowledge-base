@@ -6,8 +6,8 @@ Progress indicators inform users about the state of an ongoing loading or saving
 
 There are two types of progress indicators:
 
-- The [progress circle component](https://developer.dynatrace.com/contents/docs/design/components/content/ProgressCircle/index.mdx/) informs users about the state of an ongoing **loading process**.
-- The [progress bar component](https://developer.dynatrace.com/contents/docs/design/components/content/ProgressBar/index.mdx/) informs users about the state of an ongoing **saving or uploading process**.
+- The [progress circle component](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/content/ProgressCircle/index.mdx/) informs users about the state of an ongoing **loading process**.
+- The [progress bar component](https://public-developer.central.internal.dynatrace.com/contents/docs/design/components/content/ProgressBar/index.mdx/) informs users about the state of an ongoing **saving or uploading process**.
 
 Progress indicators can purposely steer the user's attention toward a specific part of your app. However, be aware that progress indicators draw a lot of attention and can be distracting if shown more than once on a page.
 

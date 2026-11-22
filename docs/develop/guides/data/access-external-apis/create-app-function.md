@@ -16,4 +16,4 @@ export default async () => {
 
 This app function makes a call to an external API `https://dummyjson.com/users/1` and returns the `json` response.
 
-Ensure the external host is declared in the allowlist (see this [guide](https://developer.dynatrace.com/develop/guides/app-functions/allow-outbound-connections.md) for more details).
+Ensure the external host is declared in the allowlist (see this [guide](https://public-developer.central.internal.dynatrace.com/develop/guides/app-functions/allow-outbound-connections.md) for more details).

@@ -64,8 +64,8 @@ This operation requires one of the following scopes:
 - `app-settings:objects:read`
 - `app-settings:objects:write`
 
-[guide](https://developer.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
+[guide](https://public-developer.central.internal.dynatrace.com/develop/guides/security/add-permission-scopes-to-use-dynatrace-apis.md).
 
 > **Tip**
 >
-> You can also [query user permissions](https://developer.dynatrace.com/develop/guides/security/query-user-permissions.md).
+> You can also [query user permissions](https://public-developer.central.internal.dynatrace.com/develop/guides/security/query-user-permissions.md).

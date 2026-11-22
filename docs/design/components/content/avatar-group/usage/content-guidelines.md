@@ -1,6 +1,6 @@
 ## Content guidelines
 
-![Anatomy of an AvatarGroup showing two examples. One with three numbered callouts mapping to: Avatars, Overflow menu trigger, and Overflow menu. The other, with two numbered callouts mapping to: Avatars and Tooltip.](https://developer.dynatrace.com/assets/images/avatargroup-content-anatomy-light-39c38566f7ea5656cc10db868c08fabb.webp)
+![Anatomy of an AvatarGroup showing two examples. One with three numbered callouts mapping to: Avatars, Overflow menu trigger, and Overflow menu. The other, with two numbered callouts mapping to: Avatars and Tooltip.](https://public-developer.central.internal.dynatrace.com/assets/images/avatargroup-content-anatomy-light-39c38566f7ea5656cc10db868c08fabb.webp)
 
 1. Avatars (required)
 2. Overflow menu trigger (only when there are +5 avatars)

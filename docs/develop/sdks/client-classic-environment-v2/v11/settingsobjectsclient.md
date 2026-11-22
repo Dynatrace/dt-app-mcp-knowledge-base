@@ -6,7 +6,7 @@ import { settingsObjectsClient } from '@dynatrace-sdk/client-classic-environment
 
 ### addPermission
 
-**settingsObjectsClient.addPermission(config): Promise\<[AccessorPermissions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions)>**
+**settingsObjectsClient.addPermission(config): Promise\<[AccessorPermissions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions)>**
 
 Add the permissions for a single accessor on this object.
 
@@ -16,17 +16,17 @@ Add the permissions for a single accessor on this object, anyone with read/write
 
 #### Parameters
 
-| Name                       | Type                                                                                                                               | Description                                                                                                                                                     |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.adminAccess         | boolean                                                                                                                            | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
-| config.body (required)     | [AccessorPermissions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) |                                                                                                                                                                 |
-| config.objectId (required) | string                                                                                                                             | The ID of the required settings object.                                                                                                                         |
+| Name                       | Type                                                                                                                                                       | Description                                                                                                                                                     |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.adminAccess         | boolean                                                                                                                                                    | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
+| config.body (required)     | [AccessorPermissions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) |                                                                                                                                                                 |
+| config.objectId (required) | string                                                                                                                                                     | The ID of the required settings object.                                                                                                                         |
 
 #### Returns
 
-| Return type                                                                                                                        | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AccessorPermissions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) | 201         | Created     |
+| Return type                                                                                                                                                | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AccessorPermissions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) | 201         | Created     |
 
 #### Throws
 
@@ -91,7 +91,7 @@ const data =
 
 ### getEffectiveSettingsValues
 
-**settingsObjectsClient.getEffectiveSettingsValues(config): Promise\<[EffectiveSettingsValuesList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivesettingsvalueslist)>**
+**settingsObjectsClient.getEffectiveSettingsValues(config): Promise\<[EffectiveSettingsValuesList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivesettingsvalueslist)>**
 
 Lists effective settings values
 
@@ -122,9 +122,9 @@ If no object along the hierarchy is persisted, the default value as defined in t
 
 #### Returns
 
-| Return type                                                                                                                                        | Status code | Description |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EffectiveSettingsValuesList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivesettingsvalueslist) | 200         | Success     |
+| Return type                                                                                                                                                                | Status code | Description |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EffectiveSettingsValuesList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivesettingsvalueslist) | 200         | Success     |
 
 #### Throws
 
@@ -143,7 +143,7 @@ const data =
 
 ### getPermission
 
-**settingsObjectsClient.getPermission(config): Promise\<[AccessorPermissions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions)>**
+**settingsObjectsClient.getPermission(config): Promise\<[AccessorPermissions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions)>**
 
 Get current permissions of the accessor on this object.
 
@@ -162,9 +162,9 @@ Get current permissions of the accessor on this object.
 
 #### Returns
 
-| Return type                                                                                                                        | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AccessorPermissions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) | 200         | Success     |
+| Return type                                                                                                                                                | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AccessorPermissions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) | 200         | Success     |
 
 #### Throws
 
@@ -186,7 +186,7 @@ const data = await settingsObjectsClient.getPermission({
 
 ### getPermissionAllUsers
 
-**settingsObjectsClient.getPermissionAllUsers(config): Promise\<[AccessorPermissions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions)>**
+**settingsObjectsClient.getPermissionAllUsers(config): Promise\<[AccessorPermissions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions)>**
 
 Get current permissions of the all-users accessor on this object.
 
@@ -203,9 +203,9 @@ Get current permissions of the all-users accessor on this object.
 
 #### Returns
 
-| Return type                                                                                                                        | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [AccessorPermissions](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) | 200         | Success     |
+| Return type                                                                                                                                                | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [AccessorPermissions](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissions) | 200         | Success     |
 
 #### Throws
 
@@ -226,7 +226,7 @@ const data =
 
 ### getPermissions
 
-**settingsObjectsClient.getPermissions(config): Promise\<[AccessorPermissionsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissionslist)>**
+**settingsObjectsClient.getPermissions(config): Promise\<[AccessorPermissionsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissionslist)>**
 
 Get current permissions on this object.
 
@@ -243,9 +243,9 @@ Get current permissions on this object.
 
 #### Returns
 
-| Return type                                                                                                                                | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [AccessorPermissionsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissionslist) | 200         | Success     |
+| Return type                                                                                                                                                        | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [AccessorPermissionsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#accessorpermissionslist) | 200         | Success     |
 
 #### Throws
 
@@ -265,7 +265,7 @@ const data = await settingsObjectsClient.getPermissions({
 
 ### getSettingsHistory
 
-**settingsObjectsClient.getSettingsHistory(config): Promise\<[RevisionDiffPage](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#revisiondiffpage)>**
+**settingsObjectsClient.getSettingsHistory(config): Promise\<[RevisionDiffPage](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#revisiondiffpage)>**
 
 Gets the history of settings objects
 
@@ -292,9 +292,9 @@ Gets the history of settings objects
 
 #### Returns
 
-| Return type                                                                                                                  | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [RevisionDiffPage](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#revisiondiffpage) | 200         | Success     |
+| Return type                                                                                                                                          | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [RevisionDiffPage](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#revisiondiffpage) | 200         | Success     |
 
 #### Throws
 
@@ -313,7 +313,7 @@ const data =
 
 ### getSettingsObjectByObjectId
 
-**settingsObjectsClient.getSettingsObjectByObjectId(config): Promise\<[SettingsObjectByObjectIdResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectbyobjectidresponse)>**
+**settingsObjectsClient.getSettingsObjectByObjectId(config): Promise\<[SettingsObjectByObjectIdResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectbyobjectidresponse)>**
 
 Gets the specified settings object
 
@@ -332,9 +332,9 @@ Gets the specified settings object
 
 #### Returns
 
-| Return type                                                                                                                                                  | Status code | Description |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
-| [SettingsObjectByObjectIdResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectbyobjectidresponse) | 200         | Success     |
+| Return type                                                                                                                                                                          | Status code | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| [SettingsObjectByObjectIdResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectbyobjectidresponse) | 200         | Success     |
 
 #### Throws
 
@@ -355,7 +355,7 @@ const data =
 
 ### getSettingsObjects
 
-**settingsObjectsClient.getSettingsObjects(config): Promise\<[ObjectsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#objectslist)>**
+**settingsObjectsClient.getSettingsObjects(config): Promise\<[ObjectsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#objectslist)>**
 
 Lists persisted settings objects
 
@@ -407,9 +407,9 @@ To query the effective values (including schema defaults) please see /settings/e
 
 #### Returns
 
-| Return type                                                                                                        | Status code | Description                           |
-| ------------------------------------------------------------------------------------------------------------------ | ----------- | ------------------------------------- |
-| [ObjectsList](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#objectslist) | 200         | Success. Accessible objects returned. |
+| Return type                                                                                                                                | Status code | Description                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ------------------------------------- |
+| [ObjectsList](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#objectslist) | 200         | Success. Accessible objects returned. |
 
 #### Throws
 
@@ -428,7 +428,7 @@ const data =
 
 ### postSettingsObjects
 
-**settingsObjectsClient.postSettingsObjects(config): Promise\<Array\<[SettingsObjectResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse)>>**
+**settingsObjectsClient.postSettingsObjects(config): Promise\<Array\<[SettingsObjectResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse)>>**
 
 Creates a new settings object
 
@@ -442,18 +442,18 @@ You can upload several objects at once. In that case each object returns its own
 
 #### Parameters
 
-| Name                   | Type                                                                                                                                         | Description                                                                                                                                                     |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.adminAccess     | boolean                                                                                                                                      | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
-| config.body (required) | Array\<[SettingsObjectCreate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectcreate)> |                                                                                                                                                                 |
-| config.validateOnly    | boolean                                                                                                                                      | If `true`, the request runs only validation of the submitted settings objects, without saving them.<br /><br />**Default:** `false`                             |
+| Name                   | Type                                                                                                                                                                 | Description                                                                                                                                                     |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.adminAccess     | boolean                                                                                                                                                              | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
+| config.body (required) | Array\<[SettingsObjectCreate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectcreate)> |                                                                                                                                                                 |
+| config.validateOnly    | boolean                                                                                                                                                              | If `true`, the request runs only validation of the submitted settings objects, without saving them.<br /><br />**Default:** `false`                             |
 
 #### Returns
 
-| Return type                                                                                                                              | Status code | Description                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------ |
-| [SettingsObjectResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse) | 200         | Success                                                                        |
-| [SettingsObjectResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse) | 207         | Multi-status: different objects in the payload resulted in different statuses. |
+| Return type                                                                                                                                                      | Status code | Description                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| [SettingsObjectResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse) | 200         | Success                                                                        |
+| [SettingsObjectResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse) | 207         | Multi-status: different objects in the payload resulted in different statuses. |
 
 #### Throws
 
@@ -482,7 +482,7 @@ const data =
 
 ### putSettingsObjectByObjectId
 
-**settingsObjectsClient.putSettingsObjectByObjectId(config): Promise\<[SettingsObjectResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse)>**
+**settingsObjectsClient.putSettingsObjectByObjectId(config): Promise\<[SettingsObjectResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse)>**
 
 Updates an existing settings object
 
@@ -498,18 +498,18 @@ Some schemas don't allow passing of the masked secret. In that case you need to 
 
 #### Parameters
 
-| Name                       | Type                                                                                                                                 | Description                                                                                                                                                     |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.adminAccess         | boolean                                                                                                                              | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
-| config.body (required)     | [SettingsObjectUpdate](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectupdate) |                                                                                                                                                                 |
-| config.objectId (required) | string                                                                                                                               | The ID of the required settings object.                                                                                                                         |
-| config.validateOnly        | boolean                                                                                                                              | If `true`, the request runs only validation of the submitted settings object, without saving it.<br /><br />**Default:** `false`                                |
+| Name                       | Type                                                                                                                                                         | Description                                                                                                                                                     |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.adminAccess         | boolean                                                                                                                                                      | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
+| config.body (required)     | [SettingsObjectUpdate](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectupdate) |                                                                                                                                                                 |
+| config.objectId (required) | string                                                                                                                                                       | The ID of the required settings object.                                                                                                                         |
+| config.validateOnly        | boolean                                                                                                                                                      | If `true`, the request runs only validation of the submitted settings object, without saving it.<br /><br />**Default:** `false`                                |
 
 #### Returns
 
-| Return type                                                                                                                              | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [SettingsObjectResponse](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse) | 200         | Success     |
+| Return type                                                                                                                                                      | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [SettingsObjectResponse](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#settingsobjectresponse) | 200         | Success     |
 
 #### Throws
 
@@ -615,7 +615,7 @@ const data =
 
 ### resolveEffectivePermissions
 
-**settingsObjectsClient.resolveEffectivePermissions(config): Promise\<Array\<[EffectivePermission](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivepermission)>>**
+**settingsObjectsClient.resolveEffectivePermissions(config): Promise\<Array\<[EffectivePermission](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivepermission)>>**
 
 Get the effective settings permissions of the calling user in the environment
 
@@ -632,15 +632,15 @@ Get the effective settings permissions of the calling user in the environment
 
 #### Parameters
 
-| Name                   | Type                                                                                                                           |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| config.body (required) | [ResolutionRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#resolutionrequest) |
+| Name                   | Type                                                                                                                                                   |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| config.body (required) | [ResolutionRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#resolutionrequest) |
 
 #### Returns
 
-| Return type                                                                                                                        | Status code | Description |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| [EffectivePermission](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivepermission) | 200         | Success     |
+| Return type                                                                                                                                                | Status code | Description |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| [EffectivePermission](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#effectivepermission) | 200         | Success     |
 
 #### Throws
 
@@ -681,11 +681,11 @@ Transfer ownership of the object, only the owner or the main admin is allowed to
 
 #### Parameters
 
-| Name                       | Type                                                                                                                                         | Description                                                                                                                                                     |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.adminAccess         | boolean                                                                                                                                      | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
-| config.body (required)     | [TransferOwnershipRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#transferownershiprequest) |                                                                                                                                                                 |
-| config.objectId (required) | string                                                                                                                                       | The ID of the required settings object.                                                                                                                         |
+| Name                       | Type                                                                                                                                                                 | Description                                                                                                                                                     |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.adminAccess         | boolean                                                                                                                                                              | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
+| config.body (required)     | [TransferOwnershipRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#transferownershiprequest) |                                                                                                                                                                 |
+| config.objectId (required) | string                                                                                                                                                               | The ID of the required settings object.                                                                                                                         |
 
 #### Returns
 
@@ -722,13 +722,13 @@ Update the permissions for an existing accessor on this object, anyone with read
 
 #### Parameters
 
-| Name                           | Type                                                                                                                                         | Description                                                                                                                                                     |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.accessorId (required)   | string                                                                                                                                       | The user uuid or group uuid of the accessor, depending on the type.                                                                                             |
-| config.accessorType (required) | "group" \| "user"                                                                                                                            | The type of the accessor.                                                                                                                                       |
-| config.adminAccess             | boolean                                                                                                                                      | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
-| config.body (required)         | [UpdatePermissionsRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#updatepermissionsrequest) |                                                                                                                                                                 |
-| config.objectId (required)     | string                                                                                                                                       | The ID of the required settings object.                                                                                                                         |
+| Name                           | Type                                                                                                                                                                 | Description                                                                                                                                                     |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.accessorId (required)   | string                                                                                                                                                               | The user uuid or group uuid of the accessor, depending on the type.                                                                                             |
+| config.accessorType (required) | "group" \| "user"                                                                                                                                                    | The type of the accessor.                                                                                                                                       |
+| config.adminAccess             | boolean                                                                                                                                                              | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
+| config.body (required)         | [UpdatePermissionsRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#updatepermissionsrequest) |                                                                                                                                                                 |
+| config.objectId (required)     | string                                                                                                                                                               | The ID of the required settings object.                                                                                                                         |
 
 #### Returns
 
@@ -767,11 +767,11 @@ Update the permissions for an existing all-users accessor on this object, anyone
 
 #### Parameters
 
-| Name                       | Type                                                                                                                                         | Description                                                                                                                                                     |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config.adminAccess         | boolean                                                                                                                                      | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
-| config.body (required)     | [UpdatePermissionsRequest](https://developer.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#updatepermissionsrequest) |                                                                                                                                                                 |
-| config.objectId (required) | string                                                                                                                                       | The ID of the required settings object.                                                                                                                         |
+| Name                       | Type                                                                                                                                                                 | Description                                                                                                                                                     |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config.adminAccess         | boolean                                                                                                                                                              | If set to true and user has settings:objects:admin permission, the endpoint will act as if the user is the owner of all objects<br /><br />**Default:** `false` |
+| config.body (required)     | [UpdatePermissionsRequest](https://public-developer.central.internal.dynatrace.com/develop/sdks/client-classic-environment-v2/v11/types.md#updatepermissionsrequest) |                                                                                                                                                                 |
+| config.objectId (required) | string                                                                                                                                                               | The ID of the required settings object.                                                                                                                         |
 
 #### Returns
 

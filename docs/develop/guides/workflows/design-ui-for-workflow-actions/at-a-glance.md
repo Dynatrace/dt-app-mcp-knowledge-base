@@ -16,4 +16,4 @@ Group related fields under a named heading — never leave them scattered across
 
 Place a help icon in the top-right corner of each group — this is where users look for documentation links across all actions. It opens an overlay menu with links to the relevant docs users need to complete their task. Don't use a regular tooltip for this — tooltips disappear, and documentation links are task-critical.
 
-![Workflow action anatomy summary](https://developer.dynatrace.com/assets/images/workflow_action_anatomy_summary-86b048de2ca9e871642285e6d3bfa95b.png)
+![Workflow action anatomy summary](https://public-developer.central.internal.dynatrace.com/assets/images/workflow_action_anatomy_summary-86b048de2ca9e871642285e6d3bfa95b.png)

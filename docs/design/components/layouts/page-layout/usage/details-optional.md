@@ -19,7 +19,7 @@ Use details panel exclusively as a split view when:
 - The `Content` and details panel should show all their information simultaneously.
 - The details panel must not be closed.
 
-![Example of a split view where the full content area is visible to the left of the details panel.](https://developer.dynatrace.com/assets/images/pagelayout-splitview-light-fe08f0ecab8a7674e4032662bd4e2788.webp)&#x20;
+![Example of a split view where the full content area is visible to the left of the details panel.](https://public-developer.central.internal.dynatrace.com/assets/images/pagelayout-splitview-light-fe08f0ecab8a7674e4032662bd4e2788.webp)&#x20;
 
 ### Overlay view
 

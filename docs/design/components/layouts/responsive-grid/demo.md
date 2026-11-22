@@ -1,6 +1,6 @@
 ## Demo
 
-The `ResponsiveGrid` component lets you create a fully responsive grid. It accepts the same props as [Grid](https://developer.dynatrace.com/design/components/layouts/Grid.md), except `gridTemplateColumns`, `gridTemplate`, `grid`, and `gridItem`. The `columns` prop replaces these props.
+The `ResponsiveGrid` component lets you create a fully responsive grid. It accepts the same props as [Grid](https://public-developer.central.internal.dynatrace.com/design/components/layouts/Grid.md), except `gridTemplateColumns`, `gridTemplate`, `grid`, and `gridItem`. The `columns` prop replaces these props.
 
 **Basic**
 

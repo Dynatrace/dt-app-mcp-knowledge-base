@@ -1,6 +1,6 @@
 ## Test an app function
 
-Refer to the [Dynatrace Apps testing guide](https://developer.dynatrace.com/develop/test-and-troubleshoot/test/create-unit-tests-jest.md#test-your-app-functions) on how to write tests for app functions.
+Refer to the [Dynatrace Apps testing guide](https://public-developer.central.internal.dynatrace.com/develop/test-and-troubleshoot/test/create-unit-tests-jest.md#test-your-app-functions) on how to write tests for app functions.
 
 ### Write unit and integration tests
 
@@ -36,7 +36,7 @@ What you should test:
 
 #### Example
 
-The example below shows a TypeScript script that leverages the [Automation SDK](https://developer.dynatrace.com/contents/docs/develop/sdks/client-automation/index.md/) to create and run a workflow. The script also checks for the final state of the workflow execution.
+The example below shows a TypeScript script that leverages the [Automation SDK](https://public-developer.central.internal.dynatrace.com/contents/docs/develop/sdks/client-automation/index.md/) to create and run a workflow. The script also checks for the final state of the workflow execution.
 
 The workflow consists of three tasks in a sequence:
 

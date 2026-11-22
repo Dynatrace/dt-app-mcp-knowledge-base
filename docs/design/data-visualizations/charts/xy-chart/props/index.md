@@ -2,16 +2,14 @@ The `XYChart` encompasses various types of charts that utilize both x-axis and y
 
 **`XYChartProps`**
 
-| Prop                     | Type                                        | Default    | Description                                                                                                                                                                                               |
-| ------------------------ | ------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data` (required)        | `XYChartData[]`                             |            | Data object for the xy chart.                                                                                                                                                                             |
-| `height`                 | `number \| string`                          | `300px`    | Chart height. When a number is specified, it's treated as pixels, otherwise a valid height string is expected.                                                                                            |
-| `width`                  | `number \| string`                          | `100%`     | Chart width. When a number is specified, it's treated as pixels, otherwise a valid width string is expected.                                                                                              |
-| `colorPalette`           | `XYChartColorPalette`                       | `'blue'`   | Color palette for the xy chart.                                                                                                                                                                           |
-| `loading`                | `boolean`                                   | `false`    | Show the loading indicator when truthy.                                                                                                                                                                   |
-| `truncationMode`         | `TruncationMode`                            | `'middle'` | Truncation mode to be used as start, middle or end, and applied to all the parts that truncate text.                                                                                                      |
-| `__downloadDataCallback` | `() => void`                                |            | Callback invoked when a download is triggered. Receives the CSV string so the caller can drive the actual download (e.g. for migration purposes). When provided, the default browser download is skipped. |
-| `__onEvent`              | `(payload: _XYChartOnEventPayload) => void` |            | Fired when a chart interaction event occurs.                                                                                                                                                              |
+| Prop              | Type                  | Default    | Description                                                                                                    |
+| ----------------- | --------------------- | ---------- | -------------------------------------------------------------------------------------------------------------- |
+| `data` (required) | `XYChartData[]`       |            | Data object for the xy chart.                                                                                  |
+| `height`          | `number \| string`    | `300px`    | Chart height. When a number is specified, it's treated as pixels, otherwise a valid height string is expected. |
+| `width`           | `number \| string`    | `100%`     | Chart width. When a number is specified, it's treated as pixels, otherwise a valid width string is expected.   |
+| `colorPalette`    | `XYChartColorPalette` | `'blue'`   | Color palette for the xy chart.                                                                                |
+| `loading`         | `boolean`             | `false`    | Show the loading indicator when truthy.                                                                        |
+| `truncationMode`  | `TruncationMode`      | `'middle'` | Truncation mode to be used as start, middle or end, and applied to all the parts that truncate text.           |
 
 ### XYChart.XAxis
 

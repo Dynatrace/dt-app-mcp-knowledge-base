@@ -13,13 +13,13 @@ Users can apply filters to a dataset by triggering a dedicated button or using a
   - If the FilterField is empty, or the filters have already been applied, use a neutral-colored, emphasized button.
   - If the filters have changed but haven't been applied yet, use a primary-colored, accent button.
 - Include a `ProgressCircle` in the `Button.Prefix` and change the button label to "Cancel" while changes are being applied or the data is refreshing.
-  - See [Loading and saving behavior](https://developer.dynatrace.com/design/patterns/loading-saving.md#behavior) for guidance on when and for how long to show a loading indicator.
+  - See [Loading and saving behavior](https://public-developer.central.internal.dynatrace.com/design/patterns/loading-saving.md#behavior) for guidance on when and for how long to show a loading indicator.
 - Always keep the button clickable. Never disable it.
 
 ![Four numbered states of the apply button beside a FilterField: "Refresh"
 with an empty field, "Apply" in primary accent when filters have changed,
 "Cancel" with a loading indicator, and "Refresh" once filters are
-applied.](https://developer.dynatrace.com/assets/images/filterfield-apply-button-light-e7a5a4be708bac86c4a872e7d68cbde6.webp)
+applied.](https://public-developer.central.internal.dynatrace.com/assets/images/filterfield-apply-button-light-e7a5a4be708bac86c4a872e7d68cbde6.webp)
 
 Example of a button near the FilterField that refreshes the dataset (1, 4),
 reacts to filter changes (2), and allows cancellation when something is
@@ -27,5 +27,5 @@ loading (3).
 
 ### Keyboard shortcuts
 
-- Trigger the refresh or apply action when users press `Cmd+Enter` on macOS and `Ctrl+Enter` on Windows/Linux while interacting with the FilterField. Find more details in the [Use the FilterField in a form documentation](https://developer.dynatrace.com/design/components/filters/FilterField.md#use-filterfield-in-a-form).
+- Trigger the refresh or apply action when users press `Cmd+Enter` on macOS and `Ctrl+Enter` on Windows/Linux while interacting with the FilterField. Find more details in the [Use the FilterField in a form documentation](https://public-developer.central.internal.dynatrace.com/design/components/filters/FilterField.md#use-filterfield-in-a-form).
 - Trigger the filter submission when users press `Enter` while the FilterField input is focused.

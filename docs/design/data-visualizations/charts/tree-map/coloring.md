@@ -1,6 +1,6 @@
 ## Coloring
 
-The `TreeMap` component provides a set of predefined color palettes that can be used out of the box to provide more appealing visualisations. See [Charts Colors](https://developer.dynatrace.com/design/design-tokens/Colors.md#colorscharts) for more info.
+The `TreeMap` component provides a set of predefined color palettes that can be used out of the box to provide more appealing visualisations. See [Charts Colors](https://public-developer.central.internal.dynatrace.com/design/design-tokens/Colors.md#colorscharts) for more info.
 
 **Coloring**
 

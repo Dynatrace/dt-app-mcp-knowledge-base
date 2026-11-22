@@ -1,6 +1,6 @@
 ## Content guidelines
 
-![Anatomy of an Avatar showing two examples. One with three numbered callouts mapping to: Initials, Label, and Subtitle. The other, with two numbered callouts mapping to: Initials and Tooltip.](https://developer.dynatrace.com/assets/images/avatar-content-anatomy-light-48d7453413a19678470fd5dfd146b900.webp)
+![Anatomy of an Avatar showing two examples. One with three numbered callouts mapping to: Initials, Label, and Subtitle. The other, with two numbered callouts mapping to: Initials and Tooltip.](https://public-developer.central.internal.dynatrace.com/assets/images/avatar-content-anatomy-light-48d7453413a19678470fd5dfd146b900.webp)
 
 1. Initials (required)
 2. Label (optional)

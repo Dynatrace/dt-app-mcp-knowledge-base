@@ -3,7 +3,7 @@
 **`ToggleButtonGroupProps`**
 
 ```ts
-export declare type ToggleButtonGroupProps = FormControlProps<string, (value: string, event?: SyntheticEvent<HTMLElement | SVGElement>) => void | never, HTMLDivElement> & PropsWithChildren & DOMProps & StylingProps & DataTestId & MaskingProps & BehaviorTrackingProps & {
+export declare type ToggleButtonGroupProps = FormControlProps<string | null, (value: string, event?: SyntheticEvent<HTMLElement | SVGElement>) => void | never, HTMLDivElement> & PropsWithChildren & DOMProps & StylingProps & DataTestId & MaskingProps & BehaviorTrackingProps & {
     /**
      * Internal: associates this control with a `_Form` rendered outside its
      * React subtree via the native `form` attribute. Unstable.
