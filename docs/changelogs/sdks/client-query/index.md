@@ -1,5 +1,16 @@
 @dynatrace-sdk/client-query
 
+## 1.30.0 (2026-11-24) \{#1300}
+
+### Minor changes
+
+- Add the `DatastoreContribution` interface (`name`, `scannedBytes`) and the optional `datastores` field on `Contributions`.
+- Add the `TokenType` enum members `UriPattern`, `TimeframeValue`, `Locale` and `Timezone`. The `type` and `referenceType` unions on `AutocompleteSuggestionPart` and `DQLTerminalNode` now also accept `'URI_PATTERN'`, `'TIMEFRAME_VALUE'`, `'LOCALE'` and `'TIMEZONE'`.
+
+### Patch changes
+
+- Updated the minimum required versions of `@dynatrace-sdk/http-client` (`^1.5.2`) and `@dynatrace-sdk/shared-errors` (`^1.1.0`).
+
 ## 1.29.0 (2026-10-22) \{#1290}
 
 ### Minor changes

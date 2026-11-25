@@ -3197,6 +3197,11 @@
       "path": "docs/changelogs/design-system/design-tokens-changelog/0-12-0-2023-04-11-0120.md"
     },
     {
+      "name": "Geo changelog: 4.1.1 (2026-11-23) {#411}",
+      "description": "Dependency updates",
+      "path": "docs/changelogs/design-system/geo-changelog/4-1-1-2026-11-23-411.md"
+    },
+    {
       "name": "Geo changelog: 4.1.0 (2026-11-12) {#410}",
       "description": "Dependency updates; Updates; ChoroplethLayer; MapView",
       "path": "docs/changelogs/design-system/geo-changelog/4-1-0-2026-11-12-410.md"
@@ -7640,6 +7645,11 @@
       "name": "Extensions 2.0 - changelog",
       "description": "@dynatrace-sdk/client-extensions-v2",
       "path": "docs/changelogs/sdks/client-extensions-v2/index.md"
+    },
+    {
+      "name": "Extensions 2.0 - changelog: 3.8.0 (2026-11-23) {#380}",
+      "description": "Minor changes",
+      "path": "docs/changelogs/sdks/client-extensions-v2/3-8-0-2026-11-23-380.md"
     },
     {
       "name": "Extensions 2.0 - changelog: 3.7.0 (2026-11-10) {#370}",

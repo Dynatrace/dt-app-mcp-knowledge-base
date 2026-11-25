@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/dynatrace/dt-app-mcp-knowledge-base/main/schemas/meta.schema.json",
-  "generatedAt": "2026-11-22T03:25:18.875Z",
+  "generatedAt": "2026-11-25T03:27:30.657Z",
   "sources": [
     {
       "url": "https://developer.dynatrace.com/blog.md",
@@ -976,9 +976,10 @@
     },
     {
       "url": "https://developer.dynatrace.com/changelogs/design-system/geo-changelog.md",
-      "downloadHash": "deb2eae6eed9fa9128379758fd406a780eb745aafaa6542f0778a09d2207e9b3",
-      "downloadedAt": "2026-11-22T03:25:18.875Z",
+      "downloadHash": "0b04cb83e75f76a80d87cd7ec1db1c36c7663536b801c1c36f5efe25ebf064fb",
+      "downloadedAt": "2026-11-25T03:27:30.657Z",
       "chunkPaths": [
+        "docs/changelogs/design-system/geo-changelog/4-1-1-2026-11-23-411.md",
         "docs/changelogs/design-system/geo-changelog/4-1-0-2026-11-12-410.md",
         "docs/changelogs/design-system/geo-changelog/4-0-2-2026-11-04-402.md",
         "docs/changelogs/design-system/geo-changelog/4-0-1-2026-11-02-401.md",
@@ -2004,10 +2005,11 @@
     },
     {
       "url": "https://developer.dynatrace.com/changelogs/sdks/client-extensions-v2.md",
-      "downloadHash": "51263af2c420ece26514044a78faf06fe0c600bc6c6bdb249f5d832f97d91eb0",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "fee9ce5f66be384b0ab9ff429a37cda54925ca37c4c83da4583e22e78f099e39",
+      "downloadedAt": "2026-11-25T03:27:30.657Z",
       "chunkPaths": [
         "docs/changelogs/sdks/client-extensions-v2/index.md",
+        "docs/changelogs/sdks/client-extensions-v2/3-8-0-2026-11-23-380.md",
         "docs/changelogs/sdks/client-extensions-v2/3-7-0-2026-11-10-370.md",
         "docs/changelogs/sdks/client-extensions-v2/3-6-0-2026-10-28-360.md",
         "docs/changelogs/sdks/client-extensions-v2/3-5-1-2026-10-20-351.md",
@@ -2267,8 +2269,8 @@
     },
     {
       "url": "https://developer.dynatrace.com/changelogs/sdks/client-query.md",
-      "downloadHash": "b2365c746837d53648975683290f3feb5d5d76518a9963b60d576fb4394338ae",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "153dfb03769ef06947a25dfbf10ad3a964a86f7d28570902a6fbdf9becf3acbb",
+      "downloadedAt": "2026-11-25T03:27:30.657Z",
       "chunkPaths": [
         "docs/changelogs/sdks/client-query/index.md",
         "docs/changelogs/sdks/client-query/enriched-autocomplete-suggestion-parts.md"
