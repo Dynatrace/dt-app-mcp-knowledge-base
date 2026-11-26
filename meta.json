@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/dynatrace/dt-app-mcp-knowledge-base/main/schemas/meta.schema.json",
-  "generatedAt": "2026-11-25T03:27:30.657Z",
+  "generatedAt": "2026-11-26T03:25:50.061Z",
   "sources": [
     {
       "url": "https://developer.dynatrace.com/blog.md",
@@ -8097,8 +8097,8 @@
     },
     {
       "url": "https://developer.dynatrace.com/design/foundations/accessibility.md",
-      "downloadHash": "3df6b658bd332b269146269e4593e3bd8dc503fd9ae7f90009c0fffdf18b75a0",
-      "downloadedAt": "2026-11-22T03:25:18.875Z",
+      "downloadHash": "fc435edcf791d2fc96b597f71121d0fc90add1af28845e680bcdd8f286c3aafa",
+      "downloadedAt": "2026-11-26T03:25:50.061Z",
       "chunkPaths": [
         "docs/design/foundations/accessibility/index.md",
         "docs/design/foundations/accessibility/how-to-use-this-page.md",

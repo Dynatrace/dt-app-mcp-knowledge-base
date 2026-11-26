@@ -2,11 +2,11 @@
 
 > **Tip**
 >
-> Relates to [WCAG 2.1.1](https://www.w3.org/WAI/WCAG22/Understanding/keyboard), [WCAG 2.4.3](https://www.w3.org/WAI/WCAG22/Understanding/focus-order), [WCAG 2.4.7](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible), [WCAG 2.4.11](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance), and [WCAG 2.4.12](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured).
+> Relates to [WCAG 2.1.1](https://www.w3.org/WAI/WCAG22/Understanding/keyboard), [WCAG 2.4.3](https://www.w3.org/WAI/WCAG22/Understanding/focus-order), [WCAG 2.4.7](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible), [WCAG 2.4.11](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum), and [WCAG 2.4.13](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance).
 
 All functionality must be accessible using a keyboard alone. Users who can't use a pointer device such as a mouse rely entirely on keyboard navigation. The focus indicator must always be visible so users can see where they are on the page.
 
-Strato components are designed to meet the two WCAG 2.2 AA focus requirements that focus indicators must meet minimum size and contrast thresholds, and focused elements must never be fully obscured by overlapping content.
+Strato components are designed to meet the WCAG 2.2 requirements that focused elements must never be fully obscured by overlapping content (Level AA) and that focus indicators must meet minimum size and contrast thresholds (Level AAA).
 
 You can further ensure a good, accessible experience by maintaining a logical tab order, never trapping keyboard focus, and keeping a clearly visible focus indicator at all times. Follow established keyboard patterns for composite components such as menus, tab panels, and data grids.
 
