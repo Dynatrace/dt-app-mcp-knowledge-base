@@ -12,8 +12,6 @@ Get a single action of an installed app.
 
 **Required scope:** app-engine:apps:run
 
-**Early adopter:** May be changed in non-compatible ways, although we try to avoid this.
-
 Returns the action with all its fields, as declared in the manifest of the app.
 
 #### Parameters
@@ -54,8 +52,6 @@ const data =
 Get actions of installed apps.
 
 **Required scope:** app-engine:apps:run
-
-**Early adopter:** May be changed in non-compatible ways, although we try to avoid this.
 
 Returns a flat list of the actions of all installed apps.
 

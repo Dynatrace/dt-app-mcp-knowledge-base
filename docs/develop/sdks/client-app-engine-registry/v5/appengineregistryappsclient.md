@@ -164,13 +164,18 @@ const data = await appEngineRegistryAppsClient.installApp({
 });
 ```
 
-### searchActions
+### ~~searchActions~~
+
+> ⚠️ **Deprecated**
 
 **appEngineRegistryAppsClient.searchActions(config): Promise\<[SearchAppActionList](#searchappactionlist)>**
 
 Search actions of installed apps.
 
 **Required scope:** app-engine:apps:run
+
+**Deprecated:** Use `GET /actions` or `GET /actions/{appId}/{actionName}` instead.
+This endpoint stops working on June 1, 2027. From then on, it returns `410 Gone`.
 
 #### Parameters
 
@@ -186,9 +191,9 @@ Search actions of installed apps.
 
 #### Throws
 
-| Error Type         | Error Message                            |
-| ------------------ | ---------------------------------------- |
-| ErrorEnvelopeError | Client side error. \| Server side error. |
+| Error Type         | Error Message                                                                                                     |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| ErrorEnvelopeError | The endpoint was removed on June 1, 2027. Use `GET /actions` instead. \| Client side error. \| Server side error. |
 
 **Code example**
 

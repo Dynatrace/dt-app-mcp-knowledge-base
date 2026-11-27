@@ -371,6 +371,17 @@ Indicates the origin of these settings.
 
 `Default` | `Monitor` | `Tenant` | `Unknown`
 
+### ~~PlatformEnablementDtoPerformanceMetricSource~~
+
+> ⚠️ **Deprecated**
+> Use literal values.
+
+[NOT SUPPORTED] Source of the metrics used for performance alerting of the browser monitor: CLASSIC or THE_LATEST_DYNATRACE. THE_LATEST_DYNATRACE requires 3rd gen JS agent reporting.
+
+#### Enum keys
+
+`Classic` | `TheLatestDynatrace`
+
 ### ~~RequestFilterDtoType~~
 
 > ⚠️ **Deprecated**

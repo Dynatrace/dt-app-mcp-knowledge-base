@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/dynatrace/dt-app-mcp-knowledge-base/main/schemas/meta.schema.json",
-  "generatedAt": "2026-11-26T03:25:50.061Z",
+  "generatedAt": "2026-11-27T03:25:58.322Z",
   "sources": [
     {
       "url": "https://developer.dynatrace.com/blog.md",
@@ -2378,8 +2378,8 @@
     },
     {
       "url": "https://developer.dynatrace.com/changelogs/sdks/client-synthetic.md",
-      "downloadHash": "6b7de301c7d07ca55053525984e7dd2e11c55d7268ae139c92246d216b49c268",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "e4c6c5dc1b1fd19749e09b5bca6c2d24800512a00b133446e330069ae8754b11",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
       "chunkPaths": [
         "docs/changelogs/sdks/client-synthetic/index.md",
         "docs/changelogs/sdks/client-synthetic/release-notes.md"
@@ -9751,8 +9751,8 @@
     },
     {
       "url": "https://developer.dynatrace.com/develop/sdks/client-app-engine-registry/v5.md",
-      "downloadHash": "9e8fa658caf2cb4e90f89c17aec9713e666fabc041ff3a5709066cdbb4c009de",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "f4980dd0525a4a2f7e681388285006bb9211fc40dbaef200a1732e2fc78b777a",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
       "chunkPaths": [
         "docs/develop/sdks/client-app-engine-registry/v5/index.md",
         "docs/develop/sdks/client-app-engine-registry/v5/appengineregistryactionsclient.md",
@@ -9804,6 +9804,27 @@
         "docs/develop/sdks/client-automation/workflowsclient.md",
         "docs/develop/sdks/client-automation/types.md",
         "docs/develop/sdks/client-automation/enums.md"
+      ]
+    },
+    {
+      "url": "https://developer.dynatrace.com/develop/sdks/client-automation/v10.md",
+      "downloadHash": "851d59483c2065a3d656322d196723a6a0ceaa09310472dca7bc540e635db390",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
+      "chunkPaths": [
+        "docs/develop/sdks/client-automation/v10/index.md",
+        "docs/develop/sdks/client-automation/v10/actionexecutionsclient.md",
+        "docs/develop/sdks/client-automation/v10/actionssampleresultclient.md",
+        "docs/develop/sdks/client-automation/v10/businesscalendarsclient.md",
+        "docs/develop/sdks/client-automation/v10/eventtriggersclient.md",
+        "docs/develop/sdks/client-automation/v10/executionsclient.md",
+        "docs/develop/sdks/client-automation/v10/schedulesclient.md",
+        "docs/develop/sdks/client-automation/v10/schedulingrulesclient.md",
+        "docs/develop/sdks/client-automation/v10/settingsclient.md",
+        "docs/develop/sdks/client-automation/v10/versionclient.md",
+        "docs/develop/sdks/client-automation/v10/webhookhandlersclient.md",
+        "docs/develop/sdks/client-automation/v10/workflowsclient.md",
+        "docs/develop/sdks/client-automation/v10/types.md",
+        "docs/develop/sdks/client-automation/v10/enums.md"
       ]
     },
     {
@@ -9887,6 +9908,27 @@
         "docs/develop/sdks/client-automation/v8/workflowsclient.md",
         "docs/develop/sdks/client-automation/v8/types.md",
         "docs/develop/sdks/client-automation/v8/enums.md"
+      ]
+    },
+    {
+      "url": "https://developer.dynatrace.com/develop/sdks/client-automation/v9.md",
+      "downloadHash": "dc2c22d39c811f948bf1b49a179ae78cc73ba4d193cec324047a4424632e7a5f",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
+      "chunkPaths": [
+        "docs/develop/sdks/client-automation/v9/index.md",
+        "docs/develop/sdks/client-automation/v9/actionexecutionsclient.md",
+        "docs/develop/sdks/client-automation/v9/actionssampleresultclient.md",
+        "docs/develop/sdks/client-automation/v9/businesscalendarsclient.md",
+        "docs/develop/sdks/client-automation/v9/eventtriggersclient.md",
+        "docs/develop/sdks/client-automation/v9/executionsclient.md",
+        "docs/develop/sdks/client-automation/v9/schedulesclient.md",
+        "docs/develop/sdks/client-automation/v9/schedulingrulesclient.md",
+        "docs/develop/sdks/client-automation/v9/settingsclient.md",
+        "docs/develop/sdks/client-automation/v9/versionclient.md",
+        "docs/develop/sdks/client-automation/v9/webhookhandlersclient.md",
+        "docs/develop/sdks/client-automation/v9/workflowsclient.md",
+        "docs/develop/sdks/client-automation/v9/types.md",
+        "docs/develop/sdks/client-automation/v9/enums.md"
       ]
     },
     {
@@ -17164,8 +17206,8 @@
     },
     {
       "url": "https://developer.dynatrace.com/develop/sdks/client-extensions-v2/v3.md",
-      "downloadHash": "73f8032d80e3b3b53b672b491c394aa806b47e728c32be3f531c23b269593e71",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "d34dc06c5de26accf42be6f6541c5da28273688849ef1e326867332cf905f23a",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
       "chunkPaths": [
         "docs/develop/sdks/client-extensions-v2/v3/index.md",
         "docs/develop/sdks/client-extensions-v2/v3/discoveryclient.md",
@@ -17357,16 +17399,22 @@
     },
     {
       "url": "https://developer.dynatrace.com/develop/sdks/client-query/v1.md",
-      "downloadHash": "31948865fd470f76cb011229631fb9bd14267e04867fd552d975e0a391547f1a",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "54b60e126d7682939273f259b8540a63e3437cf3fc19fbaf1ed8cf7010d4c223",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
       "chunkPaths": [
         "docs/develop/sdks/client-query/v1/index.md",
         "docs/develop/sdks/client-query/v1/queryassistanceclient.md",
+        "docs/develop/sdks/client-query/v1/required-permissions.md",
         "docs/develop/sdks/client-query/v1/overview.md",
+        "docs/develop/sdks/client-query/v1/required-permissions-2.md",
         "docs/develop/sdks/client-query/v1/overview-2.md",
         "docs/develop/sdks/client-query/v1/details.md",
+        "docs/develop/sdks/client-query/v1/required-permissions-3.md",
         "docs/develop/sdks/client-query/v1/overview-3.md",
         "docs/develop/sdks/client-query/v1/queryexecutionclient.md",
+        "docs/develop/sdks/client-query/v1/required-permissions-4.md",
+        "docs/develop/sdks/client-query/v1/required-permissions-5.md",
+        "docs/develop/sdks/client-query/v1/required-permissions-6.md",
         "docs/develop/sdks/client-query/v1/types.md",
         "docs/develop/sdks/client-query/v1/enums.md"
       ]
@@ -17391,6 +17439,17 @@
         "docs/develop/sdks/client-resource-store/v1/delete-file.md",
         "docs/develop/sdks/client-resource-store/v1/upload-lookup-data.md",
         "docs/develop/sdks/client-resource-store/v1/test-parsing-lookup-data.md"
+      ]
+    },
+    {
+      "url": "https://developer.dynatrace.com/develop/sdks/client-resource-store/v2.md",
+      "downloadHash": "9d0208b01816dd171cab4f66fe66ca0e731d6663d740d6d5215d40f4d7e05ed7",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
+      "chunkPaths": [
+        "docs/develop/sdks/client-resource-store/v2/index.md",
+        "docs/develop/sdks/client-resource-store/v2/delete-file.md",
+        "docs/develop/sdks/client-resource-store/v2/upload-lookup-data.md",
+        "docs/develop/sdks/client-resource-store/v2/test-parsing-lookup-data.md"
       ]
     },
     {
@@ -17506,8 +17565,8 @@
     },
     {
       "url": "https://developer.dynatrace.com/develop/sdks/client-synthetic/v4.md",
-      "downloadHash": "28101115064e75df75dcdefd48bceda9bdd48960c450b141825b089940e63c39",
-      "downloadedAt": "2026-11-12T12:26:38.649Z",
+      "downloadHash": "7bca1639412f35fae78ac2b1a7ef1d04659ae0ccb19d69ca8edb138071a6d013",
+      "downloadedAt": "2026-11-27T03:25:58.322Z",
       "chunkPaths": [
         "docs/develop/sdks/client-synthetic/v4/index.md",
         "docs/develop/sdks/client-synthetic/v4/syntheticconfigurationclient.md",

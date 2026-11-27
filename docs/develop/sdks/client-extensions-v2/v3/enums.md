@@ -9,7 +9,7 @@ The type of the asset.
 
 #### Enum keys
 
-`Alert` | `AlertTemplate` | `AwsService` | `CustomCards` | `Dashboard` | `DeclarativeProcesses` | `DocumentDashboard` | `DocumentScreen` | `DqlLogMetric` | `DqlLogProcessingRule` | `EventCorrelationRules` | `GenericRelationship` | `GenericType` | `ListScreenFilters` | `ListScreenInjections` | `ListScreenLayout` | `LogEvent` | `LogMetric` | `LogProcessingRule` | `LqlLogMetric` | `LqlLogProcessingRule` | `MetricMetadata` | `MetricQuery` | `OpenPipeline` | `ProblemResolutionPathRules` | `ProcessGroupingRules` | `ScreenActions` | `ScreenChartGroups` | `ScreenDqlTable` | `ScreenEntitiesLists` | `ScreenEventsCards` | `ScreenFilters` | `ScreenHealthCards` | `ScreenInjections` | `ScreenLayout` | `ScreenLogsCards` | `ScreenMessageCards` | `ScreenMetricTables` | `ScreenProblems` | `ScreenProperties`
+`Alert` | `AlertTemplate` | `AwsService` | `CustomCards` | `Dashboard` | `DeclarativeProcesses` | `DocumentDashboard` | `DocumentGeneric` | `DocumentScreen` | `DqlLogMetric` | `DqlLogProcessingRule` | `EventCorrelationRules` | `GenericRelationship` | `GenericType` | `ListScreenFilters` | `ListScreenInjections` | `ListScreenLayout` | `LogEvent` | `LogMetric` | `LogProcessingRule` | `LqlLogMetric` | `LqlLogProcessingRule` | `MetricMetadata` | `MetricQuery` | `OpenPipeline` | `ProblemResolutionPathRules` | `ProcessGroupingRules` | `ScreenActions` | `ScreenChartGroups` | `ScreenDqlTable` | `ScreenEntitiesLists` | `ScreenEventsCards` | `ScreenFilters` | `ScreenHealthCards` | `ScreenInjections` | `ScreenLayout` | `ScreenLogsCards` | `ScreenMessageCards` | `ScreenMetricTables` | `ScreenProblems` | `ScreenProperties`
 
 ### ~~AuditLogEntryCategory~~
 
@@ -129,11 +129,11 @@ The type of the property.
 > ⚠️ **Deprecated**
 > Use literal values.
 
-The status of the assets list.
+The status of the assets list. ERROR means at least one asset failed to install, WARNING means the installed assets could not be fully read.
 
 #### Enum keys
 
-`Pending` | `UpToDate`
+`Error` | `Pending` | `UpToDate` | `Warning`
 
 ### ~~ExtensionStatusStatus~~
 

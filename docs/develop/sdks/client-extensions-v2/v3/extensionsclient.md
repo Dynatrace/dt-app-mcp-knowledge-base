@@ -249,15 +249,17 @@ Retrieves the active environment configuration version for Extension 2.0.
 
 #### Parameters
 
-| Name                            | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                            | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | config.addFields                | string | Comma separated list of additional fields to include in the response. Available fields: * `assets`
    \- includes assets of the Extension 2.0 in the environment.
 * `status`
    \- includes installation status of assets of the Extension 2.0 in the environment.
 * `errors`
-   \- includes installation errors of assets of the Extension 2.0 in the environment. <br /><br />**Example:** `assets,status,errors` |
-| config.extensionName (required) | string | The name of the requested Extension 2.0.                                                                                                                                                                                                                                                                                                                                                                            |
+   \- includes installation errors of assets of the Extension 2.0 in the environment.
+* `warnings`
+   \- includes warnings while reading the assets of the Extension 2.0 in the environment. <br /><br />**Example:** `assets,status,errors,warnings` |
+| config.extensionName (required) | string | The name of the requested Extension 2.0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 #### Returns
 

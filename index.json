@@ -25173,7 +25173,7 @@
     },
     {
       "name": "AppEngine - registry: V5: appEngineRegistryAppsClient",
-      "description": "getApp; Parameters; Returns; Throws; getApps; Parameters; Returns; Throws; installApp; Parameters; Returns; Throws; searchActions; Parameters; Returns; Throws; uninstallApp; Parameters; Returns…",
+      "description": "getApp; Parameters; Returns; Throws; getApps; Parameters; Returns; Throws; installApp; Parameters; Returns; Throws; ~~searchActions~~; Parameters; Returns; Throws; uninstallApp; Parameters; Returns…",
       "path": "docs/develop/sdks/client-app-engine-registry/v5/appengineregistryappsclient.md"
     },
     {
@@ -25305,6 +25305,76 @@
       "name": "Automation: Enums",
       "description": "~~ActionExecutionState~~; Enum keys; ~~Byday~~; Enum keys; ~~Byworkday~~; Enum keys; ~~CronTriggerType~~; Enum keys; ~~DavisEventNameMatch~~; Enum keys; ~~DavisEventTriggerConfigType~~; Enum keys…",
       "path": "docs/develop/sdks/client-automation/enums.md"
+    },
+    {
+      "name": "Automation: V10",
+      "description": "Manage and run workflows with the AutomationEngine API.",
+      "path": "docs/develop/sdks/client-automation/v10/index.md"
+    },
+    {
+      "name": "Automation: V10: actionExecutionsClient",
+      "description": "getActionExecution; Parameters; Returns; Throws; getActionExecutionLog; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v10/actionexecutionsclient.md"
+    },
+    {
+      "name": "Automation: V10: actionsSampleResultClient",
+      "description": "~~getActionSampleResult~~; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v10/actionssampleresultclient.md"
+    },
+    {
+      "name": "Automation: V10: businessCalendarsClient",
+      "description": "createBusinessCalendar; Parameters; Returns; Throws; deleteBusinessCalendar; Parameters; Returns; Throws; duplicateBusinessCalendar; Parameters; Returns; Throws; getBusinessCalendar; Parameters…",
+      "path": "docs/develop/sdks/client-automation/v10/businesscalendarsclient.md"
+    },
+    {
+      "name": "Automation: V10: eventTriggersClient",
+      "description": "~~previewFilter~~; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v10/eventtriggersclient.md"
+    },
+    {
+      "name": "Automation: V10: executionsClient",
+      "description": "cancelExecution; Parameters; Returns; Throws; cancelTaskExecution; Parameters; Returns; Throws; getAllEventLogs; Parameters; Returns; Throws; getExecution; Parameters; Returns; Throws…",
+      "path": "docs/develop/sdks/client-automation/v10/executionsclient.md"
+    },
+    {
+      "name": "Automation: V10: schedulesClient",
+      "description": "getCountries; Returns; Throws; getHolidayCalendar; Parameters; Returns; Throws; getTimezones; Returns; Throws; ~~previewSchedule~~; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v10/schedulesclient.md"
+    },
+    {
+      "name": "Automation: V10: schedulingRulesClient",
+      "description": "createRule; Parameters; Returns; Throws; deleteRule; Parameters; Returns; Throws; duplicateRule; Parameters; Returns; Throws; getRule; Parameters; Returns; Throws; getRuleHistoryRecord; Parameters…",
+      "path": "docs/develop/sdks/client-automation/v10/schedulingrulesclient.md"
+    },
+    {
+      "name": "Automation: V10: settingsClient",
+      "description": "~~getServiceUsers~~; Returns; Throws; ~~getSettings~~; Returns; Throws; ~~getUserPermissions~~; Returns; Throws; ~~getUserSettings~~; Returns; Throws; ~~updateAuthorizations~~; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v10/settingsclient.md"
+    },
+    {
+      "name": "Automation: V10: versionClient",
+      "description": "getVersion; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v10/versionclient.md"
+    },
+    {
+      "name": "Automation: V10: webhookHandlersClient",
+      "description": "deleteWebhookHandler; Parameters; Returns; Throws; getWebhookHandler; Parameters; Returns; Throws; getWebhookHandlers; Returns; Throws; writeWebhookHandler; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v10/webhookhandlersclient.md"
+    },
+    {
+      "name": "Automation: V10: workflowsClient",
+      "description": "createWorkflow; Parameters; Returns; Throws; deleteTrashedWorkflow; Parameters; Returns; Throws; deleteWorkflow; Parameters; Returns; Throws; duplicateWorkflow; Parameters; Returns; Throws…",
+      "path": "docs/develop/sdks/client-automation/v10/workflowsclient.md"
+    },
+    {
+      "name": "Automation: V10: Types",
+      "description": "ActionExecution; ActionExecutionInput; ActionExecutionLoopItem; BasedOnTemplate; BusinessCalendarCreate; BusinessCalendarResponse; BusinessCalendarUpdate; ChangeHistory; Country; CountryList…",
+      "path": "docs/develop/sdks/client-automation/v10/types.md"
+    },
+    {
+      "name": "Automation: V10: Enums",
+      "description": "~~ActionExecutionState~~; Enum keys; ~~Byday~~; Enum keys; ~~Byworkday~~; Enum keys; ~~CronTriggerType~~; Enum keys; ~~DavisEventNameMatch~~; Enum keys; ~~DavisEventTriggerConfigType~~; Enum keys…",
+      "path": "docs/develop/sdks/client-automation/v10/enums.md"
     },
     {
       "name": "Automation: V5",
@@ -25580,6 +25650,76 @@
       "name": "Automation: V8: Enums",
       "description": "~~ActionExecutionState~~; Enum keys; ~~Byday~~; Enum keys; ~~Byworkday~~; Enum keys; ~~CronTriggerType~~; Enum keys; ~~DavisEventNameMatch~~; Enum keys; ~~DavisEventTriggerConfigType~~; Enum keys…",
       "path": "docs/develop/sdks/client-automation/v8/enums.md"
+    },
+    {
+      "name": "Automation: V9",
+      "description": "Manage and run workflows with the AutomationEngine API.",
+      "path": "docs/develop/sdks/client-automation/v9/index.md"
+    },
+    {
+      "name": "Automation: V9: actionExecutionsClient",
+      "description": "getActionExecution; Parameters; Returns; Throws; getActionExecutionLog; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v9/actionexecutionsclient.md"
+    },
+    {
+      "name": "Automation: V9: actionsSampleResultClient",
+      "description": "~~getActionSampleResult~~; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v9/actionssampleresultclient.md"
+    },
+    {
+      "name": "Automation: V9: businessCalendarsClient",
+      "description": "createBusinessCalendar; Parameters; Returns; Throws; deleteBusinessCalendar; Parameters; Returns; Throws; duplicateBusinessCalendar; Parameters; Returns; Throws; getBusinessCalendar; Parameters…",
+      "path": "docs/develop/sdks/client-automation/v9/businesscalendarsclient.md"
+    },
+    {
+      "name": "Automation: V9: eventTriggersClient",
+      "description": "~~previewFilter~~; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v9/eventtriggersclient.md"
+    },
+    {
+      "name": "Automation: V9: executionsClient",
+      "description": "cancelExecution; Parameters; Returns; Throws; cancelTaskExecution; Parameters; Returns; Throws; getAllEventLogs; Parameters; Returns; Throws; getExecution; Parameters; Returns; Throws…",
+      "path": "docs/develop/sdks/client-automation/v9/executionsclient.md"
+    },
+    {
+      "name": "Automation: V9: schedulesClient",
+      "description": "getCountries; Returns; Throws; getHolidayCalendar; Parameters; Returns; Throws; getTimezones; Returns; Throws; ~~previewSchedule~~; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v9/schedulesclient.md"
+    },
+    {
+      "name": "Automation: V9: schedulingRulesClient",
+      "description": "createRule; Parameters; Returns; Throws; deleteRule; Parameters; Returns; Throws; duplicateRule; Parameters; Returns; Throws; getRule; Parameters; Returns; Throws; getRuleHistoryRecord; Parameters…",
+      "path": "docs/develop/sdks/client-automation/v9/schedulingrulesclient.md"
+    },
+    {
+      "name": "Automation: V9: settingsClient",
+      "description": "~~getServiceUsers~~; Returns; Throws; ~~getSettings~~; Returns; Throws; ~~getUserPermissions~~; Returns; Throws; ~~getUserSettings~~; Returns; Throws; ~~updateAuthorizations~~; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v9/settingsclient.md"
+    },
+    {
+      "name": "Automation: V9: versionClient",
+      "description": "getVersion; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v9/versionclient.md"
+    },
+    {
+      "name": "Automation: V9: webhookHandlersClient",
+      "description": "deleteWebhookHandler; Parameters; Returns; Throws; getWebhookHandler; Parameters; Returns; Throws; getWebhookHandlers; Returns; Throws; writeWebhookHandler; Parameters; Returns; Throws",
+      "path": "docs/develop/sdks/client-automation/v9/webhookhandlersclient.md"
+    },
+    {
+      "name": "Automation: V9: workflowsClient",
+      "description": "createWorkflow; Parameters; Returns; Throws; deleteTrashedWorkflow; Parameters; Returns; Throws; deleteWorkflow; Parameters; Returns; Throws; duplicateWorkflow; Parameters; Returns; Throws…",
+      "path": "docs/develop/sdks/client-automation/v9/workflowsclient.md"
+    },
+    {
+      "name": "Automation: V9: Types",
+      "description": "ActionExecution; ActionExecutionInput; ActionExecutionLoopItem; BasedOnTemplate; BusinessCalendarCreate; BusinessCalendarResponse; BusinessCalendarUpdate; ChangeHistory; Country; CountryList…",
+      "path": "docs/develop/sdks/client-automation/v9/types.md"
+    },
+    {
+      "name": "Automation: V9: Enums",
+      "description": "~~ActionExecutionState~~; Enum keys; ~~Byday~~; Enum keys; ~~Byworkday~~; Enum keys; ~~CronTriggerType~~; Enum keys; ~~DavisEventNameMatch~~; Enum keys; ~~DavisEventTriggerConfigType~~; Enum keys…",
+      "path": "docs/develop/sdks/client-automation/v9/enums.md"
     },
     {
       "name": "Grail storage management API",
@@ -60603,7 +60743,7 @@
     },
     {
       "name": "Extensions 2.0: V3: Types",
-      "description": "ActiveGateGroupInfo; ActiveGateGroupInfoList; ActiveGateInfo; AlertTemplate; AssetInfo; AssetSchemaDetails; AuditLog; AuditLogEntry; Author; ComplexConstraint; Constraint; ConstraintViolation…",
+      "description": "ActiveGateGroupInfo; ActiveGateGroupInfoList; ActiveGateInfo; AlertTemplate; AssetInfo; AssetInfoDetails; AssetSchemaDetails; AuditLog; AuditLogEntry; Author; ComplexConstraint; Constraint…",
       "path": "docs/develop/sdks/client-extensions-v2/v3/types.md"
     },
     {
@@ -61032,9 +61172,19 @@
       "path": "docs/develop/sdks/client-query/v1/queryassistanceclient.md"
     },
     {
+      "name": "Grail DQL query: V1:  Required permissions",
+      "description": "Bucket permission (required): storage:buckets:read.; Table permission (required): the permission for the tables the suggestions are based on, for example storage:logs:read.",
+      "path": "docs/develop/sdks/client-query/v1/required-permissions.md"
+    },
+    {
       "name": "Grail DQL query: V1:  Overview",
       "description": "We provide a list of suggestions that may be used after the cursor position. The following queries will all provide the same results",
       "path": "docs/develop/sdks/client-query/v1/overview.md"
+    },
+    {
+      "name": "Grail DQL query: V1:  Required permissions",
+      "description": "Table permission (required): the permission for each table the query reads. No bucket permission is required.",
+      "path": "docs/develop/sdks/client-query/v1/required-permissions-2.md"
     },
     {
       "name": "Grail DQL query: V1:  Overview",
@@ -61047,14 +61197,34 @@
       "path": "docs/develop/sdks/client-query/v1/details.md"
     },
     {
+      "name": "Grail DQL query: V1:  Required permissions",
+      "description": "Table permission (required): the permission for each table the query reads. No bucket permission is required.",
+      "path": "docs/develop/sdks/client-query/v1/required-permissions-3.md"
+    },
+    {
       "name": "Grail DQL query: V1:  Overview",
       "description": "Verifies the supplied query string and other query parameters for lack of any errors, but without actually submitting the query for execution.",
       "path": "docs/develop/sdks/client-query/v1/overview-3.md"
     },
     {
       "name": "Grail DQL query: V1: queryExecutionClient",
-      "description": "queryCancel; Overview:; The response format:; Parameters; Returns; Throws; queryExecute; Overview:; The response format:; Parameters; Returns; Throws; queryPoll; Overview:; The response format:…",
+      "description": "queryCancel",
       "path": "docs/develop/sdks/client-query/v1/queryexecutionclient.md"
+    },
+    {
+      "name": "Grail DQL query: V1:  Required permissions",
+      "description": "Table permission: the table permissions of the calling user are evaluated to decide on 403 responses, as for query:execute. No bucket permission is checked.",
+      "path": "docs/develop/sdks/client-query/v1/required-permissions-4.md"
+    },
+    {
+      "name": "Grail DQL query: V1:  Required permissions",
+      "description": "Grail checks the permissions described under Permission types in the API overview. A bucket permission and one table permission per table the query reads are required. Row-level conditions and…",
+      "path": "docs/develop/sdks/client-query/v1/required-permissions-5.md"
+    },
+    {
+      "name": "Grail DQL query: V1:  Required permissions",
+      "description": "Table permission: the table permissions of the calling user are evaluated to decide on 403 responses, as for query:execute. No bucket permission is checked.",
+      "path": "docs/develop/sdks/client-query/v1/required-permissions-6.md"
     },
     {
       "name": "Grail DQL query: V1: Types",
@@ -61105,6 +61275,26 @@
       "name": "Grail resource store API: V1:  Test parsing lookup data",
       "description": "Test parsing lookup data without storing the result in the Grail Resource Store. The request body needs to be submitted as multipart/form-data with the following parts",
       "path": "docs/develop/sdks/client-resource-store/v1/test-parsing-lookup-data.md"
+    },
+    {
+      "name": "Grail resource store API: V2",
+      "description": "Documentation of the Dynatrace Resource Store API for Grail. To read about use cases and examples, see Dynatrace Documentation",
+      "path": "docs/develop/sdks/client-resource-store/v2/index.md"
+    },
+    {
+      "name": "Grail resource store API: V2:  Delete file",
+      "description": "Delete a file from the Grail Resource Store.",
+      "path": "docs/develop/sdks/client-resource-store/v2/delete-file.md"
+    },
+    {
+      "name": "Grail resource store API: V2:  Upload lookup data",
+      "description": "Upload lookup data and store it as a new tabular file in the Grail Resource Store or replace an existing one. The request body needs to be submitted as multipart/form-data with the following parts",
+      "path": "docs/develop/sdks/client-resource-store/v2/upload-lookup-data.md"
+    },
+    {
+      "name": "Grail resource store API: V2:  Test parsing lookup data",
+      "description": "Test parsing lookup data without storing the result in the Grail Resource Store. The request body needs to be submitted as multipart/form-data with the following parts",
+      "path": "docs/develop/sdks/client-resource-store/v2/test-parsing-lookup-data.md"
     },
     {
       "name": "Service-Level objectives",

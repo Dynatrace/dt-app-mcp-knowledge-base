@@ -1,5 +1,15 @@
 @dynatrace-sdk/client-synthetic
 
+## 4.2.0 (2026-11-26) \{#420}
+
+### Minor changes
+
+- Add the optional `performanceMetricSource` field (`'CLASSIC' | 'THE_LATEST_DYNATRACE'`) to `PlatformEnablementDto`. Add the deprecated `PlatformEnablementDtoPerformanceMetricSource` enum. The field is marked `[NOT SUPPORTED]` in the spec.
+
+### Patch changes
+
+- Updated the minimum required versions of `@dynatrace-sdk/http-client` (`^1.5.2`) and `@dynatrace-sdk/shared-errors` (`^1.1.0`).
+
 ## 4.1.0 (2026-10-23) \{#410}
 
 ### Minor changes

@@ -853,10 +853,11 @@ Credential-based input for keystrokes step.
 
 Browser monitor enablement settings for 3rd gen.
 
-| Name                     | Type                                            | Description                                                                           |
-| ------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------- |
-| enableOnGrail (required) | boolean                                         | Enable 3rd gen JS agent reporting. Relevant only for grail-enabled SaaS environments. |
-| origin                   | "MONITOR" \| "TENANT" \| "DEFAULT" \| "UNKNOWN" | Indicates the origin of these settings.                                               |
+| Name                     | Type                                            | Description                                                                                                                                                                                 |
+| ------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| enableOnGrail (required) | boolean                                         | Enable 3rd gen JS agent reporting. Relevant only for grail-enabled SaaS environments.                                                                                                       |
+| origin                   | "MONITOR" \| "TENANT" \| "DEFAULT" \| "UNKNOWN" | Indicates the origin of these settings.                                                                                                                                                     |
+| performanceMetricSource  | "CLASSIC" \| "THE_LATEST_DYNATRACE"           | [NOT SUPPORTED] Source of the metrics used for performance alerting of the browser monitor: CLASSIC or THE_LATEST_DYNATRACE. THE_LATEST_DYNATRACE requires 3rd gen JS agent reporting. |
 
 ### ProxyDto
 
