@@ -31,7 +31,7 @@
   "devDependencies": {
     "@types/node": "^24.3.0",
     "ajv-formats": "^3.0.1",
-    "markdownlint-cli2": "^0.24.0",
+    "markdownlint-cli2": "^0.24.1",
     "oxlint": "^1.90.0",
     "prettier": "^3.9.6",
     "typescript": "^5.9.2"
